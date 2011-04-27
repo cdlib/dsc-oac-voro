@@ -21,7 +21,7 @@ DB_MYSQL_PASSWORD = db['default-ro']['PASSWORD']
 DB_MYSQL_HOST = db['default-ro']['HOST']
 DB_MYSQL_PORT = db['default-ro']['PORT']
 
-DIR_ORPHANS =  os.path.realpath(__file__) + '/orphans'
+DIR_ORPHANS =  os.path.split(os.path.realpath(__file__))[0] + '/orphans/'
 
 def run_samples():
     DIR_SAMPLES_ROOT = HOME + '/data/in/oac-ead/prime2002/'

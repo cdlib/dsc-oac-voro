@@ -1,3 +1,3 @@
 #! /usr/bin/csh 
 
-python /voro/code/oac4/ois/oisIndexer.py  >&! /voro/code/oac4/ois/oisIndexer.log
+python $HOME/branches/production/voro/objinfo/oisIndexer.py  >&! $HOME/log/ois/oisIndexer.log
