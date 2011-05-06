@@ -26,6 +26,7 @@ task :default do |t|
 	Rake::Task["ead:oisindex"].invoke
 	Rake::Task["xtf:metsark"].invoke
  	Rake::Task["ingest-stats"].invoke
+        Rake::Task["tar-index"].invoke
  	Rake::Task["report-results"].invoke
 end
 
@@ -148,3 +149,9 @@ EOM
         end
     end
 end
+
+desc "tar up the index async for TSM"
+task "tar-index" do |t|
+    sh "/usr/bin/tar cf /dsc/indexes/xtf.backup.tar /dsc/branches/production/xtf/index/ &"
+end
+
