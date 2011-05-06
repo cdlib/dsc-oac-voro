@@ -28,7 +28,7 @@ my $teiBuff = "$xsltBase/teiBuff.xsl";
 my $imgsize;
 
 # if carefree, then processing goes forward, even if input has not changed
-my $carefree = 0;
+my $carefree = 1;
 my $regen = 0;
 my $forgive_mets = 0;
 my $forgive_tei = 0;
@@ -914,7 +914,7 @@ sub qtvrsize {
 	my $file = $_[0];
 
 	# Name the command we'll use to decipher the info.
-	my $info_cmd = "/voro/local/bin/oqtinfo";
+	my $info_cmd = "/$ENV{HOME}/local/bin/oqtinfo";
 
 	# If the command doesn't exist, or isn't executable, there's not
 	# much we can do.
