@@ -4,35 +4,57 @@ import pymarc
 import os
 import sys
 import re
-from StringIO import StringIO
+import codecs
+import StringIO
 
 def update_marc_file(infile, outfile, cdlpath):
-    reader = pymarc.MARCReader(file(infile))
+    """add cdlpath info to all the MARC records in a file"""
+    # open MARC file for reading
+    reader = pymarc.MARCReader(
+      file(infile),
+      to_unicode=True, 
+      force_utf8=True, 
+      utf8_handling='ignore'
+    )
 
-    string = StringIO()
+    # keep the new file in memory
+    string = StringIO.StringIO()
     writer = pymarc.MARCWriter(string)
 
+    # main look through all the records
     count = 0
     for record in reader:
-        newrecord = pymarc.Record
         count += 1
+        # create new MARC field and add it to the record
         field = pymarc.Field(
             tag = '941', 
             indicators = ['0','1'],
             subfields = [ 'a', cdlpath ]
         )
-        newrecord = record
-        newrecord.rewrite = True
-        newrecord.add_field(field)
-        writer.write(newrecord)
+        record.add_field(field)
 
-    print count
+        # write the records in a try to catch unicode errors
+        try:
+            writer.write(record)
+        except UnicodeDecodeError as inst:
+            title = ''
+            recordId = ''
+            if record['245'] is not None:
+                title = record['245']
+            if record['001'] is not None:
+                recordId = record['001']
+            print "--- error with record %s %s" % (count, recordId) 
+            print "leader9 = %s" % record.leader[9]
+            print title
+            print inst
+            print "\n"
 
-    # wait to open the file until the new MARC is ready
     out  = open(outfile, mode="w")
     sys.stdout = out
     print string.getvalue()
     string.close()
+
+# could wrap the stuff below in a "main"
 
 # file name of the input MARC
 infile = sys.argv[1]
