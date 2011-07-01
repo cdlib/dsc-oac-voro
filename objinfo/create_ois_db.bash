@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 set -e
 set -u 
 mkdir -p $HOME/indexes/sqlite3
