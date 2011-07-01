@@ -33,10 +33,9 @@ def update_marc_file(infile, outfile, cdlpath):
         )
         record.add_field(field)
 
-        # write the records in a try to catch unicode errors
-        try:
+        try:				# try to write the record
             writer.write(record)
-        except UnicodeDecodeError as inst:
+        except UnicodeDecodeError as inst:   # catch Unicode errors
             title = ''
             recordId = ''
             if record['245'] is not None:
@@ -47,34 +46,46 @@ def update_marc_file(infile, outfile, cdlpath):
             print "leader9 = %s" % record.leader[9]
             print title
             print inst
-            print "\n"
+            # set leader9 to 'a' (indicates unicode) and try again
+            ## this didn't work
+#           try:
+#               l = list(record.leader)
+#               l[9] = 'a' # UTF-8 encoding
+#               record.leader = "".join(l)
+#               writer.write(record)
+#           except UnicodeDecodeError as inst2:
+#               print "tried again and failed again"
+#               print "leader9 = %s" % record.leader[9]
+#               print inst2
 
     out  = open(outfile, mode="w")
     sys.stdout = out
     print string.getvalue()
     string.close()
 
-# could wrap the stuff below in a "main"
+def main():
+    # file name of the input MARC
+    infile = sys.argv[1]
 
-# file name of the input MARC
-infile = sys.argv[1]
+    # try to guess the path
+    pathmatch = re.search('marc/(.*)$', infile)
+    # die if no pathmatch is found
+    if pathmatch is None:
+        sys.exit("file name does not match required regex")
+    
+    # the dirname that is left is the cdlpath
+    cdlpath = os.path.dirname(pathmatch.group(1))
+    basename = os.path.basename(pathmatch.group(1))
 
-# try to guess the path
-pathmatch = re.search('marc/(.*)$', infile)
-# die if no pathmatch is found
-if pathmatch is None:
-    sys.exit("file name does not match required regex")
+    # the directory to write out to
+    if len(sys.argv) >=3:
+        data_dir = sys.argv[2] 
+    else:
+        data_dir = "/dsc/data/xtf/data/marc/"
+    
+    outfile = data_dir + cdlpath.replace("/",".") + "." + basename + ".marc"
+    
+    update_marc_file(infile, outfile, cdlpath)
 
-# the dirname that is left is the cdlpath
-cdlpath = os.path.dirname(pathmatch.group(1))
-basename = os.path.basename(pathmatch.group(1))
-
-# the directory to write out to
-if len(sys.argv) >=3:
-    data_dir = sys.argv[2] 
-else:
-    data_dir = "/dsc/data/xtf/data/marc/"
-
-outfile = data_dir + cdlpath.replace("/",".") + "." + basename + ".marc"
-
-update_marc_file(infile, outfile, cdlpath)
+if __name__ == "__main__":
+    main()
