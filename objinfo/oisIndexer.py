@@ -1,11 +1,17 @@
 #!/usr/bin/env python
+
+# The Object information service indexer. Creates the Institution name based
+# mapping db for use by the Object Info Service
+
 import os
+import sys
 import os.path
 import datetime
 import pysqlite2._sqlite as sqlite
 import lxml.etree as ET
 import glob
 import csv
+import re
 import MySQLdb
 from config_reader import read_config
 
@@ -21,7 +27,15 @@ DB_MYSQL_PASSWORD = db['default-ro']['PASSWORD']
 DB_MYSQL_HOST = db['default-ro']['HOST']
 DB_MYSQL_PORT = db['default-ro']['PORT']
 
+DB_MYSQL_NAME = db['dev']['NAME']
+DB_MYSQL_USER = db['dev']['USER']
+DB_MYSQL_PASSWORD = db['dev']['PASSWORD']
+DB_MYSQL_HOST = db['dev']['HOST']
+DB_MYSQL_PORT = db['dev']['PORT']
+
 DIR_ORPHANS =  os.path.split(os.path.realpath(__file__))[0] + '/orphans/'
+
+REGEX_ARK = re.compile("ark:/(?P<NAAN>\d{5}|\d{9})/([a-zA-Z0-9=#\*\+@_\$/%-\.]+)$")
 
 def run_samples():
     DIR_SAMPLES_ROOT = HOME + '/data/in/oac-ead/prime2002/'
@@ -95,11 +109,13 @@ def parse_findingaid(findingaid):
     except ET.XMLSyntaxError, instance:
         print "ET.XMLSyntaxError : %s" % str(instance)
         print instance.msg
+        sys.stdout.flush()
         return None, None, None, None
 
     eadid = tree.find("//eadid")
     if eadid is None:
         print "No eadid for file:%s" % findingaid
+        sys.stdout.flush()
         return None, None, None, None
     ark_findingaid = eadid.attrib.get('identifier')
     ark_parent = eadid.attrib.get('{http://www.cdlib.org/path/}parent')
@@ -115,35 +131,58 @@ def parse_findingaid(findingaid):
             id_href = digobj.attrib.get('href')
             #print "id_href = ", id_href.encode('utf-8'), "for FA = ", findingaid.encode('utf-8')
             if id_href is not None:
-                id_obj = id_href[id_href.find("ark:"):]
+                #try to get an OAC ark, objs on other sites in general  
+                # don't have these
+                # for our style hrefs they will end in ark:/XXXXX/XXXXXX
+                #matchobj = REGEX_ARK.search(id_href)
+                #if matchobj:
+                #    print '++++++++ MATCH ARK:', matchobj.groups()
+                try:
+                    id_obj = id_href[id_href.index("ark:"):]
+                except ValueError:
+                    pass
         if id_obj is not None:
             ark_daos.append(id_obj)
     return ark_findingaid, ark_parent, ark_grandparent, ark_daos
 
 def add_ark_to_db(ark_object, ark_parent, ark_grandparent=None, ark_daos=None):
     #there are some daos for this finding aid, so make db entries
-    if ark_grandparent == None:
-        #Lookup parent ark in DB & see if a parent for it exists
-        conn = MySQLdb.connect(host=DB_MYSQL_HOST, user=DB_MYSQL_USER,
+    conn = MySQLdb.connect(host=DB_MYSQL_HOST, user=DB_MYSQL_USER,
                                passwd=DB_MYSQL_PASSWORD, db=DB_MYSQL_NAME,
                                port=int(DB_MYSQL_PORT)
                               )
+    google_analytics_tracking_code = ''
+    if ark_grandparent == None:
+        #Lookup parent ark in DB & see if a parent for it exists
+        #conn = MySQLdb.connect(host=DB_MYSQL_HOST, user=DB_MYSQL_USER,
+        #                       passwd=DB_MYSQL_PASSWORD, db=DB_MYSQL_NAME,
+        #                       port=int(DB_MYSQL_PORT)
+        #                      )
         c = conn.cursor()
-        c.execute("""SELECT parent_institution_id from oac_institution where ark=%s""", (ark_parent,))
-        id_parent = c.fetchone()[0]
+        #c.execute("""SELECT parent_institution_id from oac_institution where ark=%s""", (ark_parent,))
+        c.execute("""SELECT google_analytics_tracking_code, name, id from oac_institution where ark=%s""", (ark_parent,))
+        google_analytics_tracking_code, inst_name, inst_id = c.fetchone()
+        id_parent = inst_id
         if id_parent:
             c.execute("""SELECT ark from oac_institution where id=%s""",
                       (id_parent,))
             ark_grandparent = c.fetchone()[0]
         conn.close()
+    else: #grandparent is inst???
+        c = conn.cursor()
+        c.execute("""SELECT google_analytics_tracking_code, name, id from oac_institution where ark=%s""", (ark_grandparent,))
+        google_analytics_tracking_code, inst_name, inst_id = c.fetchone()
+        conn.close()
+
 
     conn = sqlite.connect(DB_FILE)
     c = conn.cursor()
     c.execute("""insert or replace into item
-              (ark, ark_parent, ark_grandparent)
-              VALUES (?, ?, ?)""", (ark_object, ark_parent,
+              (ark, ark_parent, ark_grandparent, google_analytics_tracking_code)
+              VALUES (?, ?, ?, ?)""", (ark_object, ark_parent,
                                     (ark_grandparent,
-                                     '')[ark_grandparent is None]
+                                     '')[ark_grandparent is None],
+                                    google_analytics_tracking_code
                                    )
              )
     if ark_daos:
@@ -158,8 +197,8 @@ def add_ark_to_db(ark_object, ark_parent, ark_grandparent=None, ark_daos=None):
                     break
             order_str = order_format % order
             c.execute("""insert or replace into digitalobject
-                       (ark, ark_findingaid, "num_order" )
-                       VALUES (?, ?, ?)""", (ark_dao, ark_object, order_str)
+                       (ark, ark_findingaid, "num_order", google_analytics_tracking_code )
+                       VALUES (?, ?, ?, ?)""", (ark_dao, ark_object, order_str, google_analytics_tracking_code)
                      )
     conn.commit()
     conn.close()
@@ -171,7 +210,10 @@ def load_findingaid(findingaid):
     '''
     ark_findingaid, ark_parent, ark_grandparent, ark_daos = parse_findingaid(findingaid)
     add_ark_to_db(ark_findingaid, ark_parent, ark_grandparent, ark_daos)
-    print "Added %s : ark:%s" % (findingaid, ark_findingaid)
+    print "Added %s : ark_EAD:%s" % (findingaid, ark_findingaid)
+    for a in ark_daos:
+        print '++++ DAO in EAD %s - %s' % (ark_findingaid, a)
+    sys.stdout.flush()
 
 def process_findingaids():
     # use os.walk to recurse, open any .xml files & parse with ET
