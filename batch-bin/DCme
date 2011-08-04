@@ -7,12 +7,15 @@ use XML::LibXML::XPathContext;
 use File::Path;
 use File::stat;
 use Getopt::Std;
+use LWP::UserAgent;
+use HTTP::Date;
 
 getopts('r'); # side effect; sets opt_r
 
 mkpath "$ENV{HOME}/workspace/DC";
 
-my $buildfile = "$ENV{HOME}/workspace/DC/build-dc.xml";
+my $buildfile = $ENV{'DC_BUILD_FILE'} || "$ENV{HOME}/workspace/DC/build-dc.xml";
+
 
 # lets play nice
 setpriority( "PRIO_PROCESS", 0 , "19") || die ("$0: $! not nice\n");
@@ -88,6 +91,31 @@ print BUILD "</project>\n";
 
 exit;
 
+sub get_django_dc ($) {
+    my $dcurl = "http://$ENV{VCS_IP}:$ENV{BACK_PORT}/djsite/xtf/ARKObject/dc/@_[0]";
+    #print "DCURL = $dcurl\n";
+    my $ua = new LWP::UserAgent;
+    my $request = HTTP::Request->new('GET');
+    $request->url($dcurl);
+    my $response = $ua->request($request);
+    my $code = $response->code;
+    my $last_mod = $response->header('Last-Modified');
+    my $last_mod_time = str2time($last_mod);
+    my $content = $response->content;
+    return $last_mod_time, $content;
+}
+
+sub parse_ark_from_filename($) {
+    my $path = @_[0];
+    my @p = split( /\./, $path);
+    @p = split(/\//, @p[0]);
+    ##print "P @p\n";
+    my $naan = @p[(scalar @p -4)];
+    ##print "NAAN $naan\n";
+    my $ark = pop(@p);
+    join('', 'ark:/', $naan, '/',  $ark);
+}
+
 # main routine
 sub upfile {
   for ( @_ ) {
@@ -118,17 +146,43 @@ sub upfile {
 	die ("same name for in and out") if ($_ eq $out);
 	my $METSstat = stat("$_");
 	my $DCstat = stat("$out");
+    # check the Django DC interface for given ark
+    my $ark = parse_ark_from_filename($out);
+    my ($last_mod_django, $content_django) = get_django_dc($ark);
 	# check that the files exist
+    {
+        my $previous_default = select(STDOUT); # save previous default
+        $|++; # autoflush STDOUT
+        select(STDERR);
+        $|++; # autoflush STDERR, to be sure
+        select($previous_default); # restore previous default
+    }
 	if ( -e "$mets_base/$dcx" && $dcx ){
 		my $dcxStat = stat("$mets_base/$dcx");
 		if ( 	not(-e $out) ||				# if the .dc.xml is not there yet OR
                         $regen ||
 			( $METSstat->mtime > $DCstat->mtime  	# METS file is newer than DC file
-			|| $dcxStat->mtime > $DCstat->mtime ) 	# OR XSLT is newer than the DC file
+			|| $dcxStat->mtime > $DCstat->mtime  	# OR XSLT is newer than the DC file
+            || $last_mod_django > $DCstat->mtime )         # OR Django DC object is newer than DC file
 		   )
 			{
-			print BUILD qq{<xslt in="$_" out="$out" style="\${metsBase}/$dcx"><classpath location="\${saxon}"/><factory name="net.sf.saxon.TransformerFactoryImpl"/></xslt>\n } ;
+                #print "$out needs new DC\n";
+                #if Django is newer than other files
+                #write out the dc directly from the content_django
+                if ( ($last_mod_django > $METSstat->mtime) && ($last_mod_django > $dcxStat->mtime) ) {
+                    print "USE DJANGO CONTENT FOR $out\n";
+                    #$dcout = join('', $out, '.djangotest');
+                    #print "Creating $dcout\n";
+                    open (DCFILE, ">$out");
+                    print DCFILE $content_django;
+                    close DCFILE;
+                }
+                else {
+                    print "ant build dc for $out\n";
+			        print BUILD qq{<xslt in="$_" out="$out" style="\${metsBase}/$dcx"><classpath location="\${saxon}"/><factory name="net.sf.saxon.TransformerFactoryImpl"/></xslt>\n } ;
+                }
 		} else {
+            print "$out OLD DC \n";
 			#print STDERR "$profile what what what $0: $! $_ $mets_base/$dcx\n";
 		}
 	}
