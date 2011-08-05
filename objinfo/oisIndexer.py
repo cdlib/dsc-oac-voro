@@ -27,12 +27,6 @@ DB_MYSQL_PASSWORD = db['default-ro']['PASSWORD']
 DB_MYSQL_HOST = db['default-ro']['HOST']
 DB_MYSQL_PORT = db['default-ro']['PORT']
 
-DB_MYSQL_NAME = db['dev']['NAME']
-DB_MYSQL_USER = db['dev']['USER']
-DB_MYSQL_PASSWORD = db['dev']['PASSWORD']
-DB_MYSQL_HOST = db['dev']['HOST']
-DB_MYSQL_PORT = db['dev']['PORT']
-
 DIR_ORPHANS =  os.path.split(os.path.realpath(__file__))[0] + '/orphans/'
 
 REGEX_ARK = re.compile("ark:/(?P<NAAN>\d{5}|\d{9})/([a-zA-Z0-9=#\*\+@_\$/%-\.]+)$")
