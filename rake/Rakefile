@@ -20,16 +20,17 @@ ENV['CODEBASE'] = "#{ENV['HOME']}/branches/#{branch}"
 
 
 task :default do |t|
-    if not File.exists?("#{ENV['HOME']}"+"/log/skip-sync") then
-	    Rake::Task["sync:pullfromproduction"].execute
-	Rake::Task["ead:makemets"].invoke
+	if not File.exists?("#{ENV['HOME']}"+"/log/skip-sync") then
+		Rake::Task["sync:pullfromproduction"].execute
+		Rake::Task["ead:makemets"].invoke
+	end
 	Rake::Task[:DCme].invoke
 	Rake::Task["ead:pdfgen"].invoke
 	Rake::Task["ead:pdfsweep"].invoke
 	Rake::Task["ead:oisindex"].invoke
 	Rake::Task["xtf:metsark"].invoke
  	Rake::Task["ingest-stats"].invoke
-    Rake::Task["tar-index"].invoke
+        Rake::Task["tar-index"].invoke
  	Rake::Task["report-results"].invoke
 end
 
@@ -94,7 +95,7 @@ namespace :sync do
 		when "leonardo", "davinci"
 			# stage should be a clone of production
 			cvs_opts = "-v --delete --cvs-exclude --links --recursive --times"
-			print "rsync #{cvs_opts} voro@dsc.cdlib.org:/dsc/data/xtf/ #{ENV['HOME']}/data/xtf"
+			sh "rsync #{cvs_opts} voro@dsc.cdlib.org:/dsc/data/xtf/ #{ENV['HOME']}/data/xtf"
 		else
 			cvs_opts = "-v --delete --cvs-exclude --links --recursive --times"
 			# hey; I *am* the master for this, I can't sync from myself, can I?
@@ -171,4 +172,3 @@ desc "tar up the index async for TSM"
 task "tar-index" do |t|
     sh "/usr/bin/tar cf /dsc/indexes/xtf.backup.tar /dsc/branches/production/xtf/index/ &"
 end
-
