@@ -1,0 +1,19 @@
+syntax: glob
+*.pyc
+*/*.pyc
+**.pyc
+*.swp
+**.swp
+*.orig
+**.orig
+*~
+**~
+*.svn*
+**.svn*
+CVS*
+*CVS*
+CVS/*
+CVS/**
+tmp/*
+.git*
+
