@@ -170,21 +170,21 @@ sub upfile {
                 #if Django is newer than other files
                 #write out the dc directly from the content_django
                 if ( ($last_mod_django > $METSstat->mtime) && ($last_mod_django > $dcxStat->mtime) ) {
-                    print "USE DJANGO CONTENT FOR $out\n";
-                    #$dcout = join('', $out, '.djangotest');
-                    #print "Creating $dcout\n";
+                    print "++++++ Django DC for: $out\n";
                     open (DCFILE, ">$out");
                     print DCFILE $content_django;
                     close DCFILE;
+                    #touch the source file, so xtf indexes
+                    $now = time;
+                    utime $now, $now, $_;
                 }
                 else {
-                    print "ant build dc for $out\n";
 			        print BUILD qq{<xslt in="$_" out="$out" style="\${metsBase}/$dcx"><classpath location="\${saxon}"/><factory name="net.sf.saxon.TransformerFactoryImpl"/></xslt>\n } ;
                 }
 		} else {
-            print "$out OLD DC \n";
+            #print "OLD DC - $out \n";
 			#print STDERR "$profile what what what $0: $! $_ $mets_base/$dcx\n";
-		}
+            }
 	}
   }
 }
