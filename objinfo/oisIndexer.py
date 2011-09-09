@@ -15,6 +15,7 @@ import re
 import MySQLdb
 from config_reader import read_config
 
+DEBUG = os.environ.get('DEBUG', False)
 HOME = os.environ['HOME']
 
 DIR_ROOT = HOME + '/data/in/oac-ead/prime2002/'
@@ -73,7 +74,6 @@ def run_samples():
         id = ark.rsplit("/",1)[1]
         dir_sub = id[-2:]
         foo = os.path.join(DIR_ROOT, dir_sub, id, id+".xml")
-        #print i, id, foo
         #if i == 'AF':
         load_findingaid(foo)
 
@@ -128,9 +128,6 @@ def parse_findingaid(findingaid):
                 #try to get an OAC ark, objs on other sites in general  
                 # don't have these
                 # for our style hrefs they will end in ark:/XXXXX/XXXXXX
-                #matchobj = REGEX_ARK.search(id_href)
-                #if matchobj:
-                #    print '++++++++ MATCH ARK:', matchobj.groups()
                 try:
                     id_obj = id_href[id_href.index("ark:"):]
                 except ValueError:
@@ -204,10 +201,11 @@ def load_findingaid(findingaid):
     '''
     ark_findingaid, ark_parent, ark_grandparent, ark_daos = parse_findingaid(findingaid)
     add_ark_to_db(ark_findingaid, ark_parent, ark_grandparent, ark_daos)
-    print "Added %s : ark_EAD:%s" % (findingaid, ark_findingaid)
-    for a in ark_daos:
-        print '++++ DAO in EAD %s - %s' % (ark_findingaid, a)
-    sys.stdout.flush()
+    if DEBUG:
+        print "Added %s : ark_EAD:%s" % (findingaid, ark_findingaid)
+        for a in ark_daos:
+            print '++++ DAO in EAD %s - %s' % (ark_findingaid, a)
+        sys.stdout.flush()
 
 def process_findingaids():
     # use os.walk to recurse, open any .xml files & parse with ET
@@ -225,7 +223,8 @@ def process_orphans():
     '''
     foo_orphans = glob.glob(DIR_ORPHANS+'*.orphans')
     for f in foo_orphans:
-        print f
+        if DEBUG:
+            print f
         fh = open(f,'r')
         reader = csv.reader(fh)
         for row in reader:
@@ -238,6 +237,5 @@ if __name__=="__main__":
     process_orphans()
     time_finish = datetime.datetime.now()
     time_delta = time_finish - time_start
-    print "Finished indexing digital objects"
+    print "OIS Finished indexing digital objects"
     print "Started:%s Finished:%s Elapsed:%s" % (time_start, time_finish,
-                                                 time_delta)
