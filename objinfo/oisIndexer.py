@@ -233,9 +233,11 @@ def process_orphans():
 
 if __name__=="__main__":
     time_start = datetime.datetime.now()
+    print "OIS Indexer PID: %d started at: %s " % (os.getpid(), time_start,)
+    sys.stdout.flush()
     process_findingaids()
     process_orphans()
     time_finish = datetime.datetime.now()
     time_delta = time_finish - time_start
     print "OIS Finished indexing digital objects"
-    print "Started:%s Finished:%s Elapsed:%s" % (time_start, time_finish,
+    print "Started:%s Finished:%s Elapsed:%s" % (time_start, time_finish, time_delta)
