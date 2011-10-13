@@ -84,6 +84,8 @@ def application(environ, start_response):
         status = '400 BAD REQUEST'
         output = '<h1>NO fileID Query paramter</h1>'
         return report_error(start_response, status, output)
+    fileID_raw = qs['fileID'][0]
+    fileID = os.path.splitext(fileID_raw)[0]
     fname = ''.join((poi2file(qs['POI'][0]), '.mets.xml'))
     try: 
     	foo = open(fname)
@@ -92,20 +94,25 @@ def application(environ, start_response):
         output = '<h1>No file found for poi</h1>'
         return report_error(start_response, status, output)
     doc = etree.parse(foo)
-    xpath = ''.join(('(/m:mets/m:fileSec//m:file[@ID="', qs['fileID'][0],
+    xpath = ''.join(('(/m:mets/m:fileSec//m:file[@ID="', fileID,
                      '"])[1]/m:FLocat[1]/@*[local-name() = \'href\']'))
     #print "XPATH: ", xpath
     namespaces = { 'm': 'http://www.loc.gov/METS/',
                    'xlink': 'http://www.w3.org/TR/xlink'}
     node = doc.xpath(xpath, namespaces=namespaces)  
     if not len(node):
-        status = '404 NOT FOUND'
-        output = '<h1>NO mets fileSec found</h1>'
-        return report_error(start_response, status, output)
-    # what to do if node list len > 1?
-    fileurl = re.sub('\s', '+', node[0])
-    # replace host with CDN_HOSTNAME
-    fileurl = re.sub(r'http://.+\.cdlib\.org/', ''.join(('http://', os.environ['CDN_HOSTNAME'], '/')), fileurl)
+        if fileID_raw.lower() == 'thumbnail':
+            fileurl = 'http://www.calisphere.universityofcalifornia.edu/images/misc/no_image1.gif'
+        else:
+            #original redirected to / param POI ???
+            status = '404 NOT FOUND'
+            output = '<h1>NO mets fileSec found</h1>'
+            return report_error(start_response, status, output)
+    else:
+        # what to do if node list len > 1?
+        fileurl = re.sub('\s', '+', node[0])
+        # replace host with CDN_HOSTNAME
+        fileurl = re.sub(r'http://.+\.cdlib\.org/', ''.join(('http://', os.environ['CDN_HOSTNAME'], '/')), fileurl)
     output = fileurl
     status = '302 Found'
     response_headers = [('Location', fileurl),
