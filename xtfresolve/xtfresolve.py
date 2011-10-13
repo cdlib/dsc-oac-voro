@@ -85,7 +85,9 @@ def application(environ, start_response):
         output = '<h1>NO fileID Query paramter</h1>'
         return report_error(start_response, status, output)
     fileID_raw = qs['fileID'][0]
-    fileID = os.path.splitext(fileID_raw)[0]
+    fileID, ext = os.path.splitext(fileID_raw)[0]
+    if ext not in ('jpg', 'jpeg', 'gif'):
+        fileID = fileID_raw
     fname = ''.join((poi2file(qs['POI'][0]), '.mets.xml'))
     try: 
     	foo = open(fname)
@@ -105,9 +107,11 @@ def application(environ, start_response):
             fileurl = 'http://www.calisphere.universityofcalifornia.edu/images/misc/no_image1.gif'
         else:
             #original redirected to / param POI ???
-            status = '404 NOT FOUND'
-            output = '<h1>NO mets fileSec found</h1>'
-            return report_error(start_response, status, output)
+            #security flaw here?
+            fileurl = 'http://content.cdlib.org/'+qs['POI'][0]
+            #status = '404 NOT FOUND'
+            #output = '<h1>NO mets fileSec found</h1>'
+            #return report_error(start_response, status, output)
     else:
         # what to do if node list len > 1?
         fileurl = re.sub('\s', '+', node[0])
