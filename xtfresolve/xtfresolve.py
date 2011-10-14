@@ -86,7 +86,7 @@ def application(environ, start_response):
         return report_error(start_response, status, output)
     fileID_raw = qs['fileID'][0]
     fileID, ext = os.path.splitext(fileID_raw)
-    if ext not in ('jpg', 'jpeg', 'gif'):
+    if ext not in ('.jpg', '.jpeg', '.gif'):
         fileID = fileID_raw
     fname = ''.join((poi2file(qs['POI'][0]), '.mets.xml'))
     try: 
@@ -108,10 +108,10 @@ def application(environ, start_response):
         else:
             #original redirected to / param POI ???
             #security flaw here?
-            fileurl = 'http://content.cdlib.org/'+qs['POI'][0]
-            #status = '404 NOT FOUND'
-            #output = '<h1>NO mets fileSec found</h1>'
-            #return report_error(start_response, status, output)
+            #fileurl = 'http://content.cdlib.org/'+qs['POI'][0]
+            status = '404 NOT FOUND'
+            output = '<h1>NO mets fileSec found</h1>'
+            return report_error(start_response, status, output)
     else:
         # what to do if node list len > 1?
         fileurl = re.sub('\s', '+', node[0])
