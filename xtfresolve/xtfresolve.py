@@ -85,7 +85,7 @@ def application(environ, start_response):
         output = '<h1>NO fileID Query paramter</h1>'
         return report_error(start_response, status, output)
     fileID_raw = qs['fileID'][0]
-    fileID, ext = os.path.splitext(fileID_raw)[0]
+    fileID, ext = os.path.splitext(fileID_raw)
     if ext not in ('jpg', 'jpeg', 'gif'):
         fileID = fileID_raw
     fname = ''.join((poi2file(qs['POI'][0]), '.mets.xml'))
