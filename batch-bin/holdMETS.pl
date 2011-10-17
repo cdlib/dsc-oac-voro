@@ -10,7 +10,7 @@ my $voroDel = "/dsc/data/xtf/" || $ENV{'VORODEL'};
 my $saxon ="java -Xmx1024m -cp /dsc/branches/production/xtf/WEB-INF/lib/saxonb-8.9.jar -DentityExpansionLimit=1000000 net.sf.saxon.Transform";
 
 my ($ark) = @ARGV;
-die "needs a 13030 ARK\n" unless ($ark =~ m,^ark:/13030/.*$,);
+#die "needs a 13030 ARK\n" unless ($ark =~ m,^ark:/13030/.*$,);
 
 my $ark2infile = poi2file($ark);
 my $ark2outfile = "$ark2infile.REMOVE";
@@ -51,9 +51,9 @@ sub poi2file {
         my $poi = shift;
         $poi =~ s,[.|/],,g;
         my $dir = substr($poi, -2);
-        $poi =~ m,ark:13030(.*),;
-        my $bdir = $1 ;
-        $poi = "$voroDel/data/13030/$dir/$bdir/$bdir.mets.xml";
+        $poi =~ m,ark:(\d\d\d\d\d)(.*),;
+        my $bdir = $2 ;
+        $poi = "$voroDel/data/$1/$dir/$bdir/$bdir.mets.xml";
         return $poi;
 }
 
