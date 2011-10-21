@@ -18,14 +18,15 @@ DB_SQLITE = HOME + '/indexes/sqlite3/ois.sqlite3'
 DB_SQLITE_TEST = './test/ois-test.sqlite3'
 
 db = read_config()
+DB_KEY = os.environ['DSC_DATABASE']+'-ro'
 
-DB_MYSQL_NAME = db['default-ro']['NAME']
-DB_MYSQL_USER = db['default-ro']['USER']
-DB_MYSQL_PASSWORD = db['default-ro']['PASSWORD']
-DB_MYSQL_HOST = db['default-ro']['HOST']
-DB_MYSQL_PORT = db['default-ro']['PORT']
+DB_MYSQL_NAME = db[DB_KEY]['NAME']
+DB_MYSQL_USER = db[DB_KEY]['USER']
+DB_MYSQL_PASSWORD = db[DB_KEY]['PASSWORD']
+DB_MYSQL_HOST = db[DB_KEY]['HOST']
+DB_MYSQL_PORT = db[DB_KEY]['PORT']
 
-def lookup_inst_names(ark_parent, ark_grandparent=None):
+def lookup_inst_info(ark_parent, ark_grandparent=None):
     '''For given ark, lookup the name in the Django DB
     '''
     conn = MySQLdb.connect(host=DB_MYSQL_HOST, user=DB_MYSQL_USER,
@@ -33,17 +34,16 @@ def lookup_inst_names(ark_parent, ark_grandparent=None):
                            port=int(DB_MYSQL_PORT)
                           )
     c = conn.cursor()
-    c.execute("""SELECT name from oac_institution where ark=%s""", (ark_parent,))
-    name_parent = c.fetchone()
+    c.execute("""SELECT name, url, google_analytics_tracking_code from oac_institution where ark=%s""", (ark_parent,))
+    name_parent, url_parent, gacode = c.fetchone()
     if ark_grandparent:
-        c.execute("""SELECT name from oac_institution where ark=%s""",
+        c.execute("""SELECT name, url from oac_institution where ark=%s""",
                   (ark_grandparent,))
-        name_grandparent = c.fetchone()
+        name_grandparent, url_grandparent, = c.fetchone()
     else:
-        name_grandparent = (None,)
-
+        name_grandparent = url_grandparent = None
     conn.close()
-    return name_parent[0], name_grandparent[0]
+    return name_parent, url_parent,  name_grandparent, url_grandparent, gacode
 
 def lookup_info(ark, ark_parent, db=DB_SQLITE):
     '''Lookup item information in the ois.sqlite3 database.
@@ -64,10 +64,10 @@ def lookup_info(ark, ark_parent, db=DB_SQLITE):
     KeyError
     >>> x=lookup_info('ark:/13030/hb9j49p55', 'ark:/13030/kt0g5016h6', db=DB_SQLITE_TEST)
     >>> x
-    (-1, 'Ethnic Studies Library', u'ark:/13030/kt4b69n6wx', 'UC Berkeley', u'ark:/13030/tf0p3009mq', u'')
+    (-1, 'Ethnic Studies Library', u'ark:/13030/kt4b69n6wx', 'http://eslibrary.berkeley.edu/', 'UC Berkeley', u'ark:/13030/tf0p3009mq', 'http://www.lib.berkeley.edu/', '')
     >>> x=lookup_info('ark:/13030/tf2c600703', 'ark:/13030/tf7s2010k4',  db=DB_SQLITE_TEST)
     >>> x
-    (u'073', 'Bancroft Library', u'ark:/13030/tf7r29p8s0', 'UC Berkeley', u'ark:/13030/tf0p3009mq', u'')
+    (u'073', 'Bancroft Library', u'ark:/13030/tf7r29p8s0', 'http://bancroft.berkeley.edu/', 'UC Berkeley', u'ark:/13030/tf0p3009mq', 'http://www.lib.berkeley.edu/', 'UA-5731512-1')
     >>> x=lookup_info('ark:/13030/kt3199n606', None,  db=DB_SQLITE_TEST)
     Traceback (most recent call last):
       File "<input>", line 1, in <module>
@@ -76,13 +76,13 @@ def lookup_info(ark, ark_parent, db=DB_SQLITE):
     KeyError
     >>> x=lookup_info('ark:/13030/kt5m3nb0t1', None, db=DB_SQLITE_TEST)
     >>> x
-    (-1, 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', u'')
+    (-1, 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', '')
     >>> x=lookup_info('ark:/13030/kt538nb0tr', None, db=DB_SQLITE_TEST)
     >>> x
-    (-1, 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', u'')
+    (-1, 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', '')
     >>> x=lookup_info('ark:/13030/kt787014q6', None, db=DB_SQLITE_TEST)
     >>> x
-    (-1, 'Special Collections', u'ark:/13030/tf1489p250', 'Special Collections', u'ark:/13030/tf1489p250', u'')
+    (-1, 'Special Collections', u'ark:/13030/tf1489p250', 'http://www.lib.ucdavis.edu/specol/', 'Special Collections', u'ark:/13030/tf1489p250', 'http://www.lib.ucdavis.edu/specol/', '')
     >>> x=lookup_info('ark:/13030/hb4k400701', None, db=DB_SQLITE_TEST)
     Traceback (most recent call last):
       File "<input>", line 1, in <module>
@@ -102,24 +102,21 @@ def lookup_info(ark, ark_parent, db=DB_SQLITE):
     c = conn.cursor()
     if ark_parent:
         #lookup digital object order
-        c.execute('''SELECT num_order, google_analytics_tracking_code from digitalobject where ark=? and
+        c.execute('''SELECT num_order from digitalobject where ark=? and
                   ark_findingaid=?''', (ark_object, ark_findingaid)
                  )
         rowdata = c.fetchone()
         if rowdata:
-            num_order, google_analytics_tracking_code = rowdata
-    c.execute('''SELECT ark_parent, ark_grandparent, google_analytics_tracking_code from item where ark=?''', (ark_item, )
+            num_order = rowdata[0]
+    c.execute('''SELECT ark_parent, ark_grandparent from item where ark=?''', (ark_item, )
              )
     rowdata = c.fetchone()
     if not rowdata:
         raise KeyError
-    ark_parent, ark_grandparent, g_a_code = rowdata
-    if not google_analytics_tracking_code:
-        google_analytics_tracking_code = g_a_code
-    name_parent, name_grandparent = lookup_inst_names(ark_parent,
-                                                      ark_grandparent)
+    ark_parent, ark_grandparent = rowdata
+    name_parent, url_parent, name_grandparent, url_grandparent, google_analytics_tracking_code = lookup_inst_info(ark_parent, ark_grandparent)
     conn.close()
-    return num_order, name_parent, ark_parent, name_grandparent, ark_grandparent, google_analytics_tracking_code
+    return num_order, name_parent, ark_parent, url_parent,  name_grandparent, ark_grandparent, url_grandparent, google_analytics_tracking_code
 
 # WSGI interface here.
 def application(environ, start_response):
@@ -211,7 +208,7 @@ def application(environ, start_response):
     <H1>ERROR: ARK NOT FOUND</H1>
     >>> res = app.get('/wsgi/ois_service.wsgi?ark=ark:/13030/ft8t1nb2xt&parent_ark=ark:/13030/tf0v19n4gf')
     >>> res
-    <200 OK text/plain body='<daoinfo>...nfo>'/263>
+    <200 OK text/plain body='<daoinfo>...nfo>'/259>
     '''
     status = '200 OK'
     output = 'Hello World!'
@@ -236,13 +233,17 @@ def application(environ, start_response):
             output = "<H1>ERROR: INCORRECT ARK FORMAT</H1>"
         else:
             try:
-                order, name_parent, ark_parent, name_grandparent, ark_grandparent, google_analytics_tracking_code = lookup_info(ark, ark_parent)
+                order, name_parent, ark_parent, url_parent, name_grandparent, ark_grandparent, url_grandparent, google_analytics_tracking_code = lookup_info(ark, ark_parent)
                 if not name_grandparent:
                     name_grandparent = ''
                 output = ''.join(["<daoinfo>",
                              "<order>", str(order), "</order>",
-                             '<inst poi="', str(ark_parent), '">', escape(name_parent), "</inst>",
-			     '<inst_parent poi="', str(ark_grandparent), '">', escape(name_grandparent), "</inst_parent>",
+                             '<inst poi="', str(ark_parent), '" href="',
+                             escape(url_parent) if url_parent else '','">',
+                             escape(name_parent), "</inst>",
+			     '<inst_parent poi="', str(ark_grandparent), '" href="',
+                 escape(url_grandparent) if url_grandparent else '', '">',
+                 escape(name_grandparent), "</inst_parent>",
                  '<google_analytics_tracking_code>', str(google_analytics_tracking_code), '</google_analytics_tracking_code>',
                              "</daoinfo>"
                              ]

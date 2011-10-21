@@ -7,6 +7,7 @@ import os
 import sys
 import os.path
 import datetime
+from socket import gethostname
 import pysqlite2._sqlite as sqlite
 import lxml.etree as ET
 import glob
@@ -17,16 +18,16 @@ from config_reader import read_config
 
 DEBUG = os.environ.get('DEBUG', False)
 HOME = os.environ['HOME']
+DB_KEY = os.environ['DSC_DATABASE']+'-ro'
 
 DIR_ROOT = HOME + '/data/in/oac-ead/prime2002/'
 DB_FILE = HOME + '/indexes/sqlite3/ois.sqlite3'
 db = read_config()
-
-DB_MYSQL_NAME = db['default-ro']['NAME']
-DB_MYSQL_USER = db['default-ro']['USER']
-DB_MYSQL_PASSWORD = db['default-ro']['PASSWORD']
-DB_MYSQL_HOST = db['default-ro']['HOST']
-DB_MYSQL_PORT = db['default-ro']['PORT']
+DB_MYSQL_NAME = db[DB_KEY]['NAME']
+DB_MYSQL_USER = db[DB_KEY]['USER']
+DB_MYSQL_PASSWORD = db[DB_KEY]['PASSWORD']
+DB_MYSQL_HOST = db[DB_KEY]['HOST']
+DB_MYSQL_PORT = db[DB_KEY]['PORT']
 
 DIR_ORPHANS =  os.path.split(os.path.realpath(__file__))[0] + '/orphans/'
 
@@ -95,9 +96,7 @@ def parse_findingaid(findingaid):
     list of dao/daogrp arks. Do dao & daogrp appear in one finding aid?
     '''
     if not os.path.isfile(findingaid):
-        print findingaid
-        raise Exception
-
+        raise Exception(findingaid+" is not a file")
     try:
         tree = ET.parse(findingaid)
     except ET.XMLSyntaxError, instance:
@@ -136,44 +135,28 @@ def parse_findingaid(findingaid):
             ark_daos.append(id_obj)
     return ark_findingaid, ark_parent, ark_grandparent, ark_daos
 
-def add_ark_to_db(ark_object, ark_parent, ark_grandparent=None, ark_daos=None):
+def add_ark_to_db(ark_findingaid, ark_parent, ark_grandparent=None, ark_daos=None):
+    # ark_parent is the contributing inst
+    # ark_grandparent is the contributing inst's parent (can be null)
     #there are some daos for this finding aid, so make db entries
     conn = MySQLdb.connect(host=DB_MYSQL_HOST, user=DB_MYSQL_USER,
                                passwd=DB_MYSQL_PASSWORD, db=DB_MYSQL_NAME,
                                port=int(DB_MYSQL_PORT)
                               )
-    google_analytics_tracking_code = ''
-    if ark_grandparent == None:
-        #Lookup parent ark in DB & see if a parent for it exists
-        #conn = MySQLdb.connect(host=DB_MYSQL_HOST, user=DB_MYSQL_USER,
-        #                       passwd=DB_MYSQL_PASSWORD, db=DB_MYSQL_NAME,
-        #                       port=int(DB_MYSQL_PORT)
-        #                      )
-        c = conn.cursor()
-        #c.execute("""SELECT parent_institution_id from oac_institution where ark=%s""", (ark_parent,))
-        c.execute("""SELECT google_analytics_tracking_code, name, id from oac_institution where ark=%s""", (ark_parent,))
-        google_analytics_tracking_code, inst_name, inst_id = c.fetchone()
-        id_parent = inst_id
-        if id_parent:
-            c.execute("""SELECT ark from oac_institution where id=%s""",
-                      (id_parent,))
-            ark_grandparent = c.fetchone()[0]
-        conn.close()
-    else: #grandparent is inst???
-        c = conn.cursor()
-        c.execute("""SELECT google_analytics_tracking_code, name, id from oac_institution where ark=%s""", (ark_grandparent,))
-        google_analytics_tracking_code, inst_name, inst_id = c.fetchone()
-        conn.close()
-
+    c = conn.cursor()
+    c.execute("""SELECT name, id, parent_institution_id from oac_institution where ark=%s""", (ark_parent,))
+    inst_name, inst_id, grandparent_id = c.fetchone()
+    if not ark_grandparent and grandparent_id:
+        c.execute("""SELECT ark from oac_institution where id = %s""", (grandparent_id,))
+        ark_grandparent = c.fetchone()[0]
+    conn.close()
 
     conn = sqlite.connect(DB_FILE)
     c = conn.cursor()
     c.execute("""insert or replace into item
-              (ark, ark_parent, ark_grandparent, google_analytics_tracking_code)
-              VALUES (?, ?, ?, ?)""", (ark_object, ark_parent,
-                                    (ark_grandparent,
-                                     '')[ark_grandparent is None],
-                                    google_analytics_tracking_code
+              (ark, ark_parent, ark_grandparent)
+              VALUES (?, ?, ?)""", (ark_findingaid, ark_parent,
+                                    ark_grandparent if ark_grandparent else '',
                                    )
              )
     if ark_daos:
@@ -188,8 +171,8 @@ def add_ark_to_db(ark_object, ark_parent, ark_grandparent=None, ark_daos=None):
                     break
             order_str = order_format % order
             c.execute("""insert or replace into digitalobject
-                       (ark, ark_findingaid, "num_order", google_analytics_tracking_code )
-                       VALUES (?, ?, ?, ?)""", (ark_dao, ark_object, order_str, google_analytics_tracking_code)
+                       (ark, ark_findingaid, "num_order" )
+                       VALUES (?, ?, ?)""", (ark_dao, ark_findingaid, order_str)
                      )
     conn.commit()
     conn.close()
