@@ -28,7 +28,7 @@ def main(number, shoulder='ark:/13030/c8'):
     ezid = EZIDClient(credentials=dict(username=username, password=password))
     new_ids = []
     for x in range(0, number):
-        ez = ezid.mint(shoulder=shoulder, data={'_profile':'dc',)
+        ez = ezid.mint(shoulder=shoulder, data={'_profile':'dc',})
         save_new_id(ez)
         new_ids.append(ez)
     return new_ids 
