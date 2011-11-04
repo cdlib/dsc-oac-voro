@@ -211,6 +211,8 @@ def process_orphans():
         fh = open(f,'r')
         reader = csv.reader(fh)
         for row in reader:
+            if DEBUG:
+                print '+++ ADD ORPHAN:', row[0], ':', row[1]
             add_ark_to_db(row[0], row[1])
         fh.close()
 

@@ -89,6 +89,7 @@ def lookup_info(ark, ark_parent, db=DB_SQLITE):
       File "ois_service.py", line 80, in lookup_info
         raise KeyError
     KeyError
+    >>> x=lookup_info('ark:/13030/kt4779q8sk', None, db=DB_SQLITE_TEST)
     '''
     google_analytics_tracking_code = None
     num_order = -1
