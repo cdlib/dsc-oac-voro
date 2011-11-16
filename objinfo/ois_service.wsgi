@@ -51,6 +51,8 @@ def lookup_info(ark, ark_parent, db=DB_SQLITE):
     of the contributing institution, name & ark of the parent institution if
     the contributing institution has a parent and 
     the google analytics tracking code for the owning institution.
+    The ark is either the ark of the object or finding aid. If a parent_ark is 
+    supplied it should be the ark of the object's finding aid.
 
     >>> x=lookup_info('ark:/13030/kt796nb207', db=DB_SQLITE_TEST)
     Traceback (most recent call last):
@@ -90,30 +92,31 @@ def lookup_info(ark, ark_parent, db=DB_SQLITE):
         raise KeyError
     KeyError
     >>> x=lookup_info('ark:/13030/kt4779q8sk', None, db=DB_SQLITE_TEST)
+    >>> x
     '''
     google_analytics_tracking_code = None
     num_order = -1
-    if ark_parent:
-       ark_object = ark
-       ark_findingaid = ark_item = ark_parent
-    else:
-       ark_item = ark
-
     conn = sqlite.connect(db)
     c = conn.cursor()
     if ark_parent:
         #lookup digital object order
         c.execute('''SELECT num_order from digitalobject where ark=? and
-                  ark_findingaid=?''', (ark_object, ark_findingaid)
+                  ark_findingaid=?''', (ark, ark_parent)
                  )
         rowdata = c.fetchone()
         if rowdata:
             num_order = rowdata[0]
-    c.execute('''SELECT ark_parent, ark_grandparent from item where ark=?''', (ark_item, )
+    c.execute('''SELECT ark_parent, ark_grandparent from item where ark=?''', (ark, )
              )
     rowdata = c.fetchone()
     if not rowdata:
-        raise KeyError
+        if not ark_parent:
+            raise KeyError('ARK %s for object not found in item db' % (ark,))
+        c.execute('''SELECT ark_parent, ark_grandparent from item where ark=?''', (ark_parent, )
+             )
+        rowdata = c.fetchone()
+        if not rowdata:
+            raise KeyError('ARK %s for finding aid not found in item db' % (ark_parent, ))
     ark_parent, ark_grandparent = rowdata
     name_parent, url_parent, name_grandparent, url_grandparent, google_analytics_tracking_code = lookup_inst_info(ark_parent, ark_grandparent)
     conn.close()
