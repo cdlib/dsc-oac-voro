@@ -19,7 +19,6 @@ def application(environ, start_response):
             status = '400 BAD NUMBER'
             output = '<h1>Number parameter must be an integer</h1>'
         else:
-            output = 'REQUESTED '+str(num)+' ARKS\n'
             newarks = DSC_EZID_minter.main(num)
             for ark in newarks:
                 output = '\n'.join([output, ark,])
