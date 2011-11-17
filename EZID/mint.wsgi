@@ -5,6 +5,11 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 import DSC_EZID_minter
 
 def application(environ, start_response):
+    '''WSGI wrapper for the DSC_EZID_minter. This is currently only accesible
+    from the local machine for security reasons.
+    lives at /wsgi/mintark
+    call with number param: $BACK_SERVER/wsgi/minark?number=<XXX>
+    '''
     status = '200 OK'
     output = 'Hello World!'
 
