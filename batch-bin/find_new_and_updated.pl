@@ -210,6 +210,7 @@ else {
 	$object_dir = "/dsc/data/xtf/data";
 	}
 
+
 if ((scalar(@ARGV) >= 4) && (length($ARGV[3]) > 0)) {
 	$new_and_updated_file = $ARGV[3];
 	}
@@ -639,6 +640,8 @@ sub process_file {
 
 	# If we had data for the last run, write out whether this object
 	# is new or updated.
+    print "=================== at check input_info_file=$input_info_file\n\n";
+
 	if (defined($input_info_file)) {
 		# Write the info in the file.
 		print NEWUPD "$the_dir $the_type $the_file $new_or_updated ",

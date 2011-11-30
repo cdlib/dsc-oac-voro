@@ -164,26 +164,27 @@ if ((scalar(@ARGV) >= 2) && (length($ARGV[1]) > 0)) {
 		$the_date[3]);
 	}
 else {
-	# Get the date of the most recent Friday, or the date today if today
-	# is Friday.
 	undef @summarization_date;
-	for ($i = 0; $i <= 6; $i++) {
-		# Get the date $i days ago.
-		@the_date = localtime(time( ) - ($i * 24 * 60 * 60));
-
-		# If it wasn't a Friday, go another day further back.
-		next unless ($the_date[6] == 5);
-
-		# We found Friday.  Use that date.
-		@summarization_date = ($the_date[5] + 1900, $the_date[4] + 1,
-			$the_date[3]);
-		undef @the_date;
-		last;
-		}
-	unless (@summarization_date) {
-		die "$c:  unable to find the date of the most recent ",
-			"Friday, stopped";
-		}
+	@the_date = localtime(time( ));
+    @summarization_date = ($the_date[5] + 1900, $the_date[4] + 1, $the_date[3]);
+    undef @the_date;
+####	for ($i = 0; $i <= 6; $i++) {
+####		# Get the date $i days ago.
+####		@the_date = localtime(time( ) - ($i * 24 * 60 * 60));
+####
+####		# If it wasn't a Friday, go another day further back.
+####		next unless ($the_date[6] == 5);
+####
+####		# We found Friday.  Use that date.
+####		@summarization_date = ($the_date[5] + 1900, $the_date[4] + 1,
+####			$the_date[3]);
+####		undef @the_date;
+####		last;
+####		}
+####	unless (@summarization_date) {
+####		die "$c:  unable to find the date of the most recent ",
+####			"Friday, stopped";
+####		}
 	}
 
 if ((scalar(@ARGV) >= 3) && (length($ARGV[2]) > 0)) {
@@ -272,11 +273,9 @@ $counts{"ytd-new-mets"} = { };
 $counts{"ytd-updated-ead"} = { };
 $counts{"ytd-updated-mets"} = { };
 
-# Calculate the beginning date of the weekly counts.
-$i = timelocal(0, 0, 12, $summarization_date[2], $summarization_date[1] - 1,
-	$summarization_date[0] - 1900);
-@the_date = localtime($i - (6 * 24 * 60 * 60));
+@the_date = localtime(time() - (7 * 24 * 60 * 60));
 @date_weekly = ($the_date[5] + 1900, $the_date[4] + 1, $the_date[3]);
+print "!!!!!!!!! weekly date: @date_weekly !!!!!!\n\n";
 undef @the_date;
 undef $i;
 
@@ -422,6 +421,7 @@ print SUMM "</body></html>\n";
 close(SUMM);
 
 # Write out the weekly detail files.
+# handle the cases of no new or updated
 foreach $new_or_updated ("new", "updated") {
 	foreach $mets_or_ead ("mets", "ead") {
 		open(SUMM, ">",
@@ -438,46 +438,55 @@ foreach $new_or_updated ("new", "updated") {
 		print SUMM "<table>\n";
 
 		print SUMM "<tr><td colspan=\"4\"><hr/></td></tr>\n";
-		foreach $type_specific (sort keys
-			%{$counts{"weekly-$new_or_updated-$mets_or_ead"}}) {
-			print SUMM "<tr><td>$type_specific</td><td ",
+        my $hash_ref = $counts{"weekly-$new_or_updated-$mets_or_ead"};
+        if (scalar keys ( %$hash_ref ) == 0) {
+            # then write blank and don't bother with the foreach
+            print SUMM "<tr><td>No $new_or_updated $mets_or_ead</td><td ",
 				"colspan=\"3\">&nbsp;</td></tr>\n";
-			foreach (@{$counts{
-				"weekly-$new_or_updated-$mets_or_ead"}
-				{$type_specific}}) {
-				# Use a different URL for EADs than for METS.
-				if ($mets_or_ead eq "ead") {
-					# Determine if the finding aid has
-					# a "<dao>" or "<daogrp>" element
-					$has_dao_or_daogrp =
-						build_report_string($_);
-
-					# URL for EAD.
-					$url = "http://oac.cdlib.org/" .
-						"findaid/$_";
-
-					# Staging URL for EAD.
-					$stage_url = "http://$ENV{'FINDAID_HOSTNAME'}/findaid/$_";
-					}
-				else {
-					# URL for METS.
-					$url = "http://content.cdlib.org/$_";
-
-					# Staging URL for METS.
-					$stage_url = "http://$ENV{'CONTENT_HOSTNAME'}/$_";
-
-					# No asterisk for a METS file.
-					$has_dao_or_daogrp = "&nbsp;";
-					}
-				print SUMM "<tr><td>&nbsp;</td>\n";
-				print SUMM "<td>$has_dao_or_daogrp</td>\n";
-				print SUMM "<td><a href=\"$stage_url\">",
-					"Stage</a></td>\n";
-				print SUMM "<td><a href=\"$url\">$url</a></td>",
-					"</tr>\n";
-				}
-			print SUMM "<tr><td colspan=\"4\"><hr/></td></tr>\n";
-			}
+		    print SUMM "<tr><td colspan=\"4\"><hr/></td></tr>\n";
+        }
+        else {
+    		foreach $type_specific (sort keys
+    			%{$counts{"weekly-$new_or_updated-$mets_or_ead"}}) {
+    			print SUMM "<tr><td>$type_specific</td><td ",
+    				"colspan=\"3\">&nbsp;</td></tr>\n";
+    			foreach (@{$counts{
+    				"weekly-$new_or_updated-$mets_or_ead"}
+    				{$type_specific}}) {
+    				# Use a different URL for EADs than for METS.
+    				if ($mets_or_ead eq "ead") {
+    					# Determine if the finding aid has
+    					# a "<dao>" or "<daogrp>" element
+    					$has_dao_or_daogrp =
+    						build_report_string($_);
+    
+    					# URL for EAD.
+    					$url = "http://oac.cdlib.org/" .
+    						"findaid/$_";
+    
+    					# Staging URL for EAD.
+    					$stage_url = "http://$ENV{'FINDAID_HOSTNAME'}/findaid/$_";
+    					}
+    				else {
+    					# URL for METS.
+    					$url = "http://content.cdlib.org/$_";
+    
+    					# Staging URL for METS.
+    					$stage_url = "http://$ENV{'CONTENT_HOSTNAME'}/$_";
+    
+    					# No asterisk for a METS file.
+    					$has_dao_or_daogrp = "&nbsp;";
+    					}
+    				print SUMM "<tr><td>&nbsp;</td>\n";
+    				print SUMM "<td>$has_dao_or_daogrp</td>\n";
+    				print SUMM "<td><a href=\"$stage_url\">",
+    					"Stage</a></td>\n";
+    				print SUMM "<td><a href=\"$url\">$url</a></td>",
+    					"</tr>\n";
+    				}
+    			print SUMM "<tr><td colspan=\"4\"><hr/></td></tr>\n";
+    		}
+          }
 
 		print SUMM "</table></body></html>\n";
 		close(SUMM);

@@ -81,6 +81,7 @@ $nearby = ($pos > 0) ? substr($0, 0, $pos + 1) : "";
 $nearby = "./" if ($nearby eq "");
 undef $pos;
 
+
 # Examine command line parameters.
 if ((scalar(@ARGV) >= 1) && (length($ARGV[0]) > 0)) {
 	$command_one = $ARGV[0];
@@ -95,8 +96,8 @@ if ((scalar(@ARGV) >= 1) && (length($ARGV[0]) > 0)) {
 else {
 	$command_one_short = "find_new_and_updated.pl";
 	$command_one = $nearby . $command_one_short;
-	$command_one_param = "-";
-	$command_one_param = "";
+    $command_one_param = "-";
+    #$command_one_param = "";
 	}
 
 if ((scalar(@ARGV) >= 2) && (length($ARGV[1]) > 0)) {
@@ -133,6 +134,7 @@ if ((scalar(@ARGV) >= 4) && (length($ARGV[3]) > 0)) {
 else {
 	$log_dir = "/dsc/data/ingest-stats/logs";
 	}
+
 
 # Create the timestamp for the log file(s) for this run.
 @now = localtime( );
@@ -181,6 +183,7 @@ foreach ($command_one, $command_two) {
 if (length($command_one_param) > 0) {
 	$command_one .= " $command_one_param";
 	}
+
 
 # Execute command one, and log its output, if it generated any.
 @command_out = `$command_one 2>&1`;
