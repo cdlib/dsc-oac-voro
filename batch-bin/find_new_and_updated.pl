@@ -640,8 +640,6 @@ sub process_file {
 
 	# If we had data for the last run, write out whether this object
 	# is new or updated.
-    print "=================== at check input_info_file=$input_info_file\n\n";
-
 	if (defined($input_info_file)) {
 		# Write the info in the file.
 		print NEWUPD "$the_dir $the_type $the_file $new_or_updated ",
