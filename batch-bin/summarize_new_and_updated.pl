@@ -187,6 +187,8 @@ else {
 ####		}
 	}
 
+print "+++++THE DATE: @summarization_date\n";
+
 if ((scalar(@ARGV) >= 3) && (length($ARGV[2]) > 0)) {
 	$output_dir = $ARGV[2];
 	}
@@ -236,6 +238,12 @@ else {
 		}
 	}
 
+@the_date = localtime((timelocal(0, 0, 12, $summarization_date[2], $summarization_date[1]-1, $summarization_date[0]-1900))  - (7 * 24 * 60 * 60));
+@date_weekly = ($the_date[5] + 1900, $the_date[4] + 1, $the_date[3]);
+print "!!!!!!!!! weekly date: @date_weekly !!!!!!\n\n";
+undef @the_date;
+undef $i;
+
 # Make sure the command is executable.
 unless (-e $mysql_command) {
 	die "$c:  command \"$mysql_command\" does not exist, stopped";
@@ -272,12 +280,6 @@ $counts{"ytd-new-ead"} = { };
 $counts{"ytd-new-mets"} = { };
 $counts{"ytd-updated-ead"} = { };
 $counts{"ytd-updated-mets"} = { };
-
-@the_date = localtime(time() - (7 * 24 * 60 * 60));
-@date_weekly = ($the_date[5] + 1900, $the_date[4] + 1, $the_date[3]);
-print "!!!!!!!!! weekly date: @date_weekly !!!!!!\n\n";
-undef @the_date;
-undef $i;
 
 # Calculate the beginning date of the "year-to-date" counts.  It is the
 # previous July 1.
