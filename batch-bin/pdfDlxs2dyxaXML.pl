@@ -1,4 +1,4 @@
-#!/bin/env perl
+#!/usr/bin/env perl
 # 
 # Take finished pdf directories and package them for voro.cdlib.org
 $| = 0;

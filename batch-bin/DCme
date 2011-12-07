@@ -1,4 +1,4 @@
-#!/bin/env perl
+#!/usr/bin/env perl
 # new version of METS to DC batch process
 use Data::Dumper;
 use XML::LibXML;
