@@ -11,7 +11,7 @@ def application(environ, start_response):
     call with number param: $BACK_SERVER/wsgi/minark?number=<XXX>
     '''
     status = '200 OK'
-    output = 'Hello World!'
+    output = ''
 
     qs = urlparse.parse_qs(environ['QUERY_STRING'])
     if not qs.has_key("number"): 
