@@ -88,11 +88,11 @@ namespace :sync do
 	task :pullfromproduction do |t|
 		where_am_i = Socket.gethostname
 		case where_am_i
-		when "blake"
+		when "blake", "dscl-dev"
 			# need to allow preview files on -dev
 			cvs_opts = "-v --update --cvs-exclude --links --recursive --times"
 			sh "rsync #{cvs_opts} voro@dsc.cdlib.org:/dsc/data/xtf/ #{ENV['HOME']}/data/xtf"
-		when "leonardo", "davinci"
+		when "leonardo", "davinci", "dscl-stg"
 			# stage should be a clone of production
 			cvs_opts = "-v --delete --cvs-exclude --links --recursive --times"
 			sh "rsync #{cvs_opts} voro@dsc.cdlib.org:/dsc/data/xtf/ #{ENV['HOME']}/data/xtf"
@@ -132,7 +132,7 @@ namespace :xtf do
 
 	desc "Index METS, TEI, EAD with ARKs"
 	task :metsark do |t|
-		sh "#{textIndexer} -rotate -trace debug -index cdl"
+		sh "#{textIndexer} -rotate -index cdl"
 	end
 
 end
