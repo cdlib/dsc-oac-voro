@@ -69,7 +69,7 @@ def main():
     # call dump_django.pl
     
     prog = os.path.join(DIR_EXE, 'dump_django.pl')
-    repodir = os.path.join(DIR_WORKSPACE, DIR_SUB_REPO)
+    repodir = os.path.join(DIR_DATA, DIR_SUB_REPO)
     userfile = os.path.join(DIR_IN, FILE_VOROUSERS)
     groupfile = os.path.join(DIR_IN, FILE_VOROGROUPS) 
     htdigestfile = os.path.join(DIR_APACHE_WEBDAV_CONF, FILE_APACHE_DIGEST)
