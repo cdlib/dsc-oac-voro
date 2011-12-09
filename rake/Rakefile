@@ -22,6 +22,7 @@ ENV['CODEBASE'] = "#{ENV['HOME']}/branches/#{branch}"
 task :default do |t|
 	if not File.exists?("#{ENV['HOME']}"+"/log/skip-sync") then
 		Rake::Task["sync:pullfromproduction"].execute
+        Rake::Task["sync:syncdbwithprod"].execute 
 		Rake::Task["ead:makemets"].invoke
 	end
 	Rake::Task[:DCme].invoke
@@ -107,6 +108,18 @@ namespace :sync do
 		sh "rsync #{cvs_opts} #{production}:/voro/data/oac-ead/remove/ #{ENV['HOME']}/data/in/oac-ead/remove"
 		# sh "rsync #{cvs_opts} #{production}:/voro/XTF/data-nonark/marc/ #{ENV['HOME']}/data/xtf/data/marc"
         end
+
+    desc "sync database from production"
+    task :syncdbwithprod do |t|
+		where_am_i = Socket.gethostname
+		case where_am_i
+		when "blake", "dscl-dev"
+            sh "#{ENV['HOME']}/bin/sync-django-db.py -to_db_key=dev"
+		when "leonardo", "davinci", "dscl-stg"
+            sh "#{ENV['HOME']}/bin/sync-django-db.py -to_db_key=stage"
+		end
+    end
+
 end
 
 # This replaces the DCme TWS shell wrapper
