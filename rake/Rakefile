@@ -113,9 +113,8 @@ namespace :sync do
     task :syncdbwithprod do |t|
 		where_am_i = Socket.gethostname
 		case where_am_i
-		when "blake", "dscl-dev"
+        when "emu", "kiwi" #production machine syncs
             sh "#{ENV['HOME']}/bin/sync-django-db.py -to_db_key=dev"
-		when "leonardo", "davinci", "dscl-stg"
             sh "#{ENV['HOME']}/bin/sync-django-db.py -to_db_key=stage"
 		end
     end
