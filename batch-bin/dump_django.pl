@@ -550,7 +550,7 @@ foreach (@nodes) {
 
 	# Make any directories necessary.
 	$output_repodata_file =~ m|^(.+)/[^/]+$|;
-	mkpath($1, 0, 0755);
+	mkpath($1);
 
 	# Open the output file.
 	open(REPODATA, ">:utf8", $output_repodata_file) ||
