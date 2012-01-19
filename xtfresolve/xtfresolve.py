@@ -115,8 +115,8 @@ def application(environ, start_response):
     else:
         # what to do if node list len > 1?
         fileurl = re.sub('\s', '+', node[0])
-        # replace host with CDN_HOSTNAME
-        fileurl = re.sub(r'http://.+\.cdlib\.org/', ''.join(('http://', os.environ['CDN_HOSTNAME'], '/')), fileurl)
+        # replace host with CDN_BEAR_FOR
+        fileurl = re.sub(r'http://.+\.cdlib\.org/', ''.join(('http://', os.environ['CDN_BEAR_FOR'], '/')), fileurl)
     output = fileurl
     status = '302 Found'
     response_headers = [('Location', fileurl),
