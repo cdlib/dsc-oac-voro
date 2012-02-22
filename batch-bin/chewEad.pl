@@ -97,6 +97,7 @@ if ($eadid && ($kidcount == $pkidcount)) {
 	#The number of arks does not match, but all the new arks are in
 	# the <dao>'s
 	# !! need to check that output file is writable before minting arks
+        die ("no more ead extraction");
 	my (@npois) = mintbatch($kidcount);
 	#print Dumper @npois;
 	$cdlprime = cdlToCdlprime($ARGV[0], $results, $title, $cdlpathref, $eadid, @npois);	
@@ -169,21 +170,19 @@ sub mintbatch {
         for (my $i = 0; $i < $size; $i++) {
                 my $string = lwpMint();
                 #push @return, "ark:/$string" ."a";
-                push @return, "ark:/$string";
+                push @return, "$string";
         }
         return @return;
 }
 
 sub lwpMint {
       my $ua = LWP::UserAgent->new;
-      my $req = HTTP::Request->new(GET => 'http://ark.cdlib.org/cgi/poi/kt7.cgi?mint(1)');
-      #my $req = HTTP::Request->new(GET => 'http://ark-dev.cdlib.org:8084/foo');
-      $req->authorization_basic('tingle', $ARGV[1] );
+      my $back_server = $ENV{'BACK_SERVER'};
+      my $req = HTTP::Request->new(GET => $back_server + '/wsgi/mintark?number=1');
          my $request = $ua->request($req);
         die unless ($request->code == "200");
       my $newpoi = $request->content;
       $newpoi =~ s,\n,,;
-        #$newpoi = "ark:/$newpoi";
        return $newpoi;
 }
 
