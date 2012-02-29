@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl
+#!/usr/bin/env perl
 ##===============================================================##
 ## Program name:   template                                      ##
 ## Version:        2.0d                                          ##
@@ -62,7 +62,7 @@ $ExtensionDir = 'extensions';
 
 ## The following can be set to test this script on the command-line
 
-#$TestURL = 'http://sunsite/cgi-bin/template/ead/bancroft?submit=1';
+# $TestURL = 'http://sunsite/cgi-bin/template/oacead/clart';
 
 ##==============================================##
 ## Main program                                 ##
@@ -776,7 +776,7 @@ sub ParseUrl {
 	}
 	$config_file = "$TemplateDir/$config_file.cfg";
 	
-	$SystemVariables{_SCRIPT_URL}    = "http://$server$script";
+	$SystemVariables{_SCRIPT_URL}    = "$script";
 	$SystemVariables{_PATH_INFO}     = $pathinfo;
 	$SystemVariables{_TEMPLATE_FILE} = $template_name;
 	$SystemVariables{_FULL_URL}      = "$script$pathinfo";
