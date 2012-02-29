@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>voroEAD</title>
+<link rel="stylesheet" href="http://www.cdlib.org/styles/insidecdl-basic.css" type="text/css" />
+<link rel="stylesheet" href="http://www.cdlib.org/styles/insidecdl-print.css" type="text/css" media="print" />
+</head>
+<body>
+<style>
+    UL { list-style: none}
+</style>
+<div class="box-wrap">
+<h1><em>voro</em>EAD Testing: Select a File for Processing</h1>
+<p>
+Welcome <TMPL_VAR NAME="USER_NAME">
+ to <em>voro</em>EAD Testing!  Select a file for 
+processing:
+</p>
+<TMPL_UNLESS NAME="ISDIR">
+<form method="POST">
+</TMPL_UNLESS>
+<p>
+<ul class="none">
+<TMPL_LOOP NAME=LISTING>
+<li><TMPL_VAR NAME="ITEM"></li>
+</TMPL_LOOP>
+</ul>
+</p>
+
+<TMPL_UNLESS NAME="ISDIR">
+<input type="submit">
+</form>
+</TMPL_UNLESS>
+<p>
+<b>Questions? Contact us at: </b><a href="mailto:oacops@cdlib.org">oacops@cdlib.org</a>
+</p>
+</div>
+</body>
+</html>
+

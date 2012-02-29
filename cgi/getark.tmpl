@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>voroEAD</title>
+<link rel="stylesheet" href="http://www.cdlib.org/styles/insidecdl-basic.css" type="text/css" />
+<link rel="stylesheet" href="http://www.cdlib.org/styles/insidecdl-print.css" type="text/css" media="print" />
+</head>
+<body>
+<style>
+    UL { list-style: none}
+</style>
+<div class="box-wrap">
+<div class="header"><div class="header-column-one"><a href="http://www.cdlib.org/inside/"><img src="http://www.cdlib.org/images/banner.inside.gif" alt="Inside CDL" width="176" height="25" border="0" /></a> </div>
+<div class="header-column-two"><img src="http://www.cdlib.org/images/spacer.gif" alt="" width="1" height="20" border="0" /><a class="topnav" href="http://www.cdlib.org/inside/">Inside CDL Home</a> | <a class="topnav" href="http://www.cdlib.org/">CDL Home</a> | <a class="topnav" href="http://www.cdlib.org/inside/search/">Search</a> | <a class="topnav" href="http://www.cdlib.org/inside/contact/">Contact the CDL</a></div> 
+</div><div class="breadcrumb"><a href="http://www.cdlib.org/inside/diglib/">Digital Library Building Blocks</a> &gt; <a href="http://www.oac.cdlib.org/ingest/">Submitting and Editing Finding Aids</a> &gt; <em>voro</em>EAD</div><div class="doc-body">
+<h1><em>voro</em>EAD Production: get ARK(s)</h1>
+<p>
+Welcome <TMPL_VAR NAME="USER_NAME">
+ to <em>voro</em>EAD get ARK(s)
+</p>
+<p>
+select a file to get a list of ARKs
+<TMPL_UNLESS NAME="ISDIR">
+<form method="POST">
+</TMPL_UNLESS>
+<p>
+<ul class="none">
+<TMPL_LOOP NAME=LISTING>
+<li><TMPL_VAR NAME="ITEM"></li>
+</TMPL_LOOP>
+</ul>
+</p>
+
+<TMPL_UNLESS NAME="ISDIR">
+<input type="submit">
+</form>
+</TMPL_UNLESS>
+<p>
+</div>
+<div class="footer"><a href="http://www.oac.cdlib.org/help/help_affiliates.cgi">OAC Contributing Members: Questions? Comments?</a><br /><br />
+Copyright &copy; 2003 The Regents of the University of California<br /><br />
+</div>
+</div>
+</body>
+</html>
+
