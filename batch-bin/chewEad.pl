@@ -178,9 +178,10 @@ sub mintbatch {
 sub lwpMint {
       my $ua = LWP::UserAgent->new;
       my $back_server = $ENV{'BACK_SERVER'};
-      my $req = HTTP::Request->new(GET => $back_server + '/wsgi/mintark?number=1');
-         my $request = $ua->request($req);
-        die unless ($request->code == "200");
+      my $url = 'http://' . $back_server . '/wsgi/mintark?number=1';
+      my $req = HTTP::Request->new(GET => $url);
+      my $request = $ua->request($req);
+      die unless ($request->code == "200");
       my $newpoi = $request->content;
       $newpoi =~ s,\n,,;
        return $newpoi;
