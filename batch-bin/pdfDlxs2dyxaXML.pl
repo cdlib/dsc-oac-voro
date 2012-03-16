@@ -87,8 +87,8 @@ sub do_it {
 
 		# copy PDF file from /voro/data/oac-ead/pdf/ to /voro/XTF/
 		# copy PDF from OACDATA to DYNAXML
-		my $cmd = "/usr/bin/cp -p $match $pdf_dest";
-		#print "$cmd\n";
+		my $cmd = "/bin/cp -p $match $pdf_dest";
+		print "$cmd\n";
 		#print `$cmd`;
 		system($cmd);
 	}
