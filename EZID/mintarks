@@ -1,0 +1,10 @@
+#! /usr/bin/sh
+
+if [ $# -ne  1 ]
+then
+    echo "Usage: mintarks <number_of_arks_to_mint>"
+    exit 10
+fi
+
+curl http://${BACK_SERVER}/wsgi/mintark?number=$1
+echo ""
