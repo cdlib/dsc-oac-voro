@@ -1,4 +1,4 @@
-#!/bin/env perl -w
+#!/usr/bin/env perl
 # voroBASIC: getMETS.pl
 
 use strict;
@@ -48,7 +48,7 @@ use XML::LibXSLT;
 use Carp;
 use Data::Dumper;
 use Storable;
- $Storable::interwork_56_64bit = 1 ; 
+# $Storable::interwork_56_64bit = "ture"; 
 
 
 

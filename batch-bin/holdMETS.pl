@@ -1,4 +1,4 @@
-#!/bin/env perl
+#!/usr/bin/env perl
 # saxon /voro/out/thb5199n6zz/hb5199n6zz.mets.xml removedUp.xslt voroOut='yes'
 #com.icl.saxon.StyleSheet
 
