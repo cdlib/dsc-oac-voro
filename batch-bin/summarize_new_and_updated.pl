@@ -845,7 +845,7 @@ sub load_dao_or_daogrp_info {
 				"\"$ead_file_name\", but ",
 				"\"getValue( )\" return \"undef\" ,stopped";
 			}
-		unless ($ead_ark_number =~ m|^ark:/\d+/[a-z0-9]+$|) {
+		unless ($ead_ark_number =~ m|^ark:/\d+/[a-z0-9]+/*$|) {
 			die "$c:  the format of the ARK number ",
 				"(\"/ead/eadheader/eadid/\@identifier\") in ",
 				"\"$ead_file_name\" ",
