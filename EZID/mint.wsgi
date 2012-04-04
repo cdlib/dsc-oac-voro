@@ -26,7 +26,7 @@ def application(environ, start_response):
         else:
             newarks = DSC_EZID_minter.main(num)
             for ark in newarks:
-                output = '\n'.join([output, ark,])
+                output = ''.join([output, ark, '\n'])
     response_headers = [('Content-type', 'text/plain'),
                                     ('Content-Length', str(len(output)))]
     start_response(status, response_headers)
