@@ -32,7 +32,7 @@ def application(environ, start_response):
                     metadata = {'_profile':'dc', '_coowners': 'ucblibrary'})
             for ark in newarks:
                 #make call to ezid to create co-owner
-                output = ''.join([output, ark, '\n'])
+                output = ''.join([output, ark[5:], '\n'])
     response_headers = [('Content-type', 'text/plain'),
                                     ('Content-Length', str(len(output)))]
     start_response(status, response_headers)
