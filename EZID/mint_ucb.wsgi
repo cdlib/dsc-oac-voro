@@ -6,7 +6,6 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 import DSC_EZID_minter
 
 SHOULDER_UCB_DSC = 'ark:/13030/k6'
-SHOULDER_UCB_DSC = 'ark:/99999/fk4'
 
 def application(environ, start_response):
     '''WSGI wrapper for the DSC_EZID_minter. This is currently only accesible
