@@ -184,5 +184,5 @@ end
 
 desc "tar up the index async for TSM"
 task "tar-index" do |t|
-    sh "/usr/bin/tar cf /dsc/indexes/xtf.backup.tar /dsc/branches/production/xtf/index/ &"
+    sh "/bin/tar cf /dsc/indexes/xtf.backup.tar /dsc/branches/production/xtf/index/ &"
 end
