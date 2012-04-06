@@ -106,7 +106,7 @@ def main():
     davfile = file(davfilename)
     lines = davfile.readlines()
     davfile.close()
-    dirlines = [l.strip() for l in lines if l.find("<Directory /voro/data/oac-ead") == 0]
+    dirlines = [l.strip() for l in lines if l.find("<Directory " + HOME + "/data/oac-ead") == 0]
     #Change made to add marc & ead-pdf on 20100427 necessitated change below
     #now use the full directory listing in the DAV.conf to create directories
     #NOTE: The one wrinkle is that the production dir is not a DAV dir,
