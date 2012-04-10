@@ -21,14 +21,14 @@ HOME = os.environ['HOME']
 
 #setup some globals for file locations and names
 DIR_EXE = HOME + '/branches/production/voro/batch-bin/'
-DIR_DATA = HOME + '/data/in/oac-ead/'
+DIR_DATA_IN = HOME + '/data/in/oac-ead/'
 DIR_WORKSPACE = HOME + '/workspace/'
 DIR_IN = HOME + '/users/in/'
 DIR_APACHE_WEBDAV_CONF = HOME + '/users/apache/'
 DIR_EAD_TEST = HOME + '/workspace/test-oac/submission'
-#subdirs for data, from DIR_DATA root path
+#subdirs for data, from DIR_DATA_IN root path
 DIR_SUB_REPO = 'repodata'
-DIR_SUB_SUBMISSION = DIR_DATA + 'submission'
+DIR_SUB_SUBMISSION = DIR_DATA_IN + 'submission'
 #DIR_SUB_EAD_PRODUCTION = 'prime2002'
 DIR_LOGGING = HOME + '/log/update_voroEAD/'
 
@@ -69,7 +69,7 @@ def main():
     # call dump_django.pl
     
     prog = os.path.join(DIR_EXE, 'dump_django.pl')
-    repodir = os.path.join(DIR_DATA, DIR_SUB_REPO)
+    repodir = os.path.join(DIR_DATA_IN, DIR_SUB_REPO)
     userfile = os.path.join(DIR_IN, FILE_VOROUSERS)
     groupfile = os.path.join(DIR_IN, FILE_VOROGROUPS) 
     htdigestfile = os.path.join(DIR_APACHE_WEBDAV_CONF, FILE_APACHE_DIGEST)
@@ -101,12 +101,12 @@ def main():
     # DAV.conf xml with ElementTree, but that is only included in python 2.5+
     # so I just do some string matching
     
-    # first get all lines that have <Directory /voro/data/oac-ead in them
+    # first get all lines that have <Directory /voro/data/in/oac-ead in them
     davfilename = os.path.join(DIR_APACHE_WEBDAV_CONF, FILE_APACHE_DAV_CONF)
     davfile = file(davfilename)
     lines = davfile.readlines()
     davfile.close()
-    dirlines = [l.strip() for l in lines if l.find("<Directory " + HOME + "/data/oac-ead") == 0]
+    dirlines = [l.strip() for l in lines if l.find("<Directory ") == 0]
     #Change made to add marc & ead-pdf on 20100427 necessitated change below
     #now use the full directory listing in the DAV.conf to create directories
     #NOTE: The one wrinkle is that the production dir is not a DAV dir,
@@ -129,7 +129,7 @@ def main():
             	print "Creating dir:%s" % proddir
             	os.makedirs(proddir)
                 created = True
-            testdir = d.replace('data/oac-ead', 'workspace/test-oac')
+            testdir = d.replace('data/in/oac-ead', 'workspace/test-oac')
             if not os.path.isdir(testdir):
             	logging.info( "Creating dir:%s" % testdir)
             	print "Creating dir:%s" % testdir
