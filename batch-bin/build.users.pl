@@ -87,12 +87,12 @@ sub apachelocation {
 	require group $group $altgroup caoiucdl
 	</LimitExcept>
 </Directory>
-<Directory $home/data/oac-ead/in/marc/$directory>
+<Directory $home/data/in/oac-ead/marc/$directory>
 	<LimitExcept OPTIONS GET>
 	require group $group $altgroup caoiucdl
 	</LimitExcept>
 </Directory>
-<Directory $home/data/oac-ead/in/user-pdf/$directory>
+<Directory $home/data/in/oac-ead/user-pdf/$directory>
 	<LimitExcept OPTIONS GET>
 	require group $group $altgroup caoiucdl
 	</LimitExcept>
