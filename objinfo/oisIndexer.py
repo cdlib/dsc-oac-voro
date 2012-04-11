@@ -14,9 +14,13 @@ import glob
 import csv
 import re
 import MySQLdb
+import logging
 from config_reader import read_config
 
 DEBUG = os.environ.get('DEBUG', False)
+if DEBUG:
+    logging.basicConfig(level=logging.DEBUG)
+
 HOME = os.environ['HOME']
 DB_KEY = os.environ['DSC_DATABASE']+'-ro'
 
@@ -134,6 +138,8 @@ def parse_findingaid(findingaid):
         if id_obj is not None:
             ark_daos.append(id_obj)
     return ark_findingaid, ark_parent, ark_grandparent, ark_daos
+class DBLookupError(Exception):
+    pass
 
 def add_ark_to_db(ark_findingaid, ark_parent, ark_grandparent=None, ark_daos=None):
     # ark_parent is the contributing inst
@@ -145,10 +151,18 @@ def add_ark_to_db(ark_findingaid, ark_parent, ark_grandparent=None, ark_daos=Non
                               )
     c = conn.cursor()
     c.execute("""SELECT name, id, parent_institution_id from oac_institution where ark=%s""", (ark_parent,))
-    inst_name, inst_id, grandparent_id = c.fetchone()
+    row = c.fetchone()
+    if row is None:
+        logging.error('++++++++ OIS Could not find Django institution for inst ARK:%s found in EAD ARK:%s' % (ark_parent, ark_findingaid))
+        raise DBLookupError('++++++++ OIS Could not find Django institution for inst ARK:%s found in EAD ARK:%s' % (ark_parent, ark_findingaid))
+    inst_name, inst_id, grandparent_id = row
     if not ark_grandparent and grandparent_id:
         c.execute("""SELECT ark from oac_institution where id = %s""", (grandparent_id,))
-        ark_grandparent = c.fetchone()[0]
+        row = c.fetchone()
+        if row is None:
+            logging.error('++++++++ OIS Could not find Django institution for grandparent ID:%d, from institution: %s ID:%d' % (grandparent_id, inst_name, inst_id))
+            raise DBLookupError('++++++++ OIS Could not find Django institution for grandparent ID:%d, from institution: %s ID:%d' % (grandparent_id, inst_name, inst_id))
+        ark_grandparent = row[0]
     conn.close()
 
     conn = sqlite.connect(DB_FILE)
@@ -185,44 +199,52 @@ def load_findingaid(findingaid):
     ark_findingaid, ark_parent, ark_grandparent, ark_daos = parse_findingaid(findingaid)
     add_ark_to_db(ark_findingaid, ark_parent, ark_grandparent, ark_daos)
     if DEBUG:
-        print "Added %s : ark_EAD:%s" % (findingaid, ark_findingaid)
+        logging.debug("Added %s : ark_EAD:%s" % (findingaid, ark_findingaid))
         for a in ark_daos:
-            print '++++ DAO in EAD %s - %s' % (ark_findingaid, a)
-        sys.stdout.flush()
+            logging.debug('++++ DAO in EAD %s - %s' % (ark_findingaid, a))
 
 def process_findingaids():
     # use os.walk to recurse, open any .xml files & parse with ET
+    retcode = 0
     for dirpath, dirs, files in os.walk(DIR_ROOT):
         if files:
             for foo in files:
                 filepath = os.path.join(dirpath, foo)
                 if isXMLfile(filepath):
-                    load_findingaid(filepath)
+                    try:
+                        load_findingaid(filepath)
+                    except DBLookupError:
+                        retcode += 1
+    return retcode
 
 def process_orphans():
     '''Add 'orphan' texts to the object service. This reads any *.orphans files
     in the orphans directory and parses the csv separated lising of
     object ark, parent inst ark. It then create entries in the sqlite db.
     '''
+    retcode = 0
     foo_orphans = glob.glob(DIR_ORPHANS+'*.orphans')
     for f in foo_orphans:
-        if DEBUG:
-            print f
+        logging.debug(f)
         fh = open(f,'r')
         reader = csv.reader(fh)
         for row in reader:
-            if DEBUG:
-                print '+++ ADD ORPHAN:', row[0], ':', row[1]
-            add_ark_to_db(row[0], row[1])
+            logging.debug(''.join(('+++ ADD ORPHAN:', row[0], ':', row[1])))
+            try:
+                add_ark_to_db(row[0], row[1])
+            except DBLookupError:
+                retcode += 1
         fh.close()
+    return retcode
 
 if __name__=="__main__":
     time_start = datetime.datetime.now()
     print "OIS Indexer PID: %d started at: %s " % (os.getpid(), time_start,)
     sys.stdout.flush()
-    process_findingaids()
-    process_orphans()
+    exit_code  = process_findingaids()
+    exit_code += process_orphans()
     time_finish = datetime.datetime.now()
     time_delta = time_finish - time_start
     print "OIS Finished indexing digital objects"
     print "Started:%s Finished:%s Elapsed:%s" % (time_start, time_finish, time_delta)
+    sys.exit(exit_code)
