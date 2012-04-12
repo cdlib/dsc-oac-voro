@@ -14,17 +14,20 @@ def application(environ, start_response):
     output = ''
 
     qs = urlparse.parse_qs(environ['QUERY_STRING'])
-    if not qs.has_key("number"): 
+    shoulder = None
+    if qs.has_key('shoulder'):
+        shoulder = qs['shoulder'][0]
+    if not qs.has_key('number'): 
         status = '400 NO NUMBER'
         output = '<h1>Missing number of arks to mint</h1>'
     else:
         try:
-            num = int(qs["number"][0])
+            num = int(qs['number'][0])
         except ValueError:
             status = '400 BAD NUMBER'
             output = '<h1>Number parameter must be an integer</h1>'
         else:
-            newarks = DSC_EZID_minter.main(num)
+            newarks = DSC_EZID_minter.main(num, shoulder=shoulder)
             for ark in newarks:
                 output = ''.join([output, ark, '\n'])
     response_headers = [('Content-type', 'text/plain'),
