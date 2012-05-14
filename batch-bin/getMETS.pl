@@ -143,6 +143,13 @@ for (@ARGV) {
 	my $profile = $xc->findvalue("/mets:mets/\@PROFILE");
 	my ($typeNode) = $xc->findnodes('/mets:mets/@TYPE');
 	$type =~ s, ,+,gs;
+        print "...";
+	# profile assigment for CAVPP
+        if ( $profile eq '' and  ( $type eq 'MovingImage' or $type eq 'Sound' ) ) {
+                $root->setAttribute('PROFILE', 'pamela://year1' );
+                $profile = 'pamela://year1';
+        }
+	# type tweaking
 	if ($type eq "item") { 
 		my $modsType = $xc->findvalue('/mets:mets/mets:dmdSec/mets:mdWrap[@MDTYPE="MODS"][1]/mets:xmlData//*[local-name()="typeOfResource"][1]');
 		#print STDERR $modsType;
@@ -152,8 +159,8 @@ for (@ARGV) {
 			$type = "image collection";
 		}
 	}
-
-	if ($type eq "still+image" or $type="mixed+media") {
+	# tei object scructure tests
+	if ($type eq "still+image" or $type eq "mixed+media") {
 		my $structLook = $xc->findvalue
                 	("count(//mets:fileGrp[starts-with(\@USE,'thumbnail') or \@USE='image/thumbnail'][1]/mets:file)");
 		my $structLookTei = $xc->findvalue
@@ -187,6 +194,7 @@ for (@ARGV) {
 			$type = "facsimile text" 
 		}
 	}
+        print Dumper $type, $profile;
 
 	# figure out file names
 	# - something/data/rt/arkpart/ = BASE directory for object
@@ -349,6 +357,8 @@ for (@ARGV) {
 		harvestFileNode(\$xc, \$context, \$ark, \$cacheInfo, $filesBaseName, $objectBaseName, $_);
 	}
 
+
+
 	# okay, now we are almost done! 
 	# final cleanup on the METS
 
@@ -393,13 +403,22 @@ for (@ARGV) {
 		$buff = $teiBuff;
 	}
 
-	#print STDERR "$type: $buff\n";;
+	print STDERR "$type: $buff\n";;
 
 	my $results;
 
-	if ( $profile eq "http://www.loc.gov/mets/profiles/00000010.xml") {
+
+        print Dumper $profile;
+
+	# this profile uses the "native" structmap
+	if ( $profile eq "http://www.loc.gov/mets/profiles/00000010.xml" ) {
 		$root->setAttribute("xmlns:cdl", "http://www.cdlib.org/");
 		addInfo($xc);
+		$results = $doc;
+	# structMap pretty usless here
+	} elsif ($profile eq 'pamela://year1') {
+
+		cavppClean($xc, $objectBaseDir, $type);
 		$results = $doc;
 	} elsif ( $profile eq "Archivists' Toolkit Profile" ) {
 		my $trimStyle = $parser->parse_file($trimXslt);
@@ -878,6 +897,28 @@ sub mime2ext {
 		$ext = $1;
 	}
 	return $ext;
+}
+
+# pamela://year1
+sub cavppClean {
+  my ($xc, $objectBaseDir, $type) = @_;
+  #     <mets:dmdSec ID="DMD1">
+  my $fileid = $xc->findvalue("/mets:mets/mets:structMap/mets:div/mets:fptr[position()=last()]/\@FILEID");
+  my $ia_id = $xc->findvalue(
+    "/mets:mets/mets:dmdSec[\@ID='DMD1']/mets:mdWrap/mets:xmlData/*[local-name()='identifier'][1]"
+  );
+  ## my $ia_id;
+  ## $urlRewrit =~ m,download/([a-z]+_[0-9]+)/,;
+  ## $ia_id = $1;
+  if ($type ne 'Sound') {
+    my $video_link = "http://archive.org/download/$ia_id/$fileid";
+    my $thumbnail_link = $video_link;
+    $thumbnail_link =~ s,\.[^.]+$,.gif,;
+    my $req = HTTP::Request->new(GET => $thumbnail_link);
+    my $outfile = "$objectBaseDir/files/thumbnail.gif";
+    print $outfile;
+    my $res = $ua->get($thumbnail_link, ':content_file', $outfile);
+  }
 }
 
 sub addInfo {
