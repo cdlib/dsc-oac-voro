@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt3489q8j0" LABEL="Merry Few Dramatic Club" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d4076">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_170</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_170</dc:identifier>
+            <dc:title>Merry Few Dramatic Club</dc:title>
+            <dc:creator>Unknown</dc:creator>
+            <dc:date>1896</dc:date>
+            <dc:subject>Drama clubs</dc:subject>
+            <dc:subject>Costumes</dc:subject>
+            <dc:subject>Stages (Platforms)</dc:subject>
+            <dc:subject>People</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 photographic print; 21.4 x 13.2 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>Merry Few Dramatic Club (Firm)</dc:subject>
+            <dc:subject>Dickie, George, Jr.</dc:subject>
+            <dc:subject>Dickie, Alex</dc:subject>
+            <dc:subject>Worden, Gladys</dc:subject>
+            <dc:subject>Paulin, Clara</dc:subject>
+            <dc:subject>Dickie, Mrs. Alex</dc:subject>
+            <dc:subject>Mead, William</dc:subject>
+            <dc:subject>Carrick, Ella</dc:subject>
+            <dc:subject>Dickie, Mrs. George, Jr.</dc:subject>
+            <dc:coverage>San Mateo (Calif.))</dc:coverage>
+            <dc:description>Merry Few Dramatic Club, taken about 1896.  L to R: George Dickie, Jr.; Alex Dickie; Gladys Worden; Clara Paulin (later Mrs. Alex Dickie); William Mead; Ella Carrick (later Mrs. George Dickie, Jr.). The scene was taken in the Library Hall. The club are in costume, on stage in a posed photograph.</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d4079">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e15905">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/j0/kt3489q8j0/files/kt3489q8j0-d3e15905.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e15909">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/j0/kt3489q8j0/files/kt3489q8j0-d3e15909.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e15897" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_170.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e15895" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_170.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d4080" DMDID="DC" LABEL="Merry Few Dramatic Club">
+         <mets:div ID="d4081" TYPE="thumbnail image">
+            <mets:fptr ID="d4082" FILEID="d3e15905"/>
+         </mets:div>
+         <mets:div ID="d4083" TYPE="reference image">
+            <mets:fptr ID="d4084" FILEID="d3e15909"/>
+         </mets:div>
+         <mets:div ID="d4085" TYPE="archive image">
+            <mets:fptr ID="d4086" FILEID="d3e15897"/>
+         </mets:div>
+         <mets:div ID="d4087" TYPE="archive image">
+            <mets:fptr ID="d4088" FILEID="d3e15895"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

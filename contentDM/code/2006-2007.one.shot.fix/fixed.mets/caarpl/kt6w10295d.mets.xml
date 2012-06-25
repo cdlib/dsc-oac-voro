@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt6w10295d" LABEL="Boat House and Lake at Lucky Baldwin's Ranch, Santa Anita, Cal." TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d3149">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_163</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_163</dc:identifier>
+            <dc:title>Boat House and Lake at Lucky Baldwin's Ranch, Santa Anita, Cal.</dc:title>
+            <dc:creator>unknown</dc:creator>
+            <dc:date>circa 1893</dc:date>
+            <dc:subject>Ranches--California</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 black and white photographic print; 16 x 25 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use.</dc:rights>
+            <dc:subject>Los Angeles County Arboretum and Botanical Garden</dc:subject>
+            <dc:coverage>Arcadia (Calif.); Rancho Santa Anita (Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:identifier>878A</dc:identifier>
+            <dc:description>Looking east toward boat house.  Two men can be seen standing at either side of entrance to boat house and a man and a lady can be seen in a row boat on lake.  Boat house was reportedly built c. 1891 by E.H. Gorrill of Sierra Madre.  It was destroyed on December 26, 1969 in a fire spawned by a smoldering cigarette and fanned by Santa Anita winds.</dc:description>
+            <dc:source>Arcadia Public Library Image Archives</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d3152">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e12263">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/5d/kt6w10295d/files/kt6w10295d-d3e12263.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e12267">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/5d/kt6w10295d/files/kt6w10295d-d3e12267.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e12255" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_163.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e12253" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_163.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d3153" DMDID="DC" LABEL="Boat House and Lake at Lucky Baldwin's Ranch, Santa Anita, Cal.">
+         <mets:div ID="d3154" TYPE="thumbnail image">
+            <mets:fptr ID="d3155" FILEID="d3e12263"/>
+         </mets:div>
+         <mets:div ID="d3156" TYPE="reference image">
+            <mets:fptr ID="d3157" FILEID="d3e12267"/>
+         </mets:div>
+         <mets:div ID="d3158" TYPE="archive image">
+            <mets:fptr ID="d3159" FILEID="d3e12255"/>
+         </mets:div>
+         <mets:div ID="d3160" TYPE="archive image">
+            <mets:fptr ID="d3161" FILEID="d3e12253"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

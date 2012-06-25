@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt3j49q9fj" LABEL="Faculty Stand at Entrance of Arcadia Grammar School" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d3437">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_179</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_179</dc:identifier>
+            <dc:title>Faculty Stand at Entrance of Arcadia Grammar School</dc:title>
+            <dc:creator>unknown</dc:creator>
+            <dc:date>1921-1922</dc:date>
+            <dc:subject>Public schools--California--Arcadia</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 black and white photographic print; 18 x 28 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use.</dc:rights>
+            <dc:subject>Anderson, Elsie</dc:subject>
+            <dc:subject>Arcadia Grammar School (Arcadia, Calif.)</dc:subject>
+            <dc:subject>Arcadia Unified School District--History</dc:subject>
+            <dc:subject>Benham, Grace</dc:subject>
+            <dc:subject>Clark, Reed</dc:subject>
+            <dc:subject>First Avenue Junior Middle School (Arcadia, Calif.)--History</dc:subject>
+            <dc:subject>Hoegee, Martha</dc:subject>
+            <dc:subject>Ireland, Max</dc:subject>
+            <dc:subject>Loyacano, Domenica</dc:subject>
+            <dc:subject>McMillen, Elvira</dc:subject>
+            <dc:subject>Neher, Elmer</dc:subject>
+            <dc:coverage>Arcadia (Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:identifier>568</dc:identifier>
+            <dc:description>Group of eight women and three men standing at entrance of Arcadia Grammar School, which later became First Avenue Junior High School.  As identified in 1979 by Mr. Walters (82 year old former principal), left to right: 1. Reed Clark  4. Grace Benham  5. Martha Hoegee  6. Elvira McMillen  8. Elsie Anderson  9. Max Ireland  10. Elmer Neher.  Back row #11. Domenica Loyacano. Not identified: #2,3,7.</dc:description>
+            <dc:source>Arcadia Public Library Image Archives</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d3440">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e13334">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/fj/kt3j49q9fj/files/kt3j49q9fj-d3e13334.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e13338">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/fj/kt3j49q9fj/files/kt3j49q9fj-d3e13338.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e13326" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_179.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e13324" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_179.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d3441" DMDID="DC" LABEL="Faculty Stand at Entrance of Arcadia Grammar School">
+         <mets:div ID="d3442" TYPE="thumbnail image">
+            <mets:fptr ID="d3443" FILEID="d3e13334"/>
+         </mets:div>
+         <mets:div ID="d3444" TYPE="reference image">
+            <mets:fptr ID="d3445" FILEID="d3e13338"/>
+         </mets:div>
+         <mets:div ID="d3446" TYPE="archive image">
+            <mets:fptr ID="d3447" FILEID="d3e13326"/>
+         </mets:div>
+         <mets:div ID="d3448" TYPE="archive image">
+            <mets:fptr ID="d3449" FILEID="d3e13324"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

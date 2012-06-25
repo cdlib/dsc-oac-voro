@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt3h4nd3fd" LABEL="Studio Portrait of Anita M. Baldwin" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d3581">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_187</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_187</dc:identifier>
+            <dc:title>Studio Portrait of Anita M. Baldwin</dc:title>
+            <dc:creator>unknown</dc:creator>
+            <dc:date>1927</dc:date>
+            <dc:subject>Portraits</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 black and white photographic print; 34 x 25 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:subject>Baldwin, Anita, 1876-1939</dc:subject>
+            <dc:coverage>Arcadia (Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:identifier>724</dc:identifier>
+            <dc:description>Studio portrait of Anita M.Baldwin looking to the right.  It has been inscribed in Anita's hand: To Coombsie from Lady Ann.</dc:description>
+            <dc:source>Arcadia Public Library Image Archives</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d3584">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e13875">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/fd/kt3h4nd3fd/files/kt3h4nd3fd-d3e13875.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e13879">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/fd/kt3h4nd3fd/files/kt3h4nd3fd-d3e13879.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e13867" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_187.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e13865" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_187.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d3585" DMDID="DC" LABEL="Studio Portrait of Anita M. Baldwin">
+         <mets:div ID="d3586" TYPE="thumbnail image">
+            <mets:fptr ID="d3587" FILEID="d3e13875"/>
+         </mets:div>
+         <mets:div ID="d3588" TYPE="reference image">
+            <mets:fptr ID="d3589" FILEID="d3e13879"/>
+         </mets:div>
+         <mets:div ID="d3590" TYPE="archive image">
+            <mets:fptr ID="d3591" FILEID="d3e13867"/>
+         </mets:div>
+         <mets:div ID="d3592" TYPE="archive image">
+            <mets:fptr ID="d3593" FILEID="d3e13865"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

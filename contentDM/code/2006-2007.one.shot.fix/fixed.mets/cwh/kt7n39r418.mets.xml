@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt7n39r418" LABEL="Arthur Reed's Home" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:09.112-07:00" LASTMODDATE="2008-07-18T16:13:09.112-07:00" RECORDSTATUS="NEW" ID="d860">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>cwh_052</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:09.112-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>cwh_052</dc:identifier>
+            <dc:title>Arthur Reed's Home</dc:title>
+            <dc:creator>Unknown;</dc:creator>
+            <dc:date>1895</dc:date>
+            <dc:subject>Dwellings</dc:subject>
+            <dc:subject>California</dc:subject>
+            <dc:subject>Whittier</dc:subject>
+            <dc:type>image;</dc:type>
+            <dc:type>Photographs;</dc:type>
+            <dc:format>1 photographic print; 9.5 in x 7.5 in</dc:format>
+            <dc:publisher>Whittier Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt1b69q44j</dc:relation>
+            <dc:rights>unknown;</dc:rights>
+            <dc:rights>Copyright status unknown.  Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.).  In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks.  Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners.  Works not in the public domain cannot be commercially exploited without permission of the copyright owner.  Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:subject>Reed, Arthur</dc:subject>
+            <dc:coverage>Whittier (Calif.);</dc:coverage>
+            <dc:language>eng;</dc:language>
+            <dc:description>Arthur Reed's home in 1895 located across the street from the Simon Murphy residence on College Ave.</dc:description>
+            <dc:source>Selected photograph from the Whittier History Room photograph collection.</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt1b69q44j" LABEL="Whittier Public Library Historical Photograph Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt1b69q44j"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Whittier Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt7g5027z1</dc:identifier>
+            <dc:identifier>http://www.whittierlibrary.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d863">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e3216">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/18/kt7n39r418/files/kt7n39r418-d3e3216.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e3220">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/18/kt7n39r418/files/kt7n39r418-d3e3220.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e3208" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/jpeg/cwh_052.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e3206" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/tiff/cwh_052.jpg" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d864" DMDID="DC" LABEL="Arthur Reed's Home">
+         <mets:div ID="d865" TYPE="thumbnail image">
+            <mets:fptr ID="d866" FILEID="d3e3216"/>
+         </mets:div>
+         <mets:div ID="d867" TYPE="reference image">
+            <mets:fptr ID="d868" FILEID="d3e3220"/>
+         </mets:div>
+         <mets:div ID="d869" TYPE="archive image">
+            <mets:fptr ID="d870" FILEID="d3e3208"/>
+         </mets:div>
+         <mets:div ID="d871" TYPE="archive image">
+            <mets:fptr ID="d872" FILEID="d3e3206"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

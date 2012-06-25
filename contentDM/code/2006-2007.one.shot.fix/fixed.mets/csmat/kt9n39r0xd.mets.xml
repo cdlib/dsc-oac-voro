@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt9n39r0xd" LABEL="Soldier after all night patrol - Vietnam" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d1046">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_110</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_110</dc:identifier>
+            <dc:title>Soldier after all night patrol - Vietnam</dc:title>
+            <dc:creator>U.S. Army</dc:creator>
+            <dc:subject>Military personnel</dc:subject>
+            <dc:subject>Vietnam Conflict, 1961-1975</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 color photographic print; 25.3 x 20.5 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>Chale, Roger</dc:subject>
+            <dc:subject>101st Airborne Division</dc:subject>
+            <dc:subject>U.S. Army</dc:subject>
+            <dc:subject>Ruplenas, Peter P.</dc:subject>
+            <dc:coverage>Republic of Vietnam</dc:coverage>
+            <dc:description>CC 33716 Republic of Vietnam: PFC Roger K. Chale (Grand Forks, N.D.), Hq and Hq Co, 1st Bn, 327th Inf., wends his weary way back to his tent after an all-night ambush patrol.  His face shows the strain of combat.  Operation "Harrison" was launched by the 101st Abn Div in the Rice Bowl area near Tuy Hon.  The operation was to search, sweep and destroy the Viet Cong in an area that was not swept by American forces in the past.  Photo by SFC Peter P. Ruplenas, US Army Sp Photo Det, Pacific</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1049">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e3834">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/xd/kt9n39r0xd/files/kt9n39r0xd-d3e3834.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e3838">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/xd/kt9n39r0xd/files/kt9n39r0xd-d3e3838.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e3826" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_110.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e3824" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_110.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1050" DMDID="DC" LABEL="Soldier after all night patrol - Vietnam">
+         <mets:div ID="d1051" TYPE="thumbnail image">
+            <mets:fptr ID="d1052" FILEID="d3e3834"/>
+         </mets:div>
+         <mets:div ID="d1053" TYPE="reference image">
+            <mets:fptr ID="d1054" FILEID="d3e3838"/>
+         </mets:div>
+         <mets:div ID="d1055" TYPE="archive image">
+            <mets:fptr ID="d1056" FILEID="d3e3826"/>
+         </mets:div>
+         <mets:div ID="d1057" TYPE="archive image">
+            <mets:fptr ID="d1058" FILEID="d3e3824"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

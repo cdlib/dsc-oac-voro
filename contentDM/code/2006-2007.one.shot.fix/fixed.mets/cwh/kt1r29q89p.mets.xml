@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt1r29q89p" LABEL="The Whittier Register building" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:09.112-07:00" LASTMODDATE="2008-07-18T16:13:09.112-07:00" RECORDSTATUS="NEW" ID="d1364">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>cwh_123</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:09.112-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>cwh_123</dc:identifier>
+            <dc:title>The Whittier Register building</dc:title>
+            <dc:creator>Unknown;</dc:creator>
+            <dc:date>undated: circa late 19th century - early 20th century</dc:date>
+            <dc:subject>Newspaper industry</dc:subject>
+            <dc:subject>Newspapers</dc:subject>
+            <dc:subject>Buildings</dc:subject>
+            <dc:subject>California</dc:subject>
+            <dc:subject>Whittier</dc:subject>
+            <dc:type>image;</dc:type>
+            <dc:type>Photographs;</dc:type>
+            <dc:format>1 photographic print; 8 x 10</dc:format>
+            <dc:publisher>Whittier Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt1b69q44j</dc:relation>
+            <dc:rights>unknown;</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:coverage>Whittier (Calif.);</dc:coverage>
+            <dc:language>eng;</dc:language>
+            <dc:description>The Whittier Register newspaper which was published from 1892 to 1909.  2 men and a young boy stand outside of the building.  One many is holding up a copy of the Whittier Register.</dc:description>
+            <dc:contributor>Espolt, Orville G., 1901-1987</dc:contributor>
+            <dc:source>Selected photograph from the Whittier History Room photograph collection.</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt1b69q44j" LABEL="Whittier Public Library Historical Photograph Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt1b69q44j"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Whittier Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt7g5027z1</dc:identifier>
+            <dc:identifier>http://www.whittierlibrary.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1367">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e5070">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/9p/kt1r29q89p/files/kt1r29q89p-d3e5070.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e5074">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/9p/kt1r29q89p/files/kt1r29q89p-d3e5074.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e5062" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/jpeg/cwh_123.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e5060" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/tiff/cwh_123.jpg" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1368" DMDID="DC" LABEL="The Whittier Register building">
+         <mets:div ID="d1369" TYPE="thumbnail image">
+            <mets:fptr ID="d1370" FILEID="d3e5070"/>
+         </mets:div>
+         <mets:div ID="d1371" TYPE="reference image">
+            <mets:fptr ID="d1372" FILEID="d3e5074"/>
+         </mets:div>
+         <mets:div ID="d1373" TYPE="archive image">
+            <mets:fptr ID="d1374" FILEID="d3e5062"/>
+         </mets:div>
+         <mets:div ID="d1375" TYPE="archive image">
+            <mets:fptr ID="d1376" FILEID="d3e5060"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

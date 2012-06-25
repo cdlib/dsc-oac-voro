@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt4t1nd1pb" LABEL="For this housewife, the visit was more a Journey to Remember (Army Digest 1969)" TYPE="facsimile text" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d1408">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_064</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_064</dc:identifier>
+            <dc:title>For this housewife, the visit was more a Journey to Remember (Army Digest 1969)</dc:title>
+            <dc:creator>Army Digest</dc:creator>
+            <dc:date>1969 March</dc:date>
+            <dc:subject>People</dc:subject>
+            <dc:subject>Military personnel</dc:subject>
+            <dc:subject>Clippings</dc:subject>
+            <dc:subject>Military camps</dc:subject>
+            <dc:subject>Military life</dc:subject>
+            <dc:subject>Vietnam Conflict, 1961-1975</dc:subject>
+            <dc:type>text</dc:type>
+            <dc:type>Clippings</dc:type>
+            <dc:format>2 two-sided pages from Army Digest; 20.5 x 24.5 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>Unknown</dc:rights>
+            <dc:subject>Patterson, Linda (Giese)</dc:subject>
+            <dc:subject>101st Airborne Division</dc:subject>
+            <dc:subject>U.S. Army</dc:subject>
+            <dc:subject>Camp Eagle</dc:subject>
+            <dc:subject>Artavia, Joe</dc:subject>
+            <dc:subject>Wright, R.B.</dc:subject>
+            <dc:subject>Prior, Gloria</dc:subject>
+            <dc:subject>Archibald, Roy</dc:subject>
+            <dc:subject>Chanteloup, Noe J.</dc:subject>
+            <dc:subject>Graham, Vera</dc:subject>
+            <dc:subject>Giese, Al</dc:subject>
+            <dc:subject>Hayward, Harold I.</dc:subject>
+            <dc:subject>Zais, Melvin</dc:subject>
+            <dc:subject>Shore, Christian</dc:subject>
+            <dc:coverage>San Mateo (Calif.)); Phu Bai (Republic of Vietnam); Oakland (Calif.); Hue (Republic of Vietnam)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:description>3 page article in Army Digest (pp. 57-59) describing Linda Giese's trip to visit the 101st Airborne Division and the members of the adopted sons of San Mateo - the Screaming Eagles.</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1411">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e5184" GROUPID="064_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/pb/kt4t1nd1pb/files/kt4t1nd1pb-d3e5184.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e5205" GROUPID="064_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/pb/kt4t1nd1pb/files/kt4t1nd1pb-d3e5205.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e5226" GROUPID="064_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/pb/kt4t1nd1pb/files/kt4t1nd1pb-d3e5226.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e5189" GROUPID="064_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/pb/kt4t1nd1pb/files/kt4t1nd1pb-d3e5189.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e5210" GROUPID="064_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/pb/kt4t1nd1pb/files/kt4t1nd1pb-d3e5210.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e5231" GROUPID="064_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/pb/kt4t1nd1pb/files/kt4t1nd1pb-d3e5231.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e5199" MIMETYPE="image/jpeg" GROUPID="064_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_064_page01.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e5194" GROUPID="064_PAGE01" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_064_page01.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e5220" MIMETYPE="image/jpeg" GROUPID="064_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_064_page02.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e5215" GROUPID="064_PAGE02" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_064_page02.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e5241" MIMETYPE="image/jpeg" GROUPID="064_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_064_page03.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e5236" GROUPID="064_PAGE03" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_064_page03.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1412" DMDID="DC" LABEL="For this housewife, the visit was more a Journey to Remember (Army Digest 1969)">
+         <mets:div ID="d1413" LABEL="064_PAGE01">
+            <mets:div ID="d1414" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e5184"/>
+            </mets:div>
+            <mets:div ID="d1415" TYPE="reference image">
+               <mets:fptr FILEID="d3e5189"/>
+            </mets:div>
+            <mets:div ID="d1416" TYPE="archive image">
+               <mets:fptr FILEID="d3e5199"/>
+            </mets:div>
+            <mets:div ID="d1417" TYPE="archive image">
+               <mets:fptr FILEID="d3e5194"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1418" LABEL="064_PAGE02">
+            <mets:div ID="d1419" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e5205"/>
+            </mets:div>
+            <mets:div ID="d1420" TYPE="reference image">
+               <mets:fptr FILEID="d3e5210"/>
+            </mets:div>
+            <mets:div ID="d1421" TYPE="archive image">
+               <mets:fptr FILEID="d3e5220"/>
+            </mets:div>
+            <mets:div ID="d1422" TYPE="archive image">
+               <mets:fptr FILEID="d3e5215"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1423" LABEL="064_PAGE03">
+            <mets:div ID="d1424" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e5226"/>
+            </mets:div>
+            <mets:div ID="d1425" TYPE="reference image">
+               <mets:fptr FILEID="d3e5231"/>
+            </mets:div>
+            <mets:div ID="d1426" TYPE="archive image">
+               <mets:fptr FILEID="d3e5241"/>
+            </mets:div>
+            <mets:div ID="d1427" TYPE="archive image">
+               <mets:fptr FILEID="d3e5236"/>
+            </mets:div>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

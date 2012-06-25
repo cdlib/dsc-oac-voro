@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt967nd54m" LABEL="Memorial Room Kick-off: Library Board with 101st Airborne Committee" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d470">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_075</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_075</dc:identifier>
+            <dc:title>Memorial Room Kick-off: Library Board with 101st Airborne Committee</dc:title>
+            <dc:creator>Unknown</dc:creator>
+            <dc:date>1973 April 12</dc:date>
+            <dc:subject>People</dc:subject>
+            <dc:subject>Tables</dc:subject>
+            <dc:subject>Military personnel</dc:subject>
+            <dc:subject>Rites &amp; ceremonies</dc:subject>
+            <dc:subject>Vietnam Conflict, 1961-1975</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 photographic print; 17.5 x 23.5 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>101st Airborne Division</dc:subject>
+            <dc:subject>U.S. Army</dc:subject>
+            <dc:subject>Gyorgy, William</dc:subject>
+            <dc:subject>East, Howard</dc:subject>
+            <dc:subject>Ridgeway, Gordon, Mrs.</dc:subject>
+            <dc:subject>Douglas, Frank</dc:subject>
+            <dc:subject>Melendez, Major</dc:subject>
+            <dc:subject>Chanteloup, Noe</dc:subject>
+            <dc:subject>Patterson, Linda (Giese)</dc:subject>
+            <dc:subject>Schroeder, Barbara</dc:subject>
+            <dc:subject>Wayne, Hugh A.</dc:subject>
+            <dc:subject>Murray, John J., Jr.</dc:subject>
+            <dc:subject>Condon, John</dc:subject>
+            <dc:subject>Welch, Floyd</dc:subject>
+            <dc:subject>Burkdahl, W.</dc:subject>
+            <dc:coverage>San Mateo (Calif.))</dc:coverage>
+            <dc:description>At the Memorial Room Kick-off: The Library Board (Mr. William Gyorgy, Mr. Howard East, Mrs. Gordon Ridgeway, Mr. Frank Douglas) with the 101st Airborne Committee (Major Melendez, Mr. Noe Chanteloup, Mrs. Linda Geise, Mrs. Barbara Schroeder) and members of the City Council (Mr. Hugh Wayne, Mayor John Murray, Mr. John Condon, Mr. Floyd Welch, and Mr. W. Burkdahl).  In the foreground are items for the 101st Airborne Memorial Room - the 101st Airborne colors, books, a plaque and other items.</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d473">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e1759">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/4m/kt967nd54m/files/kt967nd54m-d3e1759.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e1763">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/4m/kt967nd54m/files/kt967nd54m-d3e1763.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e1751" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_075.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e1749" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_075.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d474" DMDID="DC" LABEL="Memorial Room Kick-off: Library Board with 101st Airborne Committee">
+         <mets:div ID="d475" TYPE="thumbnail image">
+            <mets:fptr ID="d476" FILEID="d3e1759"/>
+         </mets:div>
+         <mets:div ID="d477" TYPE="reference image">
+            <mets:fptr ID="d478" FILEID="d3e1763"/>
+         </mets:div>
+         <mets:div ID="d479" TYPE="archive image">
+            <mets:fptr ID="d480" FILEID="d3e1751"/>
+         </mets:div>
+         <mets:div ID="d481" TYPE="archive image">
+            <mets:fptr ID="d482" FILEID="d3e1749"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

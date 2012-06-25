@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt7n39r3zr" LABEL="Cabbage Packing Shed" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:09.112-07:00" LASTMODDATE="2008-07-18T16:13:09.112-07:00" RECORDSTATUS="NEW" ID="d626">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>cwh_002</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:09.112-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>cwh_002</dc:identifier>
+            <dc:title>Cabbage Packing Shed</dc:title>
+            <dc:creator>Unknown;</dc:creator>
+            <dc:date>1910</dc:date>
+            <dc:subject>Agricultural facilities</dc:subject>
+            <dc:subject>Agricultural laborers</dc:subject>
+            <dc:subject>Cabbage</dc:subject>
+            <dc:subject>California</dc:subject>
+            <dc:subject>Whittier</dc:subject>
+            <dc:type>image;</dc:type>
+            <dc:type>Photographs;</dc:type>
+            <dc:format>1 photographic print; 9.5 in x 6.5 in</dc:format>
+            <dc:publisher>Whittier Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt1b69q44j</dc:relation>
+            <dc:rights>unknown;</dc:rights>
+            <dc:rights>Copyright status unknown.  Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.).  In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks.  Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners.  Works not in the public domain cannot be commercially exploited without permission of the copyright owner.  Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:coverage>Whittier (Calif.);</dc:coverage>
+            <dc:language>eng;</dc:language>
+            <dc:description>Cabbage packing shed on Magnolia, south of Hadley in 1910.  The Whittier Brick Company yard can be seen in the background.</dc:description>
+            <dc:contributor>Espolt, Orville G., 1901-1987</dc:contributor>
+            <dc:source>Selected photograph from the Whittier History Room photograph collection.</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt1b69q44j" LABEL="Whittier Public Library Historical Photograph Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt1b69q44j"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Whittier Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt7g5027z1</dc:identifier>
+            <dc:identifier>http://www.whittierlibrary.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d629">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e2348">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/zr/kt7n39r3zr/files/kt7n39r3zr-d3e2348.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e2352">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/zr/kt7n39r3zr/files/kt7n39r3zr-d3e2352.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e2340" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/jpeg/cwh_002.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e2338" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/tiff/cwh_002.jpg" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d630" DMDID="DC" LABEL="Cabbage Packing Shed">
+         <mets:div ID="d631" TYPE="thumbnail image">
+            <mets:fptr ID="d632" FILEID="d3e2348"/>
+         </mets:div>
+         <mets:div ID="d633" TYPE="reference image">
+            <mets:fptr ID="d634" FILEID="d3e2352"/>
+         </mets:div>
+         <mets:div ID="d635" TYPE="archive image">
+            <mets:fptr ID="d636" FILEID="d3e2340"/>
+         </mets:div>
+         <mets:div ID="d637" TYPE="archive image">
+            <mets:fptr ID="d638" FILEID="d3e2338"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

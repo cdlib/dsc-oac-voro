@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt596nd2js" LABEL="Levy Brothers covered coach at the San Mateo train depot" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d3680">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_048</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_048</dc:identifier>
+            <dc:title>Levy Brothers covered coach at the San Mateo train depot</dc:title>
+            <dc:creator>Unknown</dc:creator>
+            <dc:date>1900s</dc:date>
+            <dc:subject>Coach drivers</dc:subject>
+            <dc:subject>Carts &amp; wagons</dc:subject>
+            <dc:subject>Railroad stations</dc:subject>
+            <dc:subject>Horses</dc:subject>
+            <dc:subject>Horse teams</dc:subject>
+            <dc:subject>Streets</dc:subject>
+            <dc:subject>Carriages &amp; coaches</dc:subject>
+            <dc:subject>Utility poles</dc:subject>
+            <dc:subject>Telegraph lines</dc:subject>
+            <dc:subject>People</dc:subject>
+            <dc:subject>Railroads</dc:subject>
+            <dc:subject>Storefronts</dc:subject>
+            <dc:subject>Brickwork</dc:subject>
+            <dc:subject>Chimneypieces</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 photographic print; 24.3 x 19.9 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>San Mateo Rail Depot (Firm)</dc:subject>
+            <dc:subject>Levy Brothers Coach (Firm)</dc:subject>
+            <dc:subject>San Mateo Library Hall (Firm)</dc:subject>
+            <dc:coverage>San Mateo (Calif.))</dc:coverage>
+            <dc:description>Levy Bros. covered coach at the San Mateo train depot.  Building in background with arched windows was the Library Hall.  It later became the Fire Department, City Hall and the Police Department.  The building was razed in 1975.</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d3683">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e14473">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/js/kt596nd2js/files/kt596nd2js-d3e14473.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e14477">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/js/kt596nd2js/files/kt596nd2js-d3e14477.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e14465" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_048.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e14463" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_048.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d3684" DMDID="DC" LABEL="Levy Brothers covered coach at the San Mateo train depot">
+         <mets:div ID="d3685" TYPE="thumbnail image">
+            <mets:fptr ID="d3686" FILEID="d3e14473"/>
+         </mets:div>
+         <mets:div ID="d3687" TYPE="reference image">
+            <mets:fptr ID="d3688" FILEID="d3e14477"/>
+         </mets:div>
+         <mets:div ID="d3689" TYPE="archive image">
+            <mets:fptr ID="d3690" FILEID="d3e14465"/>
+         </mets:div>
+         <mets:div ID="d3691" TYPE="archive image">
+            <mets:fptr ID="d3692" FILEID="d3e14463"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

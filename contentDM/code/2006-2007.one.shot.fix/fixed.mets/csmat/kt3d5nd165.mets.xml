@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt3d5nd165" LABEL="Letter to B. Schroeder from M. Missouri and an enclosed chaplain's card" TYPE="facsimile text" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d1663">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_150</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_150</dc:identifier>
+            <dc:title>Letter to B. Schroeder from M. Missouri and an enclosed chaplain's card</dc:title>
+            <dc:creator>Missairi, Mike</dc:creator>
+            <dc:subject>Correspondence</dc:subject>
+            <dc:subject>Vietnam Conflict, 1961-1975</dc:subject>
+            <dc:type>text</dc:type>
+            <dc:type>Letters (correspondence)</dc:type>
+            <dc:format>1 three page handwritten letter 12.7 x 20 cm each page; 1 chaplain's card 12.6 x 7.7 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>Schroeder, Barbara</dc:subject>
+            <dc:subject>Missairi, Mike</dc:subject>
+            <dc:subject>101st Airborne Division</dc:subject>
+            <dc:subject>U.S. Army</dc:subject>
+            <dc:coverage>San Mateo (Calif.))</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:description>Letter to Barbara Schroeder from Mike Missairi in Vietnam, expressing his frustration with the turmoil at home and its impact on the soldiers in country.  Included is a 'Ticket of Sympathy - Call or See the Chaplain Telephone: Mercy ooo-O!' Around the edge are potential problems and the Bible verse which might support you through the problem: K.P. Duty - read Psalm 59:15; Lost At Cards - read Eph. 4:31; and so on.</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1666">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e6496" GROUPID="150_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/65/kt3d5nd165/files/kt3d5nd165-d3e6496.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e6517" GROUPID="150_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/65/kt3d5nd165/files/kt3d5nd165-d3e6517.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e6538" GROUPID="150_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/65/kt3d5nd165/files/kt3d5nd165-d3e6538.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e6559" GROUPID="150_PAGE04">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/65/kt3d5nd165/files/kt3d5nd165-d3e6559.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e6501" GROUPID="150_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/65/kt3d5nd165/files/kt3d5nd165-d3e6501.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e6522" GROUPID="150_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/65/kt3d5nd165/files/kt3d5nd165-d3e6522.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e6543" GROUPID="150_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/65/kt3d5nd165/files/kt3d5nd165-d3e6543.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e6564" GROUPID="150_PAGE04">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/65/kt3d5nd165/files/kt3d5nd165-d3e6564.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e6511" MIMETYPE="image/jpeg" GROUPID="150_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_150_page01.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e6506" GROUPID="150_PAGE01" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_150_page01.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e6532" MIMETYPE="image/jpeg" GROUPID="150_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_150_page02.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e6527" GROUPID="150_PAGE02" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_150_page02.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e6553" MIMETYPE="image/jpeg" GROUPID="150_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_150_page03.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e6548" GROUPID="150_PAGE03" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_150_page03.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e6574" MIMETYPE="image/jpeg" GROUPID="150_PAGE04">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_150_page04.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e6569" GROUPID="150_PAGE04" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_150_page04.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1667" DMDID="DC" LABEL="Letter to B. Schroeder from M. Missouri and an enclosed chaplain's card">
+         <mets:div ID="d1668" LABEL="150_PAGE01">
+            <mets:div ID="d1669" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e6496"/>
+            </mets:div>
+            <mets:div ID="d1670" TYPE="reference image">
+               <mets:fptr FILEID="d3e6501"/>
+            </mets:div>
+            <mets:div ID="d1671" TYPE="archive image">
+               <mets:fptr FILEID="d3e6511"/>
+            </mets:div>
+            <mets:div ID="d1672" TYPE="archive image">
+               <mets:fptr FILEID="d3e6506"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1673" LABEL="150_PAGE02">
+            <mets:div ID="d1674" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e6517"/>
+            </mets:div>
+            <mets:div ID="d1675" TYPE="reference image">
+               <mets:fptr FILEID="d3e6522"/>
+            </mets:div>
+            <mets:div ID="d1676" TYPE="archive image">
+               <mets:fptr FILEID="d3e6532"/>
+            </mets:div>
+            <mets:div ID="d1677" TYPE="archive image">
+               <mets:fptr FILEID="d3e6527"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1678" LABEL="150_PAGE03">
+            <mets:div ID="d1679" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e6538"/>
+            </mets:div>
+            <mets:div ID="d1680" TYPE="reference image">
+               <mets:fptr FILEID="d3e6543"/>
+            </mets:div>
+            <mets:div ID="d1681" TYPE="archive image">
+               <mets:fptr FILEID="d3e6553"/>
+            </mets:div>
+            <mets:div ID="d1682" TYPE="archive image">
+               <mets:fptr FILEID="d3e6548"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1683" LABEL="150_PAGE04">
+            <mets:div ID="d1684" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e6559"/>
+            </mets:div>
+            <mets:div ID="d1685" TYPE="reference image">
+               <mets:fptr FILEID="d3e6564"/>
+            </mets:div>
+            <mets:div ID="d1686" TYPE="archive image">
+               <mets:fptr FILEID="d3e6574"/>
+            </mets:div>
+            <mets:div ID="d1687" TYPE="archive image">
+               <mets:fptr FILEID="d3e6569"/>
+            </mets:div>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt8n39r287" LABEL="Chamber of Commerce War Bond Rally" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:09.112-07:00" LASTMODDATE="2008-07-18T16:13:09.112-07:00" RECORDSTATUS="NEW" ID="d1382">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>cwh_124</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:09.112-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>cwh_124</dc:identifier>
+            <dc:title>Chamber of Commerce War Bond Rally</dc:title>
+            <dc:creator>Unknown;</dc:creator>
+            <dc:date>1942</dc:date>
+            <dc:subject>Chambers of commerce</dc:subject>
+            <dc:subject>War bonds &amp; funds</dc:subject>
+            <dc:subject>War rallies</dc:subject>
+            <dc:subject>California</dc:subject>
+            <dc:subject>Whittier</dc:subject>
+            <dc:type>image;</dc:type>
+            <dc:type>Photographs;</dc:type>
+            <dc:format>1 photographic print; 10 x 7</dc:format>
+            <dc:publisher>Whittier Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt1b69q44j</dc:relation>
+            <dc:rights>unknown;</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:coverage>Whittier (Calif.);</dc:coverage>
+            <dc:language>eng;</dc:language>
+            <dc:description>The Chamber of Commerce War Bond Rally.  Many people are shown sitting at dinner tables.</dc:description>
+            <dc:contributor>Unknown;</dc:contributor>
+            <dc:source>Selected photograph from the Whittier History Room photograph collection.</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt1b69q44j" LABEL="Whittier Public Library Historical Photograph Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt1b69q44j"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Whittier Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt7g5027z1</dc:identifier>
+            <dc:identifier>http://www.whittierlibrary.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1385">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e5136">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/87/kt8n39r287/files/kt8n39r287-d3e5136.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e5140">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/87/kt8n39r287/files/kt8n39r287-d3e5140.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e5128" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/jpeg/cwh_124.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e5126" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/tiff/cwh_124.jpg" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1386" DMDID="DC" LABEL="Chamber of Commerce War Bond Rally">
+         <mets:div ID="d1387" TYPE="thumbnail image">
+            <mets:fptr ID="d1388" FILEID="d3e5136"/>
+         </mets:div>
+         <mets:div ID="d1389" TYPE="reference image">
+            <mets:fptr ID="d1390" FILEID="d3e5140"/>
+         </mets:div>
+         <mets:div ID="d1391" TYPE="archive image">
+            <mets:fptr ID="d1392" FILEID="d3e5128"/>
+         </mets:div>
+         <mets:div ID="d1393" TYPE="archive image">
+            <mets:fptr ID="d1394" FILEID="d3e5126"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

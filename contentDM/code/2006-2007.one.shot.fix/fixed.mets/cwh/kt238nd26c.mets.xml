@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt238nd26c" LABEL="Auto Repair Shop" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:09.112-07:00" LASTMODDATE="2008-07-18T16:13:09.112-07:00" RECORDSTATUS="NEW" ID="d2966">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>cwh_059</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:09.112-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>cwh_059</dc:identifier>
+            <dc:title>Auto Repair Shop</dc:title>
+            <dc:creator>Unknown;</dc:creator>
+            <dc:date>undated: circa early 20th century</dc:date>
+            <dc:subject>Automobile industry</dc:subject>
+            <dc:subject>Mechanics (Persons)</dc:subject>
+            <dc:subject>Automobile repair</dc:subject>
+            <dc:subject>California</dc:subject>
+            <dc:subject>Whittier</dc:subject>
+            <dc:type>image;</dc:type>
+            <dc:type>Photographs;</dc:type>
+            <dc:format>1 photographic print; 7 x 5</dc:format>
+            <dc:publisher>Whittier Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt1b69q44j</dc:relation>
+            <dc:rights>unknown;</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:coverage>Whittier (Calif.);</dc:coverage>
+            <dc:language>eng;</dc:language>
+            <dc:description>Automoblie repair shop. Mechanic is shown working on a car.  Location is unknown.</dc:description>
+            <dc:contributor>Unknown;</dc:contributor>
+            <dc:source>Selected photograph from the Whittier History Room photograph collection.</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt1b69q44j" LABEL="Whittier Public Library Historical Photograph Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt1b69q44j"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Whittier Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt7g5027z1</dc:identifier>
+            <dc:identifier>http://www.whittierlibrary.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d2969">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e10838">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/6c/kt238nd26c/files/kt238nd26c-d3e10838.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e10842">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/6c/kt238nd26c/files/kt238nd26c-d3e10842.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e10830" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/jpeg/cwh_059.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e10828" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/tiff/cwh_059.jpg" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d2970" DMDID="DC" LABEL="Auto Repair Shop">
+         <mets:div ID="d2971" TYPE="thumbnail image">
+            <mets:fptr ID="d2972" FILEID="d3e10838"/>
+         </mets:div>
+         <mets:div ID="d2973" TYPE="reference image">
+            <mets:fptr ID="d2974" FILEID="d3e10842"/>
+         </mets:div>
+         <mets:div ID="d2975" TYPE="archive image">
+            <mets:fptr ID="d2976" FILEID="d3e10830"/>
+         </mets:div>
+         <mets:div ID="d2977" TYPE="archive image">
+            <mets:fptr ID="d2978" FILEID="d3e10828"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

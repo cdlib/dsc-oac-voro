@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt7h4nd4n7" LABEL="Army photo - plaque presentation to H. Wayne 9/4/69" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d236">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_060</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_060</dc:identifier>
+            <dc:title>Army photo - plaque presentation to H. Wayne 9/4/69</dc:title>
+            <dc:creator>U.S. Army: Quick, Lee</dc:creator>
+            <dc:date>1969 September 4</dc:date>
+            <dc:subject>Rites &amp; ceremonies</dc:subject>
+            <dc:subject>Military personnel</dc:subject>
+            <dc:subject>Military officers</dc:subject>
+            <dc:subject>Plaques</dc:subject>
+            <dc:subject>Vietnam Conflict, 1961-1975</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 photographic print; 20.5 x 25 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.  If used, credit as 'U.S. Army Photograph".</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>101st Airborne Division</dc:subject>
+            <dc:subject>U.S. Army</dc:subject>
+            <dc:subject>Wayne, Hugh A.</dc:subject>
+            <dc:subject>Raymond, Frederick</dc:subject>
+            <dc:subject>Navalesi, Joseph</dc:subject>
+            <dc:subject>Chanteloup, Noe J.</dc:subject>
+            <dc:coverage>Presidio of San Francisco (Calif.)</dc:coverage>
+            <dc:description>Mayor Hugh A. Wayne accepts a plaque from Cpt. Frederick Raymond and 1Lt. Joseph Navalesi, presented on behalf of the soldiers of Company A, 1st Bn, 327th Inf, 101st Airborne Division. At right, Fire Chief Noe J. Chanteloup looks on.  4 Sep 69. Photograher SP4 Lee Quick, Sixth US Army Central Photo Facility, Presidio of San Francisco, California.  Official US Army Photograph 5058-3673-4/AM69.</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d239">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e911">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/n7/kt7h4nd4n7/files/kt7h4nd4n7-d3e911.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e915">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/n7/kt7h4nd4n7/files/kt7h4nd4n7-d3e915.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e903" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_060.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e901" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_060.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d240" DMDID="DC" LABEL="Army photo - plaque presentation to H. Wayne 9/4/69">
+         <mets:div ID="d241" TYPE="thumbnail image">
+            <mets:fptr ID="d242" FILEID="d3e911"/>
+         </mets:div>
+         <mets:div ID="d243" TYPE="reference image">
+            <mets:fptr ID="d244" FILEID="d3e915"/>
+         </mets:div>
+         <mets:div ID="d245" TYPE="archive image">
+            <mets:fptr ID="d246" FILEID="d3e903"/>
+         </mets:div>
+         <mets:div ID="d247" TYPE="archive image">
+            <mets:fptr ID="d248" FILEID="d3e901"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

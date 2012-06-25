@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt1j49q4t6" LABEL="San Mateo Says &quot;Welcome Home&quot; ot the Eagles of Company A" TYPE="facsimile text" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d1903">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_130</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_130</dc:identifier>
+            <dc:title>San Mateo Says "Welcome Home" ot the Eagles of Company A</dc:title>
+            <dc:creator>U.S. Army</dc:creator>
+            <dc:date>1972 March</dc:date>
+            <dc:subject>Homecomings</dc:subject>
+            <dc:subject>Parades &amp; processions</dc:subject>
+            <dc:subject>Military personnel</dc:subject>
+            <dc:subject>People</dc:subject>
+            <dc:subject>Vietnam Conflict, 1961-1975</dc:subject>
+            <dc:type>text</dc:type>
+            <dc:type>Clippings</dc:type>
+            <dc:format>2 page article; text and photos; 21.2 x 27.9 cm each page</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>101st Airborne Division</dc:subject>
+            <dc:subject>U.S. Army</dc:subject>
+            <dc:subject>Patterson, Linda (Giese)</dc:subject>
+            <dc:subject>Chanteloup, Noe J.</dc:subject>
+            <dc:subject>Artavia, Joe</dc:subject>
+            <dc:subject>Hope, Bob</dc:subject>
+            <dc:subject>Ziska, Richard</dc:subject>
+            <dc:subject>Wright, John M., Jr.</dc:subject>
+            <dc:subject>Maguire, Patrick</dc:subject>
+            <dc:subject>Laley, Michael F.</dc:subject>
+            <dc:coverage>San Mateo (Calif.));</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:description>2 page article in Army Magazine, March 1972.  San Mateo's Adopted Sons Come Home.  Pictures by Sp. 5 Michael F. Laley, U.S. Army Special Photo Detachment, Pacific. Photos: Company A Passes in Review; "Some eager Eagles check into a local hotel; the smiles of San Mateo's prettiest welcoming committee say better than the sign above how the city feels about its "adopted sons".</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1906">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e7616" GROUPID="130_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/t6/kt1j49q4t6/files/kt1j49q4t6-d3e7616.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e7637" GROUPID="130_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/t6/kt1j49q4t6/files/kt1j49q4t6-d3e7637.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e7658" GROUPID="130_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/t6/kt1j49q4t6/files/kt1j49q4t6-d3e7658.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e7621" GROUPID="130_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/t6/kt1j49q4t6/files/kt1j49q4t6-d3e7621.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e7642" GROUPID="130_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/t6/kt1j49q4t6/files/kt1j49q4t6-d3e7642.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e7663" GROUPID="130_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/t6/kt1j49q4t6/files/kt1j49q4t6-d3e7663.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e7631" MIMETYPE="image/jpeg" GROUPID="130_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_130_page01.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e7626" GROUPID="130_PAGE01" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_130_page01.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e7652" MIMETYPE="image/jpeg" GROUPID="130_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_130_page02.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e7647" GROUPID="130_PAGE02" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_130_page02.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e7673" MIMETYPE="image/jpeg" GROUPID="130_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_130_page03.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e7668" GROUPID="130_PAGE03" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_130_page03.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1907" DMDID="DC" LABEL="San Mateo Says &quot;Welcome Home&quot; ot the Eagles of Company A">
+         <mets:div ID="d1908" LABEL="130_PAGE01">
+            <mets:div ID="d1909" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e7616"/>
+            </mets:div>
+            <mets:div ID="d1910" TYPE="reference image">
+               <mets:fptr FILEID="d3e7621"/>
+            </mets:div>
+            <mets:div ID="d1911" TYPE="archive image">
+               <mets:fptr FILEID="d3e7631"/>
+            </mets:div>
+            <mets:div ID="d1912" TYPE="archive image">
+               <mets:fptr FILEID="d3e7626"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1913" LABEL="130_PAGE02">
+            <mets:div ID="d1914" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e7637"/>
+            </mets:div>
+            <mets:div ID="d1915" TYPE="reference image">
+               <mets:fptr FILEID="d3e7642"/>
+            </mets:div>
+            <mets:div ID="d1916" TYPE="archive image">
+               <mets:fptr FILEID="d3e7652"/>
+            </mets:div>
+            <mets:div ID="d1917" TYPE="archive image">
+               <mets:fptr FILEID="d3e7647"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1918" LABEL="130_PAGE03">
+            <mets:div ID="d1919" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e7658"/>
+            </mets:div>
+            <mets:div ID="d1920" TYPE="reference image">
+               <mets:fptr FILEID="d3e7663"/>
+            </mets:div>
+            <mets:div ID="d1921" TYPE="archive image">
+               <mets:fptr FILEID="d3e7673"/>
+            </mets:div>
+            <mets:div ID="d1922" TYPE="archive image">
+               <mets:fptr FILEID="d3e7668"/>
+            </mets:div>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

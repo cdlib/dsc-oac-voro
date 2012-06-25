@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This institution map must be formatted as follows:
+	<institutions>
+    		<institution name="" marccode="" ark="" eadark="" eadlabel="" url=""/>     ===== use only ark "stub" for eadark =====
+    		<institution name="" marccode="" ark="" eadark="" eadlabel="" url=""/>
+    </institutions>
+
+use
+
+	eadark="+default"
+
+to specify the information for the institution of the objects that do not
+have a finding aid (do not have an <isPartOf> element)
+
+
+-->
+<institutions>
+  <institution
+    name="San José State University, Special Collections and Archives"
+    marccode="csju"
+    ark="ark:/13030/kt8j49q3pt"
+    eadark="kt4j49r8b8"
+    eadlabel="Far East Asia Collection"
+    url="http://library.sjsu.edu/sjsu-special-collections/sjsu-special-collections-and-archives"/>
+  <institution
+     name="University of the Pacific"
+     marccode="cstoc"
+     ark="ark:/13030/tf609nb7wg"
+     eadark="tf0q2nb0rr"
+     eadlabel="Harold S. Jacoby Nisei Collection"
+     url="http://library.pacific.edu/ha/"/>
+  <institution
+     name="University of the Pacific"
+     marccode="cstoc"
+     ark="ark:/13030/tf609nb7wg"
+     eadark="kt0w1031nc"
+     eadlabel="John Muir Correspondence"
+     url="http://library.pacific.edu/ha/"/>
+  <institution
+     name="Occidental College Library"
+     marccode="clo"
+     ark="ark:/13030/kt4p3021tf"
+     eadark="kt638nc9ww"
+     eadlabel="Japanese American Relocation Collection"
+     url="http://departments.oxy.edu/library/"/>
+  <institution
+     name="Cheadle Center for Biodiversity and Ecological Restoration, University of California, Santa Barbara"
+     marccode="ccber"
+     ark="ark:/13030/kt9v19r2dx"
+     eadark="kt1s20304s"
+     eadlabel="Katherine Esau papers"
+     url="http://ccber.lifesci.ucsb.edu/"/>
+  <institution
+     name="Marin County Free Library"
+     marccode="CSrCL"
+     ark="ark:/13030/kt4199q430"
+     eadark="kt0q2nc5z2"
+     eadlabel="Anne T. Kent California Room Collection"
+     url="http://www.co.marin.ca.us/depts/lb/main/crm/index.html"/>
+  <institution
+     name="Tulare County Library"
+     marccode="cvicl"
+     ark="ark:/13030/kt6z09s2t9"
+     eadark="kt7t1nf5v7"
+     eadlabel="Tulare County Library Photo Heritage Collection"
+     url="http://www.tularecountylibrary.org/historyroom.html"/>
+  <institution
+    name="Tulare County Library"
+    marccode="cvicl"
+    ark="ark:/13030/kt087033c8"
+    eadark="kt9199s42x"
+    eadlabel="Collection of Tulare County local history photographs"
+    url="http://www.tularecountylibrary.org/"/>
+  <institution
+    name="Berkeley Public Library"
+    marccode="cb"
+    ark="ark:/13030/kt187019nq"
+    eadark="kt500023rn"
+    eadlabel="Berkeley History Online"
+    url="http://www.berkeleypubliclibrary.org/community/berkeley_history/"/>
+  <institution
+    name="Tulare County Library"
+    marccode="cvicl"
+    ark="ark:/13030/kt087033c8"
+    eadark="kt700038r4"
+    eadlabel="Shades of Tulare County"
+    url="http://www.tularecountylibrary.org/"/>
+  <institution
+    name="Tulare County Library"
+    marccode="cvicl"
+    ark="ark:/13030/kt087033c8"
+    eadark="kt7g50386k"
+    eadlabel="Tulare County Sesquicentennial Photograph Collection"
+    url="http://www.tularecountylibrary.org/"/>
+  <institution
+    name="Upland Public Library"
+    marccode="cupl"
+    ark="ark:/13030/kt5j49s0m9"
+    eadark="kt6r29r1w3"
+    eadlabel="Upland Public Library Historic Photograph Collection"
+    url="http://www.uplandpl.lib.ca.us/"/>
+</institutions>

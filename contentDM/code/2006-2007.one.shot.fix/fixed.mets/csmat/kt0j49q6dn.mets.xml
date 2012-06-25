@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt0j49q6dn" LABEL="Memory Book- June 22-26, 1989 Reunion" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d10">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_102</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_102</dc:identifier>
+            <dc:title>Memory Book- June 22-26, 1989 Reunion</dc:title>
+            <dc:creator>Tavitan, Vince "Doc"</dc:creator>
+            <dc:date>1989</dc:date>
+            <dc:date>1989</dc:date>
+            <dc:subject>Vietnam Conflict, 1961-1975</dc:subject>
+            <dc:subject>101st Airborne Division</dc:subject>
+            <dc:subject>U.S. Army</dc:subject>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d16">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e63" GROUPID="102_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e63.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e83" GROUPID="102_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e83.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e103" GROUPID="102_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e103.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e123" GROUPID="102_PAGE04">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e123.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e143" GROUPID="102_PAGE05">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e143.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e163" GROUPID="102_PAGE06">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e163.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e183" GROUPID="102_PAGE07">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e183.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e203" GROUPID="102_PAGE08">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e203.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e223" GROUPID="102_PAGE09">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e223.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e243" GROUPID="102_PAGE10">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e243.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e264" GROUPID="102_PAGE11">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e264.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e284" GROUPID="102_PAGE12">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e284.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e304" GROUPID="102_PAGE13">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e304.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e324" GROUPID="102_PAGE14">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e324.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e344" GROUPID="102_PAGE15">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e344.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e364" GROUPID="102_PAGE16">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e364.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e384" GROUPID="102_PAGE17">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e384.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e68" GROUPID="102_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e68.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e88" GROUPID="102_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e88.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e108" GROUPID="102_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e108.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e128" GROUPID="102_PAGE04">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e128.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e148" GROUPID="102_PAGE05">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e148.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e168" GROUPID="102_PAGE06">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e168.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e188" GROUPID="102_PAGE07">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e188.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e208" GROUPID="102_PAGE08">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e208.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e228" GROUPID="102_PAGE09">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e228.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e248" GROUPID="102_PAGE10">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e248.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e269" GROUPID="102_PAGE11">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e269.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e289" GROUPID="102_PAGE12">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e289.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e309" GROUPID="102_PAGE13">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e309.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e329" GROUPID="102_PAGE14">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e329.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e349" GROUPID="102_PAGE15">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e349.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e369" GROUPID="102_PAGE16">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e369.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e389" GROUPID="102_PAGE17">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/dn/kt0j49q6dn/files/kt0j49q6dn-d3e389.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e77" MIMETYPE="image/jpeg" GROUPID="102_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page01.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e73" GROUPID="102_PAGE01" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page01.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e97" MIMETYPE="image/jpeg" GROUPID="102_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page02.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e93" GROUPID="102_PAGE02" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page02.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e117" MIMETYPE="image/jpeg" GROUPID="102_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page03.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e113" GROUPID="102_PAGE03" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page03.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e137" MIMETYPE="image/jpeg" GROUPID="102_PAGE04">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page04.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e133" GROUPID="102_PAGE04" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page04.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e157" MIMETYPE="image/jpeg" GROUPID="102_PAGE05">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page05.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e153" GROUPID="102_PAGE05" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page05.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e177" MIMETYPE="image/jpeg" GROUPID="102_PAGE06">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page06.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e173" GROUPID="102_PAGE06" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page06.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e197" MIMETYPE="image/jpeg" GROUPID="102_PAGE07">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page07.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e193" GROUPID="102_PAGE07" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page07.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e217" MIMETYPE="image/jpeg" GROUPID="102_PAGE08">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page08.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e213" GROUPID="102_PAGE08" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page08.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e237" MIMETYPE="image/jpeg" GROUPID="102_PAGE09">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page09.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e233" GROUPID="102_PAGE09" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page09.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e257" MIMETYPE="image/jpeg" GROUPID="102_PAGE10">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page10.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e253" GROUPID="102_PAGE10" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page10.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e278" MIMETYPE="image/jpeg" GROUPID="102_PAGE11">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page11.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e274" GROUPID="102_PAGE11" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page11.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e298" MIMETYPE="image/jpeg" GROUPID="102_PAGE12">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page12.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e294" GROUPID="102_PAGE12" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page12.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e318" MIMETYPE="image/jpeg" GROUPID="102_PAGE13">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page13.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e314" GROUPID="102_PAGE13" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page13.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e338" MIMETYPE="image/jpeg" GROUPID="102_PAGE14">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page14.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e334" GROUPID="102_PAGE14" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page14.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e358" MIMETYPE="image/jpeg" GROUPID="102_PAGE15">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page15.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e354" GROUPID="102_PAGE15" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page15.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e378" MIMETYPE="image/jpeg" GROUPID="102_PAGE16">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page16.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e374" GROUPID="102_PAGE16" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page16.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e398" MIMETYPE="image/jpeg" GROUPID="102_PAGE17">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_102_page17.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e394" GROUPID="102_PAGE17" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_102_page17.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d19" DMDID="DC" LABEL="Memory Book- June 22-26, 1989 Reunion">
+         <mets:div ID="d20" LABEL="102_PAGE01">
+            <mets:div ID="d21" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e63"/>
+            </mets:div>
+            <mets:div ID="d22" TYPE="reference image">
+               <mets:fptr FILEID="d3e68"/>
+            </mets:div>
+            <mets:div ID="d23" TYPE="archive image">
+               <mets:fptr FILEID="d3e77"/>
+            </mets:div>
+            <mets:div ID="d24" TYPE="archive image">
+               <mets:fptr FILEID="d3e73"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d25" LABEL="102_PAGE02">
+            <mets:div ID="d26" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e83"/>
+            </mets:div>
+            <mets:div ID="d27" TYPE="reference image">
+               <mets:fptr FILEID="d3e88"/>
+            </mets:div>
+            <mets:div ID="d28" TYPE="archive image">
+               <mets:fptr FILEID="d3e97"/>
+            </mets:div>
+            <mets:div ID="d29" TYPE="archive image">
+               <mets:fptr FILEID="d3e93"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d30" LABEL="102_PAGE03">
+            <mets:div ID="d31" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e103"/>
+            </mets:div>
+            <mets:div ID="d32" TYPE="reference image">
+               <mets:fptr FILEID="d3e108"/>
+            </mets:div>
+            <mets:div ID="d33" TYPE="archive image">
+               <mets:fptr FILEID="d3e117"/>
+            </mets:div>
+            <mets:div ID="d34" TYPE="archive image">
+               <mets:fptr FILEID="d3e113"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d35" LABEL="102_PAGE04">
+            <mets:div ID="d36" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e123"/>
+            </mets:div>
+            <mets:div ID="d37" TYPE="reference image">
+               <mets:fptr FILEID="d3e128"/>
+            </mets:div>
+            <mets:div ID="d38" TYPE="archive image">
+               <mets:fptr FILEID="d3e137"/>
+            </mets:div>
+            <mets:div ID="d39" TYPE="archive image">
+               <mets:fptr FILEID="d3e133"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d40" LABEL="102_PAGE05">
+            <mets:div ID="d41" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e143"/>
+            </mets:div>
+            <mets:div ID="d42" TYPE="reference image">
+               <mets:fptr FILEID="d3e148"/>
+            </mets:div>
+            <mets:div ID="d43" TYPE="archive image">
+               <mets:fptr FILEID="d3e157"/>
+            </mets:div>
+            <mets:div ID="d44" TYPE="archive image">
+               <mets:fptr FILEID="d3e153"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d45" LABEL="102_PAGE06">
+            <mets:div ID="d46" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e163"/>
+            </mets:div>
+            <mets:div ID="d47" TYPE="reference image">
+               <mets:fptr FILEID="d3e168"/>
+            </mets:div>
+            <mets:div ID="d48" TYPE="archive image">
+               <mets:fptr FILEID="d3e177"/>
+            </mets:div>
+            <mets:div ID="d49" TYPE="archive image">
+               <mets:fptr FILEID="d3e173"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d50" LABEL="102_PAGE07">
+            <mets:div ID="d51" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e183"/>
+            </mets:div>
+            <mets:div ID="d52" TYPE="reference image">
+               <mets:fptr FILEID="d3e188"/>
+            </mets:div>
+            <mets:div ID="d53" TYPE="archive image">
+               <mets:fptr FILEID="d3e197"/>
+            </mets:div>
+            <mets:div ID="d54" TYPE="archive image">
+               <mets:fptr FILEID="d3e193"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d55" LABEL="102_PAGE08">
+            <mets:div ID="d56" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e203"/>
+            </mets:div>
+            <mets:div ID="d57" TYPE="reference image">
+               <mets:fptr FILEID="d3e208"/>
+            </mets:div>
+            <mets:div ID="d58" TYPE="archive image">
+               <mets:fptr FILEID="d3e217"/>
+            </mets:div>
+            <mets:div ID="d59" TYPE="archive image">
+               <mets:fptr FILEID="d3e213"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d60" LABEL="102_PAGE09">
+            <mets:div ID="d61" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e223"/>
+            </mets:div>
+            <mets:div ID="d62" TYPE="reference image">
+               <mets:fptr FILEID="d3e228"/>
+            </mets:div>
+            <mets:div ID="d63" TYPE="archive image">
+               <mets:fptr FILEID="d3e237"/>
+            </mets:div>
+            <mets:div ID="d64" TYPE="archive image">
+               <mets:fptr FILEID="d3e233"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d65" LABEL="102_PAGE10">
+            <mets:div ID="d66" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e243"/>
+            </mets:div>
+            <mets:div ID="d67" TYPE="reference image">
+               <mets:fptr FILEID="d3e248"/>
+            </mets:div>
+            <mets:div ID="d68" TYPE="archive image">
+               <mets:fptr FILEID="d3e257"/>
+            </mets:div>
+            <mets:div ID="d69" TYPE="archive image">
+               <mets:fptr FILEID="d3e253"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d70" LABEL="102_PAGE11">
+            <mets:div ID="d71" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e264"/>
+            </mets:div>
+            <mets:div ID="d72" TYPE="reference image">
+               <mets:fptr FILEID="d3e269"/>
+            </mets:div>
+            <mets:div ID="d73" TYPE="archive image">
+               <mets:fptr FILEID="d3e278"/>
+            </mets:div>
+            <mets:div ID="d74" TYPE="archive image">
+               <mets:fptr FILEID="d3e274"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d75" LABEL="102_PAGE12">
+            <mets:div ID="d76" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e284"/>
+            </mets:div>
+            <mets:div ID="d77" TYPE="reference image">
+               <mets:fptr FILEID="d3e289"/>
+            </mets:div>
+            <mets:div ID="d78" TYPE="archive image">
+               <mets:fptr FILEID="d3e298"/>
+            </mets:div>
+            <mets:div ID="d79" TYPE="archive image">
+               <mets:fptr FILEID="d3e294"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d80" LABEL="102_PAGE13">
+            <mets:div ID="d81" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e304"/>
+            </mets:div>
+            <mets:div ID="d82" TYPE="reference image">
+               <mets:fptr FILEID="d3e309"/>
+            </mets:div>
+            <mets:div ID="d83" TYPE="archive image">
+               <mets:fptr FILEID="d3e318"/>
+            </mets:div>
+            <mets:div ID="d84" TYPE="archive image">
+               <mets:fptr FILEID="d3e314"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d85" LABEL="102_PAGE14">
+            <mets:div ID="d86" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e324"/>
+            </mets:div>
+            <mets:div ID="d87" TYPE="reference image">
+               <mets:fptr FILEID="d3e329"/>
+            </mets:div>
+            <mets:div ID="d88" TYPE="archive image">
+               <mets:fptr FILEID="d3e338"/>
+            </mets:div>
+            <mets:div ID="d89" TYPE="archive image">
+               <mets:fptr FILEID="d3e334"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d90" LABEL="102_PAGE15">
+            <mets:div ID="d91" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e344"/>
+            </mets:div>
+            <mets:div ID="d92" TYPE="reference image">
+               <mets:fptr FILEID="d3e349"/>
+            </mets:div>
+            <mets:div ID="d93" TYPE="archive image">
+               <mets:fptr FILEID="d3e358"/>
+            </mets:div>
+            <mets:div ID="d94" TYPE="archive image">
+               <mets:fptr FILEID="d3e354"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d95" LABEL="102_PAGE16">
+            <mets:div ID="d96" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e364"/>
+            </mets:div>
+            <mets:div ID="d97" TYPE="reference image">
+               <mets:fptr FILEID="d3e369"/>
+            </mets:div>
+            <mets:div ID="d98" TYPE="archive image">
+               <mets:fptr FILEID="d3e378"/>
+            </mets:div>
+            <mets:div ID="d99" TYPE="archive image">
+               <mets:fptr FILEID="d3e374"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d100" LABEL="102_PAGE17">
+            <mets:div ID="d101" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e384"/>
+            </mets:div>
+            <mets:div ID="d102" TYPE="reference image">
+               <mets:fptr FILEID="d3e389"/>
+            </mets:div>
+            <mets:div ID="d103" TYPE="archive image">
+               <mets:fptr FILEID="d3e398"/>
+            </mets:div>
+            <mets:div ID="d104" TYPE="archive image">
+               <mets:fptr FILEID="d3e394"/>
+            </mets:div>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

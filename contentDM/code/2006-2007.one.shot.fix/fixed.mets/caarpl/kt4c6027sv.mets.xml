@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt4c6027sv" LABEL="Formal Photo of Arcadia Police Department" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d3329">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_173</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_173</dc:identifier>
+            <dc:title>Formal Photo of Arcadia Police Department</dc:title>
+            <dc:creator>unknown</dc:creator>
+            <dc:date>1932, April 17</dc:date>
+            <dc:subject>Police--California--Arcadia</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 black and white photographic print; 21 x 26 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use.</dc:rights>
+            <dc:subject>Arcadia (Calif.)--Police Dept.</dc:subject>
+            <dc:coverage>Arcadia (Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:identifier>427</dc:identifier>
+            <dc:description>Formal photo of Arcadia Police Department.  Back row left to right: E. "Med" Cayer, Leo Bertolina, L. Jack Richards (chief of police), Henry W. Haines (father of George, later in charge of Mutual windows at Santa Anita), Paul Edwards. Motorcycle officers, left to right: Jack Stine, Gary Pardue, Donald Ott. Standing in back: Jim Nellis, Fire Chief.  Taken by police station on Wheeler Street.  Identified September 9, 1970 by Bill Orr, former Police Chief.</dc:description>
+            <dc:source>Arcadia Public Library Image Archives</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d3332">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e12931">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/sv/kt4c6027sv/files/kt4c6027sv-d3e12931.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e12935">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/sv/kt4c6027sv/files/kt4c6027sv-d3e12935.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e12923" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_173.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e12921" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_173.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d3333" DMDID="DC" LABEL="Formal Photo of Arcadia Police Department">
+         <mets:div ID="d3334" TYPE="thumbnail image">
+            <mets:fptr ID="d3335" FILEID="d3e12931"/>
+         </mets:div>
+         <mets:div ID="d3336" TYPE="reference image">
+            <mets:fptr ID="d3337" FILEID="d3e12935"/>
+         </mets:div>
+         <mets:div ID="d3338" TYPE="archive image">
+            <mets:fptr ID="d3339" FILEID="d3e12923"/>
+         </mets:div>
+         <mets:div ID="d3340" TYPE="archive image">
+            <mets:fptr ID="d3341" FILEID="d3e12921"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt7199r081" LABEL="Arcadian Observer, September 1918 Supplement" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d2321">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_118</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_118</dc:identifier>
+            <dc:title>Arcadian Observer, September 1918 Supplement</dc:title>
+            <dc:creator>United States. Army. Balloon Section.</dc:creator>
+            <dc:date>1918</dc:date>
+            <dc:subject>Soldiers--United States</dc:subject>
+            <dc:subject>World War, 1914-1918--Periodicals</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs; Black-and-white negatives</dc:type>
+            <dc:format>1 black and white photographic negative; 11 x 13 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use.</dc:rights>
+            <dc:publisher>United States Army Balloon School, Arcadia, California</dc:publisher>
+            <dc:subject>Arcadian Observer (Arcadia, Calif. : 1918)</dc:subject>
+            <dc:subject>Burke, Ed</dc:subject>
+            <dc:subject>Christie, James A.</dc:subject>
+            <dc:subject>Clark, Dunlap C.</dc:subject>
+            <dc:subject>Drury, Newton B.</dc:subject>
+            <dc:subject>Graybill, Lloyd</dc:subject>
+            <dc:subject>Hahn, John (or Rahn?)</dc:subject>
+            <dc:subject>Hine, Harold K.</dc:subject>
+            <dc:subject>Keyser, Milton E.</dc:subject>
+            <dc:subject>Lillie, Hiram B.</dc:subject>
+            <dc:subject>Lynch, A.M.</dc:subject>
+            <dc:subject>Sullivan, Joseph</dc:subject>
+            <dc:subject>Verbeck, H.G.</dc:subject>
+            <dc:subject>Warner, Harry W.</dc:subject>
+            <dc:subject>Welch, Ed</dc:subject>
+            <dc:subject>Whistler, George</dc:subject>
+            <dc:subject>Wiggins, F.C.</dc:subject>
+            <dc:subject>United States. Army. Balloon Section.</dc:subject>
+            <dc:coverage>Arcadia (Calif.); Ross Field (Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:identifier>1855</dc:identifier>
+            <dc:description>Page 17 of The Arcadian Observer, Official Publication of the United States Army Balloon School, Arcadia, California. September 1918 Supplement. Featuring photographs of U.S. Balloon School officers, all lieutenants. H.G. Verbeck, Joseph Sullivan, John Hahn (or Rahn?), Harry W. Warner, Harold K. Hine, Newton B. Drury, Milton E. Keyser, James A. Christie, Ed Welch, Hiram B. Lillie, F.C. Wiggins C.O., A.M. Lynch, Dunlap C. Clark, George Whistler, Lloyd Graybill, and Ed Burke.</dc:description>
+            <dc:source>Arcadia Public Library Image Archives</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d2324">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e9171">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/81/kt7199r081/files/kt7199r081-d3e9171.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e9175">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/81/kt7199r081/files/kt7199r081-d3e9175.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e9163" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_118.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e9161" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_118.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d2325" DMDID="DC" LABEL="Arcadian Observer, September 1918 Supplement">
+         <mets:div ID="d2326" TYPE="thumbnail image">
+            <mets:fptr ID="d2327" FILEID="d3e9171"/>
+         </mets:div>
+         <mets:div ID="d2328" TYPE="reference image">
+            <mets:fptr ID="d2329" FILEID="d3e9175"/>
+         </mets:div>
+         <mets:div ID="d2330" TYPE="archive image">
+            <mets:fptr ID="d2331" FILEID="d3e9163"/>
+         </mets:div>
+         <mets:div ID="d2332" TYPE="archive image">
+            <mets:fptr ID="d2333" FILEID="d3e9161"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

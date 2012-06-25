@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt3q2nd0xh" LABEL="Isaac Copeland Grimes, March 14, 1829 - January 4, 1896 and Nancy (Wilson) Grimes, February 6, 1839 - January 8, 1910 " TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:12:56.326-07:00" LASTMODDATE="2008-07-18T16:12:56.326-07:00" RECORDSTATUS="NEW" ID="d698">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSB_039</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:12:56.326-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSB_039</dc:identifier>
+            <dc:title>Isaac Copeland Grimes, March 14, 1829 - January 4, 1896 and Nancy (Wilson) Grimes, February 6, 1839 - January 8, 1910 </dc:title>
+            <dc:creator>Unknown </dc:creator>
+            <dc:date>1870 - 1896? </dc:date>
+            <dc:subject>Pioneers</dc:subject>
+            <dc:subject>Portraits </dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs: Black-and-white negatives </dc:type>
+            <dc:format>1  photographic negative, 4 x 5 in. </dc:format>
+            <dc:publisher>San Bernardino Public Library </dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt7g5023bs </dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use. </dc:rights>
+            <dc:subject>Grimes, Isaac Copeland (March 14, 1829 - January 4, 1896) and Nancy (Wilson) Grimes (February 6, 1839 - January 8, 1910) </dc:subject>
+            <dc:coverage>San Bernardino, (Calif.)</dc:coverage>
+            <dc:identifier>Neg 155 </dc:identifier>
+            <dc:description>Isaac Copeland Grimes married Nancy Wilson in 1854 in San Bernardino. He had a ranch on East Base Line. </dc:description>
+            <dc:relation>http://www.sbpl.org/index_pioneers.html</dc:relation>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt7g5023bs" LABEL="Pioneers of San Bernardino" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt7g5023bs"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Bernardino Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt067nc4fj</dc:identifier>
+            <dc:identifier>http://www.sbpl.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d701">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e2573">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/xh/kt3q2nd0xh/files/kt3q2nd0xh-d3e2573.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e2577">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/xh/kt3q2nd0xh/files/kt3q2nd0xh-d3e2577.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e2565" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/jpeg/csb_039.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e2563" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/tiff/csb_039.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d702" DMDID="DC" LABEL="Isaac Copeland Grimes, March 14, 1829 - January 4, 1896 and Nancy (Wilson) Grimes, February 6, 1839 - January 8, 1910 ">
+         <mets:div ID="d703" TYPE="thumbnail image">
+            <mets:fptr ID="d704" FILEID="d3e2573"/>
+         </mets:div>
+         <mets:div ID="d705" TYPE="reference image">
+            <mets:fptr ID="d706" FILEID="d3e2577"/>
+         </mets:div>
+         <mets:div ID="d707" TYPE="archive image">
+            <mets:fptr ID="d708" FILEID="d3e2565"/>
+         </mets:div>
+         <mets:div ID="d709" TYPE="archive image">
+            <mets:fptr ID="d710" FILEID="d3e2563"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

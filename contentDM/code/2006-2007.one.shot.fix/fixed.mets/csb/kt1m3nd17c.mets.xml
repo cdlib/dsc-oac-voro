@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt1m3nd17c" LABEL="Abner Levi Blackburn, Jan. 13, 1827 - Nov. 2, 1904 and Lucinda (Harris) Blackburn: November 13, 1832 - October 9, 1905 " TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:12:56.326-07:00" LASTMODDATE="2008-07-18T16:12:56.326-07:00" RECORDSTATUS="NEW" ID="d122">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSB_007</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:12:56.326-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSB_007</dc:identifier>
+            <dc:title>Abner Levi Blackburn, Jan. 13, 1827 - Nov. 2, 1904 and Lucinda (Harris) Blackburn: November 13, 1832 - October 9, 1905 </dc:title>
+            <dc:creator>Unknown </dc:creator>
+            <dc:date>1887 - 1904? </dc:date>
+            <dc:subject>Pioneers</dc:subject>
+            <dc:subject>Portraits </dc:subject>
+            <dc:type>image </dc:type>
+            <dc:type>Photographs: Black-and-white negatives </dc:type>
+            <dc:format>1  photographic negative, 4 x 5 in. </dc:format>
+            <dc:publisher>San Bernardino Public Library </dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt7g5023bs </dc:relation>
+            <dc:rights>public domain </dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use. </dc:rights>
+            <dc:subject>Blackburn, Abner Levi, 1827 - 1904 and Blackburn, Lucinda (Harris), 1832 - 1905 </dc:subject>
+            <dc:coverage>San Bernardino (Calif.) </dc:coverage>
+            <dc:identifier>Neg 172 </dc:identifier>
+            <dc:description>Abner and Lucinda Blackburn. He was a member of the Mormon Battalion</dc:description>
+            <dc:relation>http://www.sbpl.org/index_pioneers.html</dc:relation>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt7g5023bs" LABEL="Pioneers of San Bernardino" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt7g5023bs"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Bernardino Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt067nc4fj</dc:identifier>
+            <dc:identifier>http://www.sbpl.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d125">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e458">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/7c/kt1m3nd17c/files/kt1m3nd17c-d3e458.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e462">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/7c/kt1m3nd17c/files/kt1m3nd17c-d3e462.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e450" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/jpeg/csb_007.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e448" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/tiff/csb_007.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d126" DMDID="DC" LABEL="Abner Levi Blackburn, Jan. 13, 1827 - Nov. 2, 1904 and Lucinda (Harris) Blackburn: November 13, 1832 - October 9, 1905 ">
+         <mets:div ID="d127" TYPE="thumbnail image">
+            <mets:fptr ID="d128" FILEID="d3e458"/>
+         </mets:div>
+         <mets:div ID="d129" TYPE="reference image">
+            <mets:fptr ID="d130" FILEID="d3e462"/>
+         </mets:div>
+         <mets:div ID="d131" TYPE="archive image">
+            <mets:fptr ID="d132" FILEID="d3e450"/>
+         </mets:div>
+         <mets:div ID="d133" TYPE="archive image">
+            <mets:fptr ID="d134" FILEID="d3e448"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

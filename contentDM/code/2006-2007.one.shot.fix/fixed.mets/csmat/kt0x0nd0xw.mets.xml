@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt0x0nd0xw" LABEL="Preparing dinner at San Mateo City Recreation Department Day Camp" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d2366">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_1006</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_1006</dc:identifier>
+            <dc:title>Preparing dinner at San Mateo City Recreation Department Day Camp</dc:title>
+            <dc:creator>Unknown</dc:creator>
+            <dc:date>1960s</dc:date>
+            <dc:subject>Outdoor cookery</dc:subject>
+            <dc:subject>Campfires</dc:subject>
+            <dc:subject>Camps</dc:subject>
+            <dc:subject>Trees</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 photographic print; 20.3 x 25.4 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>San Mateo City Recreation Department</dc:subject>
+            <dc:subject>Prescott, Elaine</dc:subject>
+            <dc:subject>Glab, Linda</dc:subject>
+            <dc:subject>Teiye, Carol</dc:subject>
+            <dc:coverage>San Mateo (Calif.))</dc:coverage>
+            <dc:description>San Mateo City Recreation Department Day Camp. Elaine Prescott, Linda Glab and Carol Teiye preparing dinner among the redwood trees.</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d2369">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e9728">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/xw/kt0x0nd0xw/files/kt0x0nd0xw-d3e9728.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e9732">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/xw/kt0x0nd0xw/files/kt0x0nd0xw-d3e9732.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e9720" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_1006.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e9718" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_1006.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d2370" DMDID="DC" LABEL="Preparing dinner at San Mateo City Recreation Department Day Camp">
+         <mets:div ID="d2371" TYPE="thumbnail image">
+            <mets:fptr ID="d2372" FILEID="d3e9728"/>
+         </mets:div>
+         <mets:div ID="d2373" TYPE="reference image">
+            <mets:fptr ID="d2374" FILEID="d3e9732"/>
+         </mets:div>
+         <mets:div ID="d2375" TYPE="archive image">
+            <mets:fptr ID="d2376" FILEID="d3e9720"/>
+         </mets:div>
+         <mets:div ID="d2377" TYPE="archive image">
+            <mets:fptr ID="d2378" FILEID="d3e9718"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

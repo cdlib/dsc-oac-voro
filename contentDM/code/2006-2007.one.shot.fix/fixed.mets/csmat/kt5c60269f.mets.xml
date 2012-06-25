@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt5c60269f" LABEL="Morale High as the Clouds" TYPE="facsimile text" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d1928">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_131</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_131</dc:identifier>
+            <dc:title>Morale High as the Clouds</dc:title>
+            <dc:creator>Murray, John J., Jr.</dc:creator>
+            <dc:date>1990 August</dc:date>
+            <dc:subject>Military personnel</dc:subject>
+            <dc:subject>Battlefields</dc:subject>
+            <dc:subject>Homecomings</dc:subject>
+            <dc:subject>Vietnam Conflict, 1961-1975</dc:subject>
+            <dc:type>text</dc:type>
+            <dc:type>Clippings</dc:type>
+            <dc:format>6 page article (text and photos); 20.1 x 27.5 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>Artavia, Joe</dc:subject>
+            <dc:subject>101st Airborne Division</dc:subject>
+            <dc:subject>U.S. Army</dc:subject>
+            <dc:subject>Carpenter, William S.</dc:subject>
+            <dc:subject>Patterson, Linda (Giese)</dc:subject>
+            <dc:subject>Wright, Ron</dc:subject>
+            <dc:subject>Graham, Vera</dc:subject>
+            <dc:subject>Chanteloup, Noe J.</dc:subject>
+            <dc:subject>San Mateo Times</dc:subject>
+            <dc:subject>Patterson, Stephen J.</dc:subject>
+            <dc:subject>Zais, Melvin</dc:subject>
+            <dc:coverage>San Mateo (Calif.));</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:description>Article in Vietnam Magazine August 1990: Morale High as the Clouds about the Abu's - A Company, 101st Airborne - and their adoption by the City of San Mateo.</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1931">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e7743" GROUPID="131_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/9f/kt5c60269f/files/kt5c60269f-d3e7743.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e7764" GROUPID="131_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/9f/kt5c60269f/files/kt5c60269f-d3e7764.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e7785" GROUPID="131_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/9f/kt5c60269f/files/kt5c60269f-d3e7785.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e7806" GROUPID="131_PAGE04">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/9f/kt5c60269f/files/kt5c60269f-d3e7806.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e7827" GROUPID="131_PAGE05">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/9f/kt5c60269f/files/kt5c60269f-d3e7827.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e7748" GROUPID="131_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/9f/kt5c60269f/files/kt5c60269f-d3e7748.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e7769" GROUPID="131_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/9f/kt5c60269f/files/kt5c60269f-d3e7769.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e7790" GROUPID="131_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/9f/kt5c60269f/files/kt5c60269f-d3e7790.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e7811" GROUPID="131_PAGE04">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/9f/kt5c60269f/files/kt5c60269f-d3e7811.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e7832" GROUPID="131_PAGE05">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/9f/kt5c60269f/files/kt5c60269f-d3e7832.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e7758" MIMETYPE="image/jpeg" GROUPID="131_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_131_page01.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e7753" GROUPID="131_PAGE01" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_131_page01.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e7779" MIMETYPE="image/jpeg" GROUPID="131_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_131_page02.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e7774" GROUPID="131_PAGE02" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_131_page02.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e7800" MIMETYPE="image/jpeg" GROUPID="131_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_131_page03.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e7795" GROUPID="131_PAGE03" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_131_page03.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e7821" MIMETYPE="image/jpeg" GROUPID="131_PAGE04">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_131_page04.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e7816" GROUPID="131_PAGE04" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_131_page04.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e7842" MIMETYPE="image/jpeg" GROUPID="131_PAGE05">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_131_page05.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e7837" GROUPID="131_PAGE05" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_131_page05.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1932" DMDID="DC" LABEL="Morale High as the Clouds">
+         <mets:div ID="d1933" LABEL="131_PAGE01">
+            <mets:div ID="d1934" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e7743"/>
+            </mets:div>
+            <mets:div ID="d1935" TYPE="reference image">
+               <mets:fptr FILEID="d3e7748"/>
+            </mets:div>
+            <mets:div ID="d1936" TYPE="archive image">
+               <mets:fptr FILEID="d3e7758"/>
+            </mets:div>
+            <mets:div ID="d1937" TYPE="archive image">
+               <mets:fptr FILEID="d3e7753"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1938" LABEL="131_PAGE02">
+            <mets:div ID="d1939" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e7764"/>
+            </mets:div>
+            <mets:div ID="d1940" TYPE="reference image">
+               <mets:fptr FILEID="d3e7769"/>
+            </mets:div>
+            <mets:div ID="d1941" TYPE="archive image">
+               <mets:fptr FILEID="d3e7779"/>
+            </mets:div>
+            <mets:div ID="d1942" TYPE="archive image">
+               <mets:fptr FILEID="d3e7774"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1943" LABEL="131_PAGE03">
+            <mets:div ID="d1944" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e7785"/>
+            </mets:div>
+            <mets:div ID="d1945" TYPE="reference image">
+               <mets:fptr FILEID="d3e7790"/>
+            </mets:div>
+            <mets:div ID="d1946" TYPE="archive image">
+               <mets:fptr FILEID="d3e7800"/>
+            </mets:div>
+            <mets:div ID="d1947" TYPE="archive image">
+               <mets:fptr FILEID="d3e7795"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1948" LABEL="131_PAGE04">
+            <mets:div ID="d1949" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e7806"/>
+            </mets:div>
+            <mets:div ID="d1950" TYPE="reference image">
+               <mets:fptr FILEID="d3e7811"/>
+            </mets:div>
+            <mets:div ID="d1951" TYPE="archive image">
+               <mets:fptr FILEID="d3e7821"/>
+            </mets:div>
+            <mets:div ID="d1952" TYPE="archive image">
+               <mets:fptr FILEID="d3e7816"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1953" LABEL="131_PAGE05">
+            <mets:div ID="d1954" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e7827"/>
+            </mets:div>
+            <mets:div ID="d1955" TYPE="reference image">
+               <mets:fptr FILEID="d3e7832"/>
+            </mets:div>
+            <mets:div ID="d1956" TYPE="archive image">
+               <mets:fptr FILEID="d3e7842"/>
+            </mets:div>
+            <mets:div ID="d1957" TYPE="archive image">
+               <mets:fptr FILEID="d3e7837"/>
+            </mets:div>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

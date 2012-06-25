@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt2w1024hx" LABEL="United States Army Balloon School at Ross Field--U.S. Army C-2 Balloon" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d2465">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_126</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_126</dc:identifier>
+            <dc:title>United States Army Balloon School at Ross Field--U.S. Army C-2 Balloon</dc:title>
+            <dc:creator>Unknown</dc:creator>
+            <dc:date>circa 1920 or 1921</dc:date>
+            <dc:subject>Airships</dc:subject>
+            <dc:subject>Military training camps--California--Arcadia</dc:subject>
+            <dc:subject>World War, 1914-1918--Balloons</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 black and white photographic print; 11 x 16 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use.</dc:rights>
+            <dc:subject>United States. Army. Balloon Section.</dc:subject>
+            <dc:coverage>Arcadia (Calif.); Ross Field (Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:identifier>158</dc:identifier>
+            <dc:description>United States Army C-2 Balloon at U.S. Army Balloon School at Ross Field in Arcadia, California. This was a more recent design, circa 1921 or 1922. More streamlined than the large, floppy ones seen in many of the earlier World War I photos.</dc:description>
+            <dc:source>Arcadia Public Library Image Archives</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d2468">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e9713">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/hx/kt2w1024hx/files/kt2w1024hx-d3e9713.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e9717">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/hx/kt2w1024hx/files/kt2w1024hx-d3e9717.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e9705" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_126.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e9703" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_126.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d2469" DMDID="DC" LABEL="United States Army Balloon School at Ross Field--U.S. Army C-2 Balloon">
+         <mets:div ID="d2470" TYPE="thumbnail image">
+            <mets:fptr ID="d2471" FILEID="d3e9713"/>
+         </mets:div>
+         <mets:div ID="d2472" TYPE="reference image">
+            <mets:fptr ID="d2473" FILEID="d3e9717"/>
+         </mets:div>
+         <mets:div ID="d2474" TYPE="archive image">
+            <mets:fptr ID="d2475" FILEID="d3e9705"/>
+         </mets:div>
+         <mets:div ID="d2476" TYPE="archive image">
+            <mets:fptr ID="d2477" FILEID="d3e9703"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

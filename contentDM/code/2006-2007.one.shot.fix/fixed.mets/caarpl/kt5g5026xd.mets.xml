@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt5g5026xd" LABEL="United States Army Balloon School at Ross Field--6 Balloon Panorama" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d2645">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_136</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_136</dc:identifier>
+            <dc:title>United States Army Balloon School at Ross Field--6 Balloon Panorama</dc:title>
+            <dc:creator>Unknown</dc:creator>
+            <dc:date>circa 1918</dc:date>
+            <dc:subject>Airships</dc:subject>
+            <dc:subject>Military training camps--California--Arcadia</dc:subject>
+            <dc:subject>Soldiers--United States</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 black and white photographic print; 15 x 27 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use.</dc:rights>
+            <dc:subject>United States. Army. Balloon Section.</dc:subject>
+            <dc:coverage>Arcadia (Calif.); Ross Field (Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:identifier>186</dc:identifier>
+            <dc:description>U.S. Army Balloon School at Ross Field in Arcadia, California. Shows six balloons inflated and secured just off the ground. Officers and men are in formations beneath the balloons. Buildings and tents of Ross Field are arrayed across photo. Eucalyptus make a row completely across photo. San Gabriel Mountains form backdrop.</dc:description>
+            <dc:source>Arcadia Public Library Image Archives</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d2648">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e10384">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/xd/kt5g5026xd/files/kt5g5026xd-d3e10384.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e10388">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/xd/kt5g5026xd/files/kt5g5026xd-d3e10388.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e10376" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_136.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e10374" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_136.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d2649" DMDID="DC" LABEL="United States Army Balloon School at Ross Field--6 Balloon Panorama">
+         <mets:div ID="d2650" TYPE="thumbnail image">
+            <mets:fptr ID="d2651" FILEID="d3e10384"/>
+         </mets:div>
+         <mets:div ID="d2652" TYPE="reference image">
+            <mets:fptr ID="d2653" FILEID="d3e10388"/>
+         </mets:div>
+         <mets:div ID="d2654" TYPE="archive image">
+            <mets:fptr ID="d2655" FILEID="d3e10376"/>
+         </mets:div>
+         <mets:div ID="d2656" TYPE="archive image">
+            <mets:fptr ID="d2657" FILEID="d3e10374"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

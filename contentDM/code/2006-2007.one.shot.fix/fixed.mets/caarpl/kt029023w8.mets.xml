@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt029023w8" LABEL="Postcard of Lake at Lucky Baldwin's Ranch--Lake and Trees" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d3239">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_168</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_168</dc:identifier>
+            <dc:title>Postcard of Lake at Lucky Baldwin's Ranch--Lake and Trees</dc:title>
+            <dc:creator>M. Reider, Publisher</dc:creator>
+            <dc:date>1907, April 26</dc:date>
+            <dc:subject>Ranches--California</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 black and white postcard print; 9 x 14 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use.</dc:rights>
+            <dc:subject>Los Angeles County Arboretum and Botanical Garden</dc:subject>
+            <dc:coverage>Arcadia (Calif.); Rancho Santa Anita (Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:description>Postcard of Lake at Baldwin's Ranch, California. Lake and trees are depicted. Date Apr 26th 1907 is handwritten. Printed by M. Rieder, Publ., Los Angeles, Cal. and Leipzig.</dc:description>
+            <dc:source>Ruth and Charles Gilb Arcadia Historical Museum, Accession ID 2006.1.1</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d3242">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e12596">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/w8/kt029023w8/files/kt029023w8-d3e12596.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e12600">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/w8/kt029023w8/files/kt029023w8-d3e12600.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e12588" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_168.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e12586" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_168.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d3243" DMDID="DC" LABEL="Postcard of Lake at Lucky Baldwin's Ranch--Lake and Trees">
+         <mets:div ID="d3244" TYPE="thumbnail image">
+            <mets:fptr ID="d3245" FILEID="d3e12596"/>
+         </mets:div>
+         <mets:div ID="d3246" TYPE="reference image">
+            <mets:fptr ID="d3247" FILEID="d3e12600"/>
+         </mets:div>
+         <mets:div ID="d3248" TYPE="archive image">
+            <mets:fptr ID="d3249" FILEID="d3e12588"/>
+         </mets:div>
+         <mets:div ID="d3250" TYPE="archive image">
+            <mets:fptr ID="d3251" FILEID="d3e12586"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

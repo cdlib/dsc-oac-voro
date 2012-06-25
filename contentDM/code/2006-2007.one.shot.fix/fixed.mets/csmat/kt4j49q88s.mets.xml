@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt4j49q88s" LABEL="Exercising &quot;Bluenose&quot; at the San Mateo Polo Field" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d2312">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_1003</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_1003</dc:identifier>
+            <dc:title>Exercising "Bluenose" at the San Mateo Polo Field</dc:title>
+            <dc:creator>Unknown</dc:creator>
+            <dc:date>1933</dc:date>
+            <dc:subject>Horses</dc:subject>
+            <dc:subject>People</dc:subject>
+            <dc:subject>Horseback riding</dc:subject>
+            <dc:subject>Barns</dc:subject>
+            <dc:subject>Trees</dc:subject>
+            <dc:subject>Horse boarding &amp; training facilities</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 photographic image; 20.3 x 25.4 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>Garraughty, Katherine</dc:subject>
+            <dc:subject>Mulhall, Catherine</dc:subject>
+            <dc:subject>Bunker, Harold</dc:subject>
+            <dc:subject>Borel Estate</dc:subject>
+            <dc:subject>San Mateo Polo Field</dc:subject>
+            <dc:coverage>San Mateo (Calif.)); Hillsborough (Calif.)</dc:coverage>
+            <dc:description>Katherine Garraughty on foot, Catherine Mulhall mounted on "Bluenose" owned by Mr. Harold Bunker of Hillsborough.  Taken on San Mateo Polo Field.  Barn is on adjoining Borel Estate property.</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d2315">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e9533">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/8s/kt4j49q88s/files/kt4j49q88s-d3e9533.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e9537">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/8s/kt4j49q88s/files/kt4j49q88s-d3e9537.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e9525" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_1003.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e9523" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_1003.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d2316" DMDID="DC" LABEL="Exercising &quot;Bluenose&quot; at the San Mateo Polo Field">
+         <mets:div ID="d2317" TYPE="thumbnail image">
+            <mets:fptr ID="d2318" FILEID="d3e9533"/>
+         </mets:div>
+         <mets:div ID="d2319" TYPE="reference image">
+            <mets:fptr ID="d2320" FILEID="d3e9537"/>
+         </mets:div>
+         <mets:div ID="d2321" TYPE="archive image">
+            <mets:fptr ID="d2322" FILEID="d3e9525"/>
+         </mets:div>
+         <mets:div ID="d2323" TYPE="archive image">
+            <mets:fptr ID="d2324" FILEID="d3e9523"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

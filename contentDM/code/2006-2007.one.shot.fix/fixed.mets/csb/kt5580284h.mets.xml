@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt5580284h" LABEL="Dr. Ben Barton, June 8, 1823 - January 1, 1897 " TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:12:56.326-07:00" LASTMODDATE="2008-07-18T16:12:56.326-07:00" RECORDSTATUS="NEW" ID="d104">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSB_006</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:12:56.326-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSB_006</dc:identifier>
+            <dc:title>Dr. Ben Barton, June 8, 1823 - January 1, 1897 </dc:title>
+            <dc:creator>Unknown </dc:creator>
+            <dc:date>1880s - 1897? </dc:date>
+            <dc:subject>Pioneers</dc:subject>
+            <dc:subject>Portraits </dc:subject>
+            <dc:type>image </dc:type>
+            <dc:type>Photographs: Black-and-white negatives </dc:type>
+            <dc:format>1  photographic negative, 4 x 5 in. </dc:format>
+            <dc:publisher>San Bernardino Public Library </dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt7g5023bs </dc:relation>
+            <dc:rights>public domain </dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use. </dc:rights>
+            <dc:subject>Barton, Dr. Ben, 1823 - 1897   </dc:subject>
+            <dc:coverage>San Bernardino (Calif.) </dc:coverage>
+            <dc:identifier>Neg 187 </dc:identifier>
+            <dc:description>Dr. Ben Barton, started first drug store in San Bernardino and was postmaster and rancher</dc:description>
+            <dc:relation>http://www.sbpl.org/index_pioneers.html</dc:relation>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt7g5023bs" LABEL="Pioneers of San Bernardino" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt7g5023bs"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Bernardino Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt067nc4fj</dc:identifier>
+            <dc:identifier>http://www.sbpl.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d107">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e392">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/4h/kt5580284h/files/kt5580284h-d3e392.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e396">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/4h/kt5580284h/files/kt5580284h-d3e396.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e384" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/jpeg/csb_006.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e382" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/tiff/csb_006.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d108" DMDID="DC" LABEL="Dr. Ben Barton, June 8, 1823 - January 1, 1897 ">
+         <mets:div ID="d109" TYPE="thumbnail image">
+            <mets:fptr ID="d110" FILEID="d3e392"/>
+         </mets:div>
+         <mets:div ID="d111" TYPE="reference image">
+            <mets:fptr ID="d112" FILEID="d3e396"/>
+         </mets:div>
+         <mets:div ID="d113" TYPE="archive image">
+            <mets:fptr ID="d114" FILEID="d3e384"/>
+         </mets:div>
+         <mets:div ID="d115" TYPE="archive image">
+            <mets:fptr ID="d116" FILEID="d3e382"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

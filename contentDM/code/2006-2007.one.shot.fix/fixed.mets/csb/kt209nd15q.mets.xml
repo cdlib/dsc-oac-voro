@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt209nd15q" LABEL="John Taylor, February 24, 1830 - ? " TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:12:56.326-07:00" LASTMODDATE="2008-07-18T16:12:56.326-07:00" RECORDSTATUS="NEW" ID="d1544">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>csb_090</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:12:56.326-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>csb_090</dc:identifier>
+            <dc:title>John Taylor, February 24, 1830 - ? </dc:title>
+            <dc:creator>Unknown </dc:creator>
+            <dc:date>1880s - 1890s? </dc:date>
+            <dc:subject>Pioneers</dc:subject>
+            <dc:subject>Portraits </dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1  photographic print, 4 x 5 in. </dc:format>
+            <dc:publisher>San Bernardino Public Library </dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt7g5023bs </dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use. </dc:rights>
+            <dc:subject>Taylor, John, February 24, 1830 - ? </dc:subject>
+            <dc:coverage>San Bernardino, (Calif.)</dc:coverage>
+            <dc:identifier>Neg 217 </dc:identifier>
+            <dc:description>John Taylor came to California from Texas in 1864 to escape the Confederate Army. He settled in Chino where he farmed and served as Justice of the Peace and Public Administrator. </dc:description>
+            <dc:relation>http://www.sbpl.org/index_pioneers.html</dc:relation>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt7g5023bs" LABEL="Pioneers of San Bernardino" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt7g5023bs"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Bernardino Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt067nc4fj</dc:identifier>
+            <dc:identifier>http://www.sbpl.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1547">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e5679">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/5q/kt209nd15q/files/kt209nd15q-d3e5679.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e5683">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/5q/kt209nd15q/files/kt209nd15q-d3e5683.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e5671" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/jpeg/csb_090.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e5669" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/tiff/csb_090.jpg" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1548" DMDID="DC" LABEL="John Taylor, February 24, 1830 - ? ">
+         <mets:div ID="d1549" TYPE="thumbnail image">
+            <mets:fptr ID="d1550" FILEID="d3e5679"/>
+         </mets:div>
+         <mets:div ID="d1551" TYPE="reference image">
+            <mets:fptr ID="d1552" FILEID="d3e5683"/>
+         </mets:div>
+         <mets:div ID="d1553" TYPE="archive image">
+            <mets:fptr ID="d1554" FILEID="d3e5671"/>
+         </mets:div>
+         <mets:div ID="d1555" TYPE="archive image">
+            <mets:fptr ID="d1556" FILEID="d3e5669"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

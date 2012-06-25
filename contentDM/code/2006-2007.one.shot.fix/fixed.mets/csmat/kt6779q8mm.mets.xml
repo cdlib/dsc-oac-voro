@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt6779q8mm" LABEL="St. Matthew's Episcopal Church - Altar" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d3986">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_163</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_163</dc:identifier>
+            <dc:title>St. Matthew's Episcopal Church - Altar</dc:title>
+            <dc:creator>Unknown</dc:creator>
+            <dc:date>1887</dc:date>
+            <dc:subject>Episcopal churches</dc:subject>
+            <dc:subject>Altars</dc:subject>
+            <dc:subject>Choirboys</dc:subject>
+            <dc:subject>Organs</dc:subject>
+            <dc:subject>Interiors</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 photographic print; 23.2 x 19 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>St. Matthew's Episcopal Church (Firm)</dc:subject>
+            <dc:subject>Brewer, A.L., Dr.</dc:subject>
+            <dc:subject>Robinson, H.D., Rev.</dc:subject>
+            <dc:coverage>San Mateo (Calif.))</dc:coverage>
+            <dc:description>Church of St. Matthew (Episcopal) about 1887.  Dr. A.L. Brewer, the first rector of the church at the left of the altar, the Rev. H.D. Robinson, Headmaster of St. Matthew's School at the right.  Rev. Robinson later became the Bishop of Nevada and died in New York in 1914.</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d3989">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e15579">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/mm/kt6779q8mm/files/kt6779q8mm-d3e15579.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e15583">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/mm/kt6779q8mm/files/kt6779q8mm-d3e15583.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e15571" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_163.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e15569" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_163.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d3990" DMDID="DC" LABEL="St. Matthew's Episcopal Church - Altar">
+         <mets:div ID="d3991" TYPE="thumbnail image">
+            <mets:fptr ID="d3992" FILEID="d3e15579"/>
+         </mets:div>
+         <mets:div ID="d3993" TYPE="reference image">
+            <mets:fptr ID="d3994" FILEID="d3e15583"/>
+         </mets:div>
+         <mets:div ID="d3995" TYPE="archive image">
+            <mets:fptr ID="d3996" FILEID="d3e15571"/>
+         </mets:div>
+         <mets:div ID="d3997" TYPE="archive image">
+            <mets:fptr ID="d3998" FILEID="d3e15569"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

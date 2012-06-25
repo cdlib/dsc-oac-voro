@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt7g50281j" LABEL="Man O' War newspaper, February 5, 1943" TYPE="facsimile text" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d2897">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_149</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_149</dc:identifier>
+            <dc:title>Man O' War newspaper, February 5, 1943</dc:title>
+            <dc:creator>United States Army</dc:creator>
+            <dc:date>1943</dc:date>
+            <dc:subject>World War, 1939-1945--Newspapers</dc:subject>
+            <dc:type>text</dc:type>
+            <dc:type>Clippings</dc:type>
+            <dc:format>1 newsprint; 43 x 28 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use.</dc:rights>
+            <dc:subject>Man o' War (Newspaper)</dc:subject>
+            <dc:subject>United States--Army--Ordnance Dept.</dc:subject>
+            <dc:coverage>Arcadia (Calif.); Camp Santa Anita (Arcadia,Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:description>Man O' War newspaper of the Ordnance Training Center at Camp Santa Anita, Arcadia, California. Issue date February 5, 1943. Headline reads ""Bob Hope at Camp Tuesday.""</dc:description>
+            <dc:source>Selected newspaper from Man O' War, Miscellaneous Single Issues (Document Box 39A)</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d2900">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e11327">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/1j/kt7g50281j/files/kt7g50281j-d3e11327.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e11331">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/1j/kt7g50281j/files/kt7g50281j-d3e11331.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e11319" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_149.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e11317" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_149.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d2901" DMDID="DC" LABEL="Man O' War newspaper, February 5, 1943">
+         <mets:div ID="d2902" TYPE="thumbnail image">
+            <mets:fptr ID="d2903" FILEID="d3e11327"/>
+         </mets:div>
+         <mets:div ID="d2904" TYPE="reference image">
+            <mets:fptr ID="d2905" FILEID="d3e11331"/>
+         </mets:div>
+         <mets:div ID="d2906" TYPE="archive image">
+            <mets:fptr ID="d2907" FILEID="d3e11319"/>
+         </mets:div>
+         <mets:div ID="d2908" TYPE="archive image">
+            <mets:fptr ID="d2909" FILEID="d3e11317"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

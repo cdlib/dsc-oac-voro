@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt5h4nd4bz" LABEL="Whittier Public Library History Room" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:09.112-07:00" LASTMODDATE="2008-07-18T16:13:09.112-07:00" RECORDSTATUS="NEW" ID="d2624">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>cwh_193</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:09.112-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>cwh_193</dc:identifier>
+            <dc:title>Whittier Public Library History Room</dc:title>
+            <dc:creator>Unknown;</dc:creator>
+            <dc:date>undated: circa mid 20th century</dc:date>
+            <dc:subject>Libraries</dc:subject>
+            <dc:subject>Librarians</dc:subject>
+            <dc:subject>History</dc:subject>
+            <dc:subject>Books</dc:subject>
+            <dc:subject>Bookcases</dc:subject>
+            <dc:subject>California</dc:subject>
+            <dc:subject>Whittier</dc:subject>
+            <dc:format>1 photographic print; 5 x 6</dc:format>
+            <dc:publisher>Bayless, Jane</dc:publisher>
+            <dc:coverage>Whittier (Calif.);</dc:coverage>
+            <dc:description>Interior photograph of the Whittier Public Library History Room.  Woman in the photo is Jane Bayless who was the Head Librarian from 1972-1982.</dc:description>
+            <dc:title>Whittier Public Library</dc:title>
+            <dc:contributor>Unknown;</dc:contributor>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt1b69q44j" LABEL="Whittier Public Library Historical Photograph Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt1b69q44j"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Whittier Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt7g5027z1</dc:identifier>
+            <dc:identifier>http://www.whittierlibrary.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d2627">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e9678">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/bz/kt5h4nd4bz/files/kt5h4nd4bz-d3e9678.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e9682">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/bz/kt5h4nd4bz/files/kt5h4nd4bz-d3e9682.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e9670" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/jpeg/cwh_193.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e9668" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/tiff/cwh_193.jpg" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d2628" DMDID="DC" LABEL="Whittier Public Library History Room">
+         <mets:div ID="d2629" TYPE="thumbnail image">
+            <mets:fptr ID="d2630" FILEID="d3e9678"/>
+         </mets:div>
+         <mets:div ID="d2631" TYPE="reference image">
+            <mets:fptr ID="d2632" FILEID="d3e9682"/>
+         </mets:div>
+         <mets:div ID="d2633" TYPE="archive image">
+            <mets:fptr ID="d2634" FILEID="d3e9670"/>
+         </mets:div>
+         <mets:div ID="d2635" TYPE="archive image">
+            <mets:fptr ID="d2636" FILEID="d3e9668"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

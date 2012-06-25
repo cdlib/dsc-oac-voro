@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt9h4nd5rw" LABEL="Whittier College ceremony" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:09.112-07:00" LASTMODDATE="2008-07-18T16:13:09.112-07:00" RECORDSTATUS="NEW" ID="d284">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>cwh_026</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:09.112-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>cwh_026</dc:identifier>
+            <dc:title>Whittier College ceremony</dc:title>
+            <dc:creator>Unknown;</dc:creator>
+            <dc:date>1928 August 17</dc:date>
+            <dc:subject>Universities &amp; colleges</dc:subject>
+            <dc:subject>Graduation ceremonies</dc:subject>
+            <dc:subject>Presidents' spouses</dc:subject>
+            <dc:subject>California</dc:subject>
+            <dc:subject>Whittier</dc:subject>
+            <dc:type>image;</dc:type>
+            <dc:type>Photographs;</dc:type>
+            <dc:format>1 photographic print; 7.5 x 9.5 in</dc:format>
+            <dc:publisher>Whittier Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt1b69q44j</dc:relation>
+            <dc:rights>unknown;</dc:rights>
+            <dc:rights>Copyright status unknown.  Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.).  In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks.  Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners.  Works not in the public domain cannot be commercially exploited without permission of the copyright owner.  Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:subject>Dexter, Walter F., 1886-1945</dc:subject>
+            <dc:subject>Hoover, Lou Henry, 1874-1944</dc:subject>
+            <dc:subject>Perry, Herman</dc:subject>
+            <dc:subject>Gregory, Ernest</dc:subject>
+            <dc:subject>Votaw, Merritt, 1878-1975</dc:subject>
+            <dc:coverage>Whittier (Calif.);</dc:coverage>
+            <dc:language>eng;</dc:language>
+            <dc:description>Image depicts Walter F. Dexter is presenting an honorary degree to Lou Henry Hoover at Whittier College on August 17, 1928.  Also in picture is Lou Henry Hoover, Herman Perry, Ernest Gregory, and Merritt Votaw.</dc:description>
+            <dc:title>Honorary degree presention.</dc:title>
+            <dc:contributor>unknown</dc:contributor>
+            <dc:source>Selected photograph from the Whittier History Room photograph collection.</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt1b69q44j" LABEL="Whittier Public Library Historical Photograph Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt1b69q44j"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Whittier Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt7g5027z1</dc:identifier>
+            <dc:identifier>http://www.whittierlibrary.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d287">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e1072">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/rw/kt9h4nd5rw/files/kt9h4nd5rw-d3e1072.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e1076">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/rw/kt9h4nd5rw/files/kt9h4nd5rw-d3e1076.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e1064" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/jpeg/cwh_026.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e1062" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/tiff/cwh_026.jpg" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d288" DMDID="DC" LABEL="Whittier College ceremony">
+         <mets:div ID="d289" TYPE="thumbnail image">
+            <mets:fptr ID="d290" FILEID="d3e1072"/>
+         </mets:div>
+         <mets:div ID="d291" TYPE="reference image">
+            <mets:fptr ID="d292" FILEID="d3e1076"/>
+         </mets:div>
+         <mets:div ID="d293" TYPE="archive image">
+            <mets:fptr ID="d294" FILEID="d3e1064"/>
+         </mets:div>
+         <mets:div ID="d295" TYPE="archive image">
+            <mets:fptr ID="d296" FILEID="d3e1062"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

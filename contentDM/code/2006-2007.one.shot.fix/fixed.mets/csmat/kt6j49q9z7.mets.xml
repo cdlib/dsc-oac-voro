@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt6j49q9z7" LABEL="Guide to Memorial Room" TYPE="facsimile text" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d1553">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_095</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_095</dc:identifier>
+            <dc:title>Guide to Memorial Room</dc:title>
+            <dc:creator>Unknown</dc:creator>
+            <dc:date>2001 November</dc:date>
+            <dc:subject>Memorabilia</dc:subject>
+            <dc:subject>Vietnam Conflict, 1961-1975</dc:subject>
+            <dc:type>text</dc:type>
+            <dc:type>Brochures</dc:type>
+            <dc:format>two sided printed tri-fold brochure; 35.5x 21.5 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>Artavia, Joe</dc:subject>
+            <dc:subject>Patterson, Linda (Giese)</dc:subject>
+            <dc:subject>101st Airborne Division</dc:subject>
+            <dc:subject>U.S. Army</dc:subject>
+            <dc:coverage>San Mateo (Calif.))</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:description>Guide to the items of memorabilia in the Screaming Eagles Memorial Room at the San Mateo Public Library and the Story of a City and its Adopted Sons</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1556">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e5925" GROUPID="095_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/z7/kt6j49q9z7/files/kt6j49q9z7-d3e5925.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e5946" GROUPID="095_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/z7/kt6j49q9z7/files/kt6j49q9z7-d3e5946.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e5930" GROUPID="095_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/z7/kt6j49q9z7/files/kt6j49q9z7-d3e5930.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e5951" GROUPID="095_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/z7/kt6j49q9z7/files/kt6j49q9z7-d3e5951.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e5940" MIMETYPE="image/jpeg" GROUPID="095_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_095_page01.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e5935" GROUPID="095_PAGE01" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_095_page01.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e5961" MIMETYPE="image/jpeg" GROUPID="095_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_095_page02.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e5956" GROUPID="095_PAGE02" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_095_page02.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1557" DMDID="DC" LABEL="Guide to Memorial Room">
+         <mets:div ID="d1558" LABEL="095_PAGE01">
+            <mets:div ID="d1559" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e5925"/>
+            </mets:div>
+            <mets:div ID="d1560" TYPE="reference image">
+               <mets:fptr FILEID="d3e5930"/>
+            </mets:div>
+            <mets:div ID="d1561" TYPE="archive image">
+               <mets:fptr FILEID="d3e5940"/>
+            </mets:div>
+            <mets:div ID="d1562" TYPE="archive image">
+               <mets:fptr FILEID="d3e5935"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1563" LABEL="095_PAGE02">
+            <mets:div ID="d1564" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e5946"/>
+            </mets:div>
+            <mets:div ID="d1565" TYPE="reference image">
+               <mets:fptr FILEID="d3e5951"/>
+            </mets:div>
+            <mets:div ID="d1566" TYPE="archive image">
+               <mets:fptr FILEID="d3e5961"/>
+            </mets:div>
+            <mets:div ID="d1567" TYPE="archive image">
+               <mets:fptr FILEID="d3e5956"/>
+            </mets:div>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

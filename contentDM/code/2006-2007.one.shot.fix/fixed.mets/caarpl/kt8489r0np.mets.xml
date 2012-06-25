@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt8489r0np" LABEL="William Parker Lyon Pony Express Museum--Miniature Stagecoach and Washing Machine" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d554">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_032_side001</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_032_side001</dc:identifier>
+            <dc:title>William Parker Lyon Pony Express Museum--Miniature Stagecoach and Washing Machine</dc:title>
+            <dc:creator>Unknown</dc:creator>
+            <dc:date>1935-1948</dc:date>
+            <dc:subject>Historical museums--California--Arcadia</dc:subject>
+            <dc:subject>Museums--California--Arcadia</dc:subject>
+            <dc:subject>Pony Express--Museums</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 black and white photographic print; 27 x 34 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>Unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>Unknown</dc:rights>
+            <dc:rights>Unknown</dc:rights>
+            <dc:rights>Unknown</dc:rights>
+            <dc:publisher>Unknown</dc:publisher>
+            <dc:subject>Pony Express Museum</dc:subject>
+            <dc:coverage>Arcadia (Calif.); West (U.S.)--Museums</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:identifier>Document Box 31</dc:identifier>
+            <dc:description>Exhibit room at Pony Express Museum showing swords on three walls, American flag hanging from ceiling, miniature stagecoach marked TAHOE TAVERN, and washing machine marked TERRIFFS PERFECT WASHER, PATD. MAY 7, 1889.</dc:description>
+            <dc:contributor>Unknown</dc:contributor>
+            <dc:source>Selected photograph from the William Parker Lyon Pony Express Museum Photograph Album (Document Box 31); caarpl_032_side001.tif</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d557">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e2229">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/np/kt8489r0np/files/kt8489r0np-d3e2229.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e2233">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/np/kt8489r0np/files/kt8489r0np-d3e2233.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e2221" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_032_side001.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e2219" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_032_side001.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d558" DMDID="DC" LABEL="William Parker Lyon Pony Express Museum--Miniature Stagecoach and Washing Machine">
+         <mets:div ID="d559" TYPE="thumbnail image">
+            <mets:fptr ID="d560" FILEID="d3e2229"/>
+         </mets:div>
+         <mets:div ID="d561" TYPE="reference image">
+            <mets:fptr ID="d562" FILEID="d3e2233"/>
+         </mets:div>
+         <mets:div ID="d563" TYPE="archive image">
+            <mets:fptr ID="d564" FILEID="d3e2221"/>
+         </mets:div>
+         <mets:div ID="d565" TYPE="archive image">
+            <mets:fptr ID="d566" FILEID="d3e2219"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

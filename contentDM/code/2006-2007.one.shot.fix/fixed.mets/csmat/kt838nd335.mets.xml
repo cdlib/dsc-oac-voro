@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt838nd335" LABEL="Program - 20th Anniversary Ceremony 3/4/88" TYPE="facsimile text" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d1613">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_100</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_100</dc:identifier>
+            <dc:title>Program - 20th Anniversary Ceremony 3/4/88</dc:title>
+            <dc:creator>Unknown</dc:creator>
+            <dc:date>1988 March 4</dc:date>
+            <dc:subject>Rites &amp; ceremonies</dc:subject>
+            <dc:subject>Anniversaries</dc:subject>
+            <dc:subject>Vietnam Conflict, 1961-1975</dc:subject>
+            <dc:type>text</dc:type>
+            <dc:type>Pamphlets</dc:type>
+            <dc:format>two sided printed pamphlet; 27.8 x 21.6 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>101st Airborne Division</dc:subject>
+            <dc:subject>U.S. Army</dc:subject>
+            <dc:subject>San Mateo Public Library</dc:subject>
+            <dc:subject>Murray, John J., Jr.</dc:subject>
+            <dc:subject>Carroll, Richard L.</dc:subject>
+            <dc:subject>Wayne, Hugh A.</dc:subject>
+            <dc:subject>Baker, Jane</dc:subject>
+            <dc:subject>Patterson, Linda (Giese)</dc:subject>
+            <dc:subject>Patterson, Stephen J.</dc:subject>
+            <dc:subject>Hagler, Ralph L., Jr.</dc:subject>
+            <dc:subject>Allen, Teddy G.</dc:subject>
+            <dc:subject>Dougherty, Gloria</dc:subject>
+            <dc:subject>Crawford, Kyle D.</dc:subject>
+            <dc:subject>Jenkins, Jarvis</dc:subject>
+            <dc:subject>Hershey, Jacob</dc:subject>
+            <dc:subject>Kennon, James</dc:subject>
+            <dc:subject>Gumbinger, Paul</dc:subject>
+            <dc:subject>Mack, Thomas R.</dc:subject>
+            <dc:subject>Powell, Jane M.</dc:subject>
+            <dc:subject>Rhoads, Florence</dc:subject>
+            <dc:coverage>San Mateo (Calif.))</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:description>Program for the Ceremony honoring the 20th Anniversary of the Screaming Eagles Memorial Room</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1616">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e6243" GROUPID="100_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/35/kt838nd335/files/kt838nd335-d3e6243.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e6264" GROUPID="100_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/35/kt838nd335/files/kt838nd335-d3e6264.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+         <mets:file ID="d3e6285" GROUPID="100_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/35/kt838nd335/files/kt838nd335-d3e6285.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e6248" GROUPID="100_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/35/kt838nd335/files/kt838nd335-d3e6248.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e6269" GROUPID="100_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/35/kt838nd335/files/kt838nd335-d3e6269.jpg" xlink:role="access"/>
+         </mets:file>
+         <mets:file ID="d3e6290" GROUPID="100_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/35/kt838nd335/files/kt838nd335-d3e6290.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e6258" MIMETYPE="image/jpeg" GROUPID="100_PAGE01">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_100_page01.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e6253" GROUPID="100_PAGE01" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_100_page01.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e6279" MIMETYPE="image/jpeg" GROUPID="100_PAGE02">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_100_page02.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e6274" GROUPID="100_PAGE02" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_100_page02.tif" xlink:role="master"/>
+         </mets:file>
+         <mets:file ID="d3e6300" MIMETYPE="image/jpeg" GROUPID="100_PAGE03">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_100_page03.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e6295" GROUPID="100_PAGE03" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_100_page03.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1617" DMDID="DC" LABEL="Program - 20th Anniversary Ceremony 3/4/88">
+         <mets:div ID="d1618" LABEL="100_PAGE01">
+            <mets:div ID="d1619" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e6243"/>
+            </mets:div>
+            <mets:div ID="d1620" TYPE="reference image">
+               <mets:fptr FILEID="d3e6248"/>
+            </mets:div>
+            <mets:div ID="d1621" TYPE="archive image">
+               <mets:fptr FILEID="d3e6258"/>
+            </mets:div>
+            <mets:div ID="d1622" TYPE="archive image">
+               <mets:fptr FILEID="d3e6253"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1623" LABEL="100_PAGE02">
+            <mets:div ID="d1624" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e6264"/>
+            </mets:div>
+            <mets:div ID="d1625" TYPE="reference image">
+               <mets:fptr FILEID="d3e6269"/>
+            </mets:div>
+            <mets:div ID="d1626" TYPE="archive image">
+               <mets:fptr FILEID="d3e6279"/>
+            </mets:div>
+            <mets:div ID="d1627" TYPE="archive image">
+               <mets:fptr FILEID="d3e6274"/>
+            </mets:div>
+         </mets:div>
+         <mets:div ID="d1628" LABEL="100_PAGE03">
+            <mets:div ID="d1629" TYPE="thumbnail image">
+               <mets:fptr FILEID="d3e6285"/>
+            </mets:div>
+            <mets:div ID="d1630" TYPE="reference image">
+               <mets:fptr FILEID="d3e6290"/>
+            </mets:div>
+            <mets:div ID="d1631" TYPE="archive image">
+               <mets:fptr FILEID="d3e6300"/>
+            </mets:div>
+            <mets:div ID="d1632" TYPE="archive image">
+               <mets:fptr FILEID="d3e6295"/>
+            </mets:div>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

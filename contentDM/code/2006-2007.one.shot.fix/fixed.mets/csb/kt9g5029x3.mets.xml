@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt9g5029x3" LABEL="Sydney and Matilda Brown Waite " TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:12:56.326-07:00" LASTMODDATE="2008-07-18T16:12:56.326-07:00" RECORDSTATUS="NEW" ID="d2066">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>csb_115</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:12:56.326-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>csb_115</dc:identifier>
+            <dc:title>Sydney and Matilda Brown Waite </dc:title>
+            <dc:creator>Unknown </dc:creator>
+            <dc:date>1868 </dc:date>
+            <dc:subject>Pioneers</dc:subject>
+            <dc:subject>Portraits </dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs </dc:type>
+            <dc:format>1 photographic print, 4 x 6.25 in. </dc:format>
+            <dc:publisher>San Bernardino Public Library </dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt7g5023bs </dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use. </dc:rights>
+            <dc:subject>Waite, Sydney and Matilda Brown </dc:subject>
+            <dc:coverage>San Bernardino, (Calif.)</dc:coverage>
+            <dc:identifier>No Negative</dc:identifier>
+            <dc:description>Portrait of Sydney and Matilda Brown Waite taken 1868. </dc:description>
+            <dc:relation>http://www.sbpl.org/index_pioneers.html</dc:relation>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt7g5023bs" LABEL="Pioneers of San Bernardino" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt7g5023bs"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Bernardino Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt067nc4fj</dc:identifier>
+            <dc:identifier>http://www.sbpl.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d2069">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e7596">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/x3/kt9g5029x3/files/kt9g5029x3-d3e7596.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e7600">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/x3/kt9g5029x3/files/kt9g5029x3-d3e7600.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e7588" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/jpeg/csb_115.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e7586" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/tiff/csb_115.jpg" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d2070" DMDID="DC" LABEL="Sydney and Matilda Brown Waite ">
+         <mets:div ID="d2071" TYPE="thumbnail image">
+            <mets:fptr ID="d2072" FILEID="d3e7596"/>
+         </mets:div>
+         <mets:div ID="d2073" TYPE="reference image">
+            <mets:fptr ID="d2074" FILEID="d3e7600"/>
+         </mets:div>
+         <mets:div ID="d2075" TYPE="archive image">
+            <mets:fptr ID="d2076" FILEID="d3e7588"/>
+         </mets:div>
+         <mets:div ID="d2077" TYPE="archive image">
+            <mets:fptr ID="d2078" FILEID="d3e7586"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

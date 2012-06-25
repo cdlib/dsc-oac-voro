@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt487025ws" LABEL="Arcadian Observer, November 23, 1918" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d2411">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_123</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_123</dc:identifier>
+            <dc:title>Arcadian Observer, November 23, 1918</dc:title>
+            <dc:creator>United States. Army. Balloon Section.</dc:creator>
+            <dc:date>1918</dc:date>
+            <dc:subject>World War, 1914-1918--Periodicals</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs; Black-and-white negatives</dc:type>
+            <dc:format>1 black and white photographic negative; 11 x 13 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use.</dc:rights>
+            <dc:publisher>United States Army Balloon School, Arcadia, California</dc:publisher>
+            <dc:subject>Arcadian Observer (Arcadia, Calif. : 1918)</dc:subject>
+            <dc:subject>Sparks, Robert</dc:subject>
+            <dc:subject>United States. Army. Balloon Section.</dc:subject>
+            <dc:coverage>Arcadia (Calif.); Ross Field (Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:identifier>1860</dc:identifier>
+            <dc:description>Page 2 of The Arcadian Observer, Official Publication of the United States Army Balloon School, Arcadia, California. November 23, 1918. Artwork by Robert Sparks titled ""They died not in vain."" It is a drawing of a woman holding a sword and honor roll. Text reads: They died not in vain, her sons have triumphed again, and may that war torn land oer which they fought and bled forevermore remain in peace.</dc:description>
+            <dc:source>Arcadia Public Library Image Archives</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d2414">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e9512">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/ws/kt487025ws/files/kt487025ws-d3e9512.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e9516">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/ws/kt487025ws/files/kt487025ws-d3e9516.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e9504" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_123.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e9502" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_123.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d2415" DMDID="DC" LABEL="Arcadian Observer, November 23, 1918">
+         <mets:div ID="d2416" TYPE="thumbnail image">
+            <mets:fptr ID="d2417" FILEID="d3e9512"/>
+         </mets:div>
+         <mets:div ID="d2418" TYPE="reference image">
+            <mets:fptr ID="d2419" FILEID="d3e9516"/>
+         </mets:div>
+         <mets:div ID="d2420" TYPE="archive image">
+            <mets:fptr ID="d2421" FILEID="d3e9504"/>
+         </mets:div>
+         <mets:div ID="d2422" TYPE="archive image">
+            <mets:fptr ID="d2423" FILEID="d3e9502"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

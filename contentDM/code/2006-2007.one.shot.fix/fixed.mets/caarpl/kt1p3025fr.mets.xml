@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt1p3025fr" LABEL="Pasadena Tournament of Roses Parade--Arcadia Float, 1965" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d1457">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CAARPL_067</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CAARPL_067</dc:identifier>
+            <dc:title>Pasadena Tournament of Roses Parade--Arcadia Float, 1965</dc:title>
+            <dc:creator>Pasadena Tournament of Roses Association</dc:creator>
+            <dc:date>1965</dc:date>
+            <dc:date>1965</dc:date>
+            <dc:subject>Parade floats--California--Arcadia</dc:subject>
+            <dc:subject>Parades--California--Pasadena</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 color photographic print; 21 x 26 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>copyrighted</dc:rights>
+            <dc:rights>Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>Pasadena Tournament of Roses Association</dc:rights>
+            <dc:rights>Nicole O'Neil, Public Relations Department, 391 South Orange Grove Blvd., Pasadena, CA 91184 (noneil@rosemail.org), (626) 449-4100</dc:rights>
+            <dc:rights>1965</dc:rights>
+            <dc:rights>Copyright 1965, Pasadena Tournament of Roses Association</dc:rights>
+            <dc:publisher>Pasadena Tournament of Roses Association</dc:publisher>
+            <dc:subject>Tournament of Roses (1965)</dc:subject>
+            <dc:coverage>Arcadia (Calif.); Pasadena (Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:identifier>1297</dc:identifier>
+            <dc:description>Headlines in Loveliness, Arcadia's float entry in the 1965 Pasadena Tournament of Roses Parade features a sculptured bowl overflowing with camellias and roses.  The Arcadia Court rode on the float.</dc:description>
+            <dc:source>Arcadia Public Library Image Archives</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1460">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e5848">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/fr/kt1p3025fr/files/kt1p3025fr-d3e5848.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e5852">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/fr/kt1p3025fr/files/kt1p3025fr-d3e5852.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e5840" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_067.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e5838" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_067.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1461" DMDID="DC" LABEL="Pasadena Tournament of Roses Parade--Arcadia Float, 1965">
+         <mets:div ID="d1462" TYPE="thumbnail image">
+            <mets:fptr ID="d1463" FILEID="d3e5848"/>
+         </mets:div>
+         <mets:div ID="d1464" TYPE="reference image">
+            <mets:fptr ID="d1465" FILEID="d3e5852"/>
+         </mets:div>
+         <mets:div ID="d1466" TYPE="archive image">
+            <mets:fptr ID="d1467" FILEID="d3e5840"/>
+         </mets:div>
+         <mets:div ID="d1468" TYPE="archive image">
+            <mets:fptr ID="d1469" FILEID="d3e5838"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

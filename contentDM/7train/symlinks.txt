@@ -1,0 +1,8 @@
+2009/8/13 1pm MAR
+
+There are three symbolic links in this directory.  Since they cannot be
+put into CVS, I'm documenting their presence with this file.
+
+lrwxrwxrwx   1 voro     voro          23 May 15 19:27 7train.xsl -> ../../7train/7train.xsl
+lrwxrwxrwx   1 voro     voro          27 May 15 19:27 cdmmd2dc.xwalk -> ../../7train/cdmmd2dc.xwalk
+lrwxrwxrwx   1 voro     voro          24 May 15 19:27 xwalker.xsl -> ../../7train/xwalker.xsl

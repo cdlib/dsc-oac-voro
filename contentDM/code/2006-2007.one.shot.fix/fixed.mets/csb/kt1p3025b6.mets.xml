@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt1p3025b6" LABEL="Henry Godfutz Rabel, August 2, 1826 - July 8, 1885 " TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:12:56.326-07:00" LASTMODDATE="2008-07-18T16:12:56.326-07:00" RECORDSTATUS="NEW" ID="d1202">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>csb_067</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:12:56.326-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>csb_067</dc:identifier>
+            <dc:title>Henry Godfutz Rabel, August 2, 1826 - July 8, 1885 </dc:title>
+            <dc:creator>Unknown </dc:creator>
+            <dc:date>1870s - 1880s? </dc:date>
+            <dc:subject>Pioneers</dc:subject>
+            <dc:subject>Portraits </dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs: Black-and-white negatives </dc:type>
+            <dc:format>1  photographic negative, 4 x 5 in. </dc:format>
+            <dc:publisher>San Bernardino Public Library </dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt7g5023bs </dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use. </dc:rights>
+            <dc:subject>Rabel, Henry Godfutz, August 2, 1826 - July 8, 1885 </dc:subject>
+            <dc:coverage>San Bernardino, (Calif.)</dc:coverage>
+            <dc:identifier>Neg 138 </dc:identifier>
+            <dc:description>Henry Godfutz Rabel was born in Germany. He came to America in 1845. Early 1850 he came to California with his wife and couldn't cross the Sierra's because of winter. In 1857 they arrived in San Bernardino and bought land near Rabel Springs. </dc:description>
+            <dc:relation>http://www.sbpl.org/index_pioneers.html</dc:relation>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt7g5023bs" LABEL="Pioneers of San Bernardino" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt7g5023bs"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Bernardino Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt067nc4fj</dc:identifier>
+            <dc:identifier>http://www.sbpl.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1205">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e4424">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/b6/kt1p3025b6/files/kt1p3025b6-d3e4424.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e4428">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/b6/kt1p3025b6/files/kt1p3025b6-d3e4428.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e4416" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/jpeg/csb_067.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e4414" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/tiff/csb_067.jpg" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1206" DMDID="DC" LABEL="Henry Godfutz Rabel, August 2, 1826 - July 8, 1885 ">
+         <mets:div ID="d1207" TYPE="thumbnail image">
+            <mets:fptr ID="d1208" FILEID="d3e4424"/>
+         </mets:div>
+         <mets:div ID="d1209" TYPE="reference image">
+            <mets:fptr ID="d1210" FILEID="d3e4428"/>
+         </mets:div>
+         <mets:div ID="d1211" TYPE="archive image">
+            <mets:fptr ID="d1212" FILEID="d3e4416"/>
+         </mets:div>
+         <mets:div ID="d1213" TYPE="archive image">
+            <mets:fptr ID="d1214" FILEID="d3e4414"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

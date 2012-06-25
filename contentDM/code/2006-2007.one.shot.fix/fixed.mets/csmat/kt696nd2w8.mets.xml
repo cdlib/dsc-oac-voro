@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt696nd2w8" LABEL="Levy Brothers new location" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d3518">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_039</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_039</dc:identifier>
+            <dc:title>Levy Brothers new location</dc:title>
+            <dc:creator>Sherman, Joseph</dc:creator>
+            <dc:date>1985</dc:date>
+            <dc:subject>Street lights</dc:subject>
+            <dc:subject>Traffic signs &amp; signals</dc:subject>
+            <dc:subject>Streets</dc:subject>
+            <dc:subject>Automobiles</dc:subject>
+            <dc:subject>Trees</dc:subject>
+            <dc:subject>Refuse disposal</dc:subject>
+            <dc:subject>Storefronts</dc:subject>
+            <dc:subject>Window displays</dc:subject>
+            <dc:subject>People</dc:subject>
+            <dc:subject>Mannequins</dc:subject>
+            <dc:subject>Crosswalks</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 photographic print; 15.2 x 10.1 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:subject>Levy Brothers (Firm)</dc:subject>
+            <dc:subject>4th Street (San Mateo, Calif.)</dc:subject>
+            <dc:subject>Ellsworth Avenue (San Mateo, Calif.)</dc:subject>
+            <dc:coverage>San Mateo (Calif.))</dc:coverage>
+            <dc:description>Levy Brothers new location at 4th and Ellsworth in former Joseph Magnum Store. Photo by Joseph Sherman, 1985</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d3521">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e13887">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/w8/kt696nd2w8/files/kt696nd2w8-d3e13887.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e13891">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/w8/kt696nd2w8/files/kt696nd2w8-d3e13891.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e13879" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_039.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e13877" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_039.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d3522" DMDID="DC" LABEL="Levy Brothers new location">
+         <mets:div ID="d3523" TYPE="thumbnail image">
+            <mets:fptr ID="d3524" FILEID="d3e13887"/>
+         </mets:div>
+         <mets:div ID="d3525" TYPE="reference image">
+            <mets:fptr ID="d3526" FILEID="d3e13891"/>
+         </mets:div>
+         <mets:div ID="d3527" TYPE="archive image">
+            <mets:fptr ID="d3528" FILEID="d3e13879"/>
+         </mets:div>
+         <mets:div ID="d3529" TYPE="archive image">
+            <mets:fptr ID="d3530" FILEID="d3e13877"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

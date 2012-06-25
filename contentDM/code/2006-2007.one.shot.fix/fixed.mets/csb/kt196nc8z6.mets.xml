@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt196nc8z6" LABEL="Thomas King Tompkins, August 15, 1817 - January 14, 1885 " TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:12:56.326-07:00" LASTMODDATE="2008-07-18T16:12:56.326-07:00" RECORDSTATUS="NEW" ID="d1634">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>csb_091</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:12:56.326-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>csb_091</dc:identifier>
+            <dc:title>Thomas King Tompkins, August 15, 1817 - January 14, 1885 </dc:title>
+            <dc:creator>Unknown </dc:creator>
+            <dc:date>1870s - 1880s? </dc:date>
+            <dc:subject>Pioneers</dc:subject>
+            <dc:subject>Portraits </dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs: Black-and-white negatives </dc:type>
+            <dc:format>1  photographic negative, 4 x 5 in. </dc:format>
+            <dc:publisher>San Bernardino Public Library </dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt7g5023bs </dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use. </dc:rights>
+            <dc:subject>Tompkins, Thomas King, August 15, 1817 - January 14, 1885 </dc:subject>
+            <dc:coverage>San Bernardino, (Calif.)</dc:coverage>
+            <dc:identifier>Neg 116 </dc:identifier>
+            <dc:description>Thomas King Tompkins came to San Bernardino in 1862.  </dc:description>
+            <dc:relation>http://www.sbpl.org/index_pioneers.html</dc:relation>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt7g5023bs" LABEL="Pioneers of San Bernardino" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt7g5023bs"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Bernardino Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt067nc4fj</dc:identifier>
+            <dc:identifier>http://www.sbpl.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1637">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e6010">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/z6/kt196nc8z6/files/kt196nc8z6-d3e6010.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e6014">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/z6/kt196nc8z6/files/kt196nc8z6-d3e6014.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e6002" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/jpeg/csb_091.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e6000" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csb/tiff/csb_091.jpg" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1638" DMDID="DC" LABEL="Thomas King Tompkins, August 15, 1817 - January 14, 1885 ">
+         <mets:div ID="d1639" TYPE="thumbnail image">
+            <mets:fptr ID="d1640" FILEID="d3e6010"/>
+         </mets:div>
+         <mets:div ID="d1641" TYPE="reference image">
+            <mets:fptr ID="d1642" FILEID="d3e6014"/>
+         </mets:div>
+         <mets:div ID="d1643" TYPE="archive image">
+            <mets:fptr ID="d1644" FILEID="d3e6002"/>
+         </mets:div>
+         <mets:div ID="d1645" TYPE="archive image">
+            <mets:fptr ID="d1646" FILEID="d3e6000"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

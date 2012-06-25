@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt296nd0xk" LABEL="Baldwin Avenue Business District in 1930" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d3473">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_181</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_181</dc:identifier>
+            <dc:title>Baldwin Avenue Business District in 1930</dc:title>
+            <dc:creator>Arcadia Tribune</dc:creator>
+            <dc:date>1930</dc:date>
+            <dc:subject>Streets--California--Arcadia</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 black and white photographic print; 21 x 26 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>copyrighted</dc:rights>
+            <dc:rights>Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>Arcadia Tribune</dc:rights>
+            <dc:rights>Consult owning institution</dc:rights>
+            <dc:rights>1930</dc:rights>
+            <dc:rights>Copyright 1930, Arcadia Tribune</dc:rights>
+            <dc:subject>Baldwin Avenue (Arcadia, Calif.)--History</dc:subject>
+            <dc:coverage>Arcadia (Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:identifier>585</dc:identifier>
+            <dc:description>A section of Baldwin Avenue business district in the 1000 S. Baldwin block in 1930.  Eleven automobiles are diagonally parked in front of the various shops. The prominent sign on the right reads Associated Feed Stores.</dc:description>
+            <dc:source>Arcadia Public Library Image Archives</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d3476">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e13472">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/xk/kt296nd0xk/files/kt296nd0xk-d3e13472.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e13476">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/xk/kt296nd0xk/files/kt296nd0xk-d3e13476.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e13464" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_181.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e13462" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_181.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d3477" DMDID="DC" LABEL="Baldwin Avenue Business District in 1930">
+         <mets:div ID="d3478" TYPE="thumbnail image">
+            <mets:fptr ID="d3479" FILEID="d3e13472"/>
+         </mets:div>
+         <mets:div ID="d3480" TYPE="reference image">
+            <mets:fptr ID="d3481" FILEID="d3e13476"/>
+         </mets:div>
+         <mets:div ID="d3482" TYPE="archive image">
+            <mets:fptr ID="d3483" FILEID="d3e13464"/>
+         </mets:div>
+         <mets:div ID="d3484" TYPE="archive image">
+            <mets:fptr ID="d3485" FILEID="d3e13462"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

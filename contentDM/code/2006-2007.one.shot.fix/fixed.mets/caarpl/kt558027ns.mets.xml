@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt558027ns" LABEL="Roy Knabenshue, Builder of Observation Balloons and Commanding Officer C.P. Kane, Display Model of Balloon at Ross Field, U.S. Army Balloon School" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d2789">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_143</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_143</dc:identifier>
+            <dc:title>Roy Knabenshue, Builder of Observation Balloons and Commanding Officer C.P. Kane, Display Model of Balloon at Ross Field, U.S. Army Balloon School</dc:title>
+            <dc:creator>unknown</dc:creator>
+            <dc:date>circa 1918</dc:date>
+            <dc:subject>Military camps--California--Arcadia</dc:subject>
+            <dc:subject>Soldiers--United States</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 black and white photographic print; 20 x 25 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use.</dc:rights>
+            <dc:subject>Kane, C. P.</dc:subject>
+            <dc:subject>Knabenshue, Roy</dc:subject>
+            <dc:subject>United States--Army--Balloon Section</dc:subject>
+            <dc:coverage>Arcadia (Calif.); Ross Field (Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:identifier>1274</dc:identifier>
+            <dc:description>Roy Knabenshue, who built observation balloons for the U.S. during WWI, displays a model at Ross Field.  Roy Knabenshue on left, C.P. Kane, commanding officer, on right.</dc:description>
+            <dc:source>Arcadia Public Library Image Archives</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d2792">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e10927">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/ns/kt558027ns/files/kt558027ns-d3e10927.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e10931">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/ns/kt558027ns/files/kt558027ns-d3e10931.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e10919" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_143.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e10917" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_143.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d2793" DMDID="DC" LABEL="Roy Knabenshue, Builder of Observation Balloons and Commanding Officer C.P. Kane, Display Model of Balloon at Ross Field, U.S. Army Balloon School">
+         <mets:div ID="d2794" TYPE="thumbnail image">
+            <mets:fptr ID="d2795" FILEID="d3e10927"/>
+         </mets:div>
+         <mets:div ID="d2796" TYPE="reference image">
+            <mets:fptr ID="d2797" FILEID="d3e10931"/>
+         </mets:div>
+         <mets:div ID="d2798" TYPE="archive image">
+            <mets:fptr ID="d2799" FILEID="d3e10919"/>
+         </mets:div>
+         <mets:div ID="d2800" TYPE="archive image">
+            <mets:fptr ID="d2801" FILEID="d3e10917"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

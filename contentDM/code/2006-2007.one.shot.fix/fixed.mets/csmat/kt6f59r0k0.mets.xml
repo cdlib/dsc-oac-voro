@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt6f59r0k0" LABEL="Gathering for the Parade" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:45.546-07:00" LASTMODDATE="2008-07-18T16:13:45.546-07:00" RECORDSTATUS="NEW" ID="d2384">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>CSMAT_1007</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:45.546-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>CSMAT_1007</dc:identifier>
+            <dc:title>Gathering for the Parade</dc:title>
+            <dc:creator>Unknown</dc:creator>
+            <dc:date>c1910</dc:date>
+            <dc:subject>Parades &amp; processions</dc:subject>
+            <dc:subject>Carts &amp; wagons</dc:subject>
+            <dc:subject>Ponies</dc:subject>
+            <dc:subject>Pony carts</dc:subject>
+            <dc:subject>Umbrellas</dc:subject>
+            <dc:subject>People</dc:subject>
+            <dc:subject>Children &amp; adults</dc:subject>
+            <dc:subject>Buildings</dc:subject>
+            <dc:subject>Trees</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs</dc:type>
+            <dc:format>1 photographic print; 23.8 x 18.3 cm</dc:format>
+            <dc:publisher>San Mateo Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt687022h8</dc:relation>
+            <dc:rights>unknown</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:rights>unknown</dc:rights>
+            <dc:coverage>San Mateo (Calif.))</dc:coverage>
+            <dc:description>Gathering for a parade on festive occasion in San Mateo, about 1910.  This print is an enlargement of a detail from a slightly larger original print also in the physical collection.</dc:description>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt687022h8" LABEL="San Mateo Historical Photographs Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt687022h8"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>San Mateo Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt109nc4r6</dc:identifier>
+            <dc:identifier>http://www.ci.sanmateo.ca.us/dept/library/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d2387">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e9792">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/k0/kt6f59r0k0/files/kt6f59r0k0-d3e9792.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e9796">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/k0/kt6f59r0k0/files/kt6f59r0k0-d3e9796.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e9784" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/jpeg/csmat_1007.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e9782" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/csmat/tiff/csmat_1007.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d2388" DMDID="DC" LABEL="Gathering for the Parade">
+         <mets:div ID="d2389" TYPE="thumbnail image">
+            <mets:fptr ID="d2390" FILEID="d3e9792"/>
+         </mets:div>
+         <mets:div ID="d2391" TYPE="reference image">
+            <mets:fptr ID="d2392" FILEID="d3e9796"/>
+         </mets:div>
+         <mets:div ID="d2393" TYPE="archive image">
+            <mets:fptr ID="d2394" FILEID="d3e9784"/>
+         </mets:div>
+         <mets:div ID="d2395" TYPE="archive image">
+            <mets:fptr ID="d2396" FILEID="d3e9782"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

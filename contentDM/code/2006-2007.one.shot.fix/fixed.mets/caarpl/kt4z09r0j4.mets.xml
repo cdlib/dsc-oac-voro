@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt4z09r0j4" LABEL="Arcadian Observer, September 1918 Supplement" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:52.384-07:00" LASTMODDATE="2008-07-18T16:13:52.384-07:00" RECORDSTATUS="NEW" ID="d2375">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>caarpl_121</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:52.384-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>caarpl_121</dc:identifier>
+            <dc:title>Arcadian Observer, September 1918 Supplement</dc:title>
+            <dc:creator>United States. Army. Balloon Section.</dc:creator>
+            <dc:date>1918</dc:date>
+            <dc:subject>Military training camps--California--Arcadia</dc:subject>
+            <dc:subject>World War, 1914-1918--Periodicals</dc:subject>
+            <dc:type>image</dc:type>
+            <dc:type>Photographs; Black-and-white negatives</dc:type>
+            <dc:format>1 black and white photographic negative; 11 x 13 cm</dc:format>
+            <dc:publisher>Arcadia Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt9r29q8rw</dc:relation>
+            <dc:rights>public domain</dc:rights>
+            <dc:rights>Material in the public domain. No restrictions on use.</dc:rights>
+            <dc:publisher>United States Army Balloon School, Arcadia, California</dc:publisher>
+            <dc:subject>Arcadian Observer (Arcadia, Calif. : 1918)</dc:subject>
+            <dc:subject>United States. Army. Balloon Section.</dc:subject>
+            <dc:coverage>Arcadia (Calif.); Ross Field (Calif.)</dc:coverage>
+            <dc:language>eng</dc:language>
+            <dc:identifier>1858</dc:identifier>
+            <dc:description>Page 35 of The Arcadian Observer, Official Publication of the United States Army Balloon School, Arcadia, California. September 1918 Supplement. Featuring photographs of the Observation Office, Hospital, and Interior Mess Hall.</dc:description>
+            <dc:source>Arcadia Public Library Image Archives</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt9r29q8rw" LABEL="Arcadia History Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt9r29q8rw"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Arcadia Public Library </dc:title>
+            <dc:identifier>ark:/13030/kt867nd5bd</dc:identifier>
+            <dc:identifier>http://www.ci.arcadia.ca.us/home/index.asp?page=664</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d2378">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e9375">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/j4/kt4z09r0j4/files/kt4z09r0j4-d3e9375.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e9379">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/j4/kt4z09r0j4/files/kt4z09r0j4-d3e9379.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e9367" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/jpeg/caarpl_121.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e9365" MIMETYPE="image/tiff">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/caarpl/tiff/caarpl_121.tif" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d2379" DMDID="DC" LABEL="Arcadian Observer, September 1918 Supplement">
+         <mets:div ID="d2380" TYPE="thumbnail image">
+            <mets:fptr ID="d2381" FILEID="d3e9375"/>
+         </mets:div>
+         <mets:div ID="d2382" TYPE="reference image">
+            <mets:fptr ID="d2383" FILEID="d3e9379"/>
+         </mets:div>
+         <mets:div ID="d2384" TYPE="archive image">
+            <mets:fptr ID="d2385" FILEID="d3e9367"/>
+         </mets:div>
+         <mets:div ID="d2386" TYPE="archive image">
+            <mets:fptr ID="d2387" FILEID="d3e9365"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>

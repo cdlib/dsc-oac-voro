@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mets="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" OBJID="ark:/13030/kt838nd43n" LABEL="Penn Street school students" TYPE="image" PROFILE="http://www.loc.gov/mets/profiles/00000010.xml">
+   <mets:metsHdr CREATEDATE="2008-07-18T16:13:09.112-07:00" LASTMODDATE="2008-07-18T16:13:09.112-07:00" RECORDSTATUS="NEW" ID="d1742">
+      <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+         <mets:name>California Digital Library</mets:name>
+         <mets:note>Record created by conversion of CONTENTdm XML metadata</mets:note>
+         <mets:note>Created using 7train</mets:note>
+      </mets:agent>
+      <mets:altRecordID>cwh_144</mets:altRecordID>
+   </mets:metsHdr>
+   <mets:dmdSec ID="DC" CREATED="2008-07-18T16:13:09.112-07:00">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC">
+         <mets:xmlData>
+            <dc:identifier>cwh_144</dc:identifier>
+            <dc:title>Penn Street school students</dc:title>
+            <dc:creator>Unknown;</dc:creator>
+            <dc:date>undated: circa late 19th century-mid 20th century</dc:date>
+            <dc:subject>Schools</dc:subject>
+            <dc:subject>School children</dc:subject>
+            <dc:subject>Teachers</dc:subject>
+            <dc:subject>California</dc:subject>
+            <dc:subject>Whittier</dc:subject>
+            <dc:type>image;</dc:type>
+            <dc:type>Photographs;</dc:type>
+            <dc:format>1 photographic print; 8 x 6</dc:format>
+            <dc:publisher>Whittier Public Library</dc:publisher>
+            <dc:relation>http://ark.cdlib.org/ark:/13030/kt1b69q44j</dc:relation>
+            <dc:rights>unknown;</dc:rights>
+            <dc:rights>Copyright status unknown. Some materials in these collections may be protected by the U.S. Copyright Law (Title 17, U.S.C.). In addition, the reproduction of some materials may be restricted by terms of gift or purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively with the user.</dc:rights>
+            <dc:coverage>Whittier (Calif.);</dc:coverage>
+            <dc:language>eng;</dc:language>
+            <dc:description>Image shows students from the Penn Street School. Photograph is listed as the Bailey Street school; however the building looks like the Penn Street School.  Back of the photo lists students names marked by numbers.  1. Helen Lemonte  2. Ethel  3. Blanche Gaskill  4. Hazel Delmore  5. Delight Molote  6.Iva Langstaff  7.Mathraime May  8.Dorothy Baxter  9.Marion Chase  10.Evelyn Hill  11.Jesse Y.  12.Frank   13.Linn  16.Robert Ozias  17.Virgle Parker (Emma P. Brother)  18.Millie  19.Ramond Newton  21.Mrlie Fritze(boy)  22.Rosa   23.Margaret Muchmore  24.Thelma McCord  25.Evelyn Dryl  26.Ester Ganter  27.Mildred  28.Dorothy King  29.Lude Nomson  30.Mary Lester  32.Gladys Colson  33.Glen Kendle  35.Alfred Marty  37.Stanley  38.Miss Newby  Back of photo also says "Gift of Mrs. B. Forsythe, 303 Silver Shoals Dr. Long Beach 90803.</dc:description>
+            <dc:contributor>Mrs. B. Forsythe</dc:contributor>
+            <dc:source>Selected photograph from the Whittier History Room photograph collection.</dc:source>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:dmdSec ID="ead">
+      <mets:mdRef LOCTYPE="URL" MDTYPE="EAD" ID="kt1b69q44j" LABEL="Whittier Public Library Historical Photograph Collection" xlink:href="http://www.oac.cdlib.org/findaid/ark:/13030/kt1b69q44j"/>
+   </mets:dmdSec>
+   <mets:dmdSec ID="repo">
+      <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="Repository">
+         <mets:xmlData>
+            <dc:title>Whittier Public Library</dc:title>
+            <dc:identifier>ark:/13030/kt7g5027z1</dc:identifier>
+            <dc:identifier>http://www.whittierlibrary.org/</dc:identifier>
+         </mets:xmlData>
+      </mets:mdWrap>
+   </mets:dmdSec>
+   <mets:fileSec ID="d1745">
+      <mets:fileGrp USE="thumbnail image">
+         <mets:file ID="d3e6458">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/3n/kt838nd43n/files/kt838nd43n-d3e6458.jpg" xlink:role="thumbnail"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="reference image">
+         <mets:file ID="d3e6462">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://content.cdlib.org/dynaxml/data/13030/3n/kt838nd43n/files/kt838nd43n-d3e6462.jpg" xlink:role="access"/>
+         </mets:file>
+      </mets:fileGrp>
+      <mets:fileGrp USE="archive image">
+         <mets:file ID="d3e6450" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:role="access" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/jpeg/cwh_144.jpg"/>
+         </mets:file>
+         <mets:file ID="d3e6448" MIMETYPE="image/jpeg">
+            <mets:FLocat LOCTYPE="URL" xlink:href="http://ingest1.cdlib.org/LSTA-2ndGen/cwh/tiff/cwh_144.jpg" xlink:role="master"/>
+         </mets:file>
+      </mets:fileGrp>
+   </mets:fileSec>
+   <mets:structMap>
+      <mets:div ID="d1746" DMDID="DC" LABEL="Penn Street school students">
+         <mets:div ID="d1747" TYPE="thumbnail image">
+            <mets:fptr ID="d1748" FILEID="d3e6458"/>
+         </mets:div>
+         <mets:div ID="d1749" TYPE="reference image">
+            <mets:fptr ID="d1750" FILEID="d3e6462"/>
+         </mets:div>
+         <mets:div ID="d1751" TYPE="archive image">
+            <mets:fptr ID="d1752" FILEID="d3e6450"/>
+         </mets:div>
+         <mets:div ID="d1753" TYPE="archive image">
+            <mets:fptr ID="d1754" FILEID="d3e6448"/>
+         </mets:div>
+      </mets:div>
+   </mets:structMap>
+</mets:mets>
