@@ -16,4 +16,4 @@ CVS/*
 CVS/**
 tmp/*
 .git*
-
+contentDM/mets/*

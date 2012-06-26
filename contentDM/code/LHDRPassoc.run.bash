@@ -1,4 +1,4 @@
-#! /bin/csh
+#! /usr/bin/env bash
 
 # ------------------------------------
 #
@@ -17,9 +17,10 @@
 #
 # ------------------------------------
 set -v
+set -x
 
-set dir = ${HOME}/branches/production/voro/contentDM/code
+dir=${HOME}/branches/production/voro/contentDM/code
 
 java -cp $dir/classes/LHDRPassoc.jar:$dir/classes/je-3.2.76/lib/je-3.2.76.jar org.cdlib.dsc.util.LHDRPassoc $*
 
-exit $status
+exit $?

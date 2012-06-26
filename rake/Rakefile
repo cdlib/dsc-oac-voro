@@ -146,7 +146,7 @@ namespace :xtf do
 
 	desc "Index METS, TEI, EAD with ARKs"
 	task :metsark do |t|
-		sh "#{textIndexer} -rotate -index cdl"
+		sh "#{textIndexer} -nooptimize -rotate -index cdl"
 	end
 
 end

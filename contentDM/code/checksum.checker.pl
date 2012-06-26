@@ -1,4 +1,4 @@
-#! /cdlcommon/products/bin/perl
+#! /usr/bin/env perl
 
 # ------------------------------------
 #

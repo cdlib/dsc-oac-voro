@@ -143,11 +143,36 @@ for (@ARGV) {
 	my $profile = $xc->findvalue("/mets:mets/\@PROFILE");
 	my ($typeNode) = $xc->findnodes('/mets:mets/@TYPE');
 	$type =~ s, ,+,gs;
-        print "...";
+
+	# figure out file names
+	# - something/data/rt/arkpart/ = BASE directory for object
+	# this needs to change to match Kirk's format
+	# - BASE/source.mets.xml = copy of the METS submitted to CDL
+	# - BASE/cache_info.storable = Hash of Hash seralized to disk
+	#	This file contains info to do conditional GETS
+	#	also, store checksums here too?
+	# - BASE/arkpart.mets.xml = METS after processing
+	# - BASE/files/arkpart-FID1.gif = file[@ID='FID1'] where the file extension on the href is .gif
+	# - BASE/arkpart.xml	= content for indexing ( TEI or EAD ) special case
+	# - BASE/files/arkpart-thumbnail.png  = constructed thumbnail image
+
+	# this is the base directory/filename to save METS and files to
+	my $objectBaseName = poi2text($ark);
+	my $objectBaseDir = $objectBaseName;
+	$objectBaseDir =~ s,([^/]*)/([^/]*)$,$1,;
+	my $sigpart = $2;
+	my $filesBaseName = "$objectBaseDir/files/$sigpart";
+
+	my $sourceMets =  "$objectBaseDir/source.mets.xml";
+	my $cacheFile =  "$objectBaseDir/cache_info.storable";
+	my $newMets = "$objectBaseName.mets.xml";
+	my $thumbnailF = "$objectBaseDir/$sigpart/thumbnail.png";
+
 	# profile assigment for CAVPP
         if ( $profile eq '' and  ( $type eq 'MovingImage' or $type eq 'Sound' ) ) {
                 $root->setAttribute('PROFILE', 'pamela://year1' );
                 $profile = 'pamela://year1';
+		cavppClean($xc, $filesBaseName, $type, $root);
         }
 	# type tweaking
 	if ($type eq "item") { 
@@ -194,33 +219,10 @@ for (@ARGV) {
 			$type = "facsimile text" 
 		}
 	}
-        print Dumper $type, $profile;
 
-	# figure out file names
-	# - something/data/rt/arkpart/ = BASE directory for object
-	# this needs to change to match Kirk's format
-	# - BASE/source.mets.xml = copy of the METS submitted to CDL
-	# - BASE/cache_info.storable = Hash of Hash seralized to disk
-	#	This file contains info to do conditional GETS
-	#	also, store checksums here too?
-	# - BASE/arkpart.mets.xml = METS after processing
-	# - BASE/files/arkpart-FID1.gif = file[@ID='FID1'] where the file extension on the href is .gif
-	# - BASE/arkpart.xml	= content for indexing ( TEI or EAD ) special case
-	# - BASE/files/arkpart-thumbnail.png  = constructed thumbnail image
 
-	# this is the base directory/filename to save METS and files to
-	my $objectBaseName = poi2text($ark);
-	my $objectBaseDir = $objectBaseName;
-	$objectBaseDir =~ s,([^/]*)/([^/]*)$,$1,;
-	my $sigpart = $2;
-	my $filesBaseName = "$objectBaseDir/files/$sigpart";
 
-	my $sourceMets =  "$objectBaseDir/source.mets.xml";
-	my $cacheFile =  "$objectBaseDir/cache_info.storable";
-	my $newMets = "$objectBaseName.mets.xml";
-	my $thumbnailF = "$objectBaseDir/$sigpart/thumbnail.png";
-	#print "$ark\nobn $objectBaseName\nobd $objectBaseDir\nsm $sourceMets\n$processLog\n";
-	#
+
 	# if there is a $sourceMets; take its checksum, and see if it has changed.
 	if (-e $sourceMets) {
 		# take the checksum
@@ -351,7 +353,7 @@ for (@ARGV) {
 
 	# the loop goes through the file section, collecting files
 	foreach my $context ($filenodes->get_nodelist) {
-		#print Dumper $context->toString;
+		# print Dumper $context->toString;
 		# harvestFileNode alters $context (passed by reference)
 		# it also alters $xc or $root
 		harvestFileNode(\$xc, \$context, \$ark, \$cacheInfo, $filesBaseName, $objectBaseName, $_);
@@ -403,22 +405,19 @@ for (@ARGV) {
 		$buff = $teiBuff;
 	}
 
-	print STDERR "$type: $buff\n";;
+	# print STDERR "$type: $buff\n";;
 
 	my $results;
-
-
-        print Dumper $profile;
 
 	# this profile uses the "native" structmap
 	if ( $profile eq "http://www.loc.gov/mets/profiles/00000010.xml" ) {
 		$root->setAttribute("xmlns:cdl", "http://www.cdlib.org/");
 		addInfo($xc);
 		$results = $doc;
-	# structMap pretty usless here
 	} elsif ($profile eq 'pamela://year1') {
-
-		cavppClean($xc, $objectBaseDir, $type);
+		$root->setAttribute("xmlns:cdl", "http://www.cdlib.org/");
+		addInfo($xc);
+print "HEY HEY HEY";
 		$results = $doc;
 	} elsif ( $profile eq "Archivists' Toolkit Profile" ) {
 		my $trimStyle = $parser->parse_file($trimXslt);
@@ -792,6 +791,13 @@ sub compositeThumbnails {
 
 	# update $$root to add new file element (and fileGrp??)
 	my ($ffg) = $$root->findnodes("/mets:mets/mets:fileSec/mets:fileGrp[1]");
+	my $url = file2url("$base-thumbnail.png");
+        my $newGrp = fileThumbCreate($url);
+	$ffg->addSibling($newGrp);
+}
+
+sub fileThumbCreate {
+	my ($url) = @_;
         my $newGrp = XML::LibXML::Element->new("fileGrp");
         $newGrp->setNamespace("http://www.loc.gov/METS/");
 
@@ -800,11 +806,10 @@ sub compositeThumbnails {
         $newfile->setAttribute("ID","thumbnail");
 	my $locat = XML::LibXML::Element->new("FLocat");
 	$locat->setNamespace("http://www.loc.gov/METS/");
-	my $url = file2url("$base-thumbnail.png");
-        $locat->setAttribute("xlink:href","$url" );
+	$locat->setAttributeNS('http://www.w3.org/1999/xlink', "xlink:href", $url );
         $newfile->addChild($locat);
         $newGrp->addChild($newfile);
-	$ffg->addSibling($newGrp);	
+	return $newGrp;
 }
 
 # take 3 png files and make a composite thumbnail
@@ -901,7 +906,7 @@ sub mime2ext {
 
 # pamela://year1
 sub cavppClean {
-  my ($xc, $objectBaseDir, $type) = @_;
+  my ($xc, $base, $type, $root) = @_;
   #     <mets:dmdSec ID="DMD1">
   my $fileid = $xc->findvalue("/mets:mets/mets:structMap/mets:div/mets:fptr[position()=last()]/\@FILEID");
   my $ia_id = $xc->findvalue(
@@ -912,13 +917,22 @@ sub cavppClean {
   ## $ia_id = $1;
   if ($type ne 'Sound') {
     my $video_link = "http://archive.org/download/$ia_id/$fileid";
+    print "\nvideo_link: $video_link\n";
     my $thumbnail_link = $video_link;
     $thumbnail_link =~ s,\.[^.]+$,.gif,;
-    my $req = HTTP::Request->new(GET => $thumbnail_link);
-    my $outfile = "$objectBaseDir/files/thumbnail.gif";
-    print $outfile;
-    my $res = $ua->get($thumbnail_link, ':content_file', $outfile);
-  }
+    my ($ffg) = $xc->findnodes("/mets:mets/mets:fileSec/mets:fileGrp[1]");
+    my $newGrp = fileThumbCreate($thumbnail_link);
+    $ffg->addSibling($newGrp);
+    my ($sm) = $xc->findnodes("/mets:mets/mets:structMap");
+    my $ndiv = XML::LibXML::Element->new("div");
+    $ndiv->setNamespace("http://www.loc.gov/METS/");
+    $ndiv->setAttribute('TYPE', 'thumbnail');
+    my $fptr = XML::LibXML::Element->new("fptr");
+    $fptr->setNamespace("http://www.loc.gov/METS/");
+    $fptr->setAttribute('FILEID', 'thumbnail');
+    $ndiv->addChild($fptr);
+    $sm->addChild($ndiv);
+ }
 }
 
 sub addInfo {
