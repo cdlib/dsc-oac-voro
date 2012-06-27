@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This institution map must be formatted as follows:
+  <institutions>
+    		  <institution
+    name=""
+    marccode="" ark=""
+    eadark=""
+    eadlabel=""
+    url=""/>     ===== use only ark "stub" for eadark =====
+    		  <institution
+    name=""
+    marccode="" ark=""
+    eadark=""
+    eadlabel=""
+    url=""/>
+    </institutions>
+-->
+  <institutions>
+  <institution
+    name="Arcadia Public Library"
+    marccode="caarpl" ark="ark:/13030/kt867nd5bd"
+    eadark="kt9r29q8rw"
+    eadlabel="Arcadia History Collection"
+    url="http://www.ci.arcadia.ca.us/home/index.asp?page=664"/>
+  <institution
+    name="Berkeley Public Library"
+    marccode="cb" ark="ark:/13030/kt187019nq"
+    eadark="kt500023rn"
+    eadlabel="Berkeley History Online"
+    url="http://berkeleypubliclibrary.org"/>
+     	  <institution
+    name="California State University, Stanislaus.  Library"
+    marccode="cturs" ark="ark:/13030/kt7r29q5bm"
+    eadark="kt8t1nd149"
+    eadlabel="Stanislaus Region History and Culture Image Collection"
+    url="http://library.csustan.edu"/>
+  <institution
+    name="Chula Vista Public Library"
+    marccode="cchu" ark="ark:/13030/kt100019rv"
+    eadark="kt0w101974"
+    eadlabel=" John Rojas Photograph Collection"
+    url="http://www.chulavistalibrary.com/"/>
+  <institution
+    name="Covina Public Library"
+    marccode="ccov" ark="ark:/13030/kt1d5nc5kq"
+    eadark="kt838nc8vh"
+    eadlabel="Covina Citrus Industry Photographs"
+    url="http://www.ci.covina.ca.us/library/"/>
+  <institution
+    name="Fullerton College"
+    marccode="cflj" ark="ark:/13030/kt2w1019fv"
+    eadark="kt90002552"
+    eadlabel="Collection of Fullerton College Historical Photographs"
+    url="http://library.fullcoll.edu/"/>
+    	  <institution
+    name="Glendale Public Library"
+    marccode="cgl" ark="ark:/13030/kt696nc8zr"
+    eadark="kt6n39q5wx"
+    eadlabel="Collection of historic photographs and documents related to Leslie C. Brand"
+    url="http://www.glendalepubliclibrary.org"/>
+    	  <institution
+    name="Humboldt State University Library"
+    marccode="carcht" ark="ark:/13030/tf609nb7vz"
+    eadark="kt9c6023w1"
+    eadlabel="Northwestern California Forest Communities Collection"
+    url="http://library.humboldt.edu/humco/"/>
+    <!-- institution
+    name="Humboldt State University Library"
+    marccode="carcht" ark="ark:/13030/tf609nb7vz"
+    eadark="kt2d5nc6hg"
+    eadlabel="Belcher Atlas of Humboldt County 1921-1922"
+    url="http://library.humboldt.edu/humco/"/ -->
+  <institution
+    name="Kern County Library"
+    marccode="cbak" ark="ark:/13030/kt1d5nc5j6"
+    eadark="kt3n39q3mw"
+    eadlabel="Kern County Local History Photograph Collection"
+    url="http://www.kerncountylibrary.org/"/>
+  <institution
+    name="La Habra Old Settlers Historical Society"
+    marccode="claoshs" ark="ark:/13030/kt1c6024gt"
+    eadark="kt696nd31t"
+    eadlabel="La Habra Old Settlers Historical Society Collection"
+    url="http://www.oac.cdlib.org/institutions/ark:/13030/kt1c6024gt"/>
+  <institution
+    name="Marin County Free Library"
+    marccode="csrcl" ark="ark:/13030/kt4199q430"
+    eadark="kt0q2nc5z2"
+    eadlabel="Anne T. Kent California Room Digital Archive"
+    url="http://www.co.marin.ca.us/depts/lb/main/crm/"/>
+  <institution
+    name="Mill Valley Public Library"
+    marccode="cmlpl" ark="ark:/13030/kt3199q45q"
+    eadark="kt038nc58s"
+    eadlabel="Mill Valley history photograph collection"
+    url="http://www.millvalleylibrary.org"/>
+  <institution
+    name="Mission Viejo City Library"
+    marccode="camjl" ark="ark:/13030/kt2j49q288"
+    eadark="kt2x0nc5xg"
+    eadlabel="Mission Viejo Heritage Committee Planned Community Collection"
+    url="http://cmvl.org/"/>
+  <institution
+    name="Oakland Public Library"
+    marccode="copl" ark="ark:/13030/kt1w1019nn"
+    eadark="kt5b69q5bc"
+    eadlabel="Selections from the collections of the Oakland History Room and the maps division of the Oakland Public Library"
+    url="http://www.oaklandlibrary.org"/>
+  <institution
+    name="Orange County Public Library"
+    marccode="corcl" ark="ark:/13030/kt5489q9p5"
+    eadark="kt6b69q5nb"
+    eadlabel="Orange County Public Library Local History Collection"
+    url="http://www.ocpl.org/"/>
+  <institution
+    name="Palos Verdes Library District"
+    marccode="cpv" ark="ark:/13030/kt2h4nc6mp"
+    eadark="kt1f59q1nh"
+    eadlabel="Palos Verdes Library District Local History Collection"
+    url="http://www.pvld.org"/>
+  <institution
+    name="Placentia Library District"
+    marccode="cpl" ark="ark:/13030/kt2r29q88g"
+    eadark="kt8j49q76h"
+    eadlabel="Placentia Local History Photograph Collection"
+    url="http://www.placentialibrary.net"/>
+  <institution
+    name="Richmond Public Library"
+    marccode="cabri" ark="ark:/13030/kt5199q5x6"
+    eadark="kt4r29q3tz"
+    eadlabel="Richmond local history photograph collection"
+    url="http://www.ci.richmond.ca.us/~library/"/>
+  <institution
+    name="San Bernardino Public Library"
+    marccode="csb" ark="ark:/13030/kt067nc4fj"
+    eadark="kt7g5023bs"
+    eadlabel="Pioneers of San Bernardino"
+    url="http://www.sbpl.org/"/>
+  <institution
+    name="San Bruno Public Library"
+    marccode="csbrp" ark="ark:/13030/kt338nc6v0"
+    eadark="kt5d5nc93n"
+    eadlabel="San Bruno local history photograph collection"
+    url="http://sanbruno.ca.gov/city_services/library/"/>
+     	  <institution
+    name="San Jose Public Library.  California Room"
+    marccode="csj" ark="ark:/13030/kt6k4021nt"
+    eadark="kt7t1nd0q9"
+    eadlabel="Collection on Santa Clara County’s Agricultural Past"
+    url="http://www.sjlibrary.org/research/special/ca/"/>
+  <institution
+    name="San Mateo Public Library"
+    marccode="csmat" ark="ark:/13030/kt109nc4r6"
+    eadark="kt687022h8"
+    eadlabel="San Mateo Historical Photographs Collection"
+    url="http://www.ci.sanmateo.ca.us/dept/library/"/>
+  <institution
+    name="Santa Ana Public Library"
+    marccode="santapl" ark="ark:/13030/kt2q2nb77b"
+    eadark="kt6v19p65d"
+    eadlabel="Santa Ana History Room Photograph Collection"
+    url="http://www.ci.santa-ana.ca.us/library/"/>
+  <institution
+    name="Santa Fe Springs City Library"
+    marccode="csfs" ark="ark:/13030/kt367nd2zq"
+    eadark="kt0779q1x1"
+    eadlabel="Santa Fe Springs Historical Photograph Collection"
+    url="http://www.santafesprings.org/library/default.asp"/>
+  <institution
+    name="Southern California Library for Social Studies &amp; Research"
+    marccode="clscls" ark="ark:/13030/tf7q2nb9fm"
+    eadark="kt7c602472"
+    eadlabel="Housing Authority of the City of Los Angeles Photograph Collection"
+    url="http://www.socallib.org/"/>
+  <institution
+    name="Sutter County Library"
+    marccode="cyccl" ark="ark:/13030/kt9z09q96d"
+    eadark="kt3m3nc60b"
+    eadlabel="Sutter County local history photograph collection"
+    url="http://www.co.sutter.ca.us/doc/government/depts/library/library"/>
+  <institution
+    name="Whittier Public Library"
+    marccode="cwh" ark="ark:/13030/kt7g5027z1"
+    eadark="kt1b69q44j"
+    eadlabel="Whittier Public Library Historical Photograph Collection"
+    url="http://www.whittierlibrary.org/"/>
+  <institution
+    name="Yuba County Library"
+    marccode="ycl" ark="ark:/13030/kt9489q7ft"
+    eadark="kt0s2017hn"
+    eadlabel="Yuba County History: Visual Archive"
+    url="http://www.co.yuba.ca.us/content/departments/library/"/>
+  <institution
+    name="Fresno County Public Library. California History and Genealogy Room"
+    marccode="cfcpl" ark="ark:/13030/kt296nd6mt"
+    eadark="kt5z09q99q"
+    eadlabel="Fresno County Property Atlases"
+    url="http://www.fresnolibrary.org/"/>
+  <institution
+    name="Alameda County Library, Dublin Library"
+    marccode="cfra" ark="ark:/13030/kt5c6032x8"
+    eadark="kt996nd5bc"
+    eadlabel="Collection of the Dublin Heritage Museum"
+    url="http://www.aclibrary.org/branches/dub/default.asp?topic=Dublin&amp;cat=DUBHome"/>
+  <institution
+    name="Inglewood Public Library"
+    marccode="cing" ark="ark:/13030/kt287031wp"
+    eadark="kt9g5029q0"
+    eadlabel="Collection of Inglewood Local History Photographs"
+    url="http://www.cityofinglewood.org/depts/library/default.asp"/>
+  <institution
+    name="Loyola Marymount University Library, Department of Archives and Special Collections"
+    marccode="clloy" ark="ark:/13030/kt9k402381"
+    eadark="kt9489r2nz"
+    eadlabel="Werner von Boltenstern Postcard Collection"
+    url="http://www.lmu.edu/Page4020.aspx"/>
+  <institution
+    name="California State University, Los Angeles.  Library"
+    marccode="cls" ark="ark:/13030/kt1t1nd6dp"
+    eadark="kt5r29r0d2"
+    eadlabel="Compton Communicative Arts Academy Collection"
+    url="http://www.calstatela.edu/library/"/>
+  <institution
+    name="San Mateo County Library. Brisbane Library"
+    marccode="cmsbr" ark="ark:/13030/kt1k40300d"
+    eadark="kt3t1nd0wn"
+    eadlabel="Brisbane Library History Collection"
+    url="http://www.brisbanelibrary.org/"/>
+  <institution
+    name="Riverside Public Library"
+    marccode="criv" ark="ark:/13030/kt0199q6gd"
+    eadark="kt4199q92w"
+    eadlabel="Riverside Public Library Citrus Label Collection"
+    url="http://www.riversideca.gov/library/localhistory"/>
+  <institution
+    name="Riverside Public Library"
+    marccode="criv" ark="ark:/13030/kt0199q6gd"
+    eadark="kt0t1nc9x4"
+    eadlabel="Wallace J. Miller Watercolors and Pen and Ink Drawings"
+    url="http://www.riversideca.gov/library/localhistory"/>
+  <institution
+    name="South Pasadena Public Library"
+    marccode="csp" ark="ark:/13030/kt0q2nc5xj"
+    eadark="kt1p3019vf"
+    eadlabel="South Pasadena Local History Images Collection"
+    url="http://www.ci.south-pasadena.ca.us/library/index.html"/>
+  <institution
+    name="Yorba Linda Public Library"
+    marccode="cyl" ark="ark:/13030/kt2z09r3kg"
+    eadark="kt8x0nd5m4"
+    eadlabel="Yorba Linda Public Library California History Collection"
+    url="http://www.ylpl.lib.ca.us/"/>
+  <institution
+    name="American Jewish University"
+    marccode="cajuol" ark="ark:/13030/kt8j49s18j"
+    url="http://library.ajula.edu/"
+    eadark="kt0f59q75v"
+    eadlabel="American Jewish University Photograph Collection"/>
+  <institution
+    name="City of Commerce Public Library"
+    marccode="ccr" ark="ark:/13030/kt8s2037n3"
+    url="http://www.ci.commerce.ca.us/library.asp"
+    eadark="kt5f59r0j5"
+    eadlabel="City of Commerce Local History Digital Resources Collection"/>
+  <institution
+    name="Coronado Public Library"
+    marccode="ccoron" ark="ark:/13030/kt25803396"
+    url="http://www.coronado.ca.us/library/"
+    eadark="kt4n39r09j"
+    eadlabel="Coronado Local History Photograph and Map Collection"/>
+  <institution
+    name="Escondido Public Library.  Pioneer Room"
+    marccode="cesc" ark="ark:/13030/kt0c6031s5"
+    url="http://www.library.escondido.org/pioneer/index.htm"
+    eadark="kt3c6024s3"
+    eadlabel="Eloise Perkins Collection"/>
+  <institution
+    name="Graduate Theological Union"
+    marccode="gtu" ark="ark:/13030/tf6g5012hs"
+    url="http://library.gtu.edu/archives/"
+    eadark="tf7489n8kh"
+    eadlabel="Berkeley Free Church Collection"/>
+  <institution
+    name="F. W. Olin Library Mills College"
+    marccode="mills" ark="ark:/13030/tf1w10112n"
+    url="http://www.mills.edu/academics/library/special_collections"
+    eadark="kt900030bp"
+    eadlabel="Mills College Historical Photographs"/>
+  <institution
+    name="San Diego State University. Library and Information Access"
+    marccode="sdsu" ark="ark:/13030/tf4779p5jq"
+    url="http://infodome.sdsu.edu/about/depts/spcollections/"
+    eadark="kt4199q9np"
+    eadlabel="University Archives Photograph Collection"/>
+  <institution
+    name="San Diego State University. Library and Information Access"
+    marccode="sdsu" ark="ark:/13030/tf4779p5jq"
+    url="http://infodome.sdsu.edu/about/depts/spcollections/"
+    eadark="kt758036nc"
+    eadlabel="The San Diego Photograph Collection"/>
+  <institution
+    name="South San Francisco Public Library"
+    marccode="cssf" ark="ark:/13030/kt909nf5cc"
+    url="http://www.ssflibrary.net/"
+    eadark="kt8q2nd74j"
+    eadlabel="Collection of South San Francisco: the Industrial City local history"/>
+  <institution
+    name="University of California Riverside"
+    marccode="ucr" ark="ark:/13030/tf6t1nc14w"
+    url="http://library.ucr.edu/?view=collections/spcol"
+    eadark="tf4m3nb2vv"
+    eadlabel="Avery E. Field Collection"/>
+  <institution
+    name="Upland Public Library"
+    marccode="cupl" ark="ark:/13030/kt5j49s0m9"
+    url="http://www.uplandpl.lib.ca.us/"
+    eadark="kt6r29r1w3"
+    eadlabel="Upland Public Library Historic Photograph Collection"/>
+  <institution
+    name="University of California, Santa Barbara, Cheadle Center for Biodiversity &amp; Ecological Restoration "
+    marccode="ccber" ark="ark:/13030/kt9v19r2dx"
+    url="http://ccber.lifesci.ucsb.edu/"
+    eadark="kt1s20304s"
+    eadlabel="Katherine Esau papers"/>
+  <institution
+    name="California Historical Society, North Baker Research Library"
+    marccode="chs" ark="ark:/13030/tf7v19p5mm"
+    url="http://www.californiahistoricalsociety.org/collections/northbaker_research.html"
+    eadark="kt6m3nf469"
+    eadlabel="Photographs of Peoples Temple in the United States and Guyana" />
+  <institution
+    name="Gay, Lesbian, Bisexual, Transgender Historical Society"
+    marccode="glhs" ark="ark:/13030/tf8j49p7c9"
+    url="http://www.glbthistory.org/"
+    eadark="kt7s2036zz"
+    eadlabel="Marie Ueda Collection" />
+<!-- institution
+    name="Kern County Library"
+    marccode="cbak" ark="ark:/13030/kt1d5nc5j6"
+    url="http://www.kerncountylibrary.org/"
+    eadark="kt3n39q3mw"
+    eadlabel="Kern County Local History Photograph Collection" / -->
+  <institution
+    name="Liberty High School Library"
+    marccode="calhsmc" ark="ark:/13030/kt096nd8zb"
+    url="http://libertyunion.schoolwires.net/197120420171122163/site/default.asp"
+    eadark="kt638nf330"
+    eadlabel="Liberty High School (Brentwood, CA) Images and Artifacts" />
+  <institution
+    name="Loyola Marymount University Library, Department of Archives and Special Collections"
+    marccode="clloy" ark="ark:/13030/kt9k402381"
+    url="http://library.lmu.edu/" 
+eadark="kt3d5nf1rw"
+    eadlabel="Loyola Marymount University Archives" />
+  <institution
+    name="Loyola Marymount University Library, Department of Archives and Special Collections"
+    marccode="clloy" ark="ark:/13030/kt9k402381"
+    url="http://library.lmu.edu/" 
+eadark="kt6v19r77t"
+    eadlabel="Dockweiler Family Papers" />
+  <institution
+    name="Loyola Marymount University Library, Department of Archives and Special Collections"
+    marccode="clloy" ark="ark:/13030/kt9k402381"
+    url="http://library.lmu.edu/" 
+eadark="kt8870232n"
+    eadlabel="Workman Family Papers" />
+  <institution
+    name="Sonoma State University Library"
+    marccode="carpssu" ark="ark:/13030/tf5h4nb7sw"
+    url="http://library.sonoma.edu/regional/"
+    eadark="kt9x0nf4pf"
+    eadlabel="North Bay Historic Preservation Digital Collection" />
+  <institution
+    name="Thousand Oaks Library"
+    marccode="cto" ark="ark:/13030/kt196nd978"
+    eadark="kt9z09s5pm"
+    eadlabel="News Chronicle Photograph Collection"
+    url="http://www.toaks.org/library/default.asp"/>
+  <institution
+    name="Thousand Oaks Library"
+    marccode="cto" ark="ark:/13030/kt196nd978"
+    eadark="kt8x0nf6g0"
+    eadlabel="Local History Photograph Collection"
+    url="http://www.toaks.org/library/default.asp"/>
+  <institution
+    name="California State University, Monterey Bay Library"
+    marccode="csumbl" ark="ark:/13030/kt4k403717"
+    eadark="kt900040fp"
+    eadlabel="Fort Ord Historical Images"
+    url="http://library.csumb.edu"/>
+  <institution
+    name="Sonoma County Library"
+    marccode="cstr" ark="ark:/13030/kt4m3nf3rg"
+    eadark="kt6w1039f0"
+    eadlabel="Sonoma County Visionaries, Immigrants and Winemakers Collection"
+    url="http://www.sonomalibrary.org"/>
+  <institution
+    name="Museum of Performance and Design, Performing Arts Library"
+    marccode="csfpal" ark="ark:/13030/kt7h4nc71x"
+    eadark="kt9489s26p"
+    eadlabel="Collection of San Francisco Bay Area Theater Images and Memorabilia"
+    url="http://www.mpdsf.org"/>
+  <institution
+    name="West Valley College Library"
+    marccode="csarw" ark="ark:/13030/kt8j49r9m4"
+    eadark="kt2870359t"
+    eadlabel="West Valley College Photographs and Negatives"
+    url="http://www.westvalley.edu/library/"/>
+  <institution
+    name="West Valley College Library"
+    marccode="csarw" ark="ark:/13030/kt8j49r9m4"
+    eadark="kt658037kh"
+    eadlabel="West Valley College Publications"
+    url="http://www.westvalley.edu/library/"/>
+  <institution
+    name="West Valley College Library"
+    marccode="csarw" ark="ark:/13030/kt8j49r9m4"
+    eadark="kt258034d7"
+    eadlabel="West Valley College Library Services and Instruction Materials"
+    url="http://www.westvalley.edu/library/"/>
+  <institution
+    name="West Valley College Library"
+    marccode="csarw" ark="ark:/13030/kt8j49r9m4"
+    eadark="kt438nf2mn"
+    eadlabel="West Valley College Administrators, Board Members, Community Leaders, and Alumni File"
+    url="http://www.westvalley.edu/library/"/>
+  <institution
+    name="West Valley College Library"
+    marccode="csarw" ark="ark:/13030/kt8j49r9m4"
+    eadark="kt5s2036cj"
+    eadlabel="West Valley College Pictorial Progress Scrapbooks of the Construction of the Saratoga Campus"
+    url="http://www.westvalley.edu/library/"/>
+  <institution
+    name="West Valley College Library"
+    marccode="csarw" ark="ark:/13030/kt8j49r9m4"
+    eadark="kt1k4033vs"
+    eadlabel="West Valley College Early History and Development File"
+    url="http://www.westvalley.edu/library/"/>
+  <institution
+    name="Monterey County Free Libraries"
+    marccode="csalcl" ark="ark:/13030/kt458036sh"
+    eadark="kt0j49r7c2"
+    eadlabel="Monterey County Free Libraries Local History Photograph and Document Collection"
+    url="http://www.co.monterey.ca.us/library/"/>
+  <institution
+    name="Rancho Cucamonga Library Services"
+    marccode="crancuca" ark="ark:/13030/kt6z09s370"
+    eadark="kt0z09r4gs"
+    eadlabel="Collection of City of Rancho Cucamonga Local History Photographs"
+    url="http://www.cityofrc.us/cityhall/lib/default.asp"/>
+  <institution
+    name="Monterey Park Bruggemeyer Library"
+    marccode="cmp" ark="ark:/13030/kt9f59s3wg"
+    eadark="kt9g5040fd"
+    eadlabel="Monterey Park History Collection"
+    url="http://montereyparklibrary.llwip.org/"/>
+  <institution
+    name="Los Angeles Philharmonic Archives"
+    marccode="claphila" ark="ark:/13030/kt3b69r9cn"
+    eadark="kt000032sk"
+    eadlabel="Records of the Los Angeles Philharmonic Archives"
+    url="http://www.laphil.com/philpedia/archives.cfm"/>
+  <institution
+    name="Banning Library District"
+    marccode="cban" ark="ark:/13030/kt7q2nf6fv"
+    eadark="kt6779r9df"
+    eadlabel="Banning Library District Local History Collection"
+    url="http://www.banninglibrarydistrict.org/banning/"/>
+  <institution
+    name="California State University, East Bay University Archives"
+    marccode="csueb"
+    ark="ark:/13030/kt629037x1"
+    eadark="c84q7sdj"
+    eadlabel="California State University, East Bay, Instructional Media Center records"
+    Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
+  <institution
+    name="California State University, East Bay University Archives"
+    marccode="csueb"
+    ark="ark:/13030/kt629037x1"
+    eadark="c80z71p6"
+    eadlabel="California State University, East Bay, Office of University Advancement records"
+    Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
+  <institution
+    name="California State University, East Bay University Archives"
+    marccode="csueb"
+    ark="ark:/13030/kt629037x1"
+    eadark="c8rj4gwt"
+    eadlabel="California State University, East Bay, Division of Student Affairs records"
+    Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
+  <institution
+    name="California State University, East Bay University Archives"
+    marccode="csueb"
+    ark="ark:/13030/kt629037x1"
+    eadark="kt5j49s2p9"
+    eadlabel="California State University East Bay, Division of Administration and Finance records"
+    Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
+  <institution
+    name="California State University, East Bay University Archives"
+    marccode="csueb"
+    ark="ark:/13030/kt629037x1"
+    eadark="c8p26wk2"
+    eadlabel="California State University, East Bay, University Libraries records"
+    Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
+</institutions>

@@ -99,39 +99,4 @@ have a finding aid (do not have an <isPartOf> element)
     eadark="kt6r29r1w3"
     eadlabel="Upland Public Library Historic Photograph Collection"
     url="http://www.uplandpl.lib.ca.us/"/>
-  <institution
-    name="California State University, East Bay University Archives"
-    marccode="csueb"
-    ark="ark:/13030/kt629037x1"
-    eadark="c84q7sdj"
-    eadlabel="California State University, East Bay, Instructional Media Center records"
-    Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
-  <institution
-    name="California State University, East Bay University Archives"
-    marccode="csueb"
-    ark="ark:/13030/kt629037x1"
-    eadark="c80z71p6"
-    eadlabel="California State University, East Bay, Office of University Advancement records"
-    Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
-  <institution
-    name="California State University, East Bay University Archives"
-    marccode="csueb"
-    ark="ark:/13030/kt629037x1"
-    eadark="c8rj4gwt"
-    eadlabel="California State University, East Bay, Division of Student Affairs records"
-    Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
-  <institution
-    name="California State University, East Bay University Archives"
-    marccode="csueb"
-    ark="ark:/13030/kt629037x1"
-    eadark="kt5j49s2p9"
-    eadlabel="California State University East Bay, Division of Administration and Finance records"
-    Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
-  <institution
-    name="California State University, East Bay University Archives"
-    marccode="csueb"
-    ark="ark:/13030/kt629037x1"
-    eadark="c8p26wk2"
-    eadlabel="California State University, East Bay, University Libraries records"
-    Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
 </institutions>
