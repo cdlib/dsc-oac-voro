@@ -32,7 +32,7 @@ The annual processing of the LHDRP data consists of the follow steps.
 		6.  the EAD's title
 
 	Place these values as atttributes of an "<institution>" element
-	in file "voro.cdlib.org:/voro/data/oac-lsta/admin/institutions.xml".
+	in file "dsc.cdlib.org:/apps/dsc/branches/production/voro/contentDM/7train/institutions.xml".
 
 	Here is an example:
 
@@ -49,7 +49,7 @@ The annual processing of the LHDRP data consists of the follow steps.
 	EAD's ARK number.  Only the rightmost component of the latter is
 	specified.
 
-	Commit this file to CVS (CDL CVS repository) once it has been updated.
+	Commit this file to hg once it has been updated.
 
 (2)	Step overview:  put the new contentdm export files in the file
 	system.
@@ -62,12 +62,12 @@ The annual processing of the LHDRP data consists of the follow steps.
 	element, and that need not be the same for all objects in one
 	file.)
 
-	Create a subdirectory of "voro.cdlib.org:/voro/data/oac-lsta/contentdm"
+	Create a subdirectory of "dsc.cdlib.org:/apps/dsc/data/oac-lsta/contentdm"
 	consisting of the year of the project.  For example:
 
-	mkdir /voro/data/oac-lsta/contentdm/2008-2009
+	mkdir /apps/dsc/data/oac-lsta/contentdm/2008-2009
 
-	Add this directory to CVS (Voro data CVS repository).
+TODO:	Add this directory to CVS (Voro data CVS repository).
 
 	Put the contentdm files in the new directory, and add and commit
 	them to CVS (Voro data CVS repository).
@@ -79,7 +79,7 @@ The annual processing of the LHDRP data consists of the follow steps.
 	One way to do that is to count the number of "<record>" elements
 	in the contentdm files.  For example:
 
-	% cd /voro/data/oac-lsta/contentdm/2008-2009
+	% cd /apps/dsc/data/oac-lsta/contentdm/2008-2009
 	% grep '<record>' *.xml | wc -l
 	    1823
 
@@ -89,8 +89,7 @@ The annual processing of the LHDRP data consists of the follow steps.
 	ARK numbers are in file "/abc/def/ghi", then the command to
 	add them to the database is:
 
-	% /voro/data/oac-lsta/admin/code/LHDRPassoc.run.csh unassigned \
-	? `/bin/cat /abc/def/ghi'
+	% /bin/cat /abc/def/ghi | xargs ./code/LHDRPassoc.run.bash unassigned
 
 	Once this step is done, it should not need to be re-done until
 	the following year, unless one of the updates of the contentdm
@@ -102,7 +101,7 @@ The annual processing of the LHDRP data consists of the follow steps.
 	-----
 	When we get the image files, they typically include a set of
 	files that contain the checksums of the image files.  Copy script
-	-rwxrwxr-x   1 voro     voro        6996 Aug 11  2008 /voro/data/oac-lsta/admin/code/checksum.checker.pl
+	-rwxrwxr-x   1 voro     voro        6996 Aug 11  2008 /apps/dsc/branches/production/voro/contentDM/code/checksum.checker.pl
 	to the machine on which the image files are located.  (This may
 	include changing the contents of the first line of the script,
 	which hard-codes the location of the Perl binary.)  Run the
@@ -168,10 +167,22 @@ The annual processing of the LHDRP data consists of the follow steps.
 	or files, commit them to CVS (Voro data CVS repository), and
 	rerun this step.
 
+    NOTE:(MER) -- We now get the images from Luna Imaging and they have
+    a different format for the image files. There also appears to be a
+    disconnect from the content dm export to the file names on disk for the 
+    2011-2012 batch. check_cdm.pl is very picky about the format of the 
+    directory names to the image files. I'm going to make a modified script 
+    to deal with the luna directory structure.
+    NOTE: THIS SCRIPT JUST DOESN"T WORK WITH THE NEW DIRECTORY STRUCTURE,
+    makes a lot of assumptions about file paths and such.
+
+    MER- i didn't run this for 2011-2012
+
+
 (6.5)	Step overview:  make sure that the 7train stylesheet "cdm.xsl" is
 	generating the correct URL for the TIFF images.
 	----
-	In directory "/voro/data/oac-lsta/7train", look at file "cdm.xsl".
+	In directory "/apps/dsc/branches/production/voro/contentDM/7train", look at file "cdm.xsl".
 	In CVS version 1.7 of that file, note that the string "ingest1"
 	appears in 3 places.  Those are the places to change.  To the end
 	of the URL that shows on those lines, the stylesheet will append
@@ -198,9 +209,10 @@ The annual processing of the LHDRP data consists of the follow steps.
         As of 2011, the contentdm is setup a bit differently and now it
         exposes jpeg 2000 files for the access images. This requires
         rewriting the image file URLs as exported by contentdm.
-	To do, run /voro/data/oac-lsta/admin/code/preprocess_jp2.py on 
+        NOTE: 2011-2012 doesn't need this
+	To do, run /apps/dsc/branches/production/voro/contentDM/code/preprocess_jp2.py on 
 	each xml export file.
-	% /voro/data/oac-lsta/admin/code/preprocess_jp2.py \
+	% /apps/dsc/branches/production/voro/contentDM/code/preprocess_jp2.py \
 	/voro/data/oac-lsta/contentdm/2010-2011/csumbl.xml
 
 	See /voro/data/oac-lsta/contentdm/2010-2011/run_jp2.csh for an 
@@ -212,23 +224,28 @@ The annual processing of the LHDRP data consists of the follow steps.
 	export files, run 7train on them to create the METS files for
 	the objects.
 
-	Create a subdirectory of "/voro/data/oac-lsta/mets" by the same name
-	as the subdirectory of "/voro/data/oac-lsta/contentdm" that was
+	Create a subdirectory of "/apps/dsc/data/oac-lsta/mets" by the same name
+	as the subdirectory of "/apps/dsc/data/oac-lsta/contentdm" that was
 	created in step (2).  Add this new directory to CVS (Voro data
 	CVS repository).
 	
 	Run 7train using the newly created subdirectory as its output
 	location.  For example,
 
-	% /voro/data/oac-lsta/admin/code/run_7train.pl \
-	? /voro/data/oac-lsta/contentdm/2008-2009 \
-	? "" "" "" /voro/data/oac-lsta/mets/2008-2009
+	% /apps/dsc/branches/production/voro/contentDM/code/run_7train.pl \
+	? /apps/dsc/data/oac-lsta/contentdm/2008-2009 \
+	? "" "" "" /apps/dsc/data/oac-lsta/mets/2008-2009
 
 	The METS will be created in the directory specified as the fifth
 	command line parameter to the "run_7train.pl" command (which was
-	"/voro/data/oac-lsta/mets/2008-2009" in the above example).
+	"/apps/dsc/data/oac-lsta/mets/2008-2009" in the above example).
 
 	Add and commit the new METS XML files (Voro data CVS repository).
+
+(7b - 2011-2012) -- Needed to move the files to match the generated paths from
+7Train. Essentially this is flattening out the structure to the <inst
+code>/(tiff|jpeg/<files>. Need to find all of <inst code> dirs on the LUNa
+drive and copy them to ~/Sites/luna-img/<inst code>/(tiff|jpeg)/<file>
 
 (8)	Step overview:  ingest the new METS into production.
 	-----
@@ -238,17 +255,17 @@ The annual processing of the LHDRP data consists of the follow steps.
 	production, respectively).  If you haven't been told on which
 	system to ingest the new METS XML files, ask.
 
-	If the METS are in a subdirectory of "/voro/data/oac-lsta/mets",
+	If the METS are in a subdirectory of "/apps/dsc/data/in/oac-lsta/mets",
 	then they are already accessible from the web.  To create the URL
 	in that case, substitute
-	"http://voro.cdlib.org:8081/workspace/lhdrp.mets" for
-	"/voro/data/oac-lsta/mets" in the fully qualified file name of the
+	"http://voro.cdlib.org/oac-lsta/mets" for
+	"/apps/dsc/data/in/oac-lsta/mets" in the fully qualified file name of the
 	METS file.  Use that as a parameter for the
 	"/voro/code/batch-bin/getMETS.pl" comamnd.
 
 	See files
-	"/voro/data/oac-lsta/admin/code/ingest.2007-2008.to.oac.csh" and
-	"/voro/data/oac-lsta/admin/code/ingest.2008-2009.to.oac.csh"
+	"/apps/dsc/branches/production/voro/contentDM/code/ingest.2007-2008.to.oac.csh" and
+	"/apps/dsc/branches/production/voro/contentDM/code/ingest.2008-2009.to.oac.csh"
 	for examples of this processing.
 
 	The "getMETS.pl" command sometimes prints error messages even
@@ -295,8 +312,8 @@ The annual processing of the LHDRP data consists of the follow steps.
 	Run the "create.imgzoom.ingest.script.pl" script using the METS
 	directory and the URL file as input.  For example:
 
-	% /voro/data/oac-lsta/admin/code/create.imgzoom.ingest.script.pl \
-	? /voro/data/oac-lsta/mets/2008-2009 gettiff.script.pl \
+	% /apps/dsc/branches/production/voro/contentDM/code/create.imgzoom.ingest.script.pl \
+	? /apps/dsc/data/oac-lsta/mets/2008-2009 gettiff.script.pl \
 	? urls-for-2008-2009.txt 
 
 	In this example, "urls-for-2008-2009.txt" is the file that contains
@@ -309,7 +326,7 @@ The annual processing of the LHDRP data consists of the follow steps.
 
 		:%s/^/\/imgzoom\/ingest\/bin\//
 
-    (NOTE: you can also edit the gettiff.script.pl to make it just the input
+    (****NOTE*****: you can also edit the gettiff.script.pl to make it just the input
     file for getTIFF.pl on imgzoom. Remove the "getTIFF.pl " at the start of
     each line and remove any single quotes from the file. The new file can
     become the input for getTIFF.pl on imagzoom.)
@@ -354,11 +371,11 @@ The annual processing of the LHDRP data consists of the follow steps.
 	the files in the directory to Mark, there may be some confusion.)
 
 	% mkdir DPR.files
-	% /voro/data/oac-lsta/admin/code/generate.DPR.lists.pl \
+	% /apps/dsc/branches/production/voro/contentDM/code/generate.DPR.lists.pl \
 	? 2008-2009 DPR.files
 
 	In this example, "2008-2009" is appended to the value of command
-	line parameter 3 (the default of which is "/voro/data/oac-lsta/mets")
+	line parameter 3 (the default of which is "/apps/dsc/data/oac-lsta/mets")
 	to create the input directory), and the files needed by DPR
 	personnel (typically Mark Reyes) are written in directory "DPR.files".
 	Provide the files to DPR personnel.

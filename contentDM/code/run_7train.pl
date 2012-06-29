@@ -27,12 +27,12 @@
 #
 #		4 - optional - the stylesheet.  the default (if this
 #			parameter is omitted or of length zero) is
-#			"../../7train/cdm.xsl" relative to the directory in
+#			"../7train/cdm.xsl" relative to the directory in
 #			which this script is located.
 #
 #		5 - optional - the directory into which to write the output
 #			METS XML files.  the default (if this parameter is
-#			omitted or of length zero) is "../../mets" relative
+#			omitted or of length zero) is "../mets" relative
 #			to the directory in which this script is located.
 #
 #		6 - optional - the LHDRPassoc jar file.  the default is (if
@@ -98,8 +98,8 @@ else {
 	$java_home = "/usr";
 	}
 $saxon_jar = $nearby . "classes/saxon8.jar";
-$stylesheet = $nearby . "../../7train/cdm.xsl";
-$output_directory = $nearby . "../../mets";
+$stylesheet = $nearby . "../7train/cdm.xsl";
+$output_directory = $nearby . "../mets";
 $lhdrp_assoc_jar = $nearby . "classes/LHDRPassoc.jar";
 $berkeleydb_jar = $nearby . "classes/je-3.2.76/lib/je-3.2.76.jar";
 

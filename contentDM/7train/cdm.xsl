@@ -41,8 +41,8 @@
 	<!-- Check for  existence of files first -->
 	<xsl:variable name="institutionmap">
 		<xsl:choose>
-			<xsl:when test="doc-available('../admin/institutions.xml')">
-				<xsl:copy-of select="document('../admin/institutions.xml')"/>
+			<xsl:when test="doc-available('./institutions.xml')">
+				<xsl:copy-of select="document('./institutions.xml')"/>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:text>empty</xsl:text>
@@ -380,7 +380,7 @@
 				<mets:file ID="{generate-id()}" MIMETYPE="image/jpeg" GROUPID="{../pagetitle}">
 					<mets:FLocat LOCTYPE="URL" xlink:role="master">
 						<xsl:attribute name="xlink:href">
-							<xsl:text>http://cdl-btingle-1.ad.ucop.edu/lsta/</xsl:text>
+                            <xsl:text>http://cdl-mredar-1.ad.ucop.edu/~mredar/luna-img/</xsl:text>
 							<xsl:value-of select="local:instCode(.)"/>
 							<xsl:text>jpeg</xsl:text>
 							<xsl:value-of select="identifier[1]"/>
@@ -446,7 +446,7 @@
 					</xsl:if>
 					<mets:FLocat LOCTYPE="URL" xlink:role="access">
 						<xsl:attribute name="xlink:href">
-							<xsl:text>http://cdl-btingle-1.ad.ucop.edu/lsta/</xsl:text>
+                            <xsl:text>http://http://cdl-mredar-1.ad.ucop.edu/~mredar/luna-img/</xsl:text>
 							<!-- xsl:value-of select="local:instCode(parent::node())"/ -->
 							<xsl:value-of select="local:instCode(ancestor::record)"/>
 							<xsl:text>/jpeg/</xsl:text>
@@ -504,7 +504,7 @@
 						</xsl:if>
 						<mets:FLocat LOCTYPE="URL">
 							<xsl:attribute name="xlink:href">
-								<xsl:text>http://cdl-btingle-1.ad.ucop.edu/lsta/</xsl:text>
+                                <xsl:text>http://cdl-mredar-1.ad.ucop.edu/~mredar/luna-img/</xsl:text>
 								<xsl:value-of select="local:instCode(ancestor::record)"/>
 								<xsl:text>/tiff/</xsl:text>
 
