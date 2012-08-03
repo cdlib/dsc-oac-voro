@@ -1,0 +1,224 @@
+voro@emu:/voro/data/oac-lsta% ./admin/code/run_7train.pl /voro/data/oac-lsta/contentdm/2010-2011/ "" "" "" /voro/data/oac-lsta/mets/2010-2011/
+run_7train.pl:  unexpected output from command "/cdlcommon/products/jdk1.5.0_15/bin/java -cp ./admin/code/classes/saxon8.jar:./admin/code/classes/LHDRPassoc.jar:./admin/code/classes/je-3.2.76/lib/je-3.2.76.jar net.sf.saxon.Transform "/voro/data/oac-lsta/contentdm/2010-2011//cto_kt9z09s5pm.xml" "./admin/code/../../7train/cdm.xsl" "outputdir=/voro/data/oac-lsta/mets/2010-2011" 2>&1" follows:
+Error on line 5449 column 3 of file:/voro/data/oac-lsta/contentdm/2010-2011/cto_kt9z09s5pm.xml:
+  SXXP0003: Error reported by XML parser: The element type "record" must be terminated by
+  the matching end-tag "</record>".
+Transformation failed: Run-time errors were reported
+run_7train.pl:  unexpected output from command "/cdlcommon/products/jdk1.5.0_15/bin/java -cp ./admin/code/classes/saxon8.jar:./admin/code/classes/LHDRPassoc.jar:./admin/code/classes/je-3.2.76/lib/je-3.2.76.jar net.sf.saxon.Transform "/voro/data/oac-lsta/contentdm/2010-2011//cstr.xml" "./admin/code/../../7train/cdm.xsl" "outputdir=/voro/data/oac-lsta/mets/2010-2011" 2>&1" follows:
+Finding record
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8qc01f2.mets.xml
+isPartOf[1] ("") does not match pattern.
+Processing terminated by xsl:message at line 73 in cdm.xsl
+run_7train.pl:  unexpected output from command "/cdlcommon/products/jdk1.5.0_15/bin/java -cp ./admin/code/classes/saxon8.jar:./admin/code/classes/LHDRPassoc.jar:./admin/code/classes/je-3.2.76/lib/je-3.2.76.jar net.sf.saxon.Transform "/voro/data/oac-lsta/contentdm/2010-2011//csalcl.xml" "./admin/code/../../7train/cdm.xsl" "outputdir=/voro/data/oac-lsta/mets/2010-2011" 2>&1" follows:
+Error on line 7776 column 36 of file:/voro/data/oac-lsta/contentdm/2010-2011/csalcl.xml:
+  SXXP0003: Error reported by XML parser: The content of elements must consist of
+  well-formed character data or markup.
+Transformation failed: Run-time errors were reported
+run_7train.pl:  unexpected output from command "/cdlcommon/products/jdk1.5.0_15/bin/java -cp ./admin/code/classes/saxon8.jar:./admin/code/classes/LHDRPassoc.jar:./admin/code/classes/je-3.2.76/lib/je-3.2.76.jar net.sf.saxon.Transform "/voro/data/oac-lsta/contentdm/2010-2011//crancuca.xml" "./admin/code/../../7train/cdm.xsl" "outputdir=/voro/data/oac-lsta/mets/2010-2011" 2>&1" follows:
+Finding record
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8154f2b.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8wd3xkn.mets.xml
+File name extension was neither ".tif" nor ".jpg" in "CRANCUCA_014".
+Processing terminated by xsl:message at line 484 in cdm.xsl
+run_7train.pl:  unexpected output from command "/cdlcommon/products/jdk1.5.0_15/bin/java -cp ./admin/code/classes/saxon8.jar:./admin/code/classes/LHDRPassoc.jar:./admin/code/classes/je-3.2.76/lib/je-3.2.76.jar net.sf.saxon.Transform "/voro/data/oac-lsta/contentdm/2010-2011//cban.xml" "./admin/code/../../7train/cdm.xsl" "outputdir=/voro/data/oac-lsta/mets/2010-2011" 2>&1" follows:
+Finding record
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c83x84nz.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8057cxj.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8vd6wf8.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8qn64rc.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8m043d7.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8g73bqz.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8bg2m0n.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c86q1v7g.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c82z13h4.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8z60m15.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8td9vbb.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8pr7t0w.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8k07299.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8f769kk.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c89g5jtd.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c85q4t33.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c81z42d6.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8x63jz8.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8sj1hkc.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8ns0rw3.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8j1015g.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8d798dr.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c88g8hp1.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c84q7s05.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c80z7198.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8w9575q.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8rj4ggf.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8ms3qrq.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8h1300n.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8c8278x.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c87h1gkn.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c83r0qwc.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8028pjp.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8v98637.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8qj7fb2.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8ks6pkw.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8g15xvg.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8b85650.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c86m34t4.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c82v2d48.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8z31wpb.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8tb14xj.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8pk0d5s.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8js9nfh.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8f18wrj.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c89c6vd3.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c85m63q6.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c81v5c0w.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8x34vg2.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8sb43rq.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8nk3c1d.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8ht2mb4.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8d50k00.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c88c9t95.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c84m92kt.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c80v89tn.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8w37tbp.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8rb72mb.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8mk69x2.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8gx48km.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8c53hwn.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c87d2s5b.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c83n21dj.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8zw1hxv.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8v40s6v.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8qc01hz.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8kp805z.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8fx77gp.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8b56gr8.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c86d5r0h.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c82n5085.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8xw4gsg.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8t43r3x.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8pg1pr2.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8jq0z26.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8dz06bv.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8959fkf.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c85d8pvq.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c81n7z4d.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8ww7fpj.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8s75dbd.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8ng4nn4.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8hq3wxd.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8cz3551.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8862dfm.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c84f1nrb.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c80p0x2g.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8w093xb.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8r78c7g.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8mg7mhr.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8gq6vrk.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8bz641n.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8765cbp.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c83f4mnd.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8zs2thj.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8v122tz.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8q81b3n.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8kh0kbg.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8fq9tm6.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c89z92x9.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c86971k5.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c82j68ww.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8xs5sf2.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8t151pk.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8p848xd.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8jh3j63.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8dr2sht.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8930r5p.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c85b00gs.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c81j97sz.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8ws8r87.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8s180hr.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8n877s1.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8hh6h35.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8cv4fr9.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8833q2r.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c84b2zb1.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c80k26k7.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8vt1q3z.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8r20zcj.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8m906pn.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8gm85bn.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8bv7dnc.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8736nxz.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c83b5x56.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8zk5dpw.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8tt4nz5.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8q23x8m.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8kd1vxr.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8fn1478.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c89w0chj.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8639mr4.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c82b8w1t.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8xk8cjh.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8st7mv7.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8p55kh3.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8jd4ttt.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8dn433w.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c88w3bbq.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8542km9.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c81c1twk.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8wm1bf4.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8rx9934.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8n58jd5.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8hd7spf.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8cn71xn.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c87w696b.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8445jhc.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c80c4st3.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8vq30pm.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8qz280r.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8m61h8b.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8gf0rh5.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8bp00st.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c86w983d.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8348hdf.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8zg6q8k.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8tq5zk9.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8pz56vz.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8k64g3h.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8ff3qcs.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c89p2zph.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8610xbc.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c82805ng.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8xg9p63.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8sq8xfx.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8nz85p4.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8j67dzq.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8df6p8v.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c88s4mx0.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8513w7f.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c81834jj.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8wh2n1t.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8rr1w8n.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8n014jm.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8h70cvb.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8cj8bhb.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c87s7kt2.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8416v32.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c80863b8.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8vh5kvk.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8qr4v48.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8m043fp.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8gb2237.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8bk19dz.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c86t0jp7.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8319sxt.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8z899fx.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8th8jq6.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8pr7t1b.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8k35rps.mets.xml
+Outputting to: file:////voro/data/oac-lsta/mets/2010-2011/c8fb5109.mets.xml
+Error at xsl:choose on line 220 of file:/voro/data/oac-lsta/./admin/code/../../7train/cdm.xsl:
+  Error in call to extension function {public static java.lang.String
+  org.cdlib.dsc.util.LHDRPassoc.getAssoc(java.lang.String) throws java.lang.Exception}:
+  Exception in extension function java.lang.Exception: LHDRPassoc/getAssoc:  the local id to
+  search for ("cban_005 ") contains a white space character (a blank, a tab, or a line feed)
+Transformation failed: Run-time errors were reported
+voro@emu:/voro/data/oac-lsta% 
+
