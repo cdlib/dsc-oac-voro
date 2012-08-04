@@ -264,8 +264,8 @@ drive and copy them to ~/Sites/luna-img/<inst code>/(tiff|jpeg)/<file>
 	"/voro/code/batch-bin/getMETS.pl" comamnd.
 
 	See files
-	"/apps/dsc/branches/production/voro/contentDM/code/ingest.2007-2008.to.oac.csh" and
-	"/apps/dsc/branches/production/voro/contentDM/code/ingest.2008-2009.to.oac.csh"
+	"/apps/dsc/branches/production/voro/contentDM/code/scripts/ingest.2007-2008.to.oac.csh" and
+	"/apps/dsc/branches/production/voro/contentDM/code/scripts/ingest.2008-2009.to.oac.csh"
 	for examples of this processing.
 
 	The "getMETS.pl" command sometimes prints error messages even
@@ -346,7 +346,7 @@ drive and copy them to ~/Sites/luna-img/<inst code>/(tiff|jpeg)/<file>
 	"/imgzoom/ingest/bin/buildDone.pl" as user "imgzoom".
 
 	Then on "dsc.cdlib.org", run command
-	"/dsc/data/jp2shadow/REFRESH.sh" as user "voro".
+	"/dsc/data/jp2shadow/REFRESH.sh" as user "dsc".
 
 	After the next XTF index, the links to "imgzoom.cdlib.org" will be
 	present on the newly added images.

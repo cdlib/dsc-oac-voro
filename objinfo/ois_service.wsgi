@@ -60,22 +60,18 @@ def lookup_info(ark, ark_parent, db=DB_SQLITE):
     TypeError: lookup_info() takes at least 2 non-keyword arguments (1 given)
     >>> x=lookup_info('ark:/13030/kt796nb207', None, db=DB_SQLITE_TEST)
     Traceback (most recent call last):
-      File "<input>", line 1, in <module>
-      File "ois_service.py", line 80, in lookup_info
-        raise KeyError
-    KeyError
+        ...
+    KeyError: 'ARK ark:/13030/kt796nb207 for object not found in item db'
     >>> x=lookup_info('ark:/13030/hb9j49p55', 'ark:/13030/kt0g5016h6', db=DB_SQLITE_TEST)
     >>> x
     (-1, 'Ethnic Studies Library', u'ark:/13030/kt4b69n6wx', 'http://eslibrary.berkeley.edu/', 'UC Berkeley', u'ark:/13030/tf0p3009mq', 'http://www.lib.berkeley.edu/', '')
     >>> x=lookup_info('ark:/13030/tf2c600703', 'ark:/13030/tf7s2010k4',  db=DB_SQLITE_TEST)
     >>> x
-    (u'073', 'Bancroft Library', u'ark:/13030/tf7r29p8s0', 'http://bancroft.berkeley.edu/', 'UC Berkeley', u'ark:/13030/tf0p3009mq', 'http://www.lib.berkeley.edu/', 'UA-5731512-1')
+    (u'073', 'Bancroft Library', u'ark:/13030/tf7r29p8s0', 'http://bancroft.berkeley.edu/', 'UC Berkeley', u'ark:/13030/tf0p3009mq', 'http://www.lib.berkeley.edu/', 'UA-31403262-1')
     >>> x=lookup_info('ark:/13030/kt3199n606', None,  db=DB_SQLITE_TEST)
     Traceback (most recent call last):
-      File "<input>", line 1, in <module>
-      File "ois_service.py", line 80, in lookup_info
-        raise KeyError
-    KeyError
+        ...
+    KeyError: 'ARK ark:/13030/kt3199n606 for object not found in item db'
     >>> x=lookup_info('ark:/13030/kt5m3nb0t1', None, db=DB_SQLITE_TEST)
     >>> x
     (-1, 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', '')
@@ -84,15 +80,14 @@ def lookup_info(ark, ark_parent, db=DB_SQLITE):
     (-1, 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', '')
     >>> x=lookup_info('ark:/13030/kt787014q6', None, db=DB_SQLITE_TEST)
     >>> x
-    (-1, 'Special Collections', u'ark:/13030/tf1489p250', 'http://www.lib.ucdavis.edu/specol/', 'Special Collections', u'ark:/13030/tf1489p250', 'http://www.lib.ucdavis.edu/specol/', '')
+    (-1, 'Special Collections', u'ark:/13030/tf1489p250', 'http://www.lib.ucdavis.edu/specol/', 'Special Collections', u'ark:/13030/tf1489p250', 'http://www.lib.ucdavis.edu/specol/', 'UA-30635447-1')
     >>> x=lookup_info('ark:/13030/hb4k400701', None, db=DB_SQLITE_TEST)
     Traceback (most recent call last):
-      File "<input>", line 1, in <module>
-      File "ois_service.py", line 80, in lookup_info
-        raise KeyError
-    KeyError
+      ...
+    KeyError: 'ARK ark:/13030/hb4k400701 for object not found in item db'
     >>> x=lookup_info('ark:/13030/kt4779q8sk', None, db=DB_SQLITE_TEST)
     >>> x
+    (-1, 'Chabot Space and Science Center', u'ark:/13030/kt5489q9r6', 'http://www.chabotspace.org/', None, None, None, '')
     '''
     google_analytics_tracking_code = None
     num_order = -1
