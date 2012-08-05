@@ -49,13 +49,13 @@ foreach my $NAAN ("13030", "28722", "20775") {
 	while (my $repdir = readdir(SUB)) {
 		# open outer manifest for pair directory
                 next if ($repdir eq "." || $repdir eq ".." || $repdir eq "CVS");
-		open MANI, ">/dsc/data/in/oac-ead/manifests/$repdir.checkm";
+		open MANI, ">/dsc/data/in/oac-ead/manifests/$NAAN$repdir.checkm";
 		binmode(MANI, ":utf8");
 
 		print MANI "#%checkm_0.7 \n"; # the space before \n is [sic] from the sample
 		print MANI "#%profile | http://uc3.cdlib.org/registry/ingest/manifest/mrt-batch-manifest \n";
-		print MANI "#utf8\n";
-		print MANI "# url ||||| manifest.checkm | | OAC_ark | creator[1] or contributor[1] | title[1] | date[1]\n";
+		print MANI "# utf8, OAC/Calishere ARK local ID, primary ID in Merritt will be different ARK\n";
+		print MANI "# url ||||| manifest.checkm | | local_ark | creator[1] or contributor[1] | title[1] | date[1]\n";
 
 		opendir (OBJ, "$texts_data/$NAAN/$repdir");
 
@@ -110,7 +110,9 @@ sub metadata {
 
   # !! Need some way to escape the values I'm going to put in the file; what are the 
   # the escaping rules?  Do I just =~s,|,,g
-
+  $creator = escm($creator);
+  $title = escm($title);
+  $date = escm($date);
   print MANI "$fileURL|||||manifest.checkm||$local_ark|$creator|$title|$date\n"
 }
 
@@ -126,7 +128,7 @@ sub go_deeper {
 }
 
 
-# main routine
+# run for every file
 sub checkm {
    my ($file, $part) =  @_;
    my $fileURL = file2url($file);
@@ -160,6 +162,17 @@ sub checkm {
 
 }
 
+# safe escape of | in data value
+sub escm {
+  my ($input) = @_;
+  if ($input =~ m,|,) {
+    print STDERR "replace | with ¦ in data value $_\n";
+    $input =~ tr,|,¦,;
+  }
+  return $input;
+}
+
+# compute URL to a file
 sub file2url {
   my ($file) = @_;
   $file =~ s,^/apps/dsc/data/xtf,,;
