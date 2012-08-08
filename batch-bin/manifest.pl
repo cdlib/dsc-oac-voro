@@ -1,5 +1,7 @@
 #!/usr/bin/env perl
 # create manifest files for Merritt
+use strict;
+use utf8;
 use Data::Dumper;
 use File::Path;
 use File::stat;
@@ -9,8 +11,8 @@ use XML::LibXML;
 # use Digest::SHA;
 use Digest;
 # my $sha2obj = new Digest::SHA;
-my $algorithm;
-#my $algorithm = "CRC-32";
+# my $algorithm; # leave unset to skip checksum
+my $algorithm = "CRC-32";
 my $checksummer = Digest->new($algorithm) if $algorithm;
 
 # lets play nice
@@ -99,20 +101,19 @@ sub metadata {
   # my $size = -s "$dir/manifest.checkm";
   my $dc = XML::LibXML->load_xml( location => $file )->getDocumentElement;
   return unless $dc;
-  my $title = $dc->findvalue("normalize-space(/qdc/title[1])");
-  my $creator = $dc->findvalue("normalize-space(/qdc/creator[1])");
+  my $title =       $dc->findvalue("normalize-space(/qdc/title[1])");
+  my $creator =     $dc->findvalue("normalize-space(/qdc/creator[1])");
   my $contributor = $dc->findvalue("normalize-space(/qdc/contributor[1])");
-  my $date = $dc->findvalue("normalize-space(/qdc/date[1])");
+  my $date =        $dc->findvalue("normalize-space(/qdc/date[1])");
+  # shuffle contributor up if no creator 
   $creator = $creator || $contributor;
 
   # mrt:primaryIdentifier | mrt:localIdentifier | mrt:creator | mrt:title | mrt:date ] 
   # url | [algorithm] | [value] | [size] | | filename [|primary] [|local] [|creator] [|title] [|date] 
 
-  # !! Need some way to escape the values I'm going to put in the file; what are the 
-  # the escaping rules?  Do I just =~s,|,,g
-  $creator = escm($creator);
-  $title = escm($title);
-  $date = escm($date);
+  $creator = escm($creator, $local_ark);
+  $title =   escm($title, $local_ark);
+  $date =    escm($date, $local_ark);
   print MANI "$fileURL|||||manifest.checkm||$local_ark|$creator|$title|$date\n"
 }
 
@@ -164,9 +165,9 @@ sub checkm {
 
 # safe escape of | in data value
 sub escm {
-  my ($input) = @_;
-  if ($input =~ m,|,) {
-    print STDERR "replace | with ¦ in data value $_\n";
+  my ($input, $ark) = @_;
+  if ($input =~ m,\|,) {
+    print STDERR "replaced | with ¦ $ark\n";
     $input =~ tr,|,¦,;
   }
   return $input;
