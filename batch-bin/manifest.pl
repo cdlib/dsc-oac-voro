@@ -87,8 +87,10 @@ foreach my $NAAN ("13030", "28722", "20775") {
 					metadata($file, $part, "$texts_data/$NAAN/$repdir/$objid", "ark:/$NAAN/$objid");
 				}
 			}
+			print CHECKM "#%eof";
 			close(CHECKM);
 		}
+	print MANI "#%eof";
 	close(MANI);
 	}
 }
