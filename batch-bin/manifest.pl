@@ -12,7 +12,7 @@ use XML::LibXML;
 use Digest;
 # my $sha2obj = new Digest::SHA;
 # my $algorithm; # leave unset to skip checksum
-my $algorithm = "CRC-32";
+my $algorithm = "MD5";
 my $checksummer = Digest->new($algorithm) if $algorithm;
 
 # lets play nice
