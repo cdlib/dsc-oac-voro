@@ -501,4 +501,53 @@ eadark="kt8870232n"
     eadark="c8p26wk2"
     eadlabel="California State University, East Bay, University Libraries records"
     Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
+<institution
+    name="California State University, Fullerton, University Archives and Special Collections"
+    marccode="cfls"
+    ark="ark:/13030/c8cn7290"
+    eadark="kt3199s113"
+    eadlabel="Smart Studio photographs"
+    Url="http://www.library.fullerton.edu"/>
+<institution
+    name="Citrus College, Hayden Memorial Library"
+    marccode="cazc"
+    ark="ark:/13030/kt2m3nf2vx"
+    eadark="c8v40sx8"
+    eadlabel="Citrus College Archive Collection"
+    Url="http://citruscollege.edu/library/Pages/default.aspx"/>
+<institution
+    name="Occidental College Library"
+    marccode="clo"
+    ark="ark:/13030/kt4p3021tf"
+    eadark="c8ff3qs5"
+    eadlabel="Bill Henry Collection"
+    Url="http://www.oxy.edu/library"/>
+<institution
+    name="Holt-Atherton Special Collections, University of the Pacific Library"
+    marccode="uop"
+    ark="ark:/13030/tf609nb7wg"
+    eadark="tf496nb393"
+    eadlabel="Yoshikawa Family Collection"
+    Url="http://www.pacific.edu/Library/Find/Holt-Atherton-Special-Collections.html"/>
+<institution
+    name="Glendale Public Library"
+    marccode="cgl"
+    ark="ark:/13030/kt696nc8zr"
+    eadark="c8765cr2"
+    eadlabel="Promotional Brochures of Tropico and Early Glendale"
+    Url="http://www.glendalepubliclibrary.org/"/>
+<institution
+    name="Black Gold Cooperative Library System"
+    marccode="cvtb"
+    ark="ark:/13030/kt7s2038ps"
+    eadark="c8wd3z0f"
+    eadlabel="Historical Photographs of Four Ethnicities on California's Central Coast"
+    Url="https://www.blackgold.org/polaris/bg/index.aspx"/>
+<institution
+    name="Japanese American National Museum, Hirasaki National Resource Center"
+    marccode="janm"
+    ark="ark:/13030/tf000007c3"
+    eadark="kt538nf1bb"
+    eadlabel="Afton Dill Nance Papers"
+    Url="http://www.janm.org"/>
 </institutions>
