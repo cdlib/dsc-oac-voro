@@ -34,10 +34,15 @@ def application(environ, start_response):
             status = '400 BAD MINT NUMBER'
             output = '<h1>Number parameter must be an integer</h1>'
         else:
-            newarks = DSC_EZID_minter.main(num, shoulder=shoulder,
+            if num <= 10:
+                newarks = DSC_EZID_minter.main(num, shoulder=shoulder,
                     metadata = {'_profile':'dc', '_coowners': 'ucblibrary'})
-            for ark in newarks:
-                output = ''.join([output, ark[5:], '\n'])
+                for ark in newarks:
+                    output = ''.join([output, ark[5:], '\n'])
+            else:
+                status = '400 TOO MANY ARKS REQUESTED NUMBER'
+                output = '<h1>Can only request 10 ARKs at a time from this interface</h1>'
+
     response_headers = [('Content-type', 'text/plain'),
                                     ('Content-Length', str(len(output)))]
     start_response(status, response_headers)
