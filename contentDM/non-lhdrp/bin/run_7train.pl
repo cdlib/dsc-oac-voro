@@ -19,7 +19,7 @@
 #
 #		3 - optional - the Saxon jar file.  the default is (if this
 #			parameter is omitted or of length zero)
-#			"../../admin/code/classes/saxon8.jar" relative to the
+#			"../../code/classes/saxon8.jar" relative to the
 #			directory in which this script is located.
 #
 #		4 - optional - the stylesheet.  the default (if this
@@ -34,12 +34,12 @@
 #
 #		6 - optional - the nonLHDRPassoc jar file.  the default is (if
 #			this parameter is omitted or of length zero)
-#			"../../admin/code/classes/nonLHDRPassoc.jar" relative
+#			"../../code/classes/nonLHDRPassoc.jar" relative
 #			to the directory in which this script is located.
 #
 #		7 - optional - the BerkeleyDB jar file.  the default is (if
 #			this parameter is omitted or of length zero)
-#			"../../admin/code/classes/je-3.2.76/lib/je-3.2.76.jar"
+#			"../../code/classes/je-3.2.76/lib/je-3.2.76.jar"
 #			relative to the directory in which this script is
 #			located.
 #
@@ -89,12 +89,12 @@ if (exists($ENV{"JAVA_HOME"})) {
 else {
 	$java_home = "/usr";
 	}
-$saxon_jar = $nearby . "../../admin/code/classes/saxon8.jar";
+$saxon_jar = $nearby . "../../code/classes/saxon8.jar";
 $stylesheet = $nearby . "../7train/cdm.xsl";
 $output_directory = $nearby . "../mets";
-$non_lhdrp_assoc_jar = $nearby . "../../admin/code/classes/nonLHDRPassoc.jar";
+$non_lhdrp_assoc_jar = $nearby . "../../code/classes/nonLHDRPassoc.jar";
 $berkeleydb_jar = $nearby .
-	"../../admin/code/classes/je-3.2.76/lib/je-3.2.76.jar";
+	"../../code/classes/je-3.2.76/lib/je-3.2.76.jar";
 
 # Examine the command line parameters.
 if ((scalar(@ARGV) < 1) || (length($ARGV[0]) == 0)) {
