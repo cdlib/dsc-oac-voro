@@ -99,4 +99,25 @@ have a finding aid (do not have an <isPartOf> element)
     eadark="kt6r29r1w3"
     eadlabel="Upland Public Library Historic Photograph Collection"
     url="http://www.uplandpl.lib.ca.us/"/>
+<institution
+    name="Holt-Atherton Special Collections, University of the Pacific Library"
+    marccode="uop"
+    ark="ark:/13030/tf609nb7wg"
+    eadark="tf496nb393"
+    eadlabel="Yoshikawa Family Collection"
+    Url="http://www.pacific.edu/Library/Find/Holt-Atherton-Special-Collections.html"/>
+<institution
+    name="Occidental College Library"
+    marccode="clo"
+    ark="ark:/13030/kt4p3021tf"
+    eadark="c8ff3qs5"
+    eadlabel="Bill Henry Collection"
+    Url="http://www.oxy.edu/library"/>
+<institution
+    name="Occidental College Library"
+    marccode="clo"
+    ark="ark:/13030/kt4p3021tf"
+    eadark="c8ng4pcz"
+    eadlabel="Pat Yeomans Collection on Bill Henry and the History of the Olympics"
+    Url="http://www.oxy.edu/library"/>
 </institutions>
