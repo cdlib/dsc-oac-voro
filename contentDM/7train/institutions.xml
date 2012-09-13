@@ -502,6 +502,20 @@ eadark="kt8870232n"
     eadlabel="California State University, East Bay, University Libraries records"
     Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
 <institution
+    name="California State University, East Bay University Archives"
+    marccode="csueb"
+    ark="ark:/13030/kt629037x1"
+    eadark="kt5j49s2p9"
+    eadlabel="California State University East Bay, Division of Administration and Finance records"
+    Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
+<institution
+    name="California State University, East Bay University Archives"
+    marccode="csueb"
+    ark="ark:/13030/kt629037x1"
+    eadark="c80z71p6"
+    eadlabel="California State University, East Bay, Office of University Advancement records"
+    Url="http://library.csueastbay.edu/using-the-libraries/collections/archives/"/>
+<institution
     name="California State University, Fullerton, University Archives and Special Collections"
     marccode="cfls"
     ark="ark:/13030/c8cn7290"
@@ -550,4 +564,18 @@ eadark="kt8870232n"
     eadark="kt538nf1bb"
     eadlabel="Afton Dill Nance Papers"
     Url="http://www.janm.org"/>
+<institution
+    name="Fresno County Public Library"
+    marccode="cfcpl"
+    ark="ark:/13030/kt296nd6mt"
+    eadark="c85m64f1"
+    eadlabel="Pop Laval Photographs"
+    Url="http://www.fresnolibrary.org"/>
+<institution
+    name="California State University, Channel Islands, John Spoor Broome Library"
+    marccode="csuci"
+    ark="ark:/13030/kt138nb0s0"
+    eadark="c8xd10ds"
+    eadlabel="Filipinos in Ventura County Digital Image Collection"
+    Url="http://library.csuci.edu/collections/archives.htm"/>
 </institutions>
