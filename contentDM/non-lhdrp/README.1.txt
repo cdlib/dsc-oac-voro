@@ -22,9 +22,9 @@ NOTE:	Consider keeping a transcript of the work done on the contentdm
 	export file, especially if additional things that are not documented
 	here need to be done to the contentdm export file.  To see examples
 	of what's already been done alone these lines see files:
-	"/voro/data/oac-lsta/non-lhdrp/README.ccber.txt",
-	"/voro/data/oac-lsta/non-lhdrp/README.muir.1.txt", and
-	"/voro/data/oac-lsta/non-lhdrp/README.SCJARexport2_jpg_only.1.txt".
+	"/apps/dsc/data/oac-lsta/non-lhdrp/README.ccber.txt",
+	"/apps/dsc/data/oac-lsta/non-lhdrp/README.muir.1.txt", and
+	"/apps/dsc/data/oac-lsta/non-lhdrp/README.SCJARexport2_jpg_only.1.txt".
 
 	If you do keep a transcript, commit it to CVS (CDL CVS repository).
 
@@ -45,7 +45,7 @@ directory holds the files needed to do that.  These are the steps.
 
 	Place these values as atttributes of an "<institution>" element
 	in file
-	"voro.cdlib.org:/voro/data/oac-lsta/non-lhdrp/7train/institutions.xml".
+	"voro.cdlib.org:/apps/dsc/data/oac-lsta/non-lhdrp/7train/institutions.xml".
 
 	Here is an example:
 
@@ -78,7 +78,7 @@ directory holds the files needed to do that.  These are the steps.
 	file.)
 
 	Put the file in directory
-	"voro.cdlib.org:/voro/data/oac-lsta/non-lhdrp/contentdm".
+	"voro.cdlib.org:/apps/dsc/data/oac-lsta/non-lhdrp/contentdm".
 
 	Add and commit this file to CVS (Voro data CVS repository).
 
@@ -89,7 +89,7 @@ directory holds the files needed to do that.  These are the steps.
 	One way to do that is to count the number of "<record>" elements
 	in the contentdm file.  For example:
 
-	% cd /voro/data/oac-lsta/non-lhdrp/contentdm
+	% cd /apps/dsc/data/oac-lsta/non-lhdrp/contentdm
 	% grep '<record>' ccber.xml | wc -l
 	     360
 
@@ -99,7 +99,7 @@ directory holds the files needed to do that.  These are the steps.
 	ARK numbers are in file "/abc/def/ghi", then the command to
 	add them to the database is:
 
-	% /voro/data/oac-lsta/admin/code/LHDRPassoc.run.csh unassigned \
+	% /apps/dsc/data/oac-lsta/admin/code/LHDRPassoc.run.csh unassigned \
 	? `/bin/cat /abc/def/ghi'
 
 	Once this step is done, it should not need to be re-done, unless
@@ -127,7 +127,7 @@ directory holds the files needed to do that.  These are the steps.
 
 	Therefore, make sure that there is one "<institution>" element
 	with attribute 'eadark="NAME"' in file
-	"/voro/data/oac-lsta/non-lhdrp/7train/institutions.xml" for each
+	"/apps/dsc/data/oac-lsta/non-lhdrp/7train/institutions.xml" for each
 	finding aid mentioned in the contentdm export file, plus one
 	""<institution>" element with attribute 'eadark=+default" if
 	there are any objbects in the contentdm file that have no
@@ -157,7 +157,7 @@ directory holds the files needed to do that.  These are the steps.
 
 	Then run commands:
 
-	% cd /voro/data/oac-lsta/non-lhdrp/contentdm
+	% cd /apps/dsc/data/oac-lsta/non-lhdrp/contentdm
 	% ../binpreprocess.pl INPUTCDM OUTPUTCDM UNIQUESTRING
 
 	If there are errors reported, pass them to the data analyst, and
@@ -167,7 +167,7 @@ directory holds the files needed to do that.  These are the steps.
 
 	For example:
 
-	% cd /voro/data/oac-lsta/non-lhdrp/contentdm
+	% cd /apps/dsc/data/oac-lsta/non-lhdrp/contentdm
 	% ../bin/preprocess.pl ccber.xml preprocessed_ccber.xml \
 	? ccber_kt1s20304s_
 
@@ -180,7 +180,7 @@ directory holds the files needed to do that.  These are the steps.
 	Run 7train on the preprocessed contentdm file from step (5), and
 	have it write its output in the temporary directory.
 
-	% cd /voro/data/oac-lsta/non-lhdrp/contentdm
+	% cd /apps/dsc/data/oac-lsta/non-lhdrp/contentdm
 	% mkdir ../TEMPORARYMETS
 	% ../bin/run_7train.pl OUTPUTCDM "" "" "" ../TEMPORARYMETS
 
@@ -192,7 +192,7 @@ directory holds the files needed to do that.  These are the steps.
 
 	For example,
 
-	% cd /voro/data/oac-lsta/non-lhdrp/contentdm
+	% cd /apps/dsc/data/oac-lsta/non-lhdrp/contentdm
 	% mkdir ../mets.ccber
 	% ../bin/run_7train.pl preprocessed_ccber.xml "" "" "" ../mets.ccber
 	% cd ../mets.ccber
@@ -202,22 +202,22 @@ directory holds the files needed to do that.  These are the steps.
 	-----
 	Run "getMETS.pl" on the new METS XML files.  The METS files are
 	already accessible from the web, because of this symbolic link:
-	lrwxrwxrwx   1 voro     voro          34 May 19 19:32 /voro/code/htdocs/workspace/lsta.but.non.lhdrp.mets -> /voro/data/oac-lsta/non-lhdrp/mets
+	lrwxrwxrwx   1 voro     voro          34 May 19 19:32 /apps/dsc/branches/production/voro/htdocs/workspace/lsta.but.non.lhdrp.mets -> /apps/dsc/data/oac-lsta/non-lhdrp/mets
 	Use the list of METS files in the temporary directory to generate
 	the "getMETS.pl" commands to run.
 
-	% cd /voro/data/oac-lsta/TEMPORARYMETS
+	% cd /apps/dsc/data/oac-lsta/TEMPORARYMETS
 	% foreach i (`/bin/ls`)
 	foreach? echo ---------- $i -----------
-	foreach? /voro/code/batch-bin/getMETS.pl http://voro.cdlib.org:8081/workspace/lsta.but.non.lhdrp.mets/$i
+	foreach? /apps/dsc/branches/production/voro/batch-bin/getMETS.pl http://voro.cdlib.org:8081/workspace/lsta.but.non.lhdrp.mets/$i
 	foreach? end
 
 	For example:
 
-	% cd /voro/data/oac-lsta/non-lhdrp/mets.ccber
+	% cd /apps/dsc/data/oac-lsta/non-lhdrp/mets.ccber
 	% foreach i (`/bin/ls`)
 	foreach? echo ---------- $i -----------
-	foreach? /voro/code/batch-bin/getMETS.pl http://voro.cdlib.org:8081/workspace/lsta.but.non.lhdrp.mets/$i
+	foreach? /apps/dsc/branches/production/voro/batch-bin/getMETS.pl http://voro.cdlib.org:8081/workspace/lsta.but.non.lhdrp.mets/$i
 	foreach? end
 
 (8)	Step overview:  add the new METS files to CVS.
@@ -226,7 +226,7 @@ directory holds the files needed to do that.  These are the steps.
 	files to process, run the "cvs add" and "cvs commit" commands
 	to put the new METS files into CVS (Voro data CVS repository).
 
-	% cd /voro/data/oac-lsta/non-lhdrp/mets
+	% cd /apps/dsc/data/oac-lsta/non-lhdrp/mets
 	% foreach i (`/bin/ls ../TEMPORARYMETS`)
 	foreach? cvs add $i
 	foreach? cvs commit -m "Initial file." $i
@@ -234,7 +234,7 @@ directory holds the files needed to do that.  These are the steps.
 
 	For example:
 
-	% cd /voro/data/oac-lsta/non-lhdrp/mets
+	% cd /apps/dsc/data/oac-lsta/non-lhdrp/mets
 	% foreach i (`/bin/ls ../mets.ccber`)
 	foreach? cvs add $i
 	foreach? cvs commit -m "Initial file." $i
@@ -244,8 +244,8 @@ directory holds the files needed to do that.  These are the steps.
 	-----
 	Execute:
 
-	% /bin/rm -rf /voro/data/oac-lsta/non-lhdrp/TEMPORARYMETS
+	% /bin/rm -rf /apps/dsc/data/oac-lsta/non-lhdrp/TEMPORARYMETS
 
 	For example:
 
-	% /bin/rm -rf /voro/data/oac-lsta/non-lhdrp/mets.ccber
+	% /bin/rm -rf /apps/dsc/data/oac-lsta/non-lhdrp/mets.ccber
