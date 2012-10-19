@@ -233,8 +233,8 @@ TODO:	Add this directory to CVS (Voro data CVS repository).
 	location.  For example,
 
 	% /apps/dsc/branches/production/voro/contentDM/code/run_7train.pl \
-	? /apps/dsc/data/oac-lsta/contentdm/2008-2009 \
-	? "" "" "" /apps/dsc/data/oac-lsta/mets/2008-2009
+	? /apps/dsc/data/in/oac-lsta/contentdm/2008-2009 \
+	? "" "" "" /apps/dsc/data/in/oac-lsta/mets/2008-2009
 
 	The METS will be created in the directory specified as the fifth
 	command line parameter to the "run_7train.pl" command (which was

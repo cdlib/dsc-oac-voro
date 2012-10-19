@@ -551,6 +551,13 @@ eadark="kt8870232n"
     eadlabel="Promotional Brochures of Tropico and Early Glendale"
     Url="http://www.glendalepubliclibrary.org/"/>
 <institution
+    name="Glendale Public Library"
+    marccode="cgl"
+    ark="ark:/13030/kt696nc8zr"
+    eadark="c8hd7tzf"
+    eadlabel="Brand Library and Art Center Annual National Juried Exhibition Catalogs"
+    Url="http://www.glendalepubliclibrary.org/"/>
+<institution
     name="Black Gold Cooperative Library System"
     marccode="cvtb"
     ark="ark:/13030/kt7s2038ps"
@@ -578,4 +585,18 @@ eadark="kt8870232n"
     eadark="c8xd10ds"
     eadlabel="Filipinos in Ventura County Digital Image Collection"
     Url="http://library.csuci.edu/collections/archives.htm"/>
+<institution
+    name="Beaumont Library District"
+    marccode="cbea"
+    ark="ark:/13030/kt8w10407m"
+    eadark="c83b5xv5"
+    eadlabel="Beaumont Library District Local History Collection"
+    Url="http://bld.lib.ca.us/"/>
+<institution
+    name="Santa Cruz Public Libraries, Scotts Valley Branch"
+    marccode="cstcrcl"
+    ark="ark:/13030/kt8c60413r"
+    eadark="c85b016m"
+    eadlabel="Scotts Valley Historical Photographs"
+    Url="http://www.santacruzpl.org"/>
 </institutions>

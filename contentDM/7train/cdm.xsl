@@ -147,6 +147,7 @@
 		<local:mimetype ext="gif">image/gif</local:mimetype>
 		<local:mimetype ext="tif">image/tiff</local:mimetype>
 		<local:mimetype ext="tiff">image/tiff</local:mimetype>
+		<local:mimetype ext="pdf">application/pdf</local:mimetype>
 	</xsl:variable>
 
 	<!-- Controlled vocabulary map for the mets@TYPE attribute -->
@@ -452,36 +453,36 @@
 							<xsl:text>/jpeg/</xsl:text>
 							<xsl:choose>
 							  <!-- Does the URL contain a backslash and end in tif/jpg?  -->
-							  <xsl:when test="matches(lower-case($url), '\\[^\\]+\.(tif|jpg)$')">
+							  <xsl:when test="matches(lower-case($url), '\\[^\\]+\.(tif|jpg|pdf)$')">
 							    <!-- Yes.  Pull out whatever is between the rightmost backslash
 							    and the file name extension.  -->
-							    <xsl:analyze-string select="lower-case($url)" regex="\\([^\\]+)\.(tif|jpg)$">
+							    <xsl:analyze-string select="lower-case($url)" regex="\\([^\\]+)\.(tif|jpg|pdf)$">
 							      <xsl:matching-substring>
 								<xsl:value-of select="regex-group(1)"/>
 							      </xsl:matching-substring>
 							    </xsl:analyze-string>
 							  </xsl:when>
 							  <!-- Does the URL contain a forward slash and end in tif/jpg?  -->
-							  <xsl:when test="matches(lower-case($url), '/[^\\]+\.(tif|jpg)$')">
+							  <xsl:when test="matches(lower-case($url), '/[^\\]+\.(tif|jpg|pdf)$')">
 							    <!-- Yes.  Pull out whatever is between the rightmost backslash
 							    and the file name extension.  -->
-							    <xsl:analyze-string select="lower-case($url)" regex="/([^\\]+)\.(tif|jpg)$">
+							    <xsl:analyze-string select="lower-case($url)" regex="/([^\\]+)\.(tif|jpg|pdf)$">
 							      <xsl:matching-substring>
 								<xsl:value-of select="regex-group(1)"/>
 							      </xsl:matching-substring>
 							    </xsl:analyze-string>
 							  </xsl:when>
 							  <!-- No backslash.  Does the URL end in tif/jpg?  -->
-							  <xsl:when test="matches(lower-case($url), '^.+\.(tif|jpg)$')">
+							  <xsl:when test="matches(lower-case($url), '^.+\.(tif|jpg|pdf)$')">
 							    <!-- Yes.  Pull out whatever not the file name extension.  -->
-							    <xsl:analyze-string select="lower-case($url)" regex="^(.+)\.(tif|jpg)$">
+							    <xsl:analyze-string select="lower-case($url)" regex="^(.+)\.(tif|jpg|pdf)$">
 							      <xsl:matching-substring>
 								<xsl:value-of select="regex-group(1)"/>
 							      </xsl:matching-substring>
 							    </xsl:analyze-string>
 							  </xsl:when>
 							  <xsl:otherwise>
-							    <xsl:message terminate="yes">File name extension was neither ".tif" nor ".jpg" in "<xsl:value-of select="$url"/>".</xsl:message>
+							    <xsl:message terminate="yes">File name extension was neither ".tif" nor ".jpg" nor ".pdf" in "<xsl:value-of select="$url"/>".</xsl:message>
 							  </xsl:otherwise>
 							</xsl:choose>
 							<xsl:text>.jpg</xsl:text>
@@ -510,36 +511,36 @@
 
 								<xsl:choose>
 								  <!-- Does the URL contain a backslash and end in tif/jpg?  -->
-								  <xsl:when test="matches(lower-case($url), '\\[^\\]+\.(tif|jpg)$')">
+								  <xsl:when test="matches(lower-case($url), '\\[^\\]+\.(tif|jpg|pdf)$')">
 								    <!-- Yes.  Pull out whatever is between the rightmost backslash
 								    and the file name extension.  -->
-								    <xsl:analyze-string select="lower-case($url)" regex="\\([^\\]+\.(tif|jpg))$">
+								    <xsl:analyze-string select="lower-case($url)" regex="\\([^\\]+\.(tif|jpg|pdf))$">
 								      <xsl:matching-substring>
 									<xsl:value-of select="regex-group(1)"/>
 								      </xsl:matching-substring>
 								    </xsl:analyze-string>
 								  </xsl:when>
 								  <!-- Does the URL contain a forward slash and end in tif/jpg?  -->
-								  <xsl:when test="matches(lower-case($url), '/[^\\]+\.(tif|jpg)$')">
+								  <xsl:when test="matches(lower-case($url), '/[^\\]+\.(tif|jpg|pdf)$')">
 								    <!-- Yes.  Pull out whatever is between the rightmost backslash
 								    and the file name extension.  -->
-								    <xsl:analyze-string select="lower-case($url)" regex="/([^\\]+\.(tif|jpg))$">
+								    <xsl:analyze-string select="lower-case($url)" regex="/([^\\]+\.(tif|jpg|pdf))$">
 								      <xsl:matching-substring>
 									<xsl:value-of select="regex-group(1)"/>
 								      </xsl:matching-substring>
 								    </xsl:analyze-string>
 								  </xsl:when>
 								  <!-- No backslash.  Does the URL end in tif/jpg?  -->
-								  <xsl:when test="matches(lower-case($url), '^.+\.(tif|jpg)$')">
+								  <xsl:when test="matches(lower-case($url), '^.+\.(tif|jpg|pdf)$')">
 								    <!-- Yes.  Pull out whatever not the file name extension.  -->
-								    <xsl:analyze-string select="lower-case($url)" regex="^(.+\.(tif|jpg))$">
+								    <xsl:analyze-string select="lower-case($url)" regex="^(.+\.(tif|jpg|pdf))$">
 								      <xsl:matching-substring>
 									<xsl:value-of select="regex-group(1)"/>
 								      </xsl:matching-substring>
 								    </xsl:analyze-string>
 								  </xsl:when>
 								  <xsl:otherwise>
-								    <xsl:message terminate="yes">File name extension was neither ".tif" nor ".jpg" in "<xsl:value-of select="$url"/>".</xsl:message>
+								    <xsl:message terminate="yes">File name extension was neither ".tif" nor ".jpg" nor ".pdf" in "<xsl:value-of select="$url"/>".</xsl:message>
 								  </xsl:otherwise>
 								</xsl:choose>
 							</xsl:attribute>
