@@ -142,7 +142,7 @@ sub upfile {
 			|| $dcxStat->mtime > $DCstat->mtime ) 	# OR XSLT is newer than the DC file
 		   )
 			{
-			print BUILD qq{<xslt in="$_" out="$out" style="\${metsBase}/$dcx"><classpath location="\${saxon}"/><factory name="net.sf.saxon.TransformerFactoryImpl"/></xslt>\n } ;
+			    print BUILD qq{<xslt force="true" in="$_" out="$out" style="\${metsBase}/$dcx"><classpath location="\${saxon}"/><factory name="net.sf.saxon.TransformerFactoryImpl"/></xslt>\n } ;
 		} else {
 			#print STDERR "$profile what what what $0: $! $_ $mets_base/$dcx\n";
 		}
