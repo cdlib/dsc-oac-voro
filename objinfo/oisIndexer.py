@@ -14,12 +14,28 @@ import glob
 import csv
 import re
 import MySQLdb
-import logging
+import logging, logging.handlers
 from config_reader import read_config
 
 DEBUG = os.environ.get('DEBUG', False)
+LOG_LEVEL = logging.INFO
+LOG_FILE = os.environ['HOME']+'/log/ois/oisIndexer.log'
 if DEBUG:
-    logging.basicConfig(level=logging.DEBUG)
+    LOG_LEVEL = logging.DEBUG
+logger = logging.getLogger()
+logger.setLevel(LOG_LEVEL)
+h = logging.handlers.RotatingFileHandler(LOG_FILE, backupCount=31)
+h.setLevel(LOG_LEVEL)
+format = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
+h.setFormatter(format)
+h.doRollover()
+logger.addHandler(h)
+h = logging.StreamHandler()
+h.setLevel(LOG_LEVEL)
+format = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
+h.setFormatter(format)
+logger.addHandler(h)
+
 
 HOME = os.environ['HOME']
 DB_KEY = os.environ['DSC_DATABASE']+'-ro'
@@ -153,14 +169,14 @@ def add_ark_to_db(ark_findingaid, ark_parent, ark_grandparent=None, ark_daos=Non
     c.execute("""SELECT name, id, parent_institution_id from oac_institution where ark=%s""", (ark_parent,))
     row = c.fetchone()
     if row is None:
-        logging.error('++++++++ OIS Could not find Django institution for inst ARK:%s found in EAD ARK:%s' % (ark_parent, ark_findingaid))
+        logger.error('++++++++ OIS Could not find Django institution for inst ARK:%s found in EAD ARK:%s' % (ark_parent, ark_findingaid))
         raise DBLookupError('++++++++ OIS Could not find Django institution for inst ARK:%s found in EAD ARK:%s' % (ark_parent, ark_findingaid))
     inst_name, inst_id, grandparent_id = row
     if not ark_grandparent and grandparent_id:
         c.execute("""SELECT ark from oac_institution where id = %s""", (grandparent_id,))
         row = c.fetchone()
         if row is None:
-            logging.error('++++++++ OIS Could not find Django institution for grandparent ID:%d, from institution: %s ID:%d' % (grandparent_id, inst_name, inst_id))
+            logger.error('++++++++ OIS Could not find Django institution for grandparent ID:%d, from institution: %s ID:%d' % (grandparent_id, inst_name, inst_id))
             raise DBLookupError('++++++++ OIS Could not find Django institution for grandparent ID:%d, from institution: %s ID:%d' % (grandparent_id, inst_name, inst_id))
         ark_grandparent = row[0]
     conn.close()
@@ -199,9 +215,9 @@ def load_findingaid(findingaid):
     ark_findingaid, ark_parent, ark_grandparent, ark_daos = parse_findingaid(findingaid)
     add_ark_to_db(ark_findingaid, ark_parent, ark_grandparent, ark_daos)
     if DEBUG:
-        logging.debug("Added %s : ark_EAD:%s" % (findingaid, ark_findingaid))
+        logger.debug("Added %s : ark_EAD:%s" % (findingaid, ark_findingaid))
         for a in ark_daos:
-            logging.debug('++++ DAO in EAD %s - %s' % (ark_findingaid, a))
+            logger.debug('++++ DAO in EAD %s - %s' % (ark_findingaid, a))
 
 def process_findingaids():
     # use os.walk to recurse, open any .xml files & parse with ET
@@ -225,11 +241,11 @@ def process_orphans():
     retcode = 0
     foo_orphans = glob.glob(DIR_ORPHANS+'*.orphans')
     for f in foo_orphans:
-        logging.debug(f)
+        logger.debug(f)
         fh = open(f,'r')
         reader = csv.reader(fh)
         for row in reader:
-            logging.debug(''.join(('+++ ADD ORPHAN:', row[0], ':', row[1])))
+            logger.debug(''.join(('+++ ADD ORPHAN:', row[0], ':', row[1])))
             try:
                 add_ark_to_db(row[0], row[1])
             except DBLookupError:

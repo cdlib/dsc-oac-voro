@@ -7,6 +7,7 @@
 
 import sqlite3 as sqlite
 import MySQLdb
+import sys
 import cgi
 import re
 from xml.sax.saxutils import escape
@@ -74,10 +75,10 @@ def lookup_info(ark, ark_parent, db=DB_SQLITE):
     KeyError: 'ARK ark:/13030/kt3199n606 for object not found in item db'
     >>> x=lookup_info('ark:/13030/kt5m3nb0t1', None, db=DB_SQLITE_TEST)
     >>> x
-    (-1, 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', '')
+    (-1, 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', 'UA-32908996-1')
     >>> x=lookup_info('ark:/13030/kt538nb0tr', None, db=DB_SQLITE_TEST)
     >>> x
-    (-1, 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', '')
+    (-1, 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', 'Scripps Institution of Oceanography Archives', u'ark:/13030/tf22901027', 'http://libraries.ucsd.edu/locations/sio/scripps-archives', 'UA-32908996-1')
     >>> x=lookup_info('ark:/13030/kt787014q6', None, db=DB_SQLITE_TEST)
     >>> x
     (-1, 'Special Collections', u'ark:/13030/tf1489p250', 'http://www.lib.ucdavis.edu/specol/', 'Special Collections', u'ark:/13030/tf1489p250', 'http://www.lib.ucdavis.edu/specol/', 'UA-30635447-1')
@@ -126,88 +127,45 @@ def application(environ, start_response):
     >>> app = TestApp(application)
     >>> res = app.get('/wsgi/ois_service/')
     Traceback (most recent call last):
-      File "<input>", line 1, in <module>
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 156, in get
-        expect_errors=expect_errors)
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 389, in do_request
-        self._check_status(status, res)
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 424, in _check_status
-        res.body))
+    ...
     AppError: Bad response: 400 NO ARKS (not 200 OK or 3xx redirect for http://localhost/wsgi/ois_service/)
-    <h1>NO ARK PARAMETERS</h1>
+    '<h1>NO ARK PARAMETERS</h1>'
     >>> res = app.get('/wsgi/ois_service.wsgi?ark=ark:/XXXYYYYA3030/ft8t1nb2xt&parent_ark=ark:/13030/tf0v19n4gf')
     Traceback (most recent call last):
-      File "/dsc/local-builds/blake20110526/lib/python2.6/doctest.py", line 1253, in __run
-        compileflags, 1) in test.globs
-      File "<doctest __main__.application[3]>", line 1, in <module>
-        res = app.get('/wsgi/ois_service.wsgi?ark=ark:/XXXYYYYA3030/ft8t1nb2xt&parent_ark=ark:/13030/tf0v19n4gf')
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 156, in get
-        expect_errors=expect_errors)
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 389, in do_request
-        self._check_status(status, res)
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 424, in _check_status
-        res.body))
+    ...
     AppError: Bad response: 400 INCORRECT ARK FORMAT (not 200 OK or 3xx redirect for http://localhost/wsgi/ois_service.wsgi?ark=ark:/XXXYYYYA3030/ft8t1nb2xt&parent_ark=ark:/13030/tf0v19n4gf)
-    <H1>ERROR: INCORRECT ARK FORMAT</H1>
+    '<H1>ERROR: INCORRECT ARK FORMAT</H1>'
     >>> res = app.get('/wsgi/ois_service.wsgi?ark=ark:/XXXYYYYA3030/ft8t1nb2xt&parent_ark=')
     Traceback (most recent call last):
-      File "/dsc/local-builds/blake20110526/lib/python2.6/doctest.py", line 1253, in __run
-        compileflags, 1) in test.globs
-      File "<doctest __main__.application[3]>", line 1, in <module>
-        res = app.get('/wsgi/ois_service.wsgi?ark=ark:/XXXYYYYA3030/ft8t1nb2xt&parent_ark=')
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 156, in get
-        expect_errors=expect_errors)
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 389, in do_request
-        self._check_status(status, res)
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 424, in _check_status
-        res.body))
+    ...
     AppError: Bad response: 400 INCORRECT ARK FORMAT (not 200 OK or 3xx redirect for http://localhost/wsgi/ois_service.wsgi?ark=ark:/XXXYYYYA3030/ft8t1nb2xt&parent_ark=)
-    <H1>ERROR: INCORRECT ARK FORMAT</H1>
+    '<H1>ERROR: INCORRECT ARK FORMAT</H1>'
     >>> res = app.get('/wsgi/ois_service.wsgi?ark=ark:/13030/ft8t1nb2xt&parent_ark=ark:/X3030/tf0v19n4gf')
     Traceback (most recent call last):
-      File "/dsc/local-builds/blake20110526/lib/python2.6/doctest.py", line 1253, in __run
-        compileflags, 1) in test.globs
-      File "<doctest __main__.application[3]>", line 1, in <module>
-        res = app.get('/wsgi/ois_service.wsgi?ark=ark:/XXXYYYYA3030/ft8t1nb2xt&parent_ark=ark:/13030/tf0v19n4gf')
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 156, in get
-        expect_errors=expect_errors)
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 389, in do_request
-        self._check_status(status, res)
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 424, in _check_status
-        res.body))
+    ...
     AppError: Bad response: 400 INCORRECT ARK FORMAT (not 200 OK or 3xx redirect for http://localhost/wsgi/ois_service.wsgi?ark=ark:/13030/ft8t1nb2xt&parent_ark=ark:/X3030/tf0v19n4gf)
-    <H1>ERROR: INCORRECT ARK FORMAT</H1>
+    '<H1>ERROR: INCORRECT ARK FORMAT</H1>'
     >>> res = app.get('/wsgi/ois_service.wsgi?ark=ark:/13030/ft8t1nb2xt&parent_ark=ark:/13030/xtf0v19n4gf')
     Traceback (most recent call last):
-      File "/dsc/local-builds/blake20110526/lib/python2.6/doctest.py", line 1253, in __run
-        compileflags, 1) in test.globs
-      File "<doctest __main__.application[4]>", line 1, in <module>
-        res = app.get('/wsgi/ois_service.wsgi?ark=ark:/13030/ft8t1nb2xt&parent_ark=ark:/13030/xtf0v19n4gf')
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 156, in get
-        expect_errors=expect_errors)
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 389, in do_request
-        self._check_status(status, res)
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 424, in _check_status
-        res.body))
+    ...
     AppError: Bad response: 400 ARK NOT FOUND (not 200 OK or 3xx redirect for http://localhost/wsgi/ois_service.wsgi?ark=ark:/13030/ft8t1nb2xt&parent_ark=ark:/13030/xtf0v19n4gf)
-    <H1>ERROR: ARK NOT FOUND</H1>
+    '<H1>ERROR: ARK NOT FOUND</H1>'
     >>> res = app.get('/wsgi/ois_service.wsgi?ark=ark:/13030/ft8t1nb2xt')
     Traceback (most recent call last):
-      File "/dsc/local-builds/blake20110526/lib/python2.6/doctest.py", line 1253, in __run
-        compileflags, 1) in test.globs
-      File "<doctest __main__.application[5]>", line 1, in <module>
-        res = app.get('/wsgi/ois_service.wsgi?ark=ark:/13030/ft8t1nb2xt')
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 156, in get
-        expect_errors=expect_errors)
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 389, in do_request
-        self._check_status(status, res)
-      File "/dsc/local-builds/blake20110526/lib/python2.6/site-packages/webtest/__init__.py", line 424, in _check_status
-        res.body))
+    ...
     AppError: Bad response: 400 ARK NOT FOUND (not 200 OK or 3xx redirect for http://localhost/wsgi/ois_service.wsgi?ark=ark:/13030/ft8t1nb2xt)
-    <H1>ERROR: ARK NOT FOUND</H1>
+    '<H1>ERROR: ARK NOT FOUND</H1>'
     >>> res = app.get('/wsgi/ois_service.wsgi?ark=ark:/13030/ft8t1nb2xt&parent_ark=ark:/13030/tf0v19n4gf')
     >>> res
     <200 OK text/plain body='<daoinfo>...nfo>'/259>
+    >>> res = app.get('/wsgi/ois_service.wsgi?ark=ark:/13030/kt6199q402&parent_ark=ark:/13030/kt396nc6jn')
+    >>> res = app.get('/wsgi/ois_service.wsgi?ark=ark:/13030/kt6199q402&parent_ark=ark:/13030/kt8j49q3pt')
+    Traceback (most recent call last):
+    ...
+    AppError: Bad response: 400 ARK NOT FOUND (not 200 OK or 3xx redirect for http://localhost/wsgi/ois_service.wsgi?ark=ark:/13030/kt6199q402&parent_ark=ark:/13030/kt8j49q3pt)
+    '<H1>ERROR: ARK NOT FOUND</H1>'
+    >>> res
+    <200 OK text/plain body='<daoinfo>...nfo>'/389>
     '''
     status = '200 OK'
     output = 'Hello World!'
@@ -248,6 +206,7 @@ def application(environ, start_response):
                              ]
                             )
             except KeyError:
+                print >> sys.stderr, '+++++ ARK NOT FOUND IN OBJINFO DB : %s parent: %s' % (ark, ark_parent)
                 status = '400 ARK NOT FOUND'
                 output = "<H1>ERROR: ARK NOT FOUND</H1>"
 
