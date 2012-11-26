@@ -12,7 +12,7 @@ my $saxon ="java -Xmx1024m -cp /dsc/branches/production/xtf/WEB-INF/lib/saxonb-8
 my ($ark) = @ARGV;
 #die "needs a 13030 ARK\n" unless ($ark =~ m,^ark:/13030/.*$,);
 
-my $ark2infile = poi2file($ark);
+my ($ark2infile, $arkdir) = poi2filedir($ark);
 my $ark2outfile = "$ark2infile.REMOVE";
 
 open (INFILE,"<$ark2infile") || die("can't open datafile: $ark2infile $!");
@@ -46,15 +46,23 @@ if (-e $text_content) {
 	die "touch failed: $!" if (system($touch) != 0 );
 }
 
+# Remove associated files
+my $filesDir = "$arkdir/files/";
+if (-e $filesDir) {
+    my $rmFiles = qq{rm -f $filesDir*};
+    print "$rmFiles\n";
+    die "remove of supplemental files failed: $!" if (system($rmFiles) != 0);
+}
 
-sub poi2file {
+
+sub poi2filedir {
         my $poi = shift;
         $poi =~ s,[.|/],,g;
         my $dir = substr($poi, -2);
         $poi =~ m,ark:(\d\d\d\d\d)(.*),;
         my $bdir = $2 ;
         $poi = "$voroDel/data/$1/$dir/$bdir/$bdir.mets.xml";
-        return $poi;
+        return ($poi, "$voroDel/data/$1/$dir/$bdir/");
 }
 
 
