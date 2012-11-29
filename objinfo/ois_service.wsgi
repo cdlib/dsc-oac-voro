@@ -10,6 +10,7 @@ import MySQLdb
 import sys
 import cgi
 import re
+import codecs
 from xml.sax.saxutils import escape
 import os
 from config_reader import read_config
@@ -193,6 +194,8 @@ def application(environ, start_response):
                 order, name_parent, ark_parent, url_parent, name_grandparent, ark_grandparent, url_grandparent, google_analytics_tracking_code = lookup_info(ark, ark_parent)
                 if not name_grandparent:
                     name_grandparent = ''
+                name_parent = name_parent.decode('latin-1').encode('utf-8')
+                name_grandparent = name_grandparent.decode('latin-1').encode('utf-8')
                 output = ''.join(["<daoinfo>",
                              "<order>", str(order), "</order>",
                              '<inst poi="', str(ark_parent), '" href="',
