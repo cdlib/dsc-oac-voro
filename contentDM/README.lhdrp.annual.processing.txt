@@ -325,6 +325,7 @@ drive and copy them to ~/Sites/luna-img/<inst code>/(tiff|jpeg)/<file>
 	file name.  The "vi" command to do this is:
 
 		:%s/^/\/imgzoom\/ingest\/bin\//
+        <xsl:call-template name="insert-good-institution-name-orig"/>
 
     (****NOTE*****: you can also edit the gettiff.script.pl to make it just the input
     file for getTIFF.pl on imgzoom. Remove the "getTIFF.pl " at the start of
