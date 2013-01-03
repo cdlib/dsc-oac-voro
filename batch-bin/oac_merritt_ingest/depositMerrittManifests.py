@@ -26,8 +26,9 @@ class OacMerrittDeposit:
   def depositBatch(self, filename):
     """ deposit a batch manifest to Merritt """     
     print '\ndepositing', filename
-    apiCmd = 'curl --silent --cacert ' + self.merrittPem + ' ' \
-    + '-u bhui:g3h31mn1$ ' \
+    apiCmd = 'curl --silent --cacert ' \
+    + '-u bhui:xxxxxxxx ' \
+    + '-k ' \
     + '-F "file=@' + filename + '" ' \
     + '-F "type=batch-manifest" ' \
     + '-F "profile=cdl_oac_content" ' \
