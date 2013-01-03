@@ -1,3 +1,5 @@
 syntax: glob
 
 contentDM/workspace
+batch-bin/oac_merritt_ingest/run-merritt-manifests.sh
+batch-bin/oac_merritt_ingest/run-merritt-deposit.sh

@@ -6,18 +6,19 @@ from xml.etree.ElementTree import parse
 
 # get command line arguments
 dataDir = sys.argv[1]
+dataUrlRoot = sys.argv[2]
 
 #############################################################################
 #############################################################################
 class OacManifests:
 
-  def __init__(self, dataDir):
+  def __init__(self, dataDir, dataUrlRoot):
     """ Constructor """
     self.dataDir = dataDir 
+    self.dataUrlRoot = dataUrlRoot
     self.naan = '13030' # FIXME allow for multiple NAANs
     self.manifestFileExt = '.checkm'
     self.metadataFileExt = '.dc.xml'
-    self.dataUrlRoot = 'http://dscl-dev.cdlib.org/data/' 
     self.batchManifestOutputDir = os.path.join(self.dataDir, 'manifests')
     self.objManifestOutputDir = os.path.join(self.batchManifestOutputDir, 'objectManifests')
     self.specialProfiles = []
@@ -85,8 +86,8 @@ class OacManifests:
     # LEVEL 1. dirs like '00', 'd7'
     topDirs = os.listdir(self.dataDir)
     for topDir in topDirs:
-      # if os.path.isdir(os.path.join(self.dataDir, topDir)) FIXME just testing on this subset
-      if os.path.isdir(os.path.join(self.dataDir, topDir)) and topDir == 'mt': #(topDir.startswith('c') or topDir.startswith('0')):
+      if os.path.isdir(os.path.join(self.dataDir, topDir)):
+      #if os.path.isdir(os.path.join(self.dataDir, topDir)) and topDir == 'mt': #(topDir.startswith('c') or topDir.startswith('0')):
         print 'processing', topDir
         batchManifestInfo = [] # new batch
         # LEVEL 2. dirs like 'kt296nd8zz'
@@ -324,12 +325,12 @@ class OacManifests:
     return manifestLines
 
 #############################################################################
-def createManifests(dataDir):
-  manifests = OacManifests(dataDir)
+def createManifests(dataDir, dataUrlRoot):
+  manifests = OacManifests(dataDir, dataUrlRoot)
   manifests.createManifests()
 
 #############################################################################
 if __name__ == '__main__':
   print "\n### merrittManifests.py: ###\n"
-  createManifests(dataDir)
+  createManifests(dataDir, dataUrlRoot)
   print "\n### Done! ###\n"
