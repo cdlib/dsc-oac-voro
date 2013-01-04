@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 import sys, os, hashlib, re, httplib, urllib, urllib2, collections
 from urlparse import urlparse
 from xml.etree.ElementTree import parse
@@ -86,8 +86,8 @@ class OacManifests:
     # LEVEL 1. dirs like '00', 'd7'
     topDirs = os.listdir(self.dataDir)
     for topDir in topDirs:
-      if os.path.isdir(os.path.join(self.dataDir, topDir)):
-      #if os.path.isdir(os.path.join(self.dataDir, topDir)) and topDir == 'mt': #(topDir.startswith('c') or topDir.startswith('0')):
+      #if os.path.isdir(os.path.join(self.dataDir, topDir)):
+      if os.path.isdir(os.path.join(self.dataDir, topDir)) and topDir == 'zt': #(topDir.startswith('c') or topDir.startswith('0')):
         print 'processing', topDir
         batchManifestInfo = [] # new batch
         # LEVEL 2. dirs like 'kt296nd8zz'
@@ -259,9 +259,11 @@ class OacManifests:
 
     # replace any pipes (|) with broken pipes
     if "|" in textvalue:
-      textvalue = textvalue.replace('|', 'u"\u00A6"')
+      print 'before:', textvalue
+      encodedBrokenPipe = u'¦'.encode('utf8')
+      textvalue = textvalue.replace("|", encodedBrokenPipe)
       print "NOTICE: Replaced pipe in file", fullpath
-
+      print 'after:', textvalue 
     return textvalue 
 
 ############################################################################# 
