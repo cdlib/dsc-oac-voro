@@ -86,8 +86,7 @@ class OacManifests:
     # LEVEL 1. dirs like '00', 'd7'
     topDirs = os.listdir(self.dataDir)
     for topDir in topDirs:
-      #if os.path.isdir(os.path.join(self.dataDir, topDir)):
-      if os.path.isdir(os.path.join(self.dataDir, topDir)) and topDir == 'zt': #(topDir.startswith('c') or topDir.startswith('0')):
+      if os.path.isdir(os.path.join(self.dataDir, topDir)):
         print 'processing', topDir
         batchManifestInfo = [] # new batch
         # LEVEL 2. dirs like 'kt296nd8zz'
