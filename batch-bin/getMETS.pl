@@ -169,7 +169,7 @@ for (@ARGV) {
 	my $thumbnailF = "$objectBaseDir/$sigpart/thumbnail.png";
 
 	# profile assigment for CAVPP
-        if ( $profile eq '' and  ( $type eq 'MovingImage' or $type eq 'Sound' ) ) {
+        if ( $profile eq '' and  ( lc($type) eq 'movingimage' or lc($type) eq 'sound' ) ) {
                 $root->setAttribute('PROFILE', 'pamela://year1' );
                 $profile = 'pamela://year1';
 		cavppClean($xc, $filesBaseName, $type, $root);
