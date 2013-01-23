@@ -183,6 +183,7 @@ def add_ark_to_db(ark_findingaid, ark_parent, ark_grandparent=None, ark_daos=Non
 
     conn = sqlite.connect(DB_FILE)
     c = conn.cursor()
+    logger.debug("INSERT: eadark:%s | parent: %s | grand: %s" % (ark_findingaid, ark_parent, ark_grandparent if ark_grandparent else ''))
     c.execute("""insert or replace into item
               (ark, ark_parent, ark_grandparent)
               VALUES (?, ?, ?)""", (ark_findingaid, ark_parent,
@@ -214,8 +215,8 @@ def load_findingaid(findingaid):
     '''
     ark_findingaid, ark_parent, ark_grandparent, ark_daos = parse_findingaid(findingaid)
     add_ark_to_db(ark_findingaid, ark_parent, ark_grandparent, ark_daos)
+    logger.debug("Added %s : ark_EAD:%s" % (findingaid, ark_findingaid))
     if DEBUG:
-        logger.debug("Added %s : ark_EAD:%s" % (findingaid, ark_findingaid))
         for a in ark_daos:
             logger.debug('++++ DAO in EAD %s - %s' % (ark_findingaid, a))
 
