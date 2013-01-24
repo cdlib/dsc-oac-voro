@@ -99,7 +99,7 @@ directory holds the files needed to do that.  These are the steps.
 	ARK numbers are in file "/abc/def/ghi", then the command to
 	add them to the database is:
 
-	% /apps/dsc/data/oac-lsta/admin/code/LHDRPassoc.run.csh unassigned \
+	% /apps/dsc/branches/production/voro/contentDM/code/LHDRPassoc.run.bash unassigned \
 	? `/bin/cat /abc/def/ghi'
 
 	Once this step is done, it should not need to be re-done, unless
@@ -158,7 +158,7 @@ directory holds the files needed to do that.  These are the steps.
 	Then run commands:
 
 	% cd /apps/dsc/data/oac-lsta/non-lhdrp/contentdm
-	% ../binpreprocess.pl INPUTCDM OUTPUTCDM UNIQUESTRING
+	% /apps/dsc/branches/production/voro/contentDM/non-lhdrp/bin/preprocess.pl INPUTCDM OUTPUTCDM UNIQUESTRING
 
 	If there are errors reported, pass them to the data analyst, and
 	wait until a new contentdm export file is generated, then repeat

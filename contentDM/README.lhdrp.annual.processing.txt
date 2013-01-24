@@ -313,7 +313,7 @@ drive and copy them to ~/Sites/luna-img/<inst code>/(tiff|jpeg)/<file>
 	directory and the URL file as input.  For example:
 
 	% /apps/dsc/branches/production/voro/contentDM/code/create.imgzoom.ingest.script.pl \
-	? /apps/dsc/data/oac-lsta/mets/2008-2009 gettiff.script.pl \
+	? /apps/dsc/data/in/oac-lsta/mets/2008-2009 gettiff.script.pl \
 	? urls-for-2008-2009.txt 
 
 	In this example, "urls-for-2008-2009.txt" is the file that contains
