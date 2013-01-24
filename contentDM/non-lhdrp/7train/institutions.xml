@@ -120,4 +120,18 @@ have a finding aid (do not have an <isPartOf> element)
     eadark="c8ng4pcz"
     eadlabel="Pat Yeomans Collection on Bill Henry and the History of the Olympics"
     Url="http://www.oxy.edu/library"/>
+<institution
+    name="Thousand Oaks Library"
+    marccode="cto"
+    ark="ark:/13030/kt196nd978"
+    eadark="kt8x0nf6g0"
+    eadlabel="Local History Photograph Collection"
+    Url="http://www.toaks.org/library/default.asp"/>
+<institution
+    name="Thousand Oaks Library"
+    marccode="cto"
+    ark="ark:/13030/kt196nd978"
+    eadark="kt9z09s5pm"
+    eadlabel="News Chronicle Photograph Collection"
+    Url="http://www.toaks.org/library/default.asp"/>
 </institutions>
