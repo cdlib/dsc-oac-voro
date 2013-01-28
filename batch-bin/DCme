@@ -84,8 +84,8 @@ foreach my $NAAN ("13030", "28722", "20775") {
 	# my $NAAN = "13030";
 	opendir (SUB, "$texts_data/$NAAN");
 	# second loop 
-	while (my $repdir = readdir(SUB)) {
-                next if ($repdir eq "." || $repdir eq ".." || $repdir eq "CVS");
+    while (my $repdir = readdir(SUB)) {
+          next if ($repdir eq "." || $repdir eq ".." || $repdir eq "CVS");
 		opendir (OBJ, "$texts_data/$NAAN/$repdir");
 		print BUILD qq{<target name="$NAAN$repdir">\n};
 		# third loop
@@ -96,7 +96,7 @@ foreach my $NAAN ("13030", "28722", "20775") {
 			upfile ($file) if (-e $file);
 		}
 		print BUILD "</target>\n\n";
-	}
+     }   
 }
 
 print BUILD "</project>\n";
@@ -130,23 +130,31 @@ sub upfile {
 	# figure out filename for .dc.xml file
 	my $out = $_;
 	$out =~ s,/(.*)\.mets\.xml$,/$1.dc.xml,;
+    my $dcoverride = $out;
+    $dcoverride =~ s,(.+)/[a-zA-Z0-9]+\.dc\.xml$,$1/dc-override,;
+    #print STDERR "out: $out DCOVERRIDE: $dcoverride\n";
 	die ("same name for in and out") if ($_ eq $out);
 	my $METSstat = stat("$_");
 	my $DCstat = stat("$out");
 	# check that the files exist
-	if ( -e "$mets_base/$dcx" && $dcx ){
-		my $dcxStat = stat("$mets_base/$dcx");
-		if ( 	not(-e $out) ||				# if the .dc.xml is not there yet OR
-                        $regen ||
-			( $METSstat->mtime > $DCstat->mtime  	# METS file is newer than DC file
-			|| $dcxStat->mtime > $DCstat->mtime ) 	# OR XSLT is newer than the DC file
-		   )
-			{
-			    print BUILD qq{<xslt force="true" in="$_" out="$out" style="\${metsBase}/$dcx"><classpath location="\${saxon}"/><factory name="net.sf.saxon.TransformerFactoryImpl"/></xslt>\n } ;
-		} else {
-			#print STDERR "$profile what what what $0: $! $_ $mets_base/$dcx\n";
-		}
-	}
+    if ( not -e $dcoverride ) {
+    	if ( -e "$mets_base/$dcx" && $dcx ){
+    		my $dcxStat = stat("$mets_base/$dcx");
+    		if ( 	not(-e $out) ||				# if the .dc.xml is not there yet OR
+                            $regen ||
+    			( $METSstat->mtime > $DCstat->mtime  	# METS file is newer than DC file
+    			|| $dcxStat->mtime > $DCstat->mtime ) 	# OR XSLT is newer than the DC file
+    		   )
+    			{
+    			    print BUILD qq{<xslt force="true" in="$_" out="$out" style="\${metsBase}/$dcx"><classpath location="\${saxon}"/><factory name="net.sf.saxon.TransformerFactoryImpl"/></xslt>\n } ;
+    		} else {
+    			#print STDERR "$profile what what what $0: $! $_ $mets_base/$dcx\n";
+    		}
+    	}
+    }
+    else {
+        print STDERR "$dcoverride EXISTS, not creating ant build target\n";
+    }
   }
 }
 
