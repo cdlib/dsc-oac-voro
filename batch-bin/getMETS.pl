@@ -915,11 +915,24 @@ sub cavppClean {
   ## my $ia_id;
   ## $urlRewrit =~ m,download/([a-z]+_[0-9]+)/,;
   ## $ia_id = $1;
-  if ($type ne 'Sound') {
+  if (lc($type) ne 'sound') { # moving images
+    use LWP::Simple;
     my $video_link = "http://archive.org/download/$ia_id/$fileid";
     print "\nvideo_link: $video_link\n";
     my $thumbnail_link = $video_link;
     $thumbnail_link =~ s,\.[^.]+$,.gif,;
+    if (!head($thumbnail_link)) {
+      my $next_try = "http://archive.org/download/$ia_id/$ia_id" . "_access.gif";
+      if (head($next_try)) {
+        $thumbnail_link = $next_try;
+      } else {
+        my $another_try = $thumbnail_link;
+        $another_try =~ s,_1500Kbps\.gif$,.gif,;
+        if (head($another_try)) {
+          $thumbnail_link = $another_try;
+        }
+      } 
+    }
     my ($ffg) = $xc->findnodes("/mets:mets/mets:fileSec/mets:fileGrp[1]");
     my $newGrp = fileThumbCreate($thumbnail_link);
     $ffg->addSibling($newGrp);
