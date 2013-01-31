@@ -7,15 +7,17 @@ from xml.etree.ElementTree import parse
 # get command line arguments
 dataDir = sys.argv[1]
 dataUrlRoot = sys.argv[2]
+depositObjectIds = sys.argv[3] # single object ID, list of IDs, or 'all' (all objects)
 
 #############################################################################
 #############################################################################
 class OacManifests:
 
-  def __init__(self, dataDir, dataUrlRoot):
+  def __init__(self, dataDir, dataUrlRoot, depositObjectIds):
     """ Constructor """
     self.dataDir = dataDir 
     self.dataUrlRoot = dataUrlRoot
+    self.depositObjectIds = depositObjectIds
     self.naan = '13030' # FIXME allow for multiple NAANs
     self.manifestFileExt = '.checkm'
     self.metadataFileExt = '.dc.xml'
@@ -85,8 +87,10 @@ class OacManifests:
     
     # LEVEL 1. dirs like '00', 'd7'
     topDirs = os.listdir(self.dataDir)
+    if self.depositObjectIds == 'all':
+      self.depositObjectIds = topDirs
     for topDir in topDirs:
-      if os.path.isdir(os.path.join(self.dataDir, topDir)):
+      if os.path.isdir(os.path.join(self.dataDir, topDir)) and topDir in self.depositObjectIds and topDir != 'manifests':
         print 'processing', topDir
         batchManifestInfo = [] # new batch
         # LEVEL 2. dirs like 'kt296nd8zz'
@@ -326,12 +330,12 @@ class OacManifests:
     return manifestLines
 
 #############################################################################
-def createManifests(dataDir, dataUrlRoot):
-  manifests = OacManifests(dataDir, dataUrlRoot)
+def createManifests(dataDir, dataUrlRoot, depositObjectIds):
+  manifests = OacManifests(dataDir, dataUrlRoot, depositObjectIds)
   manifests.createManifests()
 
 #############################################################################
 if __name__ == '__main__':
   print "\n### merrittManifests.py: ###\n"
-  createManifests(dataDir, dataUrlRoot)
+  createManifests(dataDir, dataUrlRoot, depositObjectIds)
   print "\n### Done! ###\n"
