@@ -399,7 +399,7 @@ for (@ARGV) {
 	my $buff;
 	
 	#print "$type $profile\n";
-	if ($type ne "text") {	
+	if ($type ne "text" or $profile = "Archivists' Toolkit Profile") {	
 		$buff = $buffXslt;
 	} else {
 		$buff = $teiBuff;
