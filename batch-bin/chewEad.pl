@@ -455,9 +455,9 @@ sub cdlToCdlprime {
                 print SENDMAIL "Reply-to: $ARGV[2]\n";
                 print SENDMAIL "From: voro user <$ARGV[2]>\n";
                 print SENDMAIL "To: oacops\@cdlib.org\n";
-		print SENDMAIL "Subject: voroEAD/voroBasic processing\n";
+		print SENDMAIL "Subject: voroEAD/voroBasic processing $ENV{'HOST'}\n";
 
-		print SENDMAIL "\n$ARGV[2] submitted a finding aid $ARGV[0] using voroEAD\n";
+		print SENDMAIL "\n$ARGV[2] submitted a finding aid \n $ARGV[0] \n using voroEAD\n";
 
  print SENDMAIL qq{which contains links to associated METS digital objects: these are
  <dao> Digital Archival Object links with ROLE attributes set to
