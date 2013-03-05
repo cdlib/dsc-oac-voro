@@ -399,6 +399,7 @@ sub dirlist {
 	my ($dirs) = @_;
 	for (@{$dirs}) {
 		next if ($_ =~ m,/CVS/$,);
+		next if ($_ =~ m,/.hg/$,);
 		my $ret = $_;
 		$ret =~ s,^$dataroot,,;
 		push @list, $ret;

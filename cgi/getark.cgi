@@ -195,6 +195,7 @@ sub dirlist {
 	my ($dirs) = @_;
 	for (@{$dirs}) {
 		next if ($_ =~ m,/CVS/$,);
+		next if ($_ =~ m,/.hg/$,);
 		next if ($_ =~ m,/xmlstyle_cache/$,);
 		my $ret = $_;
 		$ret =~ s,^$dataroot,,;
