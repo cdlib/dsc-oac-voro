@@ -103,10 +103,14 @@ for (@ARGV) {
 	my $urlRewrit = $_;
 	# work around UCB throttle
 	$urlRewrit =~ s,^http://digitalassets.berkeley.edu/,http://sunsite2.berkeley.edu/special_access/da/,;
-        if (!($doc = $parser->parse_file($urlRewrit) ) ) {
-                print STDERR "$0: LibXML parse_file($urlRewrit) failed\n";
-                return 0;
-        }
+
+	if ( $urlRewrit =~ m,^https://, ) {
+		$doc = $parser->parse_string(get($urlRewrit));
+	} else {
+        	$doc = $parser->parse_file($urlRewrit);
+	}
+
+
 	next unless $doc;
     	my $root = $doc->getDocumentElement;
 
