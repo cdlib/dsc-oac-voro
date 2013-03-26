@@ -336,31 +336,38 @@ for (@ARGV) {
 	# this XPath can be tuned (based on PROFILE and type)
 	# but right now this tries to do its stuff on all
 	# files in the file inventory
+        my $filenodes;
 	#my $filenodes = $xc->findnodes("/mets:mets/mets:fileSec//mets:file");
-	my $filenodes = $xc->findnodes
-		(q{
-	/mets:mets/mets:fileSec//mets:file
-		[not(starts-with(@USE,'archive'))]
-		[not(starts-with(../@USE,'archive'))]
-		[not(contains(@USE,'/master'))]
-		[not(contains(@USE,'-Master'))]
-		[not(contains(../@USE,'/master'))]
-		[not(contains(../@USE,'-Master'))]
-		[not(@MIMETYPE='image/sid')]
-		[not(@MIMETYPE='image/x-mrsid-image')]
-		[not(@MIMETYPE='image/tiff')]
-		[not(@MIMETYPE='image/jp2')]
-		[mets:FLocat]
-	});
+	my $data_test_results = $xc->findnodes('/mets:mets/mets:fileSec/mets:fileGrp//mets:file[contains(@USE,"Data")]');
+	if ( $profile eq "Archivists' Toolkit Profile" and $data_test_results ) {
+		print "skipped files";
+	} 
+	else {
+		$filenodes = $xc->findnodes
+			(q{
+		/mets:mets/mets:fileSec//mets:file
+			[not(starts-with(@USE,'archive'))]
+			[not(starts-with(../@USE,'archive'))]
+			[not(contains(@USE,'/master'))]
+			[not(contains(@USE,'-Master'))]
+			[not(contains(../@USE,'/master'))]
+			[not(contains(../@USE,'-Master'))]
+			[not(@MIMETYPE='image/sid')]
+			[not(@MIMETYPE='image/x-mrsid-image')]
+			[not(@MIMETYPE='image/tiff')]
+			[not(@MIMETYPE='image/jp2')]
+			[mets:FLocat]
+		});
 
-	# okay, everything is set up, now we can get to work
+		# okay, everything is set up, now we can get to work
 
-	# the loop goes through the file section, collecting files
-	foreach my $context ($filenodes->get_nodelist) {
-		# print Dumper $context->toString;
-		# harvestFileNode alters $context (passed by reference)
-		# it also alters $xc or $root
-		harvestFileNode(\$xc, \$context, \$ark, \$cacheInfo, $filesBaseName, $objectBaseName, $_);
+		# the loop goes through the file section, collecting files
+		foreach my $context ($filenodes->get_nodelist) {
+			# print Dumper $context->toString;
+			# harvestFileNode alters $context (passed by reference)
+			# it also alters $xc or $root
+			harvestFileNode(\$xc, \$context, \$ark, \$cacheInfo, $filesBaseName, $objectBaseName, $_);
+		}
 	}
 
 
@@ -403,7 +410,7 @@ for (@ARGV) {
 	my $buff;
 	
 	#print "$type $profile\n";
-	if ($type ne "text" or $profile = "Archivists' Toolkit Profile") {	
+	if ($type ne "text" or $profile eq "Archivists' Toolkit Profile") {	
 		$buff = $buffXslt;
 	} else {
 		$buff = $teiBuff;
