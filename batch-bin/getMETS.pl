@@ -289,6 +289,7 @@ for (@ARGV) {
 	# retrieve exported by Storable 
 	# (will be empty if we've not seen this one)
 	my $cacheInfo = {};
+	# if (-e $cacheFile and "true" eq "false") {
 	if (-e $cacheFile) {
 		$cacheInfo = retrieve($cacheFile);
 	}
@@ -493,7 +494,8 @@ sub harvestFileNode {
 	my $file = $lc->findvalue("mets:FLocat/\@xlink:href");
 
 	# poor man's relative links	
-	unless ( $file =~ m,^http://, ) {
+        # http://stackoverflow.com/a/4643146/1763984
+	unless ( $file =~ m,^https?://, ) {
 		my $trueBase = $baseHref;
 		$trueBase =~ s,^(.*)/[^/].*?$,$1/,;
 		$file = $trueBase . $file;
