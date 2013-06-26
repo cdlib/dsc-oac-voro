@@ -89,10 +89,16 @@ sub do_it {
 	
 	# the ead xml file in prime2002
 	my $xml = $match;
+        my $supplimental = $match;
 
-	# the path to the PDF file
+	# the path to the generated PDF file
 	$match =~ s,/prime2002/,/pdf/,;
 	$match =~ s,\.xml$,.pdf,;
+
+	# the path to contributor supplied supplimental PDF files
+	$supplimental =~ s,/prime2002/,/user-pdf/,;
+	$supplimental =~ s,\.xml$,,;
+        mkpath("$supplimental");
 
 	# if the PDF has been created
 	if (-e $match and -s $match) {
