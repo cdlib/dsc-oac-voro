@@ -16,8 +16,6 @@ use Carp;
 # sub infile2cdlprime  figures out the path to the cdlprime file
 # sub infile2repo {    figures out the path to the repository metadata file
 # sub poi2file {       figures out the path to the METS from the ARK
-# sub spitMets {       makes METS for all the sub objects in the EAD
-# sub premetsToMets {  does an XML tranformation needed by spitMets
 # sub cdlToCdlprime {  writes out the new cdlprime file
 # sub scanForIllegalChar {scans for illegal HTML characters, as chars and as numeric character references
 
@@ -127,7 +125,6 @@ if ($eadid && ($kidcount == $pkidcount)) {
 ## $cdlprime is an XML document
 
 print "just ";
-#spitMets($cdlprime);
 print " ignore bus errors and core dumps here...";
 exit;
 
@@ -362,69 +359,6 @@ sub poi2file {
         my $dir = substr($poi, -2);
         $poi =~ s|ark:13030|$eadroot/mets/$dir/|;
         return "$poi";
-}
-
-
-sub spitMets {
-# working on this
-	#print Dumper @_; exit;
-	my ($cdlprime) = @_;
-	
- 	my $doc = $parser->parse_file($cdlprime);
-	#my $xslt = XML::LibXSLT->new();
-    my $transform = $parser->parse_file("/dsc/branches/production/voro/xslt/cdlprime2objs.xsl");
-    my $stylesheet = $xslt->parse_stylesheet($transform)|| die ("$0 $!");;
-
-    my $results = $stylesheet->transform($doc);
-
-
-
-	#print $results->toString;
-
-	my $root = $results->getDocumentElement;
-
-#print "what?"; exit;
-
-	my ($super) = $root->findnodes('/eadobjs/super');
-        my $superID = $root->findvalue('/eadobjs/super/@poi');
-        my $xout = poi2file($superID);
-        # print " $superID -- $xout";
-        #open (OUT ,">$xout.mets.xml") || die("$0 $! $_: can't open $xout.mets.xml");
-        # print $super->toString;
-		#print OUT premetsToMets($super);
-        #close OUT;
-
-	
-        #foreach my $node ($root->findnodes('/eadobjs/sub/c') ) {
-		
-                #my $poi = $node->findvalue('@poi');
-                #my $xout = poi2file($poi);
-                #print "$poi -- $xout \n";
-                #if ($xout eq "") { print STDERR "$0: skipping null poi in $ARGV[0]\n"; next; }
-                #$node->setAttribute('parent', $superID);
-                #open (OUT ,">$xout.mets.xml") || die ("$0 $! $_ $xout.mets.xml");
-                #print OUT premetsToMets($node);
-                #close OUT;
-
-        #}
-	undef $doc;
-
-
-}
-
-sub premetsToMets {
-	#print "premetsToMets";
-	my ($cdlprime) = @_;
-	#print Dumper $cdlprime;
- 	my $doc = $parser->parse_string($cdlprime->toString);
-	#my $xslt = XML::LibXSLT->new();
-    my $transform = $parser->parse_file("/dsc/branches/production/voro/xslt/premets2mets.xsl");
-    my $stylesheet = $xslt->parse_stylesheet($transform)|| die ("$0 $!");;
-
-    my $results = $stylesheet->transform($doc);
-	#print $results->toString;
-	#print "premetsToMets";
-	return $results->toString;
 }
 
 sub cdlToCdlprime { 
