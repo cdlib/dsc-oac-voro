@@ -278,20 +278,6 @@ EOF
 <p>This file should be online tomorrow.  To remove files from the publication queue once accepted by voroEAD,
 please send us an email at: <a href="mailto:oacops\@cdlib.org">oacops\@cdlib.org</a>.</p>};
 
-				# try generating pdf
-				my $cdlprime =  infile2cdlprime("$file");
-				$cdlprime = "$dataroot/$cdlprime";
-				$cdlprime =~ s,/submission,,;
-                                # set up runtime environment
-				#$ENV{"PYTHONPATH"}="/voro/local/lib/python2.5/site-packages:/voro/local/lib/python2.5:/voro/local/pythonlib/:/voro/local/pythonlib/pisa/";
-				#$ENV{"PATH_TO_PROGS"}="/voro/code/dlxs-fa/oac4/pdf_gen/";
-				#$ENV{"CLASSPATH"}="/voro/XTF/xtf/WEB-INF/classes:/voro/XTF/xtf/WEB-INF/lib/saxon8-sql.jar:/voro/XTF/xtf/WEB-INF/lib/saxonb-8.9.jar:/voro/XTF/xtf/WEB-INF/lib/sqlite.jar";
-                                #$ENV{"LD_LIBRARY_PATH"}="/voro/local/lib";
-				print MESSAGE "$ENV{PATH}\n";
-				my $generate_pdf = "python /apps/dsc/branches/production/voro/batch-bin/generate_pdf_on_submission.py $cdlprime $results_file $user->{email} 2>&1";
-				print MESSAGE "$generate_pdf\n";
-				print MESSAGE `$generate_pdf`;
-
 			} else {
 				print SENDMAIL "Subject: voroEAD: Failed Processing\n";
 				print SENDMAIL "Content-type: text/plain\n\n";
