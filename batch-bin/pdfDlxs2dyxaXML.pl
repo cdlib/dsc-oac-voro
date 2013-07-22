@@ -43,6 +43,14 @@ sub poi2pdf {
         return "$poi";
 }
 
+sub poi2supplimental {
+        my $poi = shift;
+        $poi =~ s,[.|/],,g;
+        my $dir = substr($poi, -2);
+        $poi =~ s|ark:13030(.*)|$dynaroot/13030/$dir/$1/files/|;
+        return "$poi";
+}
+
 
 use Getopt::Long;
 $ret = GetOptions qw(--onefile+);
@@ -95,11 +103,6 @@ sub do_it {
 	$match =~ s,/prime2002/,/pdf/,;
 	$match =~ s,\.xml$,.pdf,;
 
-	# the path to contributor supplied supplimental PDF files
-	$supplimental =~ s,/prime2002/,/user-pdf/,;
-	$supplimental =~ s,\.xml$,,;
-        mkpath("$supplimental");
-
 	# if the PDF has been created
 	if (-e $match and -s $match) {
 
@@ -115,6 +118,20 @@ sub do_it {
 		#print `$cmd`;
 		system($cmd);
 	}
+
+	# the path to contributor supplied supplimental PDF files
+	$supplimental =~ s,/prime2002/,/user-pdf/,;
+	$supplimental =~ s,\.xml$,,;
+	mkpath("$supplimental");
+	my $file_dest = poi2supplimental($ark);
+
+	opendir(SUPP, "$supplimental") || die ("$supplimental $! $_");
+	while (my $file = readdir(SUPP)) {
+		my $command = qq{/bin/cp -p "$supplimental/$file" $file_dest};
+		print "$cmd\n";
+		system($cmd);
+	}
+        
 }
 
 sub geteadid {
