@@ -77,7 +77,7 @@ namespace :ead do
 
 	desc "get shadow files for PDFs of EADs"
 	task :pdfgen do |t|
-		sh "/dsc/data/pdfshadow/REFRESH.sh"
+		sh "sh /dsc/data/pdfshadow/REFRESH.sh"
 	end
 
 end
