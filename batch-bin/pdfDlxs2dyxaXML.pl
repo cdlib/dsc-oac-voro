@@ -103,21 +103,7 @@ sub do_it {
 	$match =~ s,/prime2002/,/pdf/,;
 	$match =~ s,\.xml$,.pdf,;
 
-	# if the PDF has been created
-	if (-e $match and -s $match) {
-
-		# look up ARK in EAD
-		my $ark = geteadid($xml);
-		# side effect of poi2pdf, mkdirs the directory for the pdf
-		my $pdf_dest = poi2pdf($ark);
-
-		# copy PDF file from /voro/data/oac-ead/pdf/ to /voro/XTF/
-		# copy PDF from OACDATA to DYNAXML
-		my $cmd = "/bin/cp -p $match $pdf_dest";
-		print "$cmd\n";
-		#print `$cmd`;
-		system($cmd);
-	}
+	my $ark = geteadid($xml);
 
 	# the path to contributor supplied supplimental PDF files
 	$supplimental =~ s,/prime2002/,/user-pdf/,;
@@ -127,9 +113,10 @@ sub do_it {
 
 	opendir(SUPP, "$supplimental") || die ("$supplimental $! $_");
 	while (my $file = readdir(SUPP)) {
+		next if ($file eq "." || $file eq ".." || $file eq "CVS");
 		my $command = qq{/bin/cp -p "$supplimental/$file" $file_dest};
-		print "$cmd\n";
-		system($cmd);
+		print "$command\n";
+		system($command);
 	}
         
 }
