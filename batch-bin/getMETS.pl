@@ -217,6 +217,8 @@ for (@ARGV) {
 		     ( $profile eq "http://www.loc.gov/standards/mets/profiles/00000002.xml" )
 			or
 		     ( $profile eq "http://www.loc.gov/standards/mets/profiles/00000003.xml" )
+			or
+		     ( $profile eq "http://www.loc.gov/mets/profiles/00000027.xml" )
 			and not 
 		     ( $structLookTei == 1 )
 		) {
@@ -294,7 +296,7 @@ for (@ARGV) {
 		$cacheInfo = retrieve($cacheFile);
 	}
 
-	if (($profile eq 'http://www.loc.gov/mets/profiles/00000027.html') or ($profile eq "Archivists' Toolkit Profile") ) {
+	if (($profile eq 'http://www.loc.gov/mets/profiles/00000027.html') or ($profile eq "Archivists' Toolkit Profile") or ($profile eq "http://www.loc.gov/mets/profiles/00000027.xml") ) {
 		# normalize fileGrp/@USE
 		my $fixUSE = $xc->findnodes('/mets:mets/mets:fileSec//mets:fileGrp[@USE]');
 		foreach my $node ($fixUSE->get_nodelist) {
