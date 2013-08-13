@@ -113,10 +113,15 @@ sub do_it {
 
 	opendir(SUPP, "$supplimental") || die ("$supplimental $! $_");
 	while (my $file = readdir(SUPP)) {
-		next if ($file eq "." || $file eq ".." || $file eq "CVS");
+		next if ($file eq "." || $file eq ".." || $file eq "CVS" || $file eq ".DAV");
 		my $command = qq{/bin/cp -p "$supplimental/$file" $file_dest};
 		print "$command\n";
 		system($command);
+		if ( $file =~ m,\.pdf$,) {
+			$command = qq{/cdlcommon/products/xpdf-3.02/bin/pdftotext -enc UTF-8 -eol unix -nopgbrk "$file_dest/$file"};
+			print "$command\n";
+			system($command);
+		}
 	}
         
 }
