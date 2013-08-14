@@ -33,14 +33,14 @@ class OacManifests:
     self.specialProfiles.append(['eadExtractedImages', 'http://ark.cdlib.org/ark:/13030/kt3q2nb7vz'])
     self.specialProfiles.append(['lstaMarc', 'http://ark.cdlib.org/ark:/13030/kt400011f8'])
     self.specialProfiles.append(['lstaDc', 'http://ark.cdlib.org/ark:/13030/kt4g5012g0'])
-    self.overwrite = 0
+    self.overwrite = 1
 
 ############################################################################# 
   def writeBatchManifest(self, naan, pair, manifestInfo):
     """ write a batch manifest file to the filesystem """
     if len(manifestInfo) < 1: return
 
-    fullpath = os.path.join(self.batchManifestOutputDir, naan + pair + self.manifestFileExt)
+    fullpath = os.path.join(self.batchManifestOutputDir, naan, naan + pair + self.manifestFileExt)
 
     with open(fullpath, 'w') as f:
       f.write('#%checkm_0.7\n')
