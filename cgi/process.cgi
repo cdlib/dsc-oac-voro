@@ -203,8 +203,7 @@ Include the URL for this processing results page in your message.</p>
 <pre><font size=2>
 EOF
 
-		my $dtdvalidate_command = "xmllint --noout --dtdvalid http://oac.cdlib.org/ents/ead.dtd $dataroot/$file 2>&1";
-		my $xsdvalidate_command = "xmllint --noout --schema http://oac.cdlib.org/ents/ead.xsd $dataroot/$file 2>&1";
+		my $validate_command = "eadator $dataroot/$file 2>&1";
 		my $process_command = "perl /apps/dsc/branches/production/voro/batch-bin/chewEad.pl $file nada $user->{email} 2>&1";
 		my $process_command_pass = "perl /apps/dsc/branches/production/voro/batch-bin/chewEad.pl $file null $user->{email} 2>&1";
 
@@ -214,7 +213,7 @@ EOF
 
 		$ENV{PREFIX} = "/apps/dsc/local";
 		#print "$validate_command\n<br>";
-		print MESSAGE `$dtdvalidate_command || $xsdvalidate_command`;
+		print MESSAGE `$validate_command`;
 		print MESSAGE "\n</pre><br>";
 
 		my $exit = $? >> 8;
