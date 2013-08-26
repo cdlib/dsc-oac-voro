@@ -134,4 +134,18 @@ have a finding aid (do not have an <isPartOf> element)
     eadark="kt9z09s5pm"
     eadlabel="News Chronicle Photograph Collection"
     Url="http://www.toaks.org/library/default.asp"/>
+<institution
+    name="Banning Library District"
+    marccode="cban"
+    ark="ark:/13030/kt7q2nf6fv"
+    eadark="kt6779r9df"
+    eadlabel="Banning Library District Local History Collection"
+    Url="http://www.banninglibrarydistrict.org/banning/"/>
+<institution
+    name="California State University, Fullerton, University Archives and Special Collections"
+    marccode="cfls"
+    ark="ark:/13030/c8cn7290"
+    eadark="kt3199s113"
+    eadlabel="Smart Studio photographs"
+    Url="http://www.library.fullerton.edu"/>
 </institutions>
