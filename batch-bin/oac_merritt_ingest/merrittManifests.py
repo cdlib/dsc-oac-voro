@@ -6,34 +6,41 @@ from xml.etree.ElementTree import parse
 
 # get command line arguments
 dataDir = sys.argv[1]
-dataUrlRoot = sys.argv[2]
-depositObjectIds = sys.argv[3] # single object ID, list of IDs, or 'all' (all objects)
+manifestDir = sys.argv[2]
+dataUrlRoot = sys.argv[3]
+naans = sys.argv[4]
+depositObjectIds = sys.argv[5] # single object ID, list of IDs, or 'all' (all objects)
 
 #############################################################################
 #############################################################################
 class OacManifests:
 
-  def __init__(self, dataDir, dataUrlRoot, depositObjectIds):
+  def __init__(self, dataDir, manifestDir, dataUrlRoot, naans, depositObjectIds):
     """ Constructor """
     self.dataDir = dataDir 
     self.dataUrlRoot = dataUrlRoot
     self.depositObjectIds = depositObjectIds
-    self.naan = '13030' # FIXME allow for multiple NAANs
+    if self.depositObjectIds != 'all':
+      self.depositObjectIds = self.depositObjectIds.split(",") 
+    self.naans = naans.split(",")
+    #self.naan = '13030' # FIXME allow for multiple NAANs
     self.manifestFileExt = '.checkm'
     self.metadataFileExt = '.dc.xml'
-    self.batchManifestOutputDir = os.path.join(self.dataDir, 'manifests')
+    self.batchManifestOutputDir = manifestDir
+    # self.batchManifestOutputDir = os.path.join(self.dataDir, 'manifests') # FIXME
     self.objManifestOutputDir = os.path.join(self.batchManifestOutputDir, 'objectManifests')
     self.specialProfiles = []
     self.specialProfiles.append(['eadExtractedImages', 'http://ark.cdlib.org/ark:/13030/kt3q2nb7vz'])
     self.specialProfiles.append(['lstaMarc', 'http://ark.cdlib.org/ark:/13030/kt400011f8'])
     self.specialProfiles.append(['lstaDc', 'http://ark.cdlib.org/ark:/13030/kt4g5012g0'])
+    self.overwrite = 1
 
 ############################################################################# 
-  def writeBatchManifest(self, objectId, pair, manifestInfo):
+  def writeBatchManifest(self, naan, pair, manifestInfo):
     """ write a batch manifest file to the filesystem """
     if len(manifestInfo) < 1: return
 
-    fullpath = os.path.join(self.batchManifestOutputDir, self.naan + pair + self.manifestFileExt)
+    fullpath = os.path.join(self.batchManifestOutputDir, naan, naan + pair + self.manifestFileExt)
 
     with open(fullpath, 'w') as f:
       f.write('#%checkm_0.7\n')
@@ -84,43 +91,65 @@ class OacManifests:
   def createManifests(self):
     """ create batch and object manifests """
     print 'createManifests()'
-    
+
+    for naan in self.naans:
+      fullpath = os.path.join(self.dataDir, naan)
+      print 'fullpath:', fullpath
+      self.createManifestsForNaan(naan, fullpath) 
+
+#############################################################################
+  def createManifestsForNaan(self, naan, naanDataDir):
+    """ create batch and object manifests for a given NAAN """ 
     # LEVEL 1. dirs like '00', 'd7'
-    topDirs = os.listdir(self.dataDir)
+    print 'processing NAAN dir', naanDataDir
+    topDirs = os.listdir(naanDataDir)
     if self.depositObjectIds == 'all':
       self.depositObjectIds = topDirs
     for topDir in topDirs:
-      if os.path.isdir(os.path.join(self.dataDir, topDir)) and topDir in self.depositObjectIds and topDir != 'manifests':
-        print 'processing', topDir
+      validPair = 0
+      processBatch = 0
+      manifestPath = ''
+      # check that the directory name is a valid pair name
+      if os.path.isdir(os.path.join(naanDataDir, topDir)) and topDir in self.depositObjectIds and topDir != 'manifests':
+        validPair = 1
+        processBatch = 1
+      # check that the manifest file doesn't already exist
+      if validPair and not self.overwrite:
+        manifestPath = os.path.join(self.batchManifestOutputDir, naan + topDir + self.manifestFileExt)
+        if os.path.isfile(manifestPath):
+          processBatch = 0
+ 
+      if processBatch:
+        print '  processing', topDir
         batchManifestInfo = [] # new batch
         # LEVEL 2. dirs like 'kt296nd8zz'
-        for objectId in os.listdir(os.path.join(self.dataDir, topDir)):
-          if os.path.isdir(os.path.join(self.dataDir, topDir, objectId)):
+        for objectId in os.listdir(os.path.join(naanDataDir, topDir)):
+          if os.path.isdir(os.path.join(naanDataDir, topDir, objectId)):
             objectManifestInfo = [] # new object
             # LEVEL 3. 
-            for listing in os.listdir(os.path.join(self.dataDir, topDir, objectId)):
-              if os.path.isdir(os.path.join(self.dataDir, topDir, objectId, listing)):
+            for listing in os.listdir(os.path.join(naanDataDir, topDir, objectId)):
+              if os.path.isdir(os.path.join(naanDataDir, topDir, objectId, listing)):
                 # LEVEL 4.
-                for file in os.listdir(os.path.join(self.dataDir, topDir, objectId, listing)):
+                for file in os.listdir(os.path.join(naanDataDir, topDir, objectId, listing)):
                   # get info for object manifest
-                  objectManifestInfo.append(self.getObjectManifestInfo(self.naan, os.path.join(topDir, objectId, listing, file), file, topDir, objectId))
+                  objectManifestInfo.append(self.getObjectManifestInfo(naan, os.path.join(topDir, objectId, listing, file), file, topDir, objectId))
               else:
                 #get info for object manifest
-                objectManifestInfo.append(self.getObjectManifestInfo(self.naan, os.path.join(topDir, objectId, listing), listing, topDir, objectId))
+                objectManifestInfo.append(self.getObjectManifestInfo(naan, os.path.join(topDir, objectId, listing), listing, topDir, objectId))
                 # get info for any non-local files 
-                specialProfileLines = self.processSpecialProfiles(listing, os.path.join(self.dataDir, topDir, objectId, listing), objectId)
+                specialProfileLines = self.processSpecialProfiles(listing, os.path.join(naanDataDir, topDir, objectId, listing), objectId)
                 for line in specialProfileLines:
                   objectManifestInfo.append(line)
                 # get info for batch manifest
                 if listing == objectId + self.metadataFileExt:
-                  batchManifestInfo.append(self.getBatchManifestInfo(os.path.join(self.dataDir, topDir, objectId, listing), listing, self.naan, topDir, objectId))
+                  batchManifestInfo.append(self.getBatchManifestInfo(os.path.join(naanDataDir, topDir, objectId, listing), listing, naan, topDir, objectId))
 
             # CREATE OBJECT MANIFEST (e.g. data/13030/1k/kt9h4nb81k/manifest.checkm)
-            objectDir = os.path.join(self.dataDir, topDir, objectId)
+            objectDir = os.path.join(naanDataDir, topDir, objectId)
             self.writeObjectManifest(objectId, objectDir, objectManifestInfo) 
 
         # CREATE BATCH MANIFEST (e.g.: manifests/130301k.checkm)
-        self.writeBatchManifest(objectId, topDir, batchManifestInfo)
+        self.writeBatchManifest(naan, topDir, batchManifestInfo)
 
 ############################################################################# 
   def dedupFilenames(self, objectInfo):
@@ -196,7 +225,7 @@ class OacManifests:
     and filename != 'CVS' \
     and not filename.endswith(';charset=ISO-8859-1') \
     and filename != objectId + self.manifestFileExt:
-      fullpath = os.path.join(self.dataDir, partPath)
+      fullpath = os.path.join(self.dataDir, naan, partPath)
       fileUrl = os.path.join(self.dataUrlRoot, naan, partPath)
       if self.checkFileUrl(fileUrl):
         fileUrl = self.encodeUrl(fileUrl)
@@ -330,12 +359,12 @@ class OacManifests:
     return manifestLines
 
 #############################################################################
-def createManifests(dataDir, dataUrlRoot, depositObjectIds):
-  manifests = OacManifests(dataDir, dataUrlRoot, depositObjectIds)
+def createManifests(dataDir, manifestDir, dataUrlRoot, naans, depositObjectIds):
+  manifests = OacManifests(dataDir, manifestDir, dataUrlRoot, naans, depositObjectIds)
   manifests.createManifests()
 
 #############################################################################
 if __name__ == '__main__':
   print "\n### merrittManifests.py: ###\n"
-  createManifests(dataDir, dataUrlRoot, depositObjectIds)
+  createManifests(dataDir, manifestDir, dataUrlRoot, naans, depositObjectIds)
   print "\n### Done! ###\n"
