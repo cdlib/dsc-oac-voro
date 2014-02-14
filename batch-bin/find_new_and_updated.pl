@@ -20,7 +20,7 @@
 #			if this parameter is the string consisting of a
 #			single hyphen ("-"), then this script will scan
 #			directory "/dsc/data/ingest-stats/data", for files with names
-#			of the form "object_list.YYYYMMDD.txt", and will use
+#			of the form "object_list.YYYYMMDD.txt.bz2", and will use
 #			the one with the more recent "YYYYMMDD" date.
 #
 #		2 - optional - the name of the file into which will be
@@ -170,7 +170,7 @@ if ((scalar(@ARGV) >= 1) && (length($ARGV[0]) > 0)) {
 				"\"/dsc/data/ingest-stats/data\", $!, stopped";
 		my @input_dir_contents = ( );
 		while (defined($_ = readdir(DIR))) {
-			next unless (/^object_list\.\d{8}\.txt$/);
+			next unless (/^object_list\.\d{8}\.txt.bz2$/);
 			push @input_dir_contents, $_;
 			}
 		closedir(DIR);
@@ -199,7 +199,7 @@ else {
 	@now = localtime( );
 	$output_info_file = "/dsc/data/ingest-stats/data/object_list." .
 		sprintf("%04d%02d%02d", $now[5] + 1900, $now[4] + 1, $now[3]) .
-		".txt";
+		".txt.bz2";
 	undef @now;
 	}
 
@@ -237,7 +237,7 @@ $parser = XML::LibXML->new( );
 # Read in the info from the last run, if there is on.
 %last_runs_info = ( );
 if (defined($input_info_file)) {
-	open(INPF, "<", $input_info_file) ||
+    open INPF, "bzcat $input_info_file |" ||
 		die "$c:  unable to open \"$input_info_file\" for input, $!, ",
 			"stopped";
 	$line_no = 0;
@@ -276,7 +276,8 @@ if (defined($input_info_file)) {
 	}
 
 # Open our output info file.
-open(OUTF, ">", $output_info_file) ||
+
+open OUTF, "| bzip2 -c > $output_info_file" ||
 	die "$c:  unable to open \"$output_info_file\" for output, $!, stopped";
 
 # Open our output "new and updated" file, but only if we had a "last run".
