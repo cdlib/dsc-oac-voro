@@ -29,7 +29,7 @@ my $imgsize;
 
 # if carefree, then processing goes forward, even if input has not changed
 my $carefree = 1;
-my $regen = 0;
+my $regen = 1;
 my $forgive_mets = 0;
 my $forgive_tei = 0;
 
@@ -522,8 +522,8 @@ sub harvestFileNode {
 	# try to rip some text if it looks like a pdf
 	if ($ext eq 'pdf') {
 		my $message = `$pdftotext_command $outfile.$ext $outfile.txt`;
-    	my $exit = $? >> 8;
-    	print $message if ( $exit != 0 );
+    		my $exit = $? >> 8;
+    		print $message if ( $exit != 0 );
 	}
 	my $outURL = file2url("$outfile.$ext");
 	return unless ($size && $checksum);
@@ -614,6 +614,9 @@ print STDERR "\n";
 				$imgsize->{$id} = [ $x, $y ];
 			}
 		}
+		if ($mime eq "application/pdf" && $regen){
+			pdftrick("$outfile\.pdf");
+		}
 		if ( ($mime eq "text/xml" or $mime eq "application/xml") && $regen) {
 			#print "\nhello?!\n";
                         ## call xml processer
@@ -658,6 +661,10 @@ print STDERR "\n";
 			$imgsize->{$id} = [ imgsize($outfile) ];
 			#print STDERR Dumper $imgsize->{$id};
 			#print STDERR Dumper $outfile;
+		}
+
+		if ($mime eq "application/pdf") {
+			pdftrick($outfile);
 		}
 
 		if ($mime eq "video/quicktime") {
@@ -975,6 +982,13 @@ sub addInfo {
 		}
 	}
 	return $xc;
+}
+
+sub pdftrick {
+        my $outfile = $_[0];
+	print STDERR `pdftrick -t /dsc/tmp $outfile`;
+	my $pdftrick_exit = $? >> 8;
+	exit($pdftrick_exit) if ($pdftrick_exit !=0); 
 }
 
 # -----
