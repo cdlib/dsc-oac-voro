@@ -188,6 +188,9 @@ for (@ARGV) {
 			$type = "image collection";
 		}
 	}
+        if ( $type eq 'generic' && $xc->findvalue("//mets:fileGrp[\@USE='text/tei']")) {
+		$type = "text";
+	}
 	# tei object scructure tests
 	if ($type eq "still+image" or $type eq "mixed+media") {
 		my $structLook = $xc->findvalue
@@ -284,8 +287,11 @@ for (@ARGV) {
 
 	# print $message if ( $exit != 0 );
 	# next if ( ($exit != 0) && (!$forgive_mets) );
-	
+
 	$typeNode->setValue($type) if $typeNode;
+	unless ($typeNode) {
+		$root->setAttribute( 'TYPE', $type );
+	}
  	
 	# hash reference
 	# retrieve exported by Storable 
