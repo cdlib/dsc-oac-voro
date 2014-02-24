@@ -14,7 +14,7 @@ my $localBase = "/dsc/data/xtf";
 my $urlBase = "http://content.cdlib.org/dynaxml"; 
 our $validate_command = "/voro/local/bin/validate";
 our $gif2png_command = "/dsc/local/bin/gif2png -O";
-our $pdftotext_command = "/cdlcommon/products/xpdf-3.02/bin/pdftotext";
+our $pdftotext_command = "java -jar $ENV{HOME}/java/pdfbox/pdfbox-app.jar ExtractText -force";
 
 my $xsltBase = "/dsc/branches/production/voro/xslt/";
 
@@ -29,7 +29,7 @@ my $imgsize;
 
 # if carefree, then processing goes forward, even if input has not changed
 my $carefree = 1;
-my $regen = 1;
+my $regen = 0;
 my $forgive_mets = 0;
 my $forgive_tei = 0;
 
@@ -521,9 +521,6 @@ sub harvestFileNode {
 	}
 	# try to rip some text if it looks like a pdf
 	if ($ext eq 'pdf') {
-		my $message = `$pdftotext_command $outfile.$ext $outfile.txt`;
-    		my $exit = $? >> 8;
-    		print $message if ( $exit != 0 );
 	}
 	my $outURL = file2url("$outfile.$ext");
 	return unless ($size && $checksum);
@@ -630,12 +627,24 @@ print STDERR "\n";
 
         #if ( ($res->is_success) && ($res->code() ne "304") ) {
         if ( ($res->is_success) ) {
-		#print "";
+		# print "";
 		## $xmlout set down below
 		# SIZE is there a better way to get the size of a file?
 		($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,
                     $atime,$mtime,$ctime,$blksize,$blocks)
                         = stat($outfile);
+
+		$mime = $res->header('Content-type');
+
+		if ($mime eq "application/pdf") {
+			# rip the text first
+                        print "$pdftotext_command $outfile $outfile.txt";
+			my $message = `$pdftotext_command $outfile $outfile.txt`;
+    			my $exit = $? >> 8;
+    			print $message if ( $exit != 0 );
+			# now that we have ripped the text; try to compress it some
+			pdftrick($outfile);
+		}
 
 		# CHECKSUM take the checksum
 		open (CHK, "<$outfile");
@@ -651,20 +660,12 @@ print STDERR "\n";
     		$$cache->{$id}{'If_Last_Modified'} = $res->header('Last-Modified');
 
 
-		# What is the MIME type? Content-type:
-		# if I've just fetched an XML file, I need to see what it is;
-		# validate it, and then fetch files that it needs
-		$mime = $res->header('Content-type');
 		# record the height and width (if its an image)
 		if ($mime =~ m,^image/,) {
 			# imgsize exported by Image::Size
 			$imgsize->{$id} = [ imgsize($outfile) ];
 			#print STDERR Dumper $imgsize->{$id};
 			#print STDERR Dumper $outfile;
-		}
-
-		if ($mime eq "application/pdf") {
-			pdftrick($outfile);
 		}
 
 		if ($mime eq "video/quicktime") {
