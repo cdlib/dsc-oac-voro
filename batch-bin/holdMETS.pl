@@ -20,6 +20,7 @@ my $beenDone;
 while (<INFILE>) {
 	if (m,PROFILE="http://ark.cdlib.org/ark:/13030/kt4199q42g",) {
 		$beenDone = 'true';
+		$! = 103;
 		last;
 	}
 }
