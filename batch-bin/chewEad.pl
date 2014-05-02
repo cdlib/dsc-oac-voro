@@ -55,7 +55,7 @@ my @pois = getVals($poi_aref);
 # use the old file if they did not have a filetitle
 $title = $title || $ptitle;
 
-die("$0 $ARGV[0] no title") unless ($title);
+# die("$0 $ARGV[0] no title") unless ($title);
 
 #print Dumper getPrimeInfo($ARGV[0]);
 
