@@ -27,7 +27,7 @@ task :default do |t|
 	Rake::Task["ead:makemets"].invoke
 	Rake::Task[:DCme].invoke
 	Rake::Task["ead:pdfgen"].invoke
-	#Rake::Task["ead:pdfsweep"].invoke
+	Rake::Task["ead:pdfsweep"].invoke
 	Rake::Task["ead:oisindex"].invoke
 	Rake::Task["xtf:metsark"].invoke
  	Rake::Task["ingest-stats"].invoke
