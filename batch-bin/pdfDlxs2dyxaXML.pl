@@ -119,7 +119,7 @@ sub do_it {
 			my $command = qq{/bin/cp -p "$supplimental/$file" $file_dest};
 			print "$command\n";
 			system($command);
-			$command = qq{/cdlcommon/products/xpdf-3.02/bin/pdftotext -enc UTF-8 -eol unix -nopgbrk "$file_dest/$file"};
+			$command = qq{java -jar $ENV{HOME}/java/pdfbox/pdfbox-app.jar ExtractText "$file_dest/$file" -force -eol unix -nopgbrk};
 			print "$command\n";
 			system($command);
 		}
