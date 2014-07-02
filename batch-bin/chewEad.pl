@@ -384,41 +384,7 @@ sub cdlToCdlprime {
 
 	print "!$wtf1 ---- !$wtf2";
 	if ( $wtf1 && $wtf2 ) {
-
-		open(SENDMAIL, "|$sendmail") or die "can't run $sendmail";
-                print SENDMAIL "Reply-to: $ARGV[2]\n";
-                print SENDMAIL "From: voro user <$ARGV[2]>\n";
-                print SENDMAIL "To: oacops\@cdlib.org\n";
-		print SENDMAIL "Subject: voroEAD/voroBasic processing $ENV{SERVER_NAME}\n";
-
-		print SENDMAIL "\n$ARGV[2] submitted a finding aid \n $ARGV[0] \n using voroEAD\n";
-
- print SENDMAIL qq{which contains links to associated METS digital objects: these are
- <dao> Digital Archival Object links with ROLE attributes set to
- "http://oac.cdlib.org/arcrole/link/grab/" and HREF attributes with
- URLs for METS objects.\n};
-
-print SENDMAIL<<EOF;
-
-OAC Operations Group staff are now scheduling and processing the ingest
-of the associated METS digital objects, which may take several days.
-
-You will be informed if there are any problems with your submission,
-and you will be emailed the link to its final processing report if it
-the submission is accepted.
-
-Thank you,
-
-OAC Operations Group
-oacops\@cdlib.org
-
-EOF
-
-
-		close SENDMAIL;
-
-		return;
-
+		die("manual processing only for these");
 	}
 	(my $eadid) = $xc->findnodes('/ead/eadheader/eadid');
 	
