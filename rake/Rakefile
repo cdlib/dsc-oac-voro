@@ -30,8 +30,9 @@ task :default do |t|
 	Rake::Task["ead:pdfsweep"].invoke
 	Rake::Task["ead:oisindex"].invoke
 	Rake::Task["xtf:metsark"].invoke
- 	Rake::Task["ingest-stats"].invoke
         Rake::Task["tar-index"].invoke
+	Rake::Task["s3-push"].invoke
+ 	Rake::Task["ingest-stats"].invoke
  	Rake::Task["report-results"].invoke
 end
 
@@ -183,7 +184,16 @@ EOM
     end
 end
 
-desc "tar up the index async for TSM"
+desc "tar up the index for backup and delivery"
+task "s3-push" do |t|
+    if ['leonardo', 'davinci', 'dscl-stg'].include? Socket.gethostname
+        sh "/dsc/local/bin/aws s3 cp /dsc/indexes/xtf.backup.tar s3://xtf.dsc.cdlib.org/indexes/xtf.backup.tar"
+        sh "/dsc/local/bin/aws s3 sync --delete /dsc/data/xtf/data/ s3://xtf.dsc.cdlib.org/data/"
+        sh "/dsc/local/bin/aws s3 sync --delete /dsc/data/in/ s3://xtf.dsc.cdlib.org/input/"
+    end
+end 
+
+desc "tar up the index for backup and delivery"
 task "tar-index" do |t|
-    sh "/bin/tar cf /dsc/indexes/xtf.backup.tar /dsc/branches/production/xtf/index/ &"
+    sh "/bin/tar cf /dsc/indexes/xtf.backup.tar /dsc/branches/production/xtf/index/"
 end
