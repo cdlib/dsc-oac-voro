@@ -195,5 +195,5 @@ end
 
 desc "tar up the index for backup and delivery"
 task "tar-index" do |t|
-    sh "/bin/tar cf /dsc/indexes/xtf.backup.tar /dsc/branches/production/xtf/index/"
+    sh "/bin/tar cf /dsc/indexes/xtf.backup.tar -C /dsc/branches/production/xtf index"
 end
