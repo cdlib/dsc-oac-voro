@@ -12,20 +12,15 @@ use XML::LibXSLT;
 
 # http://stackoverflow.com/questions/8563377/
 use BSD::Resource qw(PRIO_PROCESS setpriority);
-use Linux::IO_Prio qw(IOPRIO_WHO_PROCESS IOPRIO_PRIO_VALUE IOPRIO_CLASS_BE ioprio_set);
-BEGIN { require autodie::hints; autodie::hints->set_hints_for(\&ioprio_set, { fail => sub { $_[0] == -1 } } ) };
-use autodie qw(:all setpriority ioprio_set);
 
 setpriority(
     PRIO_PROCESS,       # 1
     $$,
     19
 );
-ioprio_set(
-    IOPRIO_WHO_PROCESS,                         # 1
-    $$,
-    IOPRIO_PRIO_VALUE(IOPRIO_CLASS_BE, 7)       # 0x4007
-);
+
+my $pid = $$;
+`ionice -c2 -p$pid`;
 
 $eadroot = $ENV{OACDATA} || "$ENV{HOME}/data/in/oac-ead";
 $dynaroot = $ENV{DYNROOT} || "$ENV{HOME}/data/xtf/data";
