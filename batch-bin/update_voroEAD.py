@@ -34,11 +34,13 @@ DIR_LOGGING = HOME + '/log/update_voroEAD/'
 
 db = read_config()
 
-DATABASE_HOST = db['default-ro']['HOST']
-DATABASE_NAME = db['default-ro']['NAME']
-DATABASE_USER = db['default-ro']['USER']
-DATABASE_PASSWORD = db['default-ro']['PASSWORD']
-DATABASE_PORT = db['default-ro']['PORT']
+DSC_DATABASE = os.environ['DSC_DATABASE']
+
+DATABASE_HOST = db[DSC_DATABASE]['HOST']
+DATABASE_NAME = db[DSC_DATABASE]['NAME']
+DATABASE_USER = db[DSC_DATABASE]['USER']
+DATABASE_PASSWORD = db[DSC_DATABASE]['PASSWORD']
+DATABASE_PORT = db[DSC_DATABASE]['PORT']
 
 FILE_VOROUSERS = 'voro.users.txt' # HARDCODED in build.users.pl
 FILE_VOROGROUPS = 'voro.groups.txt' # HARDCODED in build.users.pl
