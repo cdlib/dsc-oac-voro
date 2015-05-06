@@ -44,6 +44,7 @@ namespace :ead do
 	desc "make METS from the EAD"
 	task :makemets do |t|
                 ENV['VOROBASE'] = "#{ENV['HOME']}/branches/#{branch}/voro"
+                puts "Current env is #{ENV['PERL5LIB']}"
                 sh "perl #{ENV['CODEBASE']}/voro/batch-bin/reMets.pl"
                 # sh "perl #{ENV['CODEBASE']}/voro/batch-bin/removeMets.pl"
 		# Regenerate all METS [VORO update #6]
@@ -134,7 +135,7 @@ task :DCme do |t|
 	#  /voro/mets-support, /voro/workspace/DC/build-dc.xml 
 	#  and /voro/XTF/data  are  hardcoded in DCme perl code
 
-	sh "/cdlcommon/products/bin/ant -f #{ENV['HOME']}/workspace/DC/build-dc.xml"
+	sh "ant -f #{ENV['HOME']}/workspace/DC/build-dc.xml"
 	# 2. run ant; needs ant >= 1.6.0
 	# works on files in /voro/XTF/data; puts .dc.xml in the same tree
 end

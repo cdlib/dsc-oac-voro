@@ -53,7 +53,7 @@ print BUILD <<EOF;
    </description>
 	<property name="ant" value="org.apache.tools.ant.launch.Launcher"/>
 	<property name="metsBase" location="$mets_base"/>
-	<property name="saxon" location="/cdlcommon/products/saxon/saxon9.jar"/>
+	<property name="saxon" location="/dsc/branches/production/xtf/WEB-INF/dist/xtf.jar"/>
 	<property name="this.cp" value="\${saxon}:\${java.class.path}"/>
 
  <target name="DCme">
