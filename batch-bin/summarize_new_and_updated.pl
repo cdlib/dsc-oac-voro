@@ -30,15 +30,7 @@
 #	TODO
 #	==> change to yyyy/yyyymmdd 
 #
-#		4 - optional - the data necessary to access the production
-#			OAC MySQL database.  this parameter gives the 5 pieces
-#			of data, separated by slashes.  its format is
-#			"host/port/user/password/database".  the default (if
-#			this parameter is omitted or of length zero) is
-#			"oac4db-prod.cdlib.org/3340/oac4ro/oac41ro/oac4".
-#
-#			(this is used to get the translation of EAD parent
-#			ARK number to cdlpath.)
+#		4 - optional - 
 #
 #		5 - optional - the path to use to access a MySQL client
 #			command.  the default (if this parameter is omitted
@@ -77,6 +69,8 @@
 #       2010/10/27 - MER - Change to work in consolidated dsc server environment
 # ------------------------------------
 
+use lib '/dsc/branches/production/config_reader';
+use config_reader;
 use strict;
 use warnings;
 use Time::Local;
@@ -101,7 +95,6 @@ use vars qw(
 	$line_no
 	$mets_or_ead
 	$mysql_command
-	$mysql_info
 	$naan
 	$nearby
 	$new_or_updated
@@ -130,6 +123,7 @@ $c = ($pos > 0) ? substr($0, $pos + 1) : $0;
 $nearby = ($pos > 0) ? substr($0, 0, $pos + 1) : "";
 $nearby = "./" if ($nearby eq "");
 undef $pos;
+
 
 # Examine command line parameters.
 if ((scalar(@ARGV) >= 1) && (length($ARGV[0]) > 0)) {
@@ -198,13 +192,6 @@ else {
 		$summarization_date[2]);
 	}
 
-if ((scalar(@ARGV) >= 4) && (length($ARGV[3]) > 0)) {
-	$mysql_info = $ARGV[3];
-	}
-else {
-	$mysql_info = "oac4db-prod.cdlib.org/3340/oac4ro/oac41ro/oac4";
-	}
-
 if ((scalar(@ARGV) >= 5) && (length($ARGV[4]) > 0)) {
 	$mysql_command = $ARGV[4];
 	}
@@ -261,7 +248,7 @@ $parser = XML::LibXML->new( );
 
 # Build the ARK-to-cdlpath conversion hash.
 %ark_to_cdlpath = ( );
-load_mysql_data($mysql_info);
+load_mysql_data();
 
 # Construct the hash that converts ARK numbers to the answer to the
 # question "does the EAD contain a <dao> or <daogrp>?"  (This becomes
@@ -611,8 +598,7 @@ unless ($sizestats_exit_code == 0) {
 # Subroutine to build the ARK-to-cdlpath conversion hash, using the
 # OAC MySQL database.
 sub load_mysql_data {
-	my $mysql_info = $_[0];
-
+	my $mysql_info = $ { read_config() }{ $ENV{'DSC_DATABASE'} };
 	my $ark;
 	my @ark_list;
 	my $cdlpath;
@@ -629,16 +615,12 @@ sub load_mysql_data {
 	my $row;
 	my @rows;
 
-	# Pull the 5 values out of the string.
-	unless ($mysql_info =~ m|^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)$|) {
-		die "$c:  format of command line parameter 4 ",
-			"(\"$mysql_info\") is invalid, stopped";
-		}
-	$mysql_host = $1;
-	$mysql_port = $2;
-	$mysql_user = $3;
-	$mysql_password = $4;
-	$mysql_database = $5;
+	$mysql_host = ${$mysql_info}{'host'};
+	$mysql_port = ${$mysql_info}{'port'};
+	$mysql_user = ${$mysql_info}{'user'};
+	$mysql_password = ${$mysql_info}{'password'};
+	$mysql_database = ${$mysql_info}{'name'};
+        exit 1;
 
 	# Construct the command we would like to execute.
 	$command = "$mysql_command " .
