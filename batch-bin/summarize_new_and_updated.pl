@@ -620,7 +620,6 @@ sub load_mysql_data {
 	$mysql_user = ${$mysql_info}{'user'};
 	$mysql_password = ${$mysql_info}{'password'};
 	$mysql_database = ${$mysql_info}{'name'};
-        exit 1;
 
 	# Construct the command we would like to execute.
 	$command = "$mysql_command " .
