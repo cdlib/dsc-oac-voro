@@ -96,7 +96,7 @@ namespace :sync do
 			cvs_opts = "-v --update --cvs-exclude --links --recursive --times"
 			sh "rsync #{cvs_opts} dsc@dsc.cdlib.org:/dsc/data/xtf/ #{ENV['HOME']}/data/xtf"
 			sh "rsync #{cvs_opts} dsc@dsc.cdlib.org:/dsc/data/in/ #{ENV['HOME']}/data/in"
-		when "leonardo", "davinci", "dscl-stg"
+		when "leonardo", "davinci", "dscl-stg", "dsc-dsc-stg"
 			# stage should be a clone of production
 			cvs_opts = "-v --delete --cvs-exclude --links --recursive --times"
 			sh "rsync #{cvs_opts} dsc@dsc.cdlib.org:/dsc/data/xtf/ #{ENV['HOME']}/data/xtf"
@@ -196,5 +196,6 @@ end
 
 desc "tar up the index for backup and delivery"
 task "tar-index" do |t|
+    sleep 60
     sh "/bin/tar cf /dsc/indexes/xtf.backup.tar -C /dsc/branches/production/xtf index"
 end
