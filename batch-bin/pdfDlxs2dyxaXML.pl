@@ -114,7 +114,7 @@ sub do_it {
 			my $command = qq{/bin/cp -p "$supplimental/$file" $file_dest};
 			print "$command\n";
 			system($command);
-			$command = qq{java -jar $ENV{HOME}/java/pdfbox/pdfbox-app.jar ExtractText "$file_dest/$file" -force -eol unix -nopgbrk};
+			$command = qq{java -jar $ENV{HOME}/java/pdfbox/pdfbox-app.jar ExtractText -encoding UTF-8 "$file_dest/$file"};
 			print "$command\n";
 			system($command);
 		}
