@@ -117,6 +117,9 @@ def application(environ, start_response):
         fileurl = re.sub('\s', '+', node[0])
         # replace host with CDN_BEAR_FOR
         fileurl = re.sub(r'http://.+\.cdlib\.org/', ''.join(('http://', os.environ['CDN_BEAR_FOR'], '/')), fileurl)
+        if fileurl.startswith('http://www.bampfa.berkeley.edu'):
+            fileurl = re.sub(r'^http://www', 'http://archive', fileurl)
+
     output = fileurl
     status = '302 Found'
     response_headers = [('Location', fileurl),
