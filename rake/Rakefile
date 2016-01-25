@@ -30,10 +30,9 @@ task :default do |t|
 	Rake::Task["ead:pdfsweep"].invoke
 	Rake::Task["ead:oisindex"].invoke
 	Rake::Task["xtf:metsark"].invoke
-        Rake::Task["tar-index"].invoke
-	Rake::Task["s3-push"].invoke
+        # Rake::Task["tar-index"].invoke
+	# Rake::Task["s3-push"].invoke
  	Rake::Task["ingest-stats"].invoke
- 	# Rake::Task["report-results"].invoke
 end
 
 # re-use the TWS wrappers and dependencies
@@ -91,16 +90,16 @@ namespace :sync do
 	task :pullfromproduction do |t|
 		where_am_i = Socket.gethostname
 		case where_am_i
-		when "blake", "dscl-dev", "dsc-dsc-dev"
+		when "dscl-dev", "dsc-dsc-dev"
 			# need to allow preview files on -dev
 			cvs_opts = "-v --update --cvs-exclude --links --recursive --times"
-			sh "rsync #{cvs_opts} dsc@dsc.cdlib.org:/dsc/data/xtf/ #{ENV['HOME']}/data/xtf"
-			sh "rsync #{cvs_opts} dsc@dsc.cdlib.org:/dsc/data/in/ #{ENV['HOME']}/data/in"
-		when "leonardo", "davinci", "dscl-stg", "dsc-dsc-stg"
+			sh "rsync #{cvs_opts} dsc@dsc-dsc-prd.cdlib.org:/dsc/data/xtf/ #{ENV['HOME']}/data/xtf"
+			sh "rsync #{cvs_opts} dsc@dsc-dsc-prd.cdlib.org:/dsc/data/in/ #{ENV['HOME']}/data/in"
+		when "dsc-dsc-stg"
 			# stage should be a clone of production
 			cvs_opts = "-v --delete --cvs-exclude --links --recursive --times"
-			sh "rsync #{cvs_opts} dsc@dsc.cdlib.org:/dsc/data/xtf/ #{ENV['HOME']}/data/xtf"
-			sh "rsync #{cvs_opts} dsc@dsc.cdlib.org:/dsc/data/in/ #{ENV['HOME']}/data/in"
+			sh "rsync #{cvs_opts} dsc@dsc-dsc-prd.cdlib.org:/dsc/data/xtf/ #{ENV['HOME']}/data/xtf"
+			sh "rsync #{cvs_opts} dsc@dsc-dsc-prd.cdlib.org:/dsc/data/in/ #{ENV['HOME']}/data/in"
 		else
 			# cvs_opts = "-v --delete --cvs-exclude --links --recursive --times"
 			# hey; I *am* the master for this, I can't sync from myself, can I?
@@ -159,36 +158,12 @@ task "ingest-stats" do |t|
 	sh "#{ENV['HOME']}/branches/#{branch}/voro/batch-bin/voro_ingest_stats.pl"
 end
 
-desc "report the time of the finished index to voro.posterous.com"
-task "report-results" do
-    require 'socket'
-    hostname = Socket.gethostname
-    from_addr = "dsc@#{hostname}"
-    to_addrs = "voro@posterous.com"
-    to_addrs_flat = to_addrs.map{ |x| "#{x}, " }.compact
-    start_time = File.ctime("#{ENV['HOME']}/log/nightly.lock")
-    index_time = File.mtime(Dir.glob("#{ENV['HOME']}/branches/#{branch}/xtf/index/*.cfs")[0])
-    if "#{ENV['PRODUCTION']}" == 'true'
-        msg = <<EOM
-From: <#{from_addr}>
-To: <#{to_addrs_flat}>
-Subject: New index complete
-
-EADs submitted and processed with voroEAD before #{start_time.strftime("%m/%d/%Y at %I:%M%p")} should be online.
-
-Index was completed at #{index_time.strftime("%m/%d/%Y at %I:%M%p")}.
-EOM
-        require 'net/smtp'
-        Net::SMTP.start('localhost', 25) do |smtp|
-            smtp.send_message msg, from_addr, to_addrs
-        end
-    end
-end
-
 desc "tar up the index for backup and delivery"
 task "s3-push" do |t|
-    if ['dsc-dsc-prd'].include? Socket.gethostname
-        sh "aws s3 sync --delete /dsc/ s3://dsc-s3ver-prd/dsc/backup/"
+    if ['leonardo', 'davinci', 'dscl-stg'].include? Socket.gethostname
+        sh "/dsc/local/bin/aws s3 cp /dsc/indexes/xtf.backup.tar s3://xtf.dsc.cdlib.org/indexes/xtf.backup.tar"
+        sh "/dsc/local/bin/aws s3 sync --delete /dsc/data/xtf/data/ s3://xtf.dsc.cdlib.org/data/"
+        sh "/dsc/local/bin/aws s3 sync --delete /dsc/data/in/ s3://xtf.dsc.cdlib.org/input/"
     end
 end 
 
