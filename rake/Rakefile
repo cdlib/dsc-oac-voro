@@ -91,7 +91,7 @@ namespace :sync do
 	task :pullfromproduction do |t|
 		where_am_i = Socket.gethostname
 		case where_am_i
-		when "blake", "dscl-dev"
+		when "blake", "dscl-dev", "dsc-dsc-dev"
 			# need to allow preview files on -dev
 			cvs_opts = "-v --update --cvs-exclude --links --recursive --times"
 			sh "rsync #{cvs_opts} dsc@dsc.cdlib.org:/dsc/data/xtf/ #{ENV['HOME']}/data/xtf"
