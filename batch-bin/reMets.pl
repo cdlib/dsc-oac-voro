@@ -20,7 +20,9 @@ $| = 1;
 my $debug="1";
 my $eadroot = "$ENV{OACDATA}" || "$ENV{HOME}/data/in/oac-ead";
 my $allroot = "$ENV{ALLDATA}" || "$ENV{HOME}/data/xtf"; # leave off final /data
-        
+my $redirect_map_txt = "$ENV{HOME}/servers/front/conf/FINDAID.txt";
+
+open(our $redirect_map_fh, '>', $redirect_map_txt) or die "Could not open file '$redirect_map_txt' $!";
 
 my $parser = XML::LibXML->new();
 $parser->recover(1);
@@ -56,7 +58,8 @@ while ( my $subdir = readdir(BASE)) {
 
 
 }
-
+close $redirect_map_fh;
+system("$ENV{HOME}/servers/front/conf/generate_maps.bash");
 exit;
 
 ##
@@ -72,7 +75,7 @@ sub poi2file {
                         mkpath("$allroot/data/$1/$dir/$part");
                         mkpath("$allroot/data/$1/$dir/$part/files");
                 }
-        my @out = ('', $poi);
+        my @out = ($part, $poi);
 	return @out;
 }
 
@@ -108,8 +111,7 @@ sub spitMets {
 	my $cdlprimeStat = stat("$cdlprime");
 	my $metsStat = stat("$xout2.mets.xml");
 	my $xtfEadStat = stat("$xout2.xml");
-
-print "$cdlprime, $xout2\n";
+        print $redirect_map_fh "$xout1\thttp://www.oac.cdlib.org/findaid/ark:/13030/$xout1/\n";
 
 	#write out the METS file
 	if ( ( (@ARGV) || !( -e "$xout2.mets.xml")) || ( $cdlprimeStat->mtime > $metsStat->mtime) ) {
