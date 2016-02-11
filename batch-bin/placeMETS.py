@@ -11,6 +11,7 @@ from shutil import copy2  # sort of like `cp -p`
 
 
 def is_xml_file(parser, arg):
+    """ funciton to validate command line arguments point to METS with ARKs """
     xmlns = {'mets': 'http://www.loc.gov/METS/'}
     try:
         return (
@@ -29,6 +30,7 @@ def is_xml_file(parser, arg):
 
 
 def ark_to_path(string):
+    """ calculate the path to the correct `.mets.xml` file in `XTF_DATA` """
     parsed_ark = re.search('ark:/(\d{5})/(\w*)', string)
     naan = parsed_ark.group(1)
     part = parsed_ark.group(2)
@@ -54,7 +56,8 @@ def main(argv=None):
         argv = parser.parse_args()
 
     for ret in argv.mets_document:
-        # tuple of the original argument (the file to work on), and the /mets:mets/@OBJID
+        # tuple of the original argument (the file to work on), and
+        # the /mets:mets/@OBJID
         arg = ret[0]
         ark = ret[1]
         copy2(arg, ark_to_path(ark))
@@ -66,7 +69,7 @@ if __name__ == "__main__":
 
 
 """
-Copyright © 2015, Regents of the University of California
+Copyright © 2016, Regents of the University of California
 All rights reserved.
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
