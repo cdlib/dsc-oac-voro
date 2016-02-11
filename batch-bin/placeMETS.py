@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-""" facet decade in python """
+""" copy edit and forget it METS into place based ARK in OBJID """
 
 import sys
 import argparse
@@ -29,7 +29,6 @@ def is_xml_file(parser, arg):
 
 
 def ark_to_path(string):
-    os.environ['XTF_DATA']
     parsed_ark = re.search('ark:/(\d{5})/(\w*)', string)
     naan = parsed_ark.group(1)
     part = parsed_ark.group(2)
@@ -54,8 +53,11 @@ def main(argv=None):
     if argv is None:
         argv = parser.parse_args()
 
-    for ark in argv.mets_document:
-        copy2(ark[0], ark_to_path(ark[1]))
+    for ret in argv.mets_document:
+        # tuple of the original argument (the file to work on), and the /mets:mets/@OBJID
+        arg = ret[0]
+        ark = ret[1]
+        copy2(arg, ark_to_path(ark))
 
 
 # main() idiom for importing into REPL for debugging
