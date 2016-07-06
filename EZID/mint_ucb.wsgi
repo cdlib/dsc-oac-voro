@@ -36,7 +36,7 @@ def application(environ, start_response):
         else:
             if num <= 10:
                 newarks = DSC_EZID_minter.main(num, shoulder=shoulder,
-                    metadata = {'_profile':'dc', '_coowners': 'ucblibrary'})
+                    metadata = {'_profile':'dc', '_owner': 'ucblibrary'})
                 for ark in newarks:
                     output = ''.join([output, ark[5:], '\n'])
             else:
