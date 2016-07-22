@@ -15,4 +15,4 @@ ark=$1
 
 xsltproc \
   ../xslt/xtf2arklist.xsl \
-  "http://content.cdlib.org/search?docsPerPage=200&facet=type-tab&group=image&raw=1&style=cui&relation=$ark"
+  "http://www.oac.cdlib.org/items/${ark}?raw=1"
