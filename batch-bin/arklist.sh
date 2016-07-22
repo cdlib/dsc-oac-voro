@@ -15,4 +15,4 @@ ark=$1
 
 xsltproc \
   ../xslt/xtf2arklist.xsl \
-  "http://www.oac.cdlib.org/items/${ark}?raw=1"
+  "http://www.oac.cdlib.org/items/${ark}?raw=1&endDoc-ignore=50000"
