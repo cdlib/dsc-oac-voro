@@ -115,6 +115,7 @@ sub do_it {
 			print "$command\n";
 			system($command);
 			$command = qq{java -jar $ENV{HOME}/java/pdfbox/pdfbox-app.jar ExtractText -encoding UTF-8 "$file_dest/$file"};
+                        $command =~ tr/\x00-\x08\x0B\x0C\x0E-\x19//d;  # http://stackoverflow.com/a/1018207/1763984
 			print "$command\n";
 			system($command);
 		}
