@@ -121,6 +121,7 @@
 #		2009/6/9 - MAR - Don't do the above check if we don't have
 #			an input file.
 #       2010/10/27 - MER - Change to work in consolidated dsc server environment
+#       2018/02/20 - BCT - $parser->load_ext_dtd(0)
 #
 # ------------------------------------
 
@@ -233,6 +234,7 @@ if (defined($input_info_file) && ($input_info_file eq $output_info_file)) {
 
 # Create a parser to use.
 $parser = XML::LibXML->new( );
+$parser->load_ext_dtd(0);
 
 # Read in the info from the last run, if there is on.
 %last_runs_info = ( );
