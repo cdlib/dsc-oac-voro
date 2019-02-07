@@ -14,7 +14,7 @@ UTF8Writer = codecs.getwriter('utf8')
 sys.stdout = UTF8Writer(sys.stdout)
 
 
-XTF_RAW = os.environ.get('XTF_RAW', 'http://dsc-dev.cdlib.org/xtf/rawQuery')
+XTF_RAW = os.environ.get('XTF_RAW', 'http://dsc.cdlib.org/xtf/rawQuery')
 
 
 def main(argv=None):

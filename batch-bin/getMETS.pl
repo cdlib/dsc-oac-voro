@@ -28,7 +28,7 @@ my $teiBuff = "$xsltBase/teiBuff.xsl";
 my $imgsize;
 
 # if carefree, then processing goes forward, even if input has not changed
-my $carefree = 1;
+my $carefree = 0;
 my $regen = 0;
 my $forgive_mets = 0;
 my $forgive_tei = 0;
@@ -993,7 +993,7 @@ sub addInfo {
 
 sub pdftrick {
         my $outfile = $_[0];
-	print STDERR `pdftrick -t /dsc/tmp $outfile`;
+	print STDERR `pdftrick -t /dsc/tmp --timeout 30 $outfile`;
 	my $pdftrick_exit = $? >> 8;
 	exit($pdftrick_exit) if ($pdftrick_exit !=0); 
 }
