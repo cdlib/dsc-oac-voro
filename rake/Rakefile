@@ -161,7 +161,7 @@ end
 desc "tar up the index for backup and delivery"
 task "s3-push" do |t|
     if ['dsc-dsc-prd'].include? Socket.gethostname
-        sh "aws s3 sync --delete --include '*' --exclude '*/logs/*' /dsc/ s3://dsc-s3ver-prd/dsc/backup/"
+        sh "/dsc/bin/backup"
     end
 end 
 
