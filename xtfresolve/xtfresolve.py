@@ -119,6 +119,8 @@ def application(environ, start_response):
         fileurl = re.sub(r'http://.+\.cdlib\.org/', ''.join(('http://', os.environ['CDN_BEAR_FOR'], '/')), fileurl)
         if fileurl.startswith('http://www.bampfa.berkeley.edu'):
             fileurl = re.sub(r'^http://www', 'http://archive', fileurl)
+        if fileurl.startswith('http://sunsite.berkeley.edu'):
+            fileurl = re.sub(r'http://sunsite.berkeley.edu', 'https://cdn.calisphere.org/affiliates/images/sunsite.berkeley.edu', fileurl)
 
     output = fileurl
     status = '302 Found'
