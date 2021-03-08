@@ -116,7 +116,7 @@ def application(environ, start_response):
         # what to do if node list len > 1?
         fileurl = re.sub('\s', '+', node[0])
         # replace host with CDN_BEAR_FOR
-        fileurl = re.sub(r'http://.+\.cdlib\.org/', ''.join(('http://', os.environ['CDN_BEAR_FOR'], '/')), fileurl)
+        fileurl = re.sub(r'http://.+\.cdlib\.org/', ''.join(('https://', os.environ['CDN_BEAR_FOR'], '/')), fileurl)
         if fileurl.startswith('http://www.bampfa.berkeley.edu'):
             fileurl = re.sub(r'^http://www', 'http://archive', fileurl)
         if fileurl.startswith('http://sunsite.berkeley.edu'):
