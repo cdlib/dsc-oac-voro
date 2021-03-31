@@ -121,6 +121,8 @@ def application(environ, start_response):
             fileurl = re.sub(r'^http://www', 'http://archive', fileurl)
         if fileurl.startswith('http://sunsite.berkeley.edu'):
             fileurl = re.sub(r'http://sunsite.berkeley.edu', 'https://cdn.calisphere.org/affiliates/images/sunsite.berkeley.edu', fileurl)
+        if fileurl.startswith('http://www.janm.org'):
+            fileurl = re.sub(r'http://www.janm.org', 'https://cdn.calisphere.org/affiliates/images/www.janm.org', fileurl)
 
     output = fileurl
     status = '302 Found'
