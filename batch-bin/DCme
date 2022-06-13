@@ -30,6 +30,7 @@ my $pid = $$;
 #default (no ARGVs) is to grab METS out of this XTF directory
 my $texts_data = $ENV{XTF_DATA} || "$ENV{HOME}/data/xtf/data";
 my $mets_base = $ENV{METSBASE} || "$ENV{HOME}/branches/production/mets-support";
+my $arkmap = $ENV{ARKMAP} || "$ENV{HOME}/servers/front/conf/LEGACYARKS.txt";
 my $regen = $opt_r;
 
 #read driver file
@@ -37,6 +38,8 @@ die ("No driver.xml in $mets_base") unless -e "$mets_base/driver.xml";
 my $driver = $parser->parse_file("$mets_base/driver.xml");
 
 open (BUILD, ">$buildfile");
+
+open (ARKMAP, ">$arkmap");
 
 my $now = localtime;
 # start printing the XML file
@@ -117,11 +120,15 @@ sub upfile {
 	}
 
 	# use  PROFILE in the driver file to look up the XSLT
-	my $profile = $xc->findvalue(q{/mets:mets/@PROFILE}) ;
+	my $profile = $xc->findvalue(q{/mets:mets/@PROFILE});
+	my $ark = $xc->findvalue(q{/mets:mets/@OBJID});
 	my $dcx = $driver->findvalue(
 		qq{/mets-profiles/mets-profile-driver[PROFILE="$profile"]/
 				tool[\@type='xslt'][\@role='toQDC']}
 	);
+	if ($dcx ne './xslt/dc/removed.qdc.xslt' and $dcx ne './xslt/dc/ead-dc.xs') {
+		print ARKMAP "$ark\n";
+	}
 	# figure out filename for .dc.xml file
 	my $out = $_;
 	$out =~ s,/(.*)\.mets\.xml$,/$1.dc.xml,;
