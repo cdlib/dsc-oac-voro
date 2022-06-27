@@ -31,6 +31,7 @@ my $pid = $$;
 my $texts_data = $ENV{XTF_DATA} || "$ENV{HOME}/data/xtf/data";
 my $mets_base = $ENV{METSBASE} || "$ENV{HOME}/branches/production/mets-support";
 my $arkmap = $ENV{ARKMAP} || "$ENV{HOME}/servers/front/conf/LEGACYARKS.txt";
+my $delmap = $ENV{DELMAP} || "$ENV{HOME}/servers/front/conf/REMOVEDARKS.txt";
 my $regen = $opt_r;
 
 #read driver file
@@ -38,8 +39,8 @@ die ("No driver.xml in $mets_base") unless -e "$mets_base/driver.xml";
 my $driver = $parser->parse_file("$mets_base/driver.xml");
 
 open (BUILD, ">$buildfile");
-
 open (ARKMAP, ">$arkmap");
+open (DELMAP, ">$delmap");
 
 my $now = localtime;
 # start printing the XML file
@@ -126,8 +127,10 @@ sub upfile {
 		qq{/mets-profiles/mets-profile-driver[PROFILE="$profile"]/
 				tool[\@type='xslt'][\@role='toQDC']}
 	);
-	if ($dcx ne './xslt/dc/removed.qdc.xslt' and $dcx ne './xslt/dc/ead-dc.xs') {
-		print ARKMAP "$ark\n";
+	if ($dcx eq './xslt/dc/removed.qdc.xslt') {
+		print DELMAP "$ark true\n";
+	} elsif ($dcx ne './xslt/dc/ead-dc.xsl') {
+		print ARKMAP "$ark true\n";
 	}
 	# figure out filename for .dc.xml file
 	my $out = $_;
