@@ -129,7 +129,7 @@ sub upfile {
 	);
 	if ($dcx eq './xslt/dc/removed.qdc.xslt') {
 		print DELMAP "$ark true\n";
-	} elsif ($dcx ne './xslt/dc/ead-dc.xsl') {
+	} elsif ($profile ne 'http://ark.cdlib.org/ark:/13030/kt0t1nb6x7') {
 		print ARKMAP "$ark true\n";
 	}
 	# figure out filename for .dc.xml file
