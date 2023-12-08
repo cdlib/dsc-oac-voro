@@ -3,7 +3,6 @@
 # Returns: order of dao in parent
 # name of parent institution
 # name of grandparent institution
-# google_analytics_tracking_code for parent institution
 
 import sqlite3 as sqlite
 import MySQLdb
@@ -36,8 +35,8 @@ def lookup_inst_info(ark_parent, ark_grandparent=None):
                            port=int(DB_MYSQL_PORT)
                           )
     c = conn.cursor()
-    c.execute("""SELECT name, url, google_analytics_tracking_code from oac_institution where ark=%s""", (ark_parent,))
-    name_parent, url_parent, gacode = c.fetchone()
+    c.execute("""SELECT name, url from oac_institution where ark=%s""", (ark_parent,))
+    name_parent, url_parent = c.fetchone()
     if ark_grandparent:
         c.execute("""SELECT name, url from oac_institution where ark=%s""",
                   (ark_grandparent,))
@@ -45,14 +44,13 @@ def lookup_inst_info(ark_parent, ark_grandparent=None):
     else:
         name_grandparent = url_grandparent = None
     conn.close()
-    return name_parent, url_parent,  name_grandparent, url_grandparent, gacode
+    return name_parent, url_parent,  name_grandparent, url_grandparent
 
 def lookup_info(ark, ark_parent, db=DB_SQLITE):
     '''Lookup item information in the ois.sqlite3 database.
     Returns the order of the object (for simple objs this is -1), name and ark
     of the contributing institution, name & ark of the parent institution if
-    the contributing institution has a parent and 
-    the google analytics tracking code for the owning institution.
+    the contributing institution has a parent.
     The ark is either the ark of the object or finding aid. If a parent_ark is 
     supplied it should be the ark of the object's finding aid.
 
@@ -91,7 +89,6 @@ def lookup_info(ark, ark_parent, db=DB_SQLITE):
     >>> x
     (-1, 'Chabot Space and Science Center', u'ark:/13030/kt5489q9r6', 'http://www.chabotspace.org/', None, None, None, '')
     '''
-    google_analytics_tracking_code = None
     num_order = -1
     conn = sqlite.connect(db)
     c = conn.cursor()
@@ -115,9 +112,9 @@ def lookup_info(ark, ark_parent, db=DB_SQLITE):
         if not rowdata:
             raise KeyError('ARK %s for finding aid not found in item db' % (ark_parent, ))
     ark_parent, ark_grandparent = rowdata
-    name_parent, url_parent, name_grandparent, url_grandparent, google_analytics_tracking_code = lookup_inst_info(ark_parent, ark_grandparent)
+    name_parent, url_parent, name_grandparent, url_grandparent = lookup_inst_info(ark_parent, ark_grandparent)
     conn.close()
-    return num_order, name_parent, ark_parent, url_parent,  name_grandparent, ark_grandparent, url_grandparent, google_analytics_tracking_code
+    return num_order, name_parent, ark_parent, url_parent,  name_grandparent, ark_grandparent, url_grandparent
 
 # WSGI interface here.
 def application(environ, start_response):
@@ -191,20 +188,19 @@ def application(environ, start_response):
             output = "<H1>ERROR: INCORRECT ARK FORMAT</H1>"
         else:
             try:
-                order, name_parent, ark_parent, url_parent, name_grandparent, ark_grandparent, url_grandparent, google_analytics_tracking_code = lookup_info(ark, ark_parent)
+                order, name_parent, ark_parent, url_parent, name_grandparent, ark_grandparent, url_grandparent = lookup_info(ark, ark_parent)
                 if not name_grandparent:
                     name_grandparent = ''
                 name_parent = name_parent.decode('latin-1').encode('utf-8')
                 name_grandparent = name_grandparent.decode('latin-1').encode('utf-8')
                 output = ''.join(["<daoinfo>",
-                             "<order>", str(order), "</order>",
-                             '<inst poi="', str(ark_parent), '" href="',
+                                  "<order>", str(order), "</order>",
+                                  '<inst poi="', str(ark_parent), '" href="',
                              escape(url_parent) if url_parent else '','">',
                              escape(name_parent), "</inst>",
 			     '<inst_parent poi="', str(ark_grandparent), '" href="',
                  escape(url_grandparent) if url_grandparent else '', '">',
                  escape(name_grandparent), "</inst_parent>",
-                 '<google_analytics_tracking_code>', str(google_analytics_tracking_code), '</google_analytics_tracking_code>',
                              "</daoinfo>"
                              ]
                             )
