@@ -78,7 +78,11 @@ namespace :ead do
 
 	desc "get shadow files for PDFs of EADs"
 	task :pdfgen do |t|
-		sh "sh /dsc/data/pdfshadow/REFRESH.sh"
+		# removed this call to prevent errors when the 
+		# generated PDFs bucket was switched to private
+		#
+		# sh "sh /dsc/data/pdfshadow/REFRESH.sh"
+		puts "No longer refreshing the shadow pdfs"
 	end
 
 end
